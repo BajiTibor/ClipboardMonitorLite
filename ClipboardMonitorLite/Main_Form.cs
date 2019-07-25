@@ -96,7 +96,7 @@ namespace ClipboardMonitorLite
 
         private void InitSettings()
         {
-            file = new FileOperation(Properties.Settings.Default.SaveFileLocation);
+            file.FilePath = Properties.Settings.Default.SaveFileLocation;
             if (Properties.Settings.Default.UseWhiteIcon)
             {
                 notificationIcon.Icon = Constants.whiteIcon;

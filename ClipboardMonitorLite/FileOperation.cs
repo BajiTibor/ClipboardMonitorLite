@@ -13,20 +13,21 @@ namespace ClipboardMonitorLite
 
         public void WriteToFile(VirtualClipboard clipboardContent)
         {
-            if (Properties.Settings.Default.AppendFile)
-            {
-                using (StreamWriter sw = File.AppendText(FilePath))
+                if (Properties.Settings.Default.AppendFile)
                 {
-                    sw.WriteLineAsync(clipboardContent.LastCopied);
+                    using (StreamWriter sw = File.AppendText(FilePath))
+                    {
+                        sw.WriteLineAsync(clipboardContent.LastCopied);
+                    }
                 }
-            }
-            else
-            {
-                using (StreamWriter sw = new StreamWriter(FilePath))
+                else
                 {
-                    sw.WriteLineAsync(clipboardContent.LastCopied);
+                    using (StreamWriter sw = new StreamWriter(FilePath))
+                    {
+                        sw.WriteLineAsync(clipboardContent.LastCopied);
+                    }
                 }
-            }
+
         }
 
         public void WriteBeforeClosing(VirtualClipboard clipboardContent)

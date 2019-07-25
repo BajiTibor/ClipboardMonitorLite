@@ -96,6 +96,7 @@ namespace ClipboardMonitorLite
 
         private void InitSettings()
         {
+            file = new FileOperation(Properties.Settings.Default.SaveFileLocation);
             if (Properties.Settings.Default.UseWhiteIcon)
             {
                 notificationIcon.Icon = Constants.whiteIcon;
@@ -135,11 +136,6 @@ namespace ClipboardMonitorLite
         {
             Form optionsForm = new OptionsForm();
             optionsForm.ShowDialog();
-            optionsForm.FormClosed += OptionsForm_FormClosed;
-        }
-
-        private void OptionsForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
             InitSettings();
         }
 

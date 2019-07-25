@@ -117,7 +117,7 @@
             this.notificationIcon.BalloonTipTitle = "App still running";
             this.notificationIcon.ContextMenuStrip = this.MenuStrip;
             this.notificationIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notificationIcon.Icon")));
-            this.notificationIcon.Text = "Notifications";
+            this.notificationIcon.Text = "Clipboard Monitor Lite";
             this.notificationIcon.Visible = true;
             this.notificationIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotificationIcon_MouseDoubleClick);
             // 

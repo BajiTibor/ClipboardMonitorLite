@@ -71,6 +71,18 @@ namespace ClipboardMonitorLite
                 true, DataSourceUpdateMode.OnPropertyChanged);
         }
 
+        private void Btn_browse_Click(object sender, EventArgs e)
+        {
+            saveFileDialog.Filter = "Text file|*.txt";
+            saveFileDialog.Title = "Save history as text file";
+            saveFileDialog.ShowDialog();
+
+            if (saveFileDialog.FileName != "")
+            {
+                Properties.Settings.Default.SaveFileLocation = saveFileDialog.FileName;
+            }
+        }
+
         private void Btn_apply_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Save();
@@ -81,5 +93,6 @@ namespace ClipboardMonitorLite
             Close();
             Dispose();
         }
+
     }
 }

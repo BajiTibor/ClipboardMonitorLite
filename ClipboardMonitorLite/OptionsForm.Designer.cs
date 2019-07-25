@@ -54,9 +54,9 @@
             this.check_SaveToFile = new System.Windows.Forms.CheckBox();
             this.check_NotifyOfCopy = new System.Windows.Forms.CheckBox();
             this.check_UseWhiteIcon = new System.Windows.Forms.CheckBox();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.btn_apply = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -145,6 +145,7 @@
             this.btn_browse.TabIndex = 2;
             this.btn_browse.Text = "Browse";
             this.btn_browse.UseVisualStyleBackColor = true;
+            this.btn_browse.Click += new System.EventHandler(this.Btn_browse_Click);
             // 
             // label7
             // 
@@ -427,8 +428,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox check_writeInRealTime;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button btn_apply;
         private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }

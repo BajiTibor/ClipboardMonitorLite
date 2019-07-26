@@ -57,6 +57,7 @@
             this.btn_apply = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.label_NoAdmin = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -375,11 +376,23 @@
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.Btn_close_Click);
             // 
+            // label_NoAdmin
+            // 
+            this.label_NoAdmin.AutoSize = true;
+            this.label_NoAdmin.Location = new System.Drawing.Point(20, 305);
+            this.label_NoAdmin.Name = "label_NoAdmin";
+            this.label_NoAdmin.Size = new System.Drawing.Size(303, 60);
+            this.label_NoAdmin.TabIndex = 5;
+            this.label_NoAdmin.Text = "Sorry! You don\'t have admin rights, or the\r\napplication failed to launch as one, " +
+    "please\r\ntry to run the app as administrator!";
+            this.label_NoAdmin.Visible = false;
+            // 
             // OptionsForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(748, 371);
             this.ControlBox = false;
+            this.Controls.Add(this.label_NoAdmin);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.btn_apply);
             this.Controls.Add(this.groupBox1);
@@ -398,6 +411,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numeric_clearAfter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_notifTimeout)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -431,5 +445,6 @@
         private System.Windows.Forms.Button btn_apply;
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.Label label_NoAdmin;
     }
 }

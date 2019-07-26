@@ -11,8 +11,10 @@ namespace ClipboardMonitorLite
         private VirtualClipboard @virtual;
         private ClipboardAction clipboardAction;
         private FileOperation file;
+        private StartWithWindows autoRunApplication;
         public MainForm()
         {
+            autoRunApplication = new StartWithWindows();
             @virtual = new VirtualClipboard();
             clipboardAction = new ClipboardAction(@virtual);
             if (Properties.Settings.Default.SaveFileLocation.Equals(string.Empty))
@@ -93,6 +95,7 @@ namespace ClipboardMonitorLite
 
         private void InitSettings()
         {
+            autoRunApplication.RunChecks();
             file.FilePath = Properties.Settings.Default.SaveFileLocation;
             if (Properties.Settings.Default.UseWhiteIcon)
             {

@@ -9,6 +9,8 @@ namespace ClipboardMonitorLite
         {
             InitializeComponent();
             BindAllProperties();
+            if (!check_openWithWindows.Enabled)
+                label_NoAdmin.Visible = true;
         }
 
         private void BindAllProperties()
@@ -68,6 +70,9 @@ namespace ClipboardMonitorLite
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
             combo_timeFormat.DataBindings.Add("Enabled", Properties.Settings.Default, "AutoClearClip",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            check_openWithWindows.DataBindings.Add("Enabled", Properties.Settings.Default, "CanRestartAsAdmin",
                 true, DataSourceUpdateMode.OnPropertyChanged);
         }
 

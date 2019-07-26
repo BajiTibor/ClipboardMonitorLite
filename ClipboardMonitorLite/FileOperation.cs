@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 namespace ClipboardMonitorLite
 {
@@ -36,6 +37,11 @@ namespace ClipboardMonitorLite
             {
                 sw.WriteLine(clipboardContent.History);
             }
+        }
+
+        public string Format()
+        {
+            return $"{DateTime.Now.ToString("MM_dd_yyyy_HH_mm_ss")}_ClipboardHistory.txt";
         }
     }
 }

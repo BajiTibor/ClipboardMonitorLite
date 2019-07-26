@@ -43,7 +43,7 @@
             this.emptyHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
-            this.timer_Clear = new System.Windows.Forms.Timer(this.components);
+            this.timerEmptyClipboard = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.MenuStrip.SuspendLayout();
@@ -167,10 +167,10 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // timer_Clear
+            // timerEmptyClipboard
             // 
-            this.timer_Clear.Interval = 60000;
-            this.timer_Clear.Tick += new System.EventHandler(this.Timer_Clear_Tick);
+            this.timerEmptyClipboard.Interval = 60000;
+            this.timerEmptyClipboard.Tick += new System.EventHandler(this.TimerEmptyClipboard_Tick);
             // 
             // MainForm
             // 
@@ -209,7 +209,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Button btn_options;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Timer timer_Clear;
+        private System.Windows.Forms.Timer timerEmptyClipboard;
     }
 }
 

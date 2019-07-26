@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Reflection;
 using System.IO;
 
 namespace ClipboardMonitorLite
@@ -12,16 +11,14 @@ namespace ClipboardMonitorLite
         private VirtualClipboard @virtual;
         private ClipboardAction clipboardAction;
         private FileOperation file;
-        private Filename filename;
         public MainForm()
         {
-            filename = new Filename();
             @virtual = new VirtualClipboard();
             clipboardAction = new ClipboardAction(@virtual);
-            if (Properties.Settings.Default.SaveFileLocation == "null")
+            if (Properties.Settings.Default.SaveFileLocation.Equals(string.Empty))
             {
                 Properties.Settings.Default.SaveFileLocation = Directory.GetCurrentDirectory() 
-                    + $"/{filename.Format()}";
+                    + $"/{file.Format()}";
             }
             file = new FileOperation(Properties.Settings.Default.SaveFileLocation);
             InitializeComponent();
@@ -111,12 +108,12 @@ namespace ClipboardMonitorLite
                 timeToClear = new TimeCalculate();
                 timeToClear.CalculateToSeconds(Properties.Settings.Default.AutoClsTime, 
                     Properties.Settings.Default.AutoClsType);
-                timer_Clear.Start();
+                timerEmptyClipboard.Start();
             }
             else
             {
-                timer_Clear.Stop();
-                timer_Clear.Dispose();
+                timerEmptyClipboard.Stop();
+                timerEmptyClipboard.Dispose();
             }
         }
 
@@ -139,7 +136,7 @@ namespace ClipboardMonitorLite
             InitSettings();
         }
 
-        private void Timer_Clear_Tick(object sender, EventArgs e)
+        private void TimerEmptyClipboard_Tick(object sender, EventArgs e)
         {
             if (timeToClear.TargetDate <= DateTime.Now)
             {

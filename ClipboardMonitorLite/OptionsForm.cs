@@ -77,7 +77,7 @@ namespace ClipboardMonitorLite
             saveFileDialog.Title = "Save history as text file";
             saveFileDialog.ShowDialog();
 
-            if (saveFileDialog.FileName != "")
+            if (!saveFileDialog.FileName.Equals(string.Empty))
             {
                 Properties.Settings.Default.SaveFileLocation = saveFileDialog.FileName;
             }

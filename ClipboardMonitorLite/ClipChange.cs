@@ -28,7 +28,7 @@ namespace ClipboardMonitorLite
             ClipboardUpdate?.Invoke(null, e);
         }
 
-        private class NotificationForm : HelperForm
+        private class NotificationForm : Form
         {
             public NotificationForm()
             {

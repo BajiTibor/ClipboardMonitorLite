@@ -5,11 +5,12 @@ namespace ClipboardMonitorLite
 {
     public class ClipboardAction
     {
-        private VirtualClipboard vr;
-        public ClipboardAction(VirtualClipboard virtClip)
+        private VirtualClipboard _virtualClipboard;
+        public ClipboardAction(VirtualClipboard virtualClipboard)
         {
-            vr = virtClip;
+            _virtualClipboard = virtualClipboard;
         }
+
         public void ClearClip_Click(object sender, EventArgs e)
         {
             Clipboard.Clear();
@@ -18,7 +19,7 @@ namespace ClipboardMonitorLite
         public void ClearHistory_Click(object sender, EventArgs e)
         {
             Clipboard.Clear();
-            vr.History = string.Empty;
+            _virtualClipboard.History = string.Empty;
         }
 
     }

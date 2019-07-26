@@ -4,37 +4,27 @@ namespace ClipboardMonitorLite
 {
     class TimeCalculate
     {
-        private readonly int FallbackValue = 0;
-        private int Time
-        {
-            get
-            {
-                return FallbackValue;
-            }
-            set
-            {
-                TargetDate = DateTime.Now.AddSeconds(Time);
-            }
-        }
         public DateTime TargetDate { get; set; }
 
         public void CalculateToSeconds(int time, string format)
         {
+            int tempTime = 0;
             switch (format)
             {
                 case "Seconds":
-                    Time = time;
+                    tempTime = time;
                     break;
                 case "Minutes":
-                    Time = time * 60;
+                    tempTime = time * 60;
                     break;
                 case "Hours":
-                    Time = time * 3600;
+                    tempTime = time * 3600;
                     break;
                 default:
-                    Time = 0;
+                    tempTime = 0;
                     break;
             }
+            TargetDate = DateTime.Now.AddSeconds(tempTime);
         }
     }
 }

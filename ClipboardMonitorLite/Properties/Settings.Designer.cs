@@ -190,5 +190,65 @@ namespace ClipboardMonitorLite.Properties {
                 this["CanRestartAsAdmin"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AdminCheck {
+            get {
+                return ((bool)(this["AdminCheck"]));
+            }
+            set {
+                this["AdminCheck"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool MinimizeOnClose {
+            get {
+                return ((bool)(this["MinimizeOnClose"]));
+            }
+            set {
+                this["MinimizeOnClose"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Minimized")]
+        public global::System.Windows.Forms.FormWindowState FormStartState {
+            get {
+                return ((global::System.Windows.Forms.FormWindowState)(this["FormStartState"]));
+            }
+            set {
+                this["FormStartState"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool DisplayDonate {
+            get {
+                return ((bool)(this["DisplayDonate"]));
+            }
+            set {
+                this["DisplayDonate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstTimeHiding {
+            get {
+                return ((bool)(this["FirstTimeHiding"]));
+            }
+            set {
+                this["FirstTimeHiding"] = value;
+            }
+        }
     }
 }

@@ -6,37 +6,47 @@ namespace ClipboardMonitorLite
 {
     public partial class MainForm : Form
     {
+        private FormActions formActions;
         private TimeCalculate timeToClear;
         private string CurrentlyCopiedItem { get; set; }
         private VirtualClipboard @virtual;
         private ClipboardAction clipboardAction;
         private FileOperation file;
         private StartWithWindows autoRunApplication;
+        private Donate donate;
         public MainForm()
         {
+            donate = new Donate();
+            formActions = new FormActions();
             autoRunApplication = new StartWithWindows();
             @virtual = new VirtualClipboard();
             clipboardAction = new ClipboardAction(@virtual);
             if (Properties.Settings.Default.SaveFileLocation.Equals(string.Empty))
             {
-                Properties.Settings.Default.SaveFileLocation = Directory.GetCurrentDirectory() 
+                Properties.Settings.Default.SaveFileLocation = Directory.GetCurrentDirectory()
                     + $"/{file.Format()}";
             }
             file = new FileOperation(Properties.Settings.Default.SaveFileLocation);
             InitializeComponent();
             InitSettings();
-
             
+            WindowState = Properties.Settings.Default.FormStartState;
+
 
             CopiedItemBox.DataBindings.Add("Text", @virtual, "History",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            
+            btn_Donate.DataBindings.Add("Visible", Properties.Settings.Default, "DisplayDonate",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+
             ClipChange.ClipboardUpdate += ClipChange_ClipboardUpdate;
             btn_EmptyClipboard.Click += clipboardAction.ClearClip_Click;
             btn_ClearHistory.Click += clipboardAction.ClearHistory_Click;
             emptyClipboardToolStripMenuItem.Click += clipboardAction.ClearClip_Click;
             emptyHistoryToolStripMenuItem.Click += clipboardAction.ClearHistory_Click;
+            exitToolStripMenuItem.Click += formActions.ExitToolStripMenuItem_Click;
+            btn_Donate.Click += donate.Btn_Donate_Click;
         }
 
         private void ClipChange_ClipboardUpdate(object sender, EventArgs e)
@@ -67,11 +77,7 @@ namespace ClipboardMonitorLite
             if (WindowState == FormWindowState.Minimized)
             {
                 Hide();
-                if (Properties.Settings.Default.FirstTimeUse)
-                {
-                    notificationIcon.ShowBalloonTip(Properties.Settings.Default.NotificationTimeout);
-                    Properties.Settings.Default.FirstTimeUse = false;
-                }
+                FirstTimeUseMinimize();
             }
             else Show();
         }
@@ -88,14 +94,17 @@ namespace ClipboardMonitorLite
             RestoreToolStripMenuItem_Click(sender, e);
         }
 
-        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void InitSettings()
         {
-            autoRunApplication.RunChecks();
+            if (Properties.Settings.Default.AdminCheck)
+            {
+                if (!autoRunApplication.RunChecks().Equals(0))
+                {
+                    MessageBox.Show(Constants.Message_AdminErr, Constants.Title_Message_AdminErr,
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+           
             file.FilePath = Properties.Settings.Default.SaveFileLocation;
             if (Properties.Settings.Default.UseWhiteIcon)
             {
@@ -109,7 +118,7 @@ namespace ClipboardMonitorLite
             if (Properties.Settings.Default.AutoClearClip)
             {
                 timeToClear = new TimeCalculate();
-                timeToClear.CalculateToSeconds(Properties.Settings.Default.AutoClsTime, 
+                timeToClear.CalculateToSeconds(Properties.Settings.Default.AutoClsTime,
                     Properties.Settings.Default.AutoClsType);
                 timerEmptyClipboard.Start();
             }
@@ -120,16 +129,25 @@ namespace ClipboardMonitorLite
             }
         }
 
-        
+
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Properties.Settings.Default.Save();
-            if (!Properties.Settings.Default.WriteInRealTime)
+            if (Properties.Settings.Default.MinimizeOnClose && e.CloseReason == CloseReason.UserClosing)
             {
-                file.WriteBeforeClosing(@virtual);
+                e.Cancel = true;
+                WindowState = FormWindowState.Minimized;
+                FirstTimeUseMinimize();
             }
-            Application.Exit();
+            else
+            {
+                Properties.Settings.Default.Save();
+                if (!Properties.Settings.Default.WriteInRealTime)
+                {
+                    file.WriteBeforeClosing(@virtual);
+                }
+                Application.Exit();
+            }
         }
 
         private void Btn_options_Click(object sender, EventArgs e)
@@ -145,6 +163,15 @@ namespace ClipboardMonitorLite
             {
                 clipboardAction.ClearHistory_Click(sender, e);
                 InitSettings();
+            }
+        }
+
+        private void FirstTimeUseMinimize()
+        {
+            if (Properties.Settings.Default.FirstTimeUse)
+            {
+                notificationIcon.ShowBalloonTip(Properties.Settings.Default.NotificationTimeout);
+                Properties.Settings.Default.FirstTimeUse = false;
             }
         }
     }

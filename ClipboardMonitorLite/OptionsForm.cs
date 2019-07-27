@@ -74,6 +74,15 @@ namespace ClipboardMonitorLite
 
             check_openWithWindows.DataBindings.Add("Enabled", Properties.Settings.Default, "CanRestartAsAdmin",
                 true, DataSourceUpdateMode.OnPropertyChanged);
+
+            check_StartMinimized.DataBindings.Add("Enabled", Properties.Settings.Default, "OpenWithWin",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            radio_MinimizeOnClose.DataBindings.Add("Checked", Properties.Settings.Default, "MinimizeOnClose",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            check_HideDonate.DataBindings.Add("Checked", Properties.Settings.Default, "DisplayDonate",
+                true, DataSourceUpdateMode.OnPropertyChanged);
         }
 
         private void Btn_browse_Click(object sender, EventArgs e)
@@ -99,5 +108,40 @@ namespace ClipboardMonitorLite
             Dispose();
         }
 
+        private void Radio_MinimizeOnClose_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check_StartMinimized.Checked)
+            {
+                Properties.Settings.Default.FormStartState = FormWindowState.Minimized;
+            }
+            else
+            {
+                Properties.Settings.Default.FormStartState = FormWindowState.Normal;
+            }
+        }
+
+        private void Combo_timeFormat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combo_timeFormat.SelectedItem.Equals("Seconds"))
+            {
+                numeric_clearAfter.Value = 30;
+                numeric_clearAfter.Minimum = 30;
+                combo_timeFormat.SelectedItem = "Seconds";
+            }
+            else
+            {
+                numeric_clearAfter.Minimum = 1;
+            }
+        }
+
+        private void Check_HideDonate_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.FirstTimeHiding)
+            {
+                MessageBox.Show(Constants.DonateButtonHideInfo, Constants.Title_DonateButtonHide,
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Properties.Settings.Default.FirstTimeHiding = false;
+            }
+        }
     }
 }

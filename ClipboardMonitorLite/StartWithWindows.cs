@@ -17,11 +17,11 @@ namespace ClipboardMonitorLite
                         .IsWellKnown(WellKnownSidType.BuiltinAdministratorsSid);
             }
         }
-        public void RunChecks()
-        {
+        public int RunChecks()
+        { // Returning anything other than a 0 means an error.
             if (!IsProgramElevated && !Properties.Settings.Default.CanRestartAsAdmin)
             {
-                return;
+                return 1;
             }
             else if (!IsProgramElevated)
             {
@@ -31,12 +31,13 @@ namespace ClipboardMonitorLite
                 Properties.Settings.Default.CanRestartAsAdmin = false;
                 Process.Start(appStartInfo);
                 Environment.Exit(0);
-                return;
+                return 0;
             }
             else
             {
                 Properties.Settings.Default.CanRestartAsAdmin = true;
                 CheckStartupStatus();
+                return 0;
             }
         }
 

@@ -79,6 +79,15 @@ namespace ClipboardMonitorLite.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to I&apos;ll hide the button right away, but before doing so, I just wanted to say, I work on this application mostly alone, with some help from a few friends, but I get no financial aid, I have no desire to ask for money from people just to use this application, and I refuse to include ads in any form. If you&apos;d like to support my work and help me improve them in the future, please consider donating, thank you! :).
+        /// </summary>
+        internal static string DonateButtonHide {
+            get {
+                return ResourceManager.GetString("DonateButtonHide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon icon_dark {
@@ -99,11 +108,49 @@ namespace ClipboardMonitorLite.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The application attempted to restart as administrator, but it failed. This either means that the application failed to correctly start up, or the current user does not have administrator rights! Please check More options for more information!.
+        /// </summary>
+        internal static string MsgBox_Error_Admin {
+            get {
+                return ResourceManager.GetString("MsgBox_Error_Admin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You are about to enable notifications for every time you copy something. This will send a windows notification to your system even when the application is running in the background. Are you sure you want to enable this?.
         /// </summary>
         internal static string NotificationEnableText {
             get {
                 return ResourceManager.GetString("NotificationEnableText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Paypal_button1 {
+            get {
+                object obj = ResourceManager.GetObject("Paypal_button1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://paypal.me/TiborSoftware.
+        /// </summary>
+        internal static string PayPal_Link {
+            get {
+                return ResourceManager.GetString("PayPal_Link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paypal_resized {
+            get {
+                object obj = ResourceManager.GetObject("paypal_resized", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -122,6 +169,24 @@ namespace ClipboardMonitorLite.Properties {
         internal static string Title_CopyNotification {
             get {
                 return ResourceManager.GetString("Title_CopyNotification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hiding donation button.
+        /// </summary>
+        internal static string Title_DonateButtonHide {
+            get {
+                return ResourceManager.GetString("Title_DonateButtonHide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Admin rights!.
+        /// </summary>
+        internal static string Title_MsgBox_Error_Admin {
+            get {
+                return ResourceManager.GetString("Title_MsgBox_Error_Admin", resourceCulture);
             }
         }
         

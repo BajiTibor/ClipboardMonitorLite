@@ -147,4 +147,26 @@
   <data name="Title_NotificationEnableText" xml:space="preserve">
     <value>Enable copy notifications</value>
   </data>
+  <data name="MsgBox_Error_Admin" xml:space="preserve">
+    <value>The application attempted to restart as administrator, but it failed. This either means that the application failed to correctly start up, or the current user does not have administrator rights! Please check More options for more information!</value>
+  </data>
+  <data name="Paypal_button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Paypal_button1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Title_MsgBox_Error_Admin" xml:space="preserve">
+    <value>No Admin rights!</value>
+  </data>
+  <data name="DonateButtonHide" xml:space="preserve">
+    <value>I'll hide the button right away, but before doing so, I just wanted to say, I work on this application mostly alone, with some help from a few friends, but I get no financial aid, I have no desire to ask for money from people just to use this application, and I refuse to include ads in any form. If you'd like to support my work and help me improve them in the future, please consider donating, thank you! :)</value>
+    <comment>Tough times</comment>
+  </data>
+  <data name="PayPal_Link" xml:space="preserve">
+    <value>https://paypal.me/TiborSoftware</value>
+  </data>
+  <data name="paypal_resized" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paypal_resized.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Title_DonateButtonHide" xml:space="preserve">
+    <value>Hiding donation button</value>
+  </data>
 </root>

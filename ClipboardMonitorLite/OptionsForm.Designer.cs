@@ -39,6 +39,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txt_FileLocation = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radio_ExitOnClose = new System.Windows.Forms.RadioButton();
+            this.radio_MinimizeOnClose = new System.Windows.Forms.RadioButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.check_StartMinimized = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,6 +63,8 @@
             this.btn_close = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.label_NoAdmin = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.check_HideDonate = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -71,7 +78,7 @@
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(720, 290);
+            this.groupBox1.Size = new System.Drawing.Size(720, 437);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "General";
@@ -87,7 +94,7 @@
             this.groupBox4.Controls.Add(this.txt_FileLocation);
             this.groupBox4.Location = new System.Drawing.Point(362, 25);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(350, 253);
+            this.groupBox4.Size = new System.Drawing.Size(350, 406);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Save to file settings";
@@ -97,10 +104,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(22, 156);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(302, 80);
+            this.label8.Size = new System.Drawing.Size(302, 140);
             this.label8.TabIndex = 6;
-            this.label8.Text = "Appending or writing to the file in real time\r\nmight be useful for a couple of us" +
-    "es, but\r\non lower-end systems, it might degrade\r\nperformance by a small amount.";
+            this.label8.Text = resources.GetString("label8.Text");
             // 
             // check_writeInRealTime
             // 
@@ -167,6 +173,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.check_HideDonate);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.radio_ExitOnClose);
+            this.groupBox2.Controls.Add(this.radio_MinimizeOnClose);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.check_StartMinimized);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
@@ -184,10 +197,60 @@
             this.groupBox2.Controls.Add(this.check_UseWhiteIcon);
             this.groupBox2.Location = new System.Drawing.Point(6, 25);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(350, 253);
+            this.groupBox2.Size = new System.Drawing.Size(350, 406);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Behaviour and visuals";
+            // 
+            // radio_ExitOnClose
+            // 
+            this.radio_ExitOnClose.AutoSize = true;
+            this.radio_ExitOnClose.Checked = true;
+            this.radio_ExitOnClose.Location = new System.Drawing.Point(6, 333);
+            this.radio_ExitOnClose.Name = "radio_ExitOnClose";
+            this.radio_ExitOnClose.Size = new System.Drawing.Size(167, 24);
+            this.radio_ExitOnClose.TabIndex = 18;
+            this.radio_ExitOnClose.TabStop = true;
+            this.radio_ExitOnClose.Text = "Exit the application";
+            this.radio_ExitOnClose.UseVisualStyleBackColor = true;
+            // 
+            // radio_MinimizeOnClose
+            // 
+            this.radio_MinimizeOnClose.AutoSize = true;
+            this.radio_MinimizeOnClose.Location = new System.Drawing.Point(6, 305);
+            this.radio_MinimizeOnClose.Name = "radio_MinimizeOnClose";
+            this.radio_MinimizeOnClose.Size = new System.Drawing.Size(201, 24);
+            this.radio_MinimizeOnClose.TabIndex = 17;
+            this.radio_MinimizeOnClose.Text = "Minimize on system tray";
+            this.radio_MinimizeOnClose.UseVisualStyleBackColor = true;
+            this.radio_MinimizeOnClose.CheckedChanged += new System.EventHandler(this.Radio_MinimizeOnClose_CheckedChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 282);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(230, 20);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "When I close the main Window:";
+            // 
+            // label10
+            // 
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label10.Location = new System.Drawing.Point(0, 280);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(350, 2);
+            this.label10.TabIndex = 15;
+            // 
+            // check_StartMinimized
+            // 
+            this.check_StartMinimized.AutoSize = true;
+            this.check_StartMinimized.Location = new System.Drawing.Point(6, 250);
+            this.check_StartMinimized.Name = "check_StartMinimized";
+            this.check_StartMinimized.Size = new System.Drawing.Size(144, 24);
+            this.check_StartMinimized.TabIndex = 14;
+            this.check_StartMinimized.Text = "Start Minimized";
+            this.check_StartMinimized.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -252,6 +315,7 @@
             this.combo_timeFormat.Name = "combo_timeFormat";
             this.combo_timeFormat.Size = new System.Drawing.Size(125, 28);
             this.combo_timeFormat.TabIndex = 8;
+            this.combo_timeFormat.SelectedIndexChanged += new System.EventHandler(this.Combo_timeFormat_SelectedIndexChanged);
             // 
             // numeric_clearAfter
             // 
@@ -358,7 +422,7 @@
             // 
             // btn_apply
             // 
-            this.btn_apply.Location = new System.Drawing.Point(492, 308);
+            this.btn_apply.Location = new System.Drawing.Point(492, 459);
             this.btn_apply.Name = "btn_apply";
             this.btn_apply.Size = new System.Drawing.Size(117, 53);
             this.btn_apply.TabIndex = 3;
@@ -368,7 +432,7 @@
             // 
             // btn_close
             // 
-            this.btn_close.Location = new System.Drawing.Point(615, 308);
+            this.btn_close.Location = new System.Drawing.Point(615, 459);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(117, 53);
             this.btn_close.TabIndex = 4;
@@ -379,7 +443,7 @@
             // label_NoAdmin
             // 
             this.label_NoAdmin.AutoSize = true;
-            this.label_NoAdmin.Location = new System.Drawing.Point(20, 305);
+            this.label_NoAdmin.Location = new System.Drawing.Point(8, 452);
             this.label_NoAdmin.Name = "label_NoAdmin";
             this.label_NoAdmin.Size = new System.Drawing.Size(303, 60);
             this.label_NoAdmin.TabIndex = 5;
@@ -387,10 +451,31 @@
     "please\r\ntry to run the app as administrator!";
             this.label_NoAdmin.Visible = false;
             // 
+            // label12
+            // 
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label12.Location = new System.Drawing.Point(0, 360);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(350, 2);
+            this.label12.TabIndex = 19;
+            // 
+            // check_HideDonate
+            // 
+            this.check_HideDonate.AutoSize = true;
+            this.check_HideDonate.Checked = true;
+            this.check_HideDonate.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_HideDonate.Location = new System.Drawing.Point(6, 370);
+            this.check_HideDonate.Name = "check_HideDonate";
+            this.check_HideDonate.Size = new System.Drawing.Size(307, 24);
+            this.check_HideDonate.TabIndex = 20;
+            this.check_HideDonate.Text = "Show donation button on main window";
+            this.check_HideDonate.UseVisualStyleBackColor = true;
+            this.check_HideDonate.CheckedChanged += new System.EventHandler(this.Check_HideDonate_CheckedChanged);
+            // 
             // OptionsForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(748, 371);
+            this.ClientSize = new System.Drawing.Size(748, 524);
             this.ControlBox = false;
             this.Controls.Add(this.label_NoAdmin);
             this.Controls.Add(this.btn_close);
@@ -446,5 +531,12 @@
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.Label label_NoAdmin;
+        private System.Windows.Forms.CheckBox check_StartMinimized;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.RadioButton radio_ExitOnClose;
+        private System.Windows.Forms.RadioButton radio_MinimizeOnClose;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckBox check_HideDonate;
     }
 }

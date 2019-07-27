@@ -42,7 +42,7 @@
             this.emptyClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emptyHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Donate = new System.Windows.Forms.Button();
             this.timerEmptyClipboard = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -156,16 +156,15 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(218, 32);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
-            // button1
+            // btn_Donate
             // 
-            this.button1.Location = new System.Drawing.Point(321, 439);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 76);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Donate.Image = global::ClipboardMonitorLite.Properties.Resources.paypal_resized;
+            this.btn_Donate.Location = new System.Drawing.Point(297, 457);
+            this.btn_Donate.Name = "btn_Donate";
+            this.btn_Donate.Size = new System.Drawing.Size(170, 86);
+            this.btn_Donate.TabIndex = 4;
+            this.btn_Donate.UseVisualStyleBackColor = true;
             // 
             // timerEmptyClipboard
             // 
@@ -176,7 +175,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(479, 550);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Donate);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -208,7 +207,7 @@
         private System.Windows.Forms.ToolStripMenuItem emptyHistoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Button btn_options;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Donate;
         private System.Windows.Forms.Timer timerEmptyClipboard;
     }
 }

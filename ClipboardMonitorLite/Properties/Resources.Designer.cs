@@ -198,5 +198,14 @@ namespace ClipboardMonitorLite.Properties {
                 return ResourceManager.GetString("Title_NotificationEnableText", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://github.com/SolluxKarkat/ClipboardMonitorLite.
+        /// </summary>
+        internal static string url_GitHub_Update {
+            get {
+                return ResourceManager.GetString("url_GitHub_Update", resourceCulture);
+            }
+        }
     }
 }

@@ -5,12 +5,16 @@ namespace ClipboardMonitorLite
 {
     public partial class OptionsForm : Form
     {
+        private Updates updates;
         public OptionsForm()
         {
+            updates = new Updates();
             InitializeComponent();
             BindAllProperties();
             if (!check_openWithWindows.Enabled)
                 label_NoAdmin.Visible = true;
+
+            btn_checkForUpdates.Click += updates.Btn_checkForUpdates_Click;
         }
 
         private void BindAllProperties()
@@ -82,6 +86,9 @@ namespace ClipboardMonitorLite
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
             check_HideDonate.DataBindings.Add("Checked", Properties.Settings.Default, "DisplayDonate",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            check_UpdateOnStartup.DataBindings.Add("Checked", Properties.Settings.Default, "AutoCheckUpdates",
                 true, DataSourceUpdateMode.OnPropertyChanged);
         }
 

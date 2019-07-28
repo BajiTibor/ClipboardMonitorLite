@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_about = new System.Windows.Forms.Button();
+            this.btn_checkForUpdates = new System.Windows.Forms.Button();
+            this.check_UpdateOnStartup = new System.Windows.Forms.CheckBox();
+            this.txt_updateInfo = new System.Windows.Forms.RichTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.check_writeInRealTime = new System.Windows.Forms.CheckBox();
@@ -39,6 +44,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txt_FileLocation = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label_NoAdmin = new System.Windows.Forms.Label();
+            this.check_HideDonate = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.radio_ExitOnClose = new System.Windows.Forms.RadioButton();
             this.radio_MinimizeOnClose = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
@@ -62,10 +70,8 @@
             this.btn_apply = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.label_NoAdmin = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.check_HideDonate = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_clearAfter)).BeginInit();
@@ -74,14 +80,66 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(720, 437);
+            this.groupBox1.Size = new System.Drawing.Size(720, 507);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "General";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btn_about);
+            this.groupBox3.Controls.Add(this.btn_checkForUpdates);
+            this.groupBox3.Controls.Add(this.check_UpdateOnStartup);
+            this.groupBox3.Controls.Add(this.txt_updateInfo);
+            this.groupBox3.Location = new System.Drawing.Point(362, 245);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(350, 256);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Update and current version";
+            // 
+            // btn_about
+            // 
+            this.btn_about.Location = new System.Drawing.Point(214, 148);
+            this.btn_about.Name = "btn_about";
+            this.btn_about.Size = new System.Drawing.Size(130, 50);
+            this.btn_about.TabIndex = 3;
+            this.btn_about.Text = "Check for updates";
+            this.btn_about.UseVisualStyleBackColor = true;
+            // 
+            // btn_checkForUpdates
+            // 
+            this.btn_checkForUpdates.Location = new System.Drawing.Point(6, 148);
+            this.btn_checkForUpdates.Name = "btn_checkForUpdates";
+            this.btn_checkForUpdates.Size = new System.Drawing.Size(130, 50);
+            this.btn_checkForUpdates.TabIndex = 2;
+            this.btn_checkForUpdates.Text = "Check for updates";
+            this.btn_checkForUpdates.UseVisualStyleBackColor = true;
+            // 
+            // check_UpdateOnStartup
+            // 
+            this.check_UpdateOnStartup.AutoSize = true;
+            this.check_UpdateOnStartup.Location = new System.Drawing.Point(10, 213);
+            this.check_UpdateOnStartup.Name = "check_UpdateOnStartup";
+            this.check_UpdateOnStartup.Size = new System.Drawing.Size(241, 24);
+            this.check_UpdateOnStartup.TabIndex = 1;
+            this.check_UpdateOnStartup.Text = "Check for updates on startup";
+            this.check_UpdateOnStartup.UseVisualStyleBackColor = true;
+            // 
+            // txt_updateInfo
+            // 
+            this.txt_updateInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_updateInfo.Location = new System.Drawing.Point(6, 28);
+            this.txt_updateInfo.Name = "txt_updateInfo";
+            this.txt_updateInfo.ReadOnly = true;
+            this.txt_updateInfo.Size = new System.Drawing.Size(338, 114);
+            this.txt_updateInfo.TabIndex = 0;
+            this.txt_updateInfo.Text = "";
             // 
             // groupBox4
             // 
@@ -94,7 +152,7 @@
             this.groupBox4.Controls.Add(this.txt_FileLocation);
             this.groupBox4.Location = new System.Drawing.Point(362, 25);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(350, 406);
+            this.groupBox4.Size = new System.Drawing.Size(350, 217);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Save to file settings";
@@ -102,11 +160,12 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(22, 156);
+            this.label8.Location = new System.Drawing.Point(33, 147);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(302, 140);
+            this.label8.Size = new System.Drawing.Size(274, 60);
             this.label8.TabIndex = 6;
-            this.label8.Text = resources.GetString("label8.Text");
+            this.label8.Text = "If Write file in real time isn\'t selected,\r\nthe file will be accessed and written" +
+    " to\r\nonly when the application exits.";
             // 
             // check_writeInRealTime
             // 
@@ -173,6 +232,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label_NoAdmin);
             this.groupBox2.Controls.Add(this.check_HideDonate);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.radio_ExitOnClose);
@@ -197,10 +257,42 @@
             this.groupBox2.Controls.Add(this.check_UseWhiteIcon);
             this.groupBox2.Location = new System.Drawing.Point(6, 25);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(350, 406);
+            this.groupBox2.Size = new System.Drawing.Size(350, 476);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Behaviour and visuals";
+            // 
+            // label_NoAdmin
+            // 
+            this.label_NoAdmin.AutoSize = true;
+            this.label_NoAdmin.Location = new System.Drawing.Point(10, 397);
+            this.label_NoAdmin.Name = "label_NoAdmin";
+            this.label_NoAdmin.Size = new System.Drawing.Size(303, 60);
+            this.label_NoAdmin.TabIndex = 5;
+            this.label_NoAdmin.Text = "Sorry! You don\'t have admin rights, or the\r\napplication failed to launch as one, " +
+    "please\r\ntry to run the app as administrator!";
+            this.label_NoAdmin.Visible = false;
+            // 
+            // check_HideDonate
+            // 
+            this.check_HideDonate.AutoSize = true;
+            this.check_HideDonate.Checked = true;
+            this.check_HideDonate.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_HideDonate.Location = new System.Drawing.Point(6, 370);
+            this.check_HideDonate.Name = "check_HideDonate";
+            this.check_HideDonate.Size = new System.Drawing.Size(307, 24);
+            this.check_HideDonate.TabIndex = 20;
+            this.check_HideDonate.Text = "Show donation button on main window";
+            this.check_HideDonate.UseVisualStyleBackColor = true;
+            this.check_HideDonate.CheckedChanged += new System.EventHandler(this.Check_HideDonate_CheckedChanged);
+            // 
+            // label12
+            // 
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label12.Location = new System.Drawing.Point(0, 360);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(350, 2);
+            this.label12.TabIndex = 19;
             // 
             // radio_ExitOnClose
             // 
@@ -422,7 +514,7 @@
             // 
             // btn_apply
             // 
-            this.btn_apply.Location = new System.Drawing.Point(492, 459);
+            this.btn_apply.Location = new System.Drawing.Point(492, 529);
             this.btn_apply.Name = "btn_apply";
             this.btn_apply.Size = new System.Drawing.Size(117, 53);
             this.btn_apply.TabIndex = 3;
@@ -432,7 +524,7 @@
             // 
             // btn_close
             // 
-            this.btn_close.Location = new System.Drawing.Point(615, 459);
+            this.btn_close.Location = new System.Drawing.Point(615, 529);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(117, 53);
             this.btn_close.TabIndex = 4;
@@ -440,44 +532,11 @@
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.Btn_close_Click);
             // 
-            // label_NoAdmin
-            // 
-            this.label_NoAdmin.AutoSize = true;
-            this.label_NoAdmin.Location = new System.Drawing.Point(8, 452);
-            this.label_NoAdmin.Name = "label_NoAdmin";
-            this.label_NoAdmin.Size = new System.Drawing.Size(303, 60);
-            this.label_NoAdmin.TabIndex = 5;
-            this.label_NoAdmin.Text = "Sorry! You don\'t have admin rights, or the\r\napplication failed to launch as one, " +
-    "please\r\ntry to run the app as administrator!";
-            this.label_NoAdmin.Visible = false;
-            // 
-            // label12
-            // 
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label12.Location = new System.Drawing.Point(0, 360);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(350, 2);
-            this.label12.TabIndex = 19;
-            // 
-            // check_HideDonate
-            // 
-            this.check_HideDonate.AutoSize = true;
-            this.check_HideDonate.Checked = true;
-            this.check_HideDonate.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_HideDonate.Location = new System.Drawing.Point(6, 370);
-            this.check_HideDonate.Name = "check_HideDonate";
-            this.check_HideDonate.Size = new System.Drawing.Size(307, 24);
-            this.check_HideDonate.TabIndex = 20;
-            this.check_HideDonate.Text = "Show donation button on main window";
-            this.check_HideDonate.UseVisualStyleBackColor = true;
-            this.check_HideDonate.CheckedChanged += new System.EventHandler(this.Check_HideDonate_CheckedChanged);
-            // 
             // OptionsForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(748, 524);
+            this.ClientSize = new System.Drawing.Size(748, 594);
             this.ControlBox = false;
-            this.Controls.Add(this.label_NoAdmin);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.btn_apply);
             this.Controls.Add(this.groupBox1);
@@ -489,6 +548,8 @@
             this.ShowInTaskbar = false;
             this.Text = "Options";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -496,7 +557,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numeric_clearAfter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_notifTimeout)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -538,5 +598,10 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox check_HideDonate;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RichTextBox txt_updateInfo;
+        private System.Windows.Forms.Button btn_about;
+        private System.Windows.Forms.Button btn_checkForUpdates;
+        private System.Windows.Forms.CheckBox check_UpdateOnStartup;
     }
 }

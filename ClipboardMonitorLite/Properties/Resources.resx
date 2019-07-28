@@ -169,4 +169,8 @@
   <data name="Title_DonateButtonHide" xml:space="preserve">
     <value>Hiding donation button</value>
   </data>
+  <data name="url_GitHub_Update" xml:space="preserve">
+    <value>https://github.com/SolluxKarkat/ClipboardMonitorLite</value>
+    <comment>URL for Squirrel to use for updates and new releases</comment>
+  </data>
 </root>

@@ -169,7 +169,7 @@ namespace ClipboardMonitorLite.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool ReplaceFile {
             get {
                 return ((bool)(this["ReplaceFile"]));
@@ -205,7 +205,7 @@ namespace ClipboardMonitorLite.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool MinimizeOnClose {
             get {
                 return ((bool)(this["MinimizeOnClose"]));
@@ -217,7 +217,7 @@ namespace ClipboardMonitorLite.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Minimized")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
         public global::System.Windows.Forms.FormWindowState FormStartState {
             get {
                 return ((global::System.Windows.Forms.FormWindowState)(this["FormStartState"]));
@@ -248,6 +248,18 @@ namespace ClipboardMonitorLite.Properties {
             }
             set {
                 this["FirstTimeHiding"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AutoCheckUpdates {
+            get {
+                return ((bool)(this["AutoCheckUpdates"]));
+            }
+            set {
+                this["AutoCheckUpdates"] = value;
             }
         }
     }

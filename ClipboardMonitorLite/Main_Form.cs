@@ -21,12 +21,13 @@ namespace ClipboardMonitorLite
             autoRunApplication = new StartWithWindows();
             @virtual = new VirtualClipboard();
             clipboardAction = new ClipboardAction(@virtual);
+            file = new FileOperation("");
             if (Properties.Settings.Default.SaveFileLocation.Equals(string.Empty))
             {
                 Properties.Settings.Default.SaveFileLocation = Directory.GetCurrentDirectory()
                     + $"/{file.Format()}";
             }
-            file = new FileOperation(Properties.Settings.Default.SaveFileLocation);
+            file.FilePath = Properties.Settings.Default.SaveFileLocation;
             InitializeComponent();
             InitSettings();
             

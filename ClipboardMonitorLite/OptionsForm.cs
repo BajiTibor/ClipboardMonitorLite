@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reflection;
+using System.Resources;
 using System.Windows.Forms;
 
 namespace ClipboardMonitorLite
@@ -6,11 +8,15 @@ namespace ClipboardMonitorLite
     public partial class OptionsForm : Form
     {
         private Updates updates;
+        private ResourceManager resManager;
         public OptionsForm()
         {
+            resManager = new ResourceManager($"ClipboardMonitorLite.lang_{Properties.Settings.Default.CurrentLanguage}",
+                Assembly.GetExecutingAssembly());
             updates = new Updates();
             InitializeComponent();
             BindAllProperties();
+            SetLanguage();
             if (!check_openWithWindows.Enabled)
                 label_NoAdmin.Visible = true;
 
@@ -91,13 +97,16 @@ namespace ClipboardMonitorLite
             check_UpdateOnStartup.DataBindings.Add("Checked", Properties.Settings.Default, "AutoCheckUpdates",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            label_version.Text = $"Software Version: {updates.GetVersionNumber()}";
+            combo_lang.DataBindings.Add("Text", Properties.Settings.Default, "CurrentLanguage",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            label_version.Text = $"{resManager.GetString("Label_Version")} {updates.GetVersionNumber()}";
         }
 
         private void Btn_browse_Click(object sender, EventArgs e)
         {
-            saveFileDialog.Filter = "Text file|*.txt";
-            saveFileDialog.Title = "Save history as text file";
+            saveFileDialog.Filter = resManager.GetString("File_TextFile");
+            saveFileDialog.Title = resManager.GetString("SaveAsTextFile");
             saveFileDialog.ShowDialog();
 
             if (!saveFileDialog.FileName.Equals(string.Empty))
@@ -147,10 +156,50 @@ namespace ClipboardMonitorLite
         {
             if (Properties.Settings.Default.FirstTimeHiding)
             {
-                MessageBox.Show(Constants.DonateButtonHideInfo, Constants.Title_DonateButtonHide,
+                MessageBox.Show(resManager.GetString("MsgBox_DonateHide"), resManager.GetString("MsgBox_Title_DonateHide"),
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Properties.Settings.Default.FirstTimeHiding = false;
             }
+        }
+
+        private void Combo_lang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetLanguage();
+        }
+
+        private void SetLanguage()
+        {
+            resManager = new ResourceManager($"ClipboardMonitorLite.lang_{Properties.Settings.Default.CurrentLanguage}",
+                Assembly.GetExecutingAssembly());
+            Text = resManager.GetString("Options_Title");
+            groupBox_General.Text = resManager.GetString("GroupBox_General");
+            groupBox_Behaviour.Text = resManager.GetString("GroupBox_BehaviourAndVisuals");
+            groupBox_SaveSettings.Text = resManager.GetString("GroupBox_SaveToFileSettings");
+            groupBox_Update.Text = resManager.GetString("GroupBox_UpdateAndCurrentVersion");
+            check_UseWhiteIcon.Text = resManager.GetString("Check_UseWhiteIcon");
+            check_NotifyOfCopy.Text = resManager.GetString("Check_NotifyOfCopy");
+            check_SaveToFile.Text = resManager.GetString("Check_SaveToFile");
+            check_AutoClearHistory.Text = resManager.GetString("Check_AutoClearClipboard");
+            check_openWithWindows.Text = resManager.GetString("Check_OpenWithWin");
+            check_StartMinimized.Text = resManager.GetString("Check_StartMinimized");
+            check_HideDonate.Text = resManager.GetString("Check_ShowDonation");
+            check_writeInRealTime.Text = resManager.GetString("Check_WriteInRealTime");
+            check_UpdateOnStartup.Text = resManager.GetString("Check_UpdateOnStartup");
+            label_ShowNotificationFor.Text = resManager.GetString("Label_ShowNotificationFor");
+            label_every.Text = resManager.GetString("Label_Every");
+            label_WhenMainWinClosed.Text = resManager.GetString("Label_WhenMainWindowClosed");
+            label_Lang.Text = resManager.GetString("Label_Lang");
+            label_FileLocation.Text = resManager.GetString("Label_FileLocation");
+            label_WriteRealTimeInfo.Text = resManager.GetString("Label_WriteRealTimeInfo");
+            radio_MinimizeOnClose.Text = resManager.GetString("Radio_Minimize");
+            radio_ExitOnClose.Text = resManager.GetString("Radio_ExitApp");
+            radio_append.Text = resManager.GetString("Radio_Append");
+            radio_replace.Text = resManager.GetString("Radio_EmptyAndReplace");
+            btn_checkForUpdates.Text = resManager.GetString("Btn_CheckForUpdates");
+            btn_about.Text = resManager.GetString("Btn_About");
+            btn_browse.Text = resManager.GetString("Btn_Browse");
+            btn_apply.Text = resManager.GetString("Btn_Apply");
+            btn_close.Text = resManager.GetString("Btn_Close");
         }
     }
 }

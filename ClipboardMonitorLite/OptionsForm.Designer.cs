@@ -29,27 +29,29 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsForm));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox_General = new System.Windows.Forms.GroupBox();
+            this.groupBox_Update = new System.Windows.Forms.GroupBox();
             this.btn_about = new System.Windows.Forms.Button();
             this.btn_checkForUpdates = new System.Windows.Forms.Button();
             this.check_UpdateOnStartup = new System.Windows.Forms.CheckBox();
             this.txt_updateInfo = new System.Windows.Forms.RichTextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox_SaveSettings = new System.Windows.Forms.GroupBox();
+            this.label_WriteRealTimeInfo = new System.Windows.Forms.Label();
             this.check_writeInRealTime = new System.Windows.Forms.CheckBox();
             this.radio_replace = new System.Windows.Forms.RadioButton();
             this.radio_append = new System.Windows.Forms.RadioButton();
             this.btn_browse = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label_FileLocation = new System.Windows.Forms.Label();
             this.txt_FileLocation = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label_NoAdmin = new System.Windows.Forms.Label();
+            this.groupBox_Behaviour = new System.Windows.Forms.GroupBox();
+            this.combo_lang = new System.Windows.Forms.ComboBox();
+            this.label_Lang = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.check_HideDonate = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
             this.radio_ExitOnClose = new System.Windows.Forms.RadioButton();
             this.radio_MinimizeOnClose = new System.Windows.Forms.RadioButton();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label_WhenMainWinClosed = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.check_StartMinimized = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,49 +62,50 @@
             this.check_openWithWindows = new System.Windows.Forms.CheckBox();
             this.combo_timeFormat = new System.Windows.Forms.ComboBox();
             this.numeric_clearAfter = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_every = new System.Windows.Forms.Label();
             this.check_AutoClearHistory = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_ShowNotificationFor = new System.Windows.Forms.Label();
             this.numeric_notifTimeout = new System.Windows.Forms.NumericUpDown();
             this.check_SaveToFile = new System.Windows.Forms.CheckBox();
             this.check_NotifyOfCopy = new System.Windows.Forms.CheckBox();
             this.check_UseWhiteIcon = new System.Windows.Forms.CheckBox();
+            this.label_NoAdmin = new System.Windows.Forms.Label();
             this.btn_apply = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.label_version = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBox_General.SuspendLayout();
+            this.groupBox_Update.SuspendLayout();
+            this.groupBox_SaveSettings.SuspendLayout();
+            this.groupBox_Behaviour.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_clearAfter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_notifTimeout)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupBox_General
             // 
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(720, 507);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "General";
+            this.groupBox_General.Controls.Add(this.groupBox_Update);
+            this.groupBox_General.Controls.Add(this.groupBox_SaveSettings);
+            this.groupBox_General.Controls.Add(this.groupBox_Behaviour);
+            this.groupBox_General.Location = new System.Drawing.Point(12, 12);
+            this.groupBox_General.Name = "groupBox_General";
+            this.groupBox_General.Size = new System.Drawing.Size(720, 561);
+            this.groupBox_General.TabIndex = 0;
+            this.groupBox_General.TabStop = false;
+            this.groupBox_General.Text = "General";
             // 
-            // groupBox3
+            // groupBox_Update
             // 
-            this.groupBox3.Controls.Add(this.btn_about);
-            this.groupBox3.Controls.Add(this.btn_checkForUpdates);
-            this.groupBox3.Controls.Add(this.check_UpdateOnStartup);
-            this.groupBox3.Controls.Add(this.txt_updateInfo);
-            this.groupBox3.Location = new System.Drawing.Point(362, 245);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(350, 256);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Update and current version";
+            this.groupBox_Update.Controls.Add(this.btn_about);
+            this.groupBox_Update.Controls.Add(this.btn_checkForUpdates);
+            this.groupBox_Update.Controls.Add(this.check_UpdateOnStartup);
+            this.groupBox_Update.Controls.Add(this.txt_updateInfo);
+            this.groupBox_Update.Location = new System.Drawing.Point(362, 245);
+            this.groupBox_Update.Name = "groupBox_Update";
+            this.groupBox_Update.Size = new System.Drawing.Size(350, 256);
+            this.groupBox_Update.TabIndex = 2;
+            this.groupBox_Update.TabStop = false;
+            this.groupBox_Update.Text = "Update and current version";
             // 
             // btn_about
             // 
@@ -141,33 +144,32 @@
             this.txt_updateInfo.ReadOnly = true;
             this.txt_updateInfo.Size = new System.Drawing.Size(338, 114);
             this.txt_updateInfo.TabIndex = 0;
-            this.txt_updateInfo.Text = "This is a test change to see if squirrel actually updates now or not.";
+            this.txt_updateInfo.Text = "";
             // 
-            // groupBox4
+            // groupBox_SaveSettings
             // 
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.check_writeInRealTime);
-            this.groupBox4.Controls.Add(this.radio_replace);
-            this.groupBox4.Controls.Add(this.radio_append);
-            this.groupBox4.Controls.Add(this.btn_browse);
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.txt_FileLocation);
-            this.groupBox4.Location = new System.Drawing.Point(362, 25);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(350, 217);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Save to file settings";
+            this.groupBox_SaveSettings.Controls.Add(this.label_WriteRealTimeInfo);
+            this.groupBox_SaveSettings.Controls.Add(this.check_writeInRealTime);
+            this.groupBox_SaveSettings.Controls.Add(this.radio_replace);
+            this.groupBox_SaveSettings.Controls.Add(this.radio_append);
+            this.groupBox_SaveSettings.Controls.Add(this.btn_browse);
+            this.groupBox_SaveSettings.Controls.Add(this.label_FileLocation);
+            this.groupBox_SaveSettings.Controls.Add(this.txt_FileLocation);
+            this.groupBox_SaveSettings.Location = new System.Drawing.Point(362, 25);
+            this.groupBox_SaveSettings.Name = "groupBox_SaveSettings";
+            this.groupBox_SaveSettings.Size = new System.Drawing.Size(350, 217);
+            this.groupBox_SaveSettings.TabIndex = 1;
+            this.groupBox_SaveSettings.TabStop = false;
+            this.groupBox_SaveSettings.Text = "Save to file settings";
             // 
-            // label8
+            // label_WriteRealTimeInfo
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(33, 147);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(274, 60);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "If Write file in real time isn\'t selected,\r\nthe file will be accessed and written" +
-    " to\r\nonly when the application exits.";
+            this.label_WriteRealTimeInfo.AutoSize = true;
+            this.label_WriteRealTimeInfo.Location = new System.Drawing.Point(33, 147);
+            this.label_WriteRealTimeInfo.Name = "label_WriteRealTimeInfo";
+            this.label_WriteRealTimeInfo.Size = new System.Drawing.Size(81, 20);
+            this.label_WriteRealTimeInfo.TabIndex = 6;
+            this.label_WriteRealTimeInfo.Text = "labExplain\r\n";
             // 
             // check_writeInRealTime
             // 
@@ -215,14 +217,14 @@
             this.btn_browse.UseVisualStyleBackColor = true;
             this.btn_browse.Click += new System.EventHandler(this.Btn_browse_Click);
             // 
-            // label7
+            // label_FileLocation
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 20);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "File location";
+            this.label_FileLocation.AutoSize = true;
+            this.label_FileLocation.Location = new System.Drawing.Point(6, 25);
+            this.label_FileLocation.Name = "label_FileLocation";
+            this.label_FileLocation.Size = new System.Drawing.Size(93, 20);
+            this.label_FileLocation.TabIndex = 1;
+            this.label_FileLocation.Text = "File location";
             // 
             // txt_FileLocation
             // 
@@ -232,48 +234,70 @@
             this.txt_FileLocation.Size = new System.Drawing.Size(254, 26);
             this.txt_FileLocation.TabIndex = 0;
             // 
-            // groupBox2
+            // groupBox_Behaviour
             // 
-            this.groupBox2.Controls.Add(this.label_NoAdmin);
-            this.groupBox2.Controls.Add(this.check_HideDonate);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.radio_ExitOnClose);
-            this.groupBox2.Controls.Add(this.radio_MinimizeOnClose);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.check_StartMinimized);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.check_openWithWindows);
-            this.groupBox2.Controls.Add(this.combo_timeFormat);
-            this.groupBox2.Controls.Add(this.numeric_clearAfter);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.check_AutoClearHistory);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.numeric_notifTimeout);
-            this.groupBox2.Controls.Add(this.check_SaveToFile);
-            this.groupBox2.Controls.Add(this.check_NotifyOfCopy);
-            this.groupBox2.Controls.Add(this.check_UseWhiteIcon);
-            this.groupBox2.Location = new System.Drawing.Point(6, 25);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(350, 476);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Behaviour and visuals";
+            this.groupBox_Behaviour.Controls.Add(this.combo_lang);
+            this.groupBox_Behaviour.Controls.Add(this.label_Lang);
+            this.groupBox_Behaviour.Controls.Add(this.label13);
+            this.groupBox_Behaviour.Controls.Add(this.check_HideDonate);
+            this.groupBox_Behaviour.Controls.Add(this.label12);
+            this.groupBox_Behaviour.Controls.Add(this.radio_ExitOnClose);
+            this.groupBox_Behaviour.Controls.Add(this.radio_MinimizeOnClose);
+            this.groupBox_Behaviour.Controls.Add(this.label_WhenMainWinClosed);
+            this.groupBox_Behaviour.Controls.Add(this.label10);
+            this.groupBox_Behaviour.Controls.Add(this.check_StartMinimized);
+            this.groupBox_Behaviour.Controls.Add(this.label9);
+            this.groupBox_Behaviour.Controls.Add(this.label6);
+            this.groupBox_Behaviour.Controls.Add(this.label5);
+            this.groupBox_Behaviour.Controls.Add(this.label4);
+            this.groupBox_Behaviour.Controls.Add(this.label3);
+            this.groupBox_Behaviour.Controls.Add(this.check_openWithWindows);
+            this.groupBox_Behaviour.Controls.Add(this.combo_timeFormat);
+            this.groupBox_Behaviour.Controls.Add(this.numeric_clearAfter);
+            this.groupBox_Behaviour.Controls.Add(this.label_every);
+            this.groupBox_Behaviour.Controls.Add(this.check_AutoClearHistory);
+            this.groupBox_Behaviour.Controls.Add(this.label_ShowNotificationFor);
+            this.groupBox_Behaviour.Controls.Add(this.numeric_notifTimeout);
+            this.groupBox_Behaviour.Controls.Add(this.check_SaveToFile);
+            this.groupBox_Behaviour.Controls.Add(this.check_NotifyOfCopy);
+            this.groupBox_Behaviour.Controls.Add(this.check_UseWhiteIcon);
+            this.groupBox_Behaviour.Location = new System.Drawing.Point(6, 25);
+            this.groupBox_Behaviour.Name = "groupBox_Behaviour";
+            this.groupBox_Behaviour.Size = new System.Drawing.Size(350, 530);
+            this.groupBox_Behaviour.TabIndex = 1;
+            this.groupBox_Behaviour.TabStop = false;
+            this.groupBox_Behaviour.Text = "Behaviour and visuals";
             // 
-            // label_NoAdmin
+            // combo_lang
             // 
-            this.label_NoAdmin.AutoSize = true;
-            this.label_NoAdmin.Location = new System.Drawing.Point(10, 397);
-            this.label_NoAdmin.Name = "label_NoAdmin";
-            this.label_NoAdmin.Size = new System.Drawing.Size(303, 60);
-            this.label_NoAdmin.TabIndex = 5;
-            this.label_NoAdmin.Text = "Sorry! You don\'t have admin rights, or the\r\napplication failed to launch as one, " +
-    "please\r\ntry to run the app as administrator!";
-            this.label_NoAdmin.Visible = false;
+            this.combo_lang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo_lang.FormattingEnabled = true;
+            this.combo_lang.Items.AddRange(new object[] {
+            "en",
+            "hu",
+            "no"});
+            this.combo_lang.Location = new System.Drawing.Point(103, 413);
+            this.combo_lang.Name = "combo_lang";
+            this.combo_lang.Size = new System.Drawing.Size(116, 28);
+            this.combo_lang.TabIndex = 23;
+            this.combo_lang.SelectedIndexChanged += new System.EventHandler(this.Combo_lang_SelectedIndexChanged);
+            // 
+            // label_Lang
+            // 
+            this.label_Lang.AutoSize = true;
+            this.label_Lang.Location = new System.Drawing.Point(2, 416);
+            this.label_Lang.Name = "label_Lang";
+            this.label_Lang.Size = new System.Drawing.Size(60, 20);
+            this.label_Lang.TabIndex = 22;
+            this.label_Lang.Text = "label14";
+            // 
+            // label13
+            // 
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label13.Location = new System.Drawing.Point(0, 400);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(350, 2);
+            this.label13.TabIndex = 21;
             // 
             // check_HideDonate
             // 
@@ -319,14 +343,14 @@
             this.radio_MinimizeOnClose.UseVisualStyleBackColor = true;
             this.radio_MinimizeOnClose.CheckedChanged += new System.EventHandler(this.Radio_MinimizeOnClose_CheckedChanged);
             // 
-            // label11
+            // label_WhenMainWinClosed
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 282);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(230, 20);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "When I close the main Window:";
+            this.label_WhenMainWinClosed.AutoSize = true;
+            this.label_WhenMainWinClosed.Location = new System.Drawing.Point(6, 282);
+            this.label_WhenMainWinClosed.Name = "label_WhenMainWinClosed";
+            this.label_WhenMainWinClosed.Size = new System.Drawing.Size(230, 20);
+            this.label_WhenMainWinClosed.TabIndex = 16;
+            this.label_WhenMainWinClosed.Text = "When I close the main Window:";
             // 
             // label10
             // 
@@ -434,14 +458,14 @@
             0,
             0});
             // 
-            // label2
+            // label_every
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 187);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Every";
+            this.label_every.AutoSize = true;
+            this.label_every.Location = new System.Drawing.Point(25, 187);
+            this.label_every.Name = "label_every";
+            this.label_every.Size = new System.Drawing.Size(48, 20);
+            this.label_every.TabIndex = 6;
+            this.label_every.Text = "Every";
             // 
             // check_AutoClearHistory
             // 
@@ -453,14 +477,14 @@
             this.check_AutoClearHistory.Text = "Automatically clear my clipboard history";
             this.check_AutoClearHistory.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // label_ShowNotificationFor
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Show notification for: (seconds)";
+            this.label_ShowNotificationFor.AutoSize = true;
+            this.label_ShowNotificationFor.Location = new System.Drawing.Point(25, 87);
+            this.label_ShowNotificationFor.Name = "label_ShowNotificationFor";
+            this.label_ShowNotificationFor.Size = new System.Drawing.Size(231, 20);
+            this.label_ShowNotificationFor.TabIndex = 4;
+            this.label_ShowNotificationFor.Text = "Show notification for: (seconds)";
             // 
             // numeric_notifTimeout
             // 
@@ -514,9 +538,20 @@
             this.check_UseWhiteIcon.Text = "Use white icon in the system tray";
             this.check_UseWhiteIcon.UseVisualStyleBackColor = true;
             // 
+            // label_NoAdmin
+            // 
+            this.label_NoAdmin.AutoSize = true;
+            this.label_NoAdmin.Location = new System.Drawing.Point(93, 576);
+            this.label_NoAdmin.Name = "label_NoAdmin";
+            this.label_NoAdmin.Size = new System.Drawing.Size(303, 60);
+            this.label_NoAdmin.TabIndex = 5;
+            this.label_NoAdmin.Text = "Sorry! You don\'t have admin rights, or the\r\napplication failed to launch as one, " +
+    "please\r\ntry to run the app as administrator!";
+            this.label_NoAdmin.Visible = false;
+            // 
             // btn_apply
             // 
-            this.btn_apply.Location = new System.Drawing.Point(492, 529);
+            this.btn_apply.Location = new System.Drawing.Point(492, 579);
             this.btn_apply.Name = "btn_apply";
             this.btn_apply.Size = new System.Drawing.Size(117, 53);
             this.btn_apply.TabIndex = 3;
@@ -526,7 +561,7 @@
             // 
             // btn_close
             // 
-            this.btn_close.Location = new System.Drawing.Point(615, 529);
+            this.btn_close.Location = new System.Drawing.Point(615, 579);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(117, 53);
             this.btn_close.TabIndex = 4;
@@ -537,7 +572,7 @@
             // label_version
             // 
             this.label_version.AutoSize = true;
-            this.label_version.Location = new System.Drawing.Point(14, 562);
+            this.label_version.Location = new System.Drawing.Point(14, 612);
             this.label_version.Name = "label_version";
             this.label_version.Size = new System.Drawing.Size(60, 20);
             this.label_version.TabIndex = 5;
@@ -546,12 +581,13 @@
             // OptionsForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(748, 594);
+            this.ClientSize = new System.Drawing.Size(748, 644);
             this.ControlBox = false;
+            this.Controls.Add(this.label_NoAdmin);
             this.Controls.Add(this.label_version);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.btn_apply);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox_General);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -559,13 +595,13 @@
             this.Name = "OptionsForm";
             this.ShowInTaskbar = false;
             this.Text = "Options";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBox_General.ResumeLayout(false);
+            this.groupBox_Update.ResumeLayout(false);
+            this.groupBox_Update.PerformLayout();
+            this.groupBox_SaveSettings.ResumeLayout(false);
+            this.groupBox_SaveSettings.PerformLayout();
+            this.groupBox_Behaviour.ResumeLayout(false);
+            this.groupBox_Behaviour.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_clearAfter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_notifTimeout)).EndInit();
             this.ResumeLayout(false);
@@ -575,17 +611,17 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox_General;
+        private System.Windows.Forms.GroupBox groupBox_SaveSettings;
+        private System.Windows.Forms.GroupBox groupBox_Behaviour;
+        private System.Windows.Forms.Label label_ShowNotificationFor;
         private System.Windows.Forms.NumericUpDown numeric_notifTimeout;
         private System.Windows.Forms.CheckBox check_SaveToFile;
         private System.Windows.Forms.CheckBox check_NotifyOfCopy;
         private System.Windows.Forms.CheckBox check_UseWhiteIcon;
         private System.Windows.Forms.ComboBox combo_timeFormat;
         private System.Windows.Forms.NumericUpDown numeric_clearAfter;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_every;
         private System.Windows.Forms.CheckBox check_AutoClearHistory;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -595,9 +631,9 @@
         private System.Windows.Forms.RadioButton radio_replace;
         private System.Windows.Forms.RadioButton radio_append;
         private System.Windows.Forms.Button btn_browse;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label_FileLocation;
         private System.Windows.Forms.TextBox txt_FileLocation;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label_WriteRealTimeInfo;
         private System.Windows.Forms.CheckBox check_writeInRealTime;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btn_apply;
@@ -608,14 +644,17 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.RadioButton radio_ExitOnClose;
         private System.Windows.Forms.RadioButton radio_MinimizeOnClose;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label_WhenMainWinClosed;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox check_HideDonate;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox_Update;
         private System.Windows.Forms.RichTextBox txt_updateInfo;
         private System.Windows.Forms.Button btn_about;
         private System.Windows.Forms.Button btn_checkForUpdates;
         private System.Windows.Forms.CheckBox check_UpdateOnStartup;
         private System.Windows.Forms.Label label_version;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox combo_lang;
+        private System.Windows.Forms.Label label_Lang;
     }
 }

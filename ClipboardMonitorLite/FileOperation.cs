@@ -12,20 +12,20 @@ namespace ClipboardMonitorLite
             FilePath = filepath;
         }
 
-        public void WriteToFile(VirtualClipboard clipboardContent)
+        public async void WriteToFile(VirtualClipboard clipboardContent)
         {
                 if (Properties.Settings.Default.AppendFile)
                 {
                     using (StreamWriter sw = File.AppendText(FilePath))
                     {
-                        sw.WriteLineAsync(clipboardContent.LastCopied);
+                        await sw.WriteLineAsync(clipboardContent.LastCopied);
                     }
                 }
                 else
                 {
                     using (StreamWriter sw = new StreamWriter(FilePath))
                     {
-                        sw.WriteLineAsync(clipboardContent.LastCopied);
+                        await sw.WriteLineAsync(clipboardContent.LastCopied);
                     }
                 }
 

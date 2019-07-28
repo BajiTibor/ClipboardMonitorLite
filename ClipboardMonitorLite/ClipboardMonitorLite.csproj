@@ -120,6 +120,21 @@
     <Compile Include="Donate.cs" />
     <Compile Include="FileOperation.cs" />
     <Compile Include="FormActions.cs" />
+    <Compile Include="lang_no.Designer.cs">
+      <DependentUpon>lang_no.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="lang_en.Designer.cs">
+      <DependentUpon>lang_en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="lang_hu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lang_hu.resx</DependentUpon>
+    </Compile>
     <Compile Include="Main_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +153,18 @@
     <Compile Include="TimeCalculate.cs" />
     <Compile Include="Updates.cs" />
     <Compile Include="VirtualClipboard.cs" />
+    <EmbeddedResource Include="lang_no.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_no.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lang_en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lang_hu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_hu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,9 +203,6 @@
     <None Include="Resources\icon_white.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Paypal_button1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\paypal_resized.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -192,12 +216,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\BuyMeACoffee_Stroke%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buymeacoffee.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\buymc2.png" />

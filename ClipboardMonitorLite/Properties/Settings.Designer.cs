@@ -262,5 +262,17 @@ namespace ClipboardMonitorLite.Properties {
                 this["AutoCheckUpdates"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("en")]
+        public string CurrentLanguage {
+            get {
+                return ((string)(this["CurrentLanguage"]));
+            }
+            set {
+                this["CurrentLanguage"] = value;
+            }
+        }
     }
 }

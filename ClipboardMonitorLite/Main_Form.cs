@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.IO;
+using System.Resources;
+using System.Reflection;
 
 namespace ClipboardMonitorLite
 {
@@ -15,8 +17,11 @@ namespace ClipboardMonitorLite
         private FileOperation file;
         private StartWithWindows autoRunApplication;
         private Donate donate;
+        private ResourceManager resManager;
         public MainForm()
         {
+            resManager = new ResourceManager($"ClipboardMonitorLite.lang_{Properties.Settings.Default.CurrentLanguage}", 
+                Assembly.GetExecutingAssembly());
             updates = new Updates();
             donate = new Donate();
             formActions = new FormActions();
@@ -46,7 +51,7 @@ namespace ClipboardMonitorLite
             btn_Donate.DataBindings.Add("Visible", Properties.Settings.Default, "DisplayDonate",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-
+            SetLanguage();
 
             ClipChange.ClipboardUpdate += ClipChange_ClipboardUpdate;
             btn_EmptyClipboard.Click += clipboardAction.ClearClip_Click;
@@ -73,8 +78,8 @@ namespace ClipboardMonitorLite
 
                 if (Properties.Settings.Default.NotifyCopy)
                 {
-                    notificationIcon.BalloonTipText = Constants.clipChange;
-                    notificationIcon.BalloonTipTitle = Constants.clipChangeTitle;
+                    notificationIcon.BalloonTipText = resManager.GetString("Notif_ItemCopied");
+                    notificationIcon.BalloonTipTitle = resManager.GetString("Notif_Title_ItemCopied");
                     notificationIcon.ShowBalloonTip(Properties.Settings.Default.NotificationTimeout);
                 }
             }
@@ -163,6 +168,7 @@ namespace ClipboardMonitorLite
             Form optionsForm = new OptionsForm();
             optionsForm.ShowDialog();
             InitSettings();
+            SetLanguage();
         }
 
         private void TimerEmptyClipboard_Tick(object sender, EventArgs e)
@@ -182,5 +188,27 @@ namespace ClipboardMonitorLite
                 Properties.Settings.Default.FirstTimeUse = false;
             }
         }
+
+        private void SetLanguage()
+        {
+            resManager = new ResourceManager($"ClipboardMonitorLite.lang_{Properties.Settings.Default.CurrentLanguage}",
+                Assembly.GetExecutingAssembly());
+            Text = resManager.GetString("Main_Title");
+            groupBox_copiedItems.Text = resManager.GetString("GroupBox_CopiedItems");
+            groupBox_Actions.Text = resManager.GetString("GroupBox_Actions");
+            btn_EmptyClipboard.Text = resManager.GetString("Button_EmptyClipboard");
+            btn_ClearHistory.Text = resManager.GetString("Button_EmptyHistory");
+            btn_options.Text = resManager.GetString("Button_MoreOptions");
+            restoreToolStripMenuItem.Text = resManager.GetString("Menu_Restore");
+            emptyClipboardToolStripMenuItem.Text = resManager.GetString("Menu_EmptyClipboard");
+            emptyHistoryToolStripMenuItem.Text = resManager.GetString("Menu_EmptyHistory");
+            exitToolStripMenuItem.Text = resManager.GetString("Menu_Exit");
+            notificationIcon.Text = resManager.GetString("Main_Title");
+            notificationIcon.BalloonTipText = resManager.GetString("Notif_AppStillRunning");
+            notificationIcon.BalloonTipTitle = resManager.GetString("Notif_Title_AppStillRunning");
+        }
+
     }
+
+    
 }

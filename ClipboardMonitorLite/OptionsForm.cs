@@ -90,6 +90,8 @@ namespace ClipboardMonitorLite
 
             check_UpdateOnStartup.DataBindings.Add("Checked", Properties.Settings.Default, "AutoCheckUpdates",
                 true, DataSourceUpdateMode.OnPropertyChanged);
+
+            label_version.Text = $"Software Version: {updates.GetVersionNumber()}";
         }
 
         private void Btn_browse_Click(object sender, EventArgs e)

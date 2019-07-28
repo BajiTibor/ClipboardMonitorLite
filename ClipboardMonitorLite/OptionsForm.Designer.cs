@@ -70,6 +70,7 @@
             this.btn_apply = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.label_version = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -532,11 +533,21 @@
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.Btn_close_Click);
             // 
+            // label_version
+            // 
+            this.label_version.AutoSize = true;
+            this.label_version.Location = new System.Drawing.Point(14, 562);
+            this.label_version.Name = "label_version";
+            this.label_version.Size = new System.Drawing.Size(60, 20);
+            this.label_version.TabIndex = 5;
+            this.label_version.Text = "label13";
+            // 
             // OptionsForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(748, 594);
             this.ControlBox = false;
+            this.Controls.Add(this.label_version);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.btn_apply);
             this.Controls.Add(this.groupBox1);
@@ -557,6 +568,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numeric_clearAfter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_notifTimeout)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -603,5 +615,6 @@
         private System.Windows.Forms.Button btn_about;
         private System.Windows.Forms.Button btn_checkForUpdates;
         private System.Windows.Forms.CheckBox check_UpdateOnStartup;
+        private System.Windows.Forms.Label label_version;
     }
 }

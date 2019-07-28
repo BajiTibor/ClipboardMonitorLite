@@ -1,12 +1,14 @@
 ﻿using Squirrel;
 using System;
+using System.Diagnostics;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace ClipboardMonitorLite
 {
     public class Updates
     {
-        public async Task UpdateApplicationGitHub()
+        private async Task UpdateApplicationGitHub()
         {
             using (var manager = UpdateManager.GitHubUpdateManager(Constants.UpdateURL))
             {
@@ -14,17 +16,17 @@ namespace ClipboardMonitorLite
             }
         }
 
-        private async Task CheckForUpdates()
-        {
-            using (var manager = new UpdateManager(@"C:\temp\releases"))
-            {
-                await manager.UpdateApp();
-            }
-        }
-
         public async void Btn_checkForUpdates_Click(object sender, EventArgs e)
         {
-            await CheckForUpdates();
+            await UpdateApplicationGitHub();
+        }
+
+        public string GetVersionNumber()
+        {
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
+
+            return versionInfo.FileVersion;
         }
     }
 }

@@ -106,11 +106,12 @@
             // 
             // btn_about
             // 
+            this.btn_about.Enabled = false;
             this.btn_about.Location = new System.Drawing.Point(214, 148);
             this.btn_about.Name = "btn_about";
             this.btn_about.Size = new System.Drawing.Size(130, 50);
             this.btn_about.TabIndex = 3;
-            this.btn_about.Text = "Check for updates";
+            this.btn_about.Text = "About page";
             this.btn_about.UseVisualStyleBackColor = true;
             // 
             // btn_checkForUpdates

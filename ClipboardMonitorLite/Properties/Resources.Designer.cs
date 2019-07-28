@@ -70,6 +70,16 @@ namespace ClipboardMonitorLite.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buymc2 {
+            get {
+                object obj = ResourceManager.GetObject("buymc2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An item has been copied to the clipboard!.
         /// </summary>
         internal static string CopyNotification {
@@ -108,6 +118,15 @@ namespace ClipboardMonitorLite.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://ko-fi.com/emilot.
+        /// </summary>
+        internal static string Ko_fi_url {
+            get {
+                return ResourceManager.GetString("Ko_fi_url", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The application attempted to restart as administrator, but it failed. This either means that the application failed to correctly start up, or the current user does not have administrator rights! Please check More options for more information!.
         /// </summary>
         internal static string MsgBox_Error_Admin {
@@ -122,16 +141,6 @@ namespace ClipboardMonitorLite.Properties {
         internal static string NotificationEnableText {
             get {
                 return ResourceManager.GetString("NotificationEnableText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Paypal_button1 {
-            get {
-                object obj = ResourceManager.GetObject("Paypal_button1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

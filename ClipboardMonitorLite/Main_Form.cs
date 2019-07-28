@@ -6,6 +6,7 @@ namespace ClipboardMonitorLite
 {
     public partial class MainForm : Form
     {
+        private Updates updates;
         private FormActions formActions;
         private TimeCalculate timeToClear;
         private string CurrentlyCopiedItem { get; set; }
@@ -16,6 +17,7 @@ namespace ClipboardMonitorLite
         private Donate donate;
         public MainForm()
         {
+            updates = new Updates();
             donate = new Donate();
             formActions = new FormActions();
             autoRunApplication = new StartWithWindows();
@@ -33,12 +35,17 @@ namespace ClipboardMonitorLite
             
             WindowState = Properties.Settings.Default.FormStartState;
 
+            if (Properties.Settings.Default.AutoCheckUpdates)
+            {
+                updates.Update();
+            }
 
             CopiedItemBox.DataBindings.Add("Text", @virtual, "History",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
             btn_Donate.DataBindings.Add("Visible", Properties.Settings.Default, "DisplayDonate",
                 true, DataSourceUpdateMode.OnPropertyChanged);
+
 
 
             ClipChange.ClipboardUpdate += ClipChange_ClipboardUpdate;

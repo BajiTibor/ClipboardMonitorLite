@@ -12,7 +12,7 @@ namespace ClipboardMonitorLite
         public static string Title_Message_AdminErr = Properties.Resources.Title_MsgBox_Error_Admin;
         public static string DonateButtonHideInfo = Properties.Resources.DonateButtonHide;
         public static string Title_DonateButtonHide = Properties.Resources.Title_DonateButtonHide;
-        public static string PayPalLink = Properties.Resources.PayPal_Link;
+        public static string KoFiLink = Properties.Resources.Ko_fi_url;
         public static string UpdateURL = Properties.Resources.url_GitHub_Update;
     }
 }

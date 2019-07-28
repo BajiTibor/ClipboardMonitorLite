@@ -193,6 +193,15 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BuyMeACoffee_Stroke%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buymeacoffee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buymc2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

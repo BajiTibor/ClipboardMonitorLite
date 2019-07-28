@@ -54,7 +54,7 @@
             this.groupBox1.Controls.Add(this.CopiedItemBox);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(450, 370);
+            this.groupBox1.Size = new System.Drawing.Size(510, 370);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Copied items";
@@ -65,7 +65,7 @@
             this.CopiedItemBox.Location = new System.Drawing.Point(6, 25);
             this.CopiedItemBox.Name = "CopiedItemBox";
             this.CopiedItemBox.ReadOnly = true;
-            this.CopiedItemBox.Size = new System.Drawing.Size(437, 339);
+            this.CopiedItemBox.Size = new System.Drawing.Size(498, 339);
             this.CopiedItemBox.TabIndex = 0;
             this.CopiedItemBox.Text = "";
             // 
@@ -73,7 +73,7 @@
             // 
             this.btn_EmptyClipboard.Location = new System.Drawing.Point(6, 25);
             this.btn_EmptyClipboard.Name = "btn_EmptyClipboard";
-            this.btn_EmptyClipboard.Size = new System.Drawing.Size(205, 35);
+            this.btn_EmptyClipboard.Size = new System.Drawing.Size(156, 35);
             this.btn_EmptyClipboard.TabIndex = 0;
             this.btn_EmptyClipboard.Text = "Empty Clipboard";
             this.btn_EmptyClipboard.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             this.groupBox3.Controls.Add(this.btn_EmptyClipboard);
             this.groupBox3.Location = new System.Drawing.Point(18, 388);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(218, 155);
+            this.groupBox3.Size = new System.Drawing.Size(170, 155);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Actions";
@@ -94,7 +94,7 @@
             // 
             this.btn_options.Location = new System.Drawing.Point(6, 106);
             this.btn_options.Name = "btn_options";
-            this.btn_options.Size = new System.Drawing.Size(205, 35);
+            this.btn_options.Size = new System.Drawing.Size(156, 35);
             this.btn_options.TabIndex = 2;
             this.btn_options.Text = "More options";
             this.btn_options.UseVisualStyleBackColor = true;
@@ -104,7 +104,7 @@
             // 
             this.btn_ClearHistory.Location = new System.Drawing.Point(6, 66);
             this.btn_ClearHistory.Name = "btn_ClearHistory";
-            this.btn_ClearHistory.Size = new System.Drawing.Size(205, 35);
+            this.btn_ClearHistory.Size = new System.Drawing.Size(156, 35);
             this.btn_ClearHistory.TabIndex = 1;
             this.btn_ClearHistory.Text = "Empty History";
             this.btn_ClearHistory.UseVisualStyleBackColor = true;
@@ -159,10 +159,10 @@
             // 
             // btn_Donate
             // 
-            this.btn_Donate.Image = global::ClipboardMonitorLite.Properties.Resources.paypal_resized;
-            this.btn_Donate.Location = new System.Drawing.Point(297, 457);
+            this.btn_Donate.Image = global::ClipboardMonitorLite.Properties.Resources.buymc2;
+            this.btn_Donate.Location = new System.Drawing.Point(210, 440);
             this.btn_Donate.Name = "btn_Donate";
-            this.btn_Donate.Size = new System.Drawing.Size(170, 86);
+            this.btn_Donate.Size = new System.Drawing.Size(315, 70);
             this.btn_Donate.TabIndex = 4;
             this.btn_Donate.UseVisualStyleBackColor = true;
             // 
@@ -174,7 +174,7 @@
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(479, 550);
+            this.ClientSize = new System.Drawing.Size(534, 550);
             this.Controls.Add(this.btn_Donate);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);

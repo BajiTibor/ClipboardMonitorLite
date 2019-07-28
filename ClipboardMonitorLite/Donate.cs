@@ -7,7 +7,7 @@ namespace ClipboardMonitorLite
     {
         public void Btn_Donate_Click(object sender, EventArgs e)
         {
-            Process.Start(Constants.PayPalLink);
+            Process.Start(Constants.KoFiLink);
         }
     }
 }

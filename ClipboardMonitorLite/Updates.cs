@@ -21,6 +21,11 @@ namespace ClipboardMonitorLite
             await UpdateApplicationGitHub();
         }
 
+        public async void Update()
+        {
+            await UpdateApplicationGitHub();
+        }
+
         public string GetVersionNumber()
         {
             Assembly assembly = Assembly.GetExecutingAssembly();

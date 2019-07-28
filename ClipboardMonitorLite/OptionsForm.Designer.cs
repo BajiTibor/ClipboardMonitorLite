@@ -111,7 +111,7 @@
             this.btn_about.Name = "btn_about";
             this.btn_about.Size = new System.Drawing.Size(130, 50);
             this.btn_about.TabIndex = 3;
-            this.btn_about.Text = "About page";
+            this.btn_about.Text = "About";
             this.btn_about.UseVisualStyleBackColor = true;
             // 
             // btn_checkForUpdates
@@ -141,7 +141,7 @@
             this.txt_updateInfo.ReadOnly = true;
             this.txt_updateInfo.Size = new System.Drawing.Size(338, 114);
             this.txt_updateInfo.TabIndex = 0;
-            this.txt_updateInfo.Text = "";
+            this.txt_updateInfo.Text = "This is a test change to see if squirrel actually updates now or not.";
             // 
             // groupBox4
             // 

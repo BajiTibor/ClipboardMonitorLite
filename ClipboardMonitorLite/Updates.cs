@@ -10,9 +10,9 @@ namespace ClipboardMonitorLite
     {
         private async Task UpdateApplicationGitHub()
         {
-            using (var manager = UpdateManager.GitHubUpdateManager(Constants.UpdateURL))
+            using (var manager = await UpdateManager.GitHubUpdateManager(Constants.UpdateURL))
             {
-                await manager.Result.UpdateApp();
+                await manager.UpdateApp();
             }
         }
 

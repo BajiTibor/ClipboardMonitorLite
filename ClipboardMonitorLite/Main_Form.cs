@@ -10,7 +10,7 @@ namespace ClipboardMonitorLite
         private FormActions formActions;
         private TimeCalculate timeToClear;
         private string CurrentlyCopiedItem { get; set; }
-        private VirtualClipboard @virtual;
+        private VirtualClipboard virtualClipboard;
         private ClipboardAction clipboardAction;
         private FileOperation file;
         private StartWithWindows autoRunApplication;
@@ -21,8 +21,8 @@ namespace ClipboardMonitorLite
             donate = new Donate();
             formActions = new FormActions();
             autoRunApplication = new StartWithWindows();
-            @virtual = new VirtualClipboard();
-            clipboardAction = new ClipboardAction(@virtual);
+            virtualClipboard = new VirtualClipboard();
+            clipboardAction = new ClipboardAction(virtualClipboard);
             file = new FileOperation("");
             if (Properties.Settings.Default.SaveFileLocation.Equals(string.Empty))
             {
@@ -40,7 +40,7 @@ namespace ClipboardMonitorLite
                 updates.Update();
             }
 
-            CopiedItemBox.DataBindings.Add("Text", @virtual, "History",
+            CopiedItemBox.DataBindings.Add("Text", virtualClipboard, "History",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
             btn_Donate.DataBindings.Add("Visible", Properties.Settings.Default, "DisplayDonate",
@@ -63,12 +63,12 @@ namespace ClipboardMonitorLite
             if (!string.IsNullOrWhiteSpace(tempText) && tempText != CurrentlyCopiedItem)
             {
                 CurrentlyCopiedItem = tempText;
-                @virtual.LastCopied = tempText;
-                @virtual.History += ($"{CurrentlyCopiedItem}\n");
+                virtualClipboard.LastCopied = tempText;
+                virtualClipboard.History += ($"{CurrentlyCopiedItem}\n");
 
                 if (Properties.Settings.Default.WriteInRealTime)
                 {
-                    file.WriteToFile(@virtual);
+                    file.WriteToFile(virtualClipboard);
                 }
 
                 if (Properties.Settings.Default.NotifyCopy)
@@ -152,7 +152,7 @@ namespace ClipboardMonitorLite
                 Properties.Settings.Default.Save();
                 if (!Properties.Settings.Default.WriteInRealTime)
                 {
-                    file.WriteBeforeClosing(@virtual);
+                    file.WriteBeforeClosing(virtualClipboard);
                 }
                 Application.Exit();
             }

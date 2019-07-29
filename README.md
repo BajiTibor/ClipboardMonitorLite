@@ -39,7 +39,7 @@ _Current languages included:_
 - [Dave de Beer](https://steamcommunity.com/id/FlunkyDave/) (Dutch)
 - [Badguy292](https://steamcommunity.com/id/Badguy292/) (Danish)
 - [TetrarchNiko](https://steamcommunity.com/id/AveryLongRoadAhead/) (Czech)
-- [Adam Błaszczyk](https://github.com/Maissae)
+- [Adam Błaszczyk](https://github.com/Maissae) (Polish)
 
 ## Planned features
 Features ticked are already included and implemented, but some of them might only be a commit, a release will likely happen every week, depends on how fast I can work and what things I need to implement next. If you find any bug, please don't hesitate to either post it as an issue or do a PR. 

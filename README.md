@@ -14,7 +14,7 @@ The following link will take you to the latest release of the application, downl
 * Monitors the clipboard, and can fetch text as soon as you hit copy
 * Save copied text to a text file in real time, without having to paste it
 * Clear clipboard's content periodically or on demand
-* Support for 8* languages
+* Support for 9* languages
 
 _*More languages will be included in the future_
 _Current languages included:_
@@ -27,6 +27,7 @@ _Current languages included:_
 - Serbian
 - Dutch
 - Danish
+- Czech
 
 ### Special thanks to the following people for translating the application!
 
@@ -36,6 +37,7 @@ _Current languages included:_
 - Nexus (Serbian)
 - [Dave de Beer](https://steamcommunity.com/id/FlunkyDave/) (Dutch)
 - [Badguy292](https://steamcommunity.com/id/Badguy292/) (Danish)
+- [TetrarchNiko](https://steamcommunity.com/id/AveryLongRoadAhead/) (Czech)
 
 ## Planned features
 Features ticked are already included and implemented, but some of them might only be a commit, a release will likely happen every week, depends on how fast I can work and what things I need to implement next. If you find any bug, please don't hesitate to either post it as an issue or do a PR. 

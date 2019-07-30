@@ -6,18 +6,18 @@ namespace ClipboardMonitorLite
     {
         public DateTime TargetDate { get; set; }
 
-        public void CalculateToSeconds(int time, string format)
+        public void CalculateToSeconds(int time, int format)
         {
             int tempTime = 0;
             switch (format)
             {
-                case "Seconds":
+                case (int)Time.Format.Seconds:
                     tempTime = time;
                     break;
-                case "Minutes":
+                case (int)Time.Format.Minutes:
                     tempTime = time * 60;
                     break;
-                case "Hours":
+                case (int)Time.Format.Hours:
                     tempTime = time * 3600;
                     break;
                 default:

@@ -108,27 +108,27 @@ namespace ClipboardMonitorLite {
         /// <summary>
         ///   Looks up a localized string similar to Empty Clipboard.
         /// </summary>
-        internal static string Button_EmptyClipboard {
+        internal static string Btn_EmptyClipboard {
             get {
-                return ResourceManager.GetString("Button_EmptyClipboard", resourceCulture);
+                return ResourceManager.GetString("Btn_EmptyClipboard", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Empty History.
         /// </summary>
-        internal static string Button_EmptyHistory {
+        internal static string Btn_EmptyHistory {
             get {
-                return ResourceManager.GetString("Button_EmptyHistory", resourceCulture);
+                return ResourceManager.GetString("Btn_EmptyHistory", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Options.
         /// </summary>
-        internal static string Button_MoreOptions {
+        internal static string Btn_MoreOptions {
             get {
-                return ResourceManager.GetString("Button_MoreOptions", resourceCulture);
+                return ResourceManager.GetString("Btn_MoreOptions", resourceCulture);
             }
         }
         

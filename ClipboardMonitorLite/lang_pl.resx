@@ -118,170 +118,167 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Btn_About" xml:space="preserve">
-    <value>Handle om</value>
+    <value>O Programie</value>
   </data>
   <data name="Btn_Apply" xml:space="preserve">
-    <value>Bruk</value>
+    <value>Zatwierdź</value>
   </data>
   <data name="Btn_Browse" xml:space="preserve">
-    <value>Sřk</value>
+    <value>Przeglądaj</value>
   </data>
   <data name="Btn_CheckForUpdates" xml:space="preserve">
-    <value>Se etter oppdateringer</value>
+    <value>Sprawdź akutalizacje</value>
   </data>
   <data name="Btn_Close" xml:space="preserve">
-    <value>Lukk</value>
+    <value>Zamknij</value>
   </data>
   <data name="Btn_EmptyClipboard" xml:space="preserve">
-    <value>Tom utklippstavle</value>
+    <value>Wyczyść schowek</value>
   </data>
   <data name="Btn_EmptyHistory" xml:space="preserve">
-    <value>Tom historie</value>
+    <value>Wyczyść historię</value>
   </data>
   <data name="Btn_MoreOptions" xml:space="preserve">
-    <value>alternativer</value>
+    <value>Opcje</value>
   </data>
   <data name="Check_AutoClearClipboard" xml:space="preserve">
-    <value>Klar utklippstavle automatisk</value>
+    <value>Automatycznie wyczyść schowek</value>
   </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
-    <value>Gi meg beskjed hvis jeg kopierer noe</value>
+    <value>Poinformuj jeśli coś skopiuję</value>
   </data>
   <data name="Check_OpenWithWin" xml:space="preserve">
-    <value>Brukes med Windows</value>
+    <value>Otwórz za pomocą Windows</value>
   </data>
   <data name="Check_SaveToFile" xml:space="preserve">
-    <value>Lagre til fil</value>
+    <value>Zapisz do pliku</value>
   </data>
   <data name="Check_ShowDonation" xml:space="preserve">
-    <value>Vis donasjonsknapp pĺ hovedskjema</value>
+    <value>Pokaż przycisk dotacji na głównym formularzu</value>
   </data>
   <data name="Check_StartMinimized" xml:space="preserve">
-    <value>Start minimert</value>
+    <value>Uruchom zminimalizowny</value>
   </data>
   <data name="Check_UpdateOnStartup" xml:space="preserve">
-    <value>Oppdatering ved oppstart</value>
+    <value>Aktualizuj na starcie</value>
   </data>
   <data name="Check_UseWhiteIcon" xml:space="preserve">
-    <value>Bruk det hvite ikonet i system oppgavelinjen</value>
+    <value>Użyj białej ikony na pasku startowym</value>
   </data>
   <data name="Check_WriteInRealTime" xml:space="preserve">
-    <value>Skriv i sanntid</value>
+    <value>Zapisuj w czasie rzeczywistym</value>
   </data>
   <data name="ComboBox_Time_Hour" xml:space="preserve">
-    <value>Time</value>
+    <value>Godzina</value>
   </data>
   <data name="ComboBox_Time_Min" xml:space="preserve">
-    <value>Minutt</value>
+    <value>Minuta</value>
   </data>
   <data name="ComboBox_Time_Sec" xml:space="preserve">
-    <value>Sekund</value>
+    <value>Sekunda</value>
   </data>
   <data name="File_TextFile" xml:space="preserve">
-    <value>Tekstfil | * .txt</value>
+    <value>Plik tekstowy|*.txt</value>
   </data>
   <data name="GroupBox_Actions" xml:space="preserve">
-    <value>handlinger</value>
+    <value>Akcje</value>
   </data>
   <data name="GroupBox_BehaviourAndVisuals" xml:space="preserve">
-    <value>Atferd og visuelle</value>
+    <value>Zachowanie i wygląd</value>
   </data>
   <data name="GroupBox_CopiedItems" xml:space="preserve">
-    <value>Kopierte gjenstander</value>
+    <value>Skopiowane rzeczy</value>
   </data>
   <data name="GroupBox_General" xml:space="preserve">
-    <value>Generell</value>
+    <value>Ogólne</value>
   </data>
   <data name="GroupBox_SaveToFileSettings" xml:space="preserve">
-    <value>Lagre i filinnstillinger</value>
+    <value>Zapisz ustawienia do pliku</value>
   </data>
   <data name="GroupBox_UpdateAndCurrentVersion" xml:space="preserve">
-    <value>Oppdater og aktuell versjonsinfo</value>
+    <value>Aktualizacje i obecna wersja</value>
   </data>
   <data name="Label_Every" xml:space="preserve">
-    <value>Hver</value>
+    <value>Każdy</value>
   </data>
   <data name="Label_FileLocation" xml:space="preserve">
-    <value>Filplassering</value>
+    <value>Lokalizacja pliku</value>
   </data>
   <data name="Label_Lang" xml:space="preserve">
-    <value>Sprĺk</value>
+    <value>Język</value>
   </data>
   <data name="Label_NoAdminRights" xml:space="preserve">
-    <value>Unnskyld! Virker som om du ikke har noen administrator
-rettigheter, eller applikasjonen mislyktes
-Hvis du vil starte opp som sĺdan, kan du prřve
-for ĺ starte programmet pĺ nytt som administrator.</value>
+    <value>Brak uprawnień administratora, lub aplikacja ich nie posiada, proszę spróbować uruchomić ją ponownie jako administrator.</value>
   </data>
   <data name="Label_ShowNotificationFor" xml:space="preserve">
-    <value>Vis varsel for (sekunder)</value>
+    <value>Pokaż powiadomienie przez (sekundy)</value>
   </data>
   <data name="Label_Version" xml:space="preserve">
-    <value>Versjon</value>
+    <value>Wersja </value>
   </data>
   <data name="Label_WhenMainWindowClosed" xml:space="preserve">
-    <value>Nĺr jeg lukker hovedvinduet</value>
+    <value>Kiedy zostanie zamknięte główne okno</value>
   </data>
   <data name="Label_WriteRealTimeInfo" xml:space="preserve">
-    <value>Hvis sanntid er slĺtt av, vil
-applikasjonen vil bare fĺ tilgang til og
-skriv til filen nĺr den er lukket.</value>
+    <value>Jeśli zapis w czasie rzeczywistym
+jest włączony, aplikacja zapisze
+dane do pliku kiedy zostanie zamknięta.</value>
   </data>
   <data name="Main_Title" xml:space="preserve">
-    <value>Utklippstavle Monitor Lite</value>
+    <value>Clipboard Monitor Lite</value>
   </data>
   <data name="Menu_EmptyClipboard" xml:space="preserve">
-    <value>Tom utklippstavle</value>
+    <value>Wyczyść schowek</value>
   </data>
   <data name="Menu_EmptyHistory" xml:space="preserve">
-    <value>Tom historie</value>
+    <value>Wyczyść historię</value>
   </data>
   <data name="Menu_Exit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Wyjdź</value>
   </data>
   <data name="Menu_Restore" xml:space="preserve">
-    <value>Ĺpen</value>
+    <value>Otwórz</value>
   </data>
   <data name="MsgBox_DonateHide" xml:space="preserve">
-    <value>Jeg skal skjule knappen med en gang, men fřr jeg gjřr det, ville jeg bare si, jeg jobber med denne applikasjonen stort sett alene, med litt hjelp fra noen fĺ venner, men jeg fĺr ingen řkonomisk střtte, jeg har ikke noe řnske om ĺ be om penger fra folk bare for ĺ bruke denne applikasjonen, og jeg nekter ĺ ta med annonser i noen form. Hvis du řnsker ĺ střtte arbeidet mitt og hjelpe meg med ĺ forbedre dem i fremtiden, kan du vurdere ĺ donere, takk! :)</value>
+    <value>Zanim schowam przycisk chciałbym powiedzieć, że pracuję nad tą aplikacją głównie sam, z pomocą kilku przyjaciół, lecz nie dostaję żadnego wspracia finansowego. Nie chcę prosić ludzi o pieniądze, którzy używają tej aplikacji i nie zamierzam dodawać żadnych reklam pod żadną postacią. Jeśli chcesz wesprzeć moją pracę i pomóc mi ulepszyć ją w przyszłości, możesz dobrowolnie złożyć dotację, dziękuję! :)</value>
   </data>
   <data name="MsgBox_RestartApp" xml:space="preserve">
-    <value>Start applikasjonen pĺ nytt for ĺ bruke endringer.</value>
+    <value>Aby zatwierdzić zmiany, zrestartuj aplikację</value>
   </data>
   <data name="MsgBox_TitleRestartApp" xml:space="preserve">
-    <value>Start appen pĺ nytt</value>
+    <value>Zrestartuj aplikację</value>
   </data>
   <data name="MsgBox_Title_DonateHide" xml:space="preserve">
-    <value>Skjul donasjonsknappen</value>
+    <value>Ukryj przycisk dotacji</value>
   </data>
   <data name="Notif_AppStillRunning" xml:space="preserve">
-    <value>Sřknaden kjřrer fortsatt! Hvis du vil avslutte, hřyreklikk pĺ oppgavelinjeikonet og velg Avslutt!</value>
+    <value>Aplikacja wciąż działa! Jeśli chcesz ją zamknąć, naciśnij prawym przyciskiem na ikonę paska i wybierz opcję zamknij!</value>
   </data>
   <data name="Notif_ItemCopied" xml:space="preserve">
-    <value>Varen er kopiert til utklippstavlen!</value>
+    <value>Skopiowano do schowka!</value>
   </data>
   <data name="Notif_Title_AppStillRunning" xml:space="preserve">
-    <value>Sřknaden kjřrer fortsatt!</value>
+    <value>Aplikacja wciąż działa!</value>
   </data>
   <data name="Notif_Title_ItemCopied" xml:space="preserve">
-    <value>Varen er kopiert!</value>
+    <value>Rzecz skopiowana!</value>
   </data>
   <data name="Options_Title" xml:space="preserve">
-    <value>alternativer</value>
+    <value>Opcje</value>
   </data>
   <data name="Radio_Append" xml:space="preserve">
-    <value>Legg ved fil</value>
+    <value>Dodaj na koniec pliku</value>
   </data>
   <data name="Radio_EmptyAndReplace" xml:space="preserve">
-    <value>Třm fil og erstatt</value>
+    <value>Podmień plik</value>
   </data>
   <data name="Radio_ExitApp" xml:space="preserve">
-    <value>Gĺ ut av programmet</value>
+    <value>Wyjdź z aplikacji</value>
   </data>
   <data name="Radio_Minimize" xml:space="preserve">
-    <value>Minimer pĺ systemstatusfeltet</value>
+    <value>Zminimalizuj do paska zadań</value>
   </data>
   <data name="SaveAsTextFile" xml:space="preserve">
-    <value>Lagre historikk som tekstfil</value>
+    <value>Zapisz historię jako plik tekstowy</value>
   </data>
 </root>

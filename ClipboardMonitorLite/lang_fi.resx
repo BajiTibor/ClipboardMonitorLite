@@ -118,170 +118,171 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Btn_About" xml:space="preserve">
-    <value>Handle om</value>
+    <value>Lisätietoja</value>
   </data>
   <data name="Btn_Apply" xml:space="preserve">
-    <value>Bruk</value>
+    <value>Hyväksy</value>
   </data>
   <data name="Btn_Browse" xml:space="preserve">
-    <value>Sřk</value>
+    <value>Selaa</value>
   </data>
   <data name="Btn_CheckForUpdates" xml:space="preserve">
-    <value>Se etter oppdateringer</value>
+    <value>Tarkasta päivitykset</value>
   </data>
   <data name="Btn_Close" xml:space="preserve">
-    <value>Lukk</value>
+    <value>Sulje</value>
   </data>
   <data name="Btn_EmptyClipboard" xml:space="preserve">
-    <value>Tom utklippstavle</value>
+    <value>Tyhjennä Leikepöytä</value>
   </data>
   <data name="Btn_EmptyHistory" xml:space="preserve">
-    <value>Tom historie</value>
+    <value>Tyhjennä Historia</value>
   </data>
   <data name="Btn_MoreOptions" xml:space="preserve">
-    <value>alternativer</value>
+    <value>Asetukset</value>
   </data>
   <data name="Check_AutoClearClipboard" xml:space="preserve">
-    <value>Klar utklippstavle automatisk</value>
+    <value>Tyhjennä leikepöytä automaattisesti</value>
   </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
-    <value>Gi meg beskjed hvis jeg kopierer noe</value>
+    <value>Huomauta jos kopioin jotakin</value>
   </data>
   <data name="Check_OpenWithWin" xml:space="preserve">
-    <value>Brukes med Windows</value>
+    <value>Avaa käyttäen Windowsia</value>
   </data>
   <data name="Check_SaveToFile" xml:space="preserve">
-    <value>Lagre til fil</value>
+    <value>Tallenna tiedostoon</value>
   </data>
   <data name="Check_ShowDonation" xml:space="preserve">
-    <value>Vis donasjonsknapp pĺ hovedskjema</value>
+    <value>Näytä Lahjoitus -nappula pääikkunnassa</value>
   </data>
   <data name="Check_StartMinimized" xml:space="preserve">
-    <value>Start minimert</value>
+    <value>Käynnistä pienennettynä</value>
   </data>
   <data name="Check_UpdateOnStartup" xml:space="preserve">
-    <value>Oppdatering ved oppstart</value>
+    <value>Päivitä käynnistettäessä</value>
   </data>
   <data name="Check_UseWhiteIcon" xml:space="preserve">
-    <value>Bruk det hvite ikonet i system oppgavelinjen</value>
+    <value>Käytä valkoista kuvaketta järjestelmän tehtäväpalkissa</value>
   </data>
   <data name="Check_WriteInRealTime" xml:space="preserve">
-    <value>Skriv i sanntid</value>
+    <value>Kirjoita reaaliajassa</value>
   </data>
   <data name="ComboBox_Time_Hour" xml:space="preserve">
-    <value>Time</value>
+    <value>Tunti</value>
   </data>
   <data name="ComboBox_Time_Min" xml:space="preserve">
-    <value>Minutt</value>
+    <value>Minuutti</value>
   </data>
   <data name="ComboBox_Time_Sec" xml:space="preserve">
-    <value>Sekund</value>
+    <value>Sekunti</value>
   </data>
   <data name="File_TextFile" xml:space="preserve">
-    <value>Tekstfil | * .txt</value>
+    <value>Tekstitiedosto|*.txt</value>
   </data>
   <data name="GroupBox_Actions" xml:space="preserve">
-    <value>handlinger</value>
+    <value>Toiminnot</value>
   </data>
   <data name="GroupBox_BehaviourAndVisuals" xml:space="preserve">
-    <value>Atferd og visuelle</value>
+    <value>Käytös ja Ulkomuoto</value>
   </data>
   <data name="GroupBox_CopiedItems" xml:space="preserve">
-    <value>Kopierte gjenstander</value>
+    <value>Kopioidut kohteet</value>
   </data>
   <data name="GroupBox_General" xml:space="preserve">
-    <value>Generell</value>
+    <value>Yleinen</value>
   </data>
   <data name="GroupBox_SaveToFileSettings" xml:space="preserve">
-    <value>Lagre i filinnstillinger</value>
+    <value>Tallenna tiedostoasetuksiin</value>
   </data>
   <data name="GroupBox_UpdateAndCurrentVersion" xml:space="preserve">
-    <value>Oppdater og aktuell versjonsinfo</value>
+    <value>Päivityksen ja nykyisen sovellusversion tiedot</value>
   </data>
   <data name="Label_Every" xml:space="preserve">
-    <value>Hver</value>
+    <value>Joka</value>
   </data>
   <data name="Label_FileLocation" xml:space="preserve">
-    <value>Filplassering</value>
+    <value>Tiedostosijainti</value>
   </data>
   <data name="Label_Lang" xml:space="preserve">
-    <value>Sprĺk</value>
+    <value>Kieli</value>
   </data>
   <data name="Label_NoAdminRights" xml:space="preserve">
-    <value>Unnskyld! Virker som om du ikke har noen administrator
-rettigheter, eller applikasjonen mislyktes
-Hvis du vil starte opp som sĺdan, kan du prřve
-for ĺ starte programmet pĺ nytt som administrator.</value>
+    <value>Hups! Näyttää siltä ettei sinulla ole
+järjestelmänvalvojan oikeuksia, tai
+sovellus ei käynnistynyt järjestelmänvalvojan
+tilassa. Ole hyvä ja käynnistä sovellus
+uudelleen järjestelmänvalvojana.</value>
   </data>
   <data name="Label_ShowNotificationFor" xml:space="preserve">
-    <value>Vis varsel for (sekunder)</value>
+    <value>Näytä ilmoituksia (X) sekuntia</value>
   </data>
   <data name="Label_Version" xml:space="preserve">
-    <value>Versjon</value>
+    <value>Versio </value>
   </data>
   <data name="Label_WhenMainWindowClosed" xml:space="preserve">
-    <value>Nĺr jeg lukker hovedvinduet</value>
+    <value>Kun suljen pääikkunan</value>
   </data>
   <data name="Label_WriteRealTimeInfo" xml:space="preserve">
-    <value>Hvis sanntid er slĺtt av, vil
-applikasjonen vil bare fĺ tilgang til og
-skriv til filen nĺr den er lukket.</value>
+    <value>Jos reaaliaika ei ole käytössä,
+sovellus kirjoittaa tiedostoon
+kun se suljetaan.</value>
   </data>
   <data name="Main_Title" xml:space="preserve">
-    <value>Utklippstavle Monitor Lite</value>
+    <value>Leikepöydän tarkasteluohjelma Lite</value>
   </data>
   <data name="Menu_EmptyClipboard" xml:space="preserve">
-    <value>Tom utklippstavle</value>
+    <value>Tyhjennä Leikepöytä</value>
   </data>
   <data name="Menu_EmptyHistory" xml:space="preserve">
-    <value>Tom historie</value>
+    <value>Tyhjennnä Historia</value>
   </data>
   <data name="Menu_Exit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Sulje</value>
   </data>
   <data name="Menu_Restore" xml:space="preserve">
-    <value>Ĺpen</value>
+    <value>Avaa</value>
   </data>
   <data name="MsgBox_DonateHide" xml:space="preserve">
-    <value>Jeg skal skjule knappen med en gang, men fřr jeg gjřr det, ville jeg bare si, jeg jobber med denne applikasjonen stort sett alene, med litt hjelp fra noen fĺ venner, men jeg fĺr ingen řkonomisk střtte, jeg har ikke noe řnske om ĺ be om penger fra folk bare for ĺ bruke denne applikasjonen, og jeg nekter ĺ ta med annonser i noen form. Hvis du řnsker ĺ střtte arbeidet mitt og hjelpe meg med ĺ forbedre dem i fremtiden, kan du vurdere ĺ donere, takk! :)</value>
+    <value>Piilotan nappulan heti, mutta ennekuin teen niin halusin vain sanoa, että työstän tätä sovellusta pääasiallisesti yksin. Saan hieman apua muutamalta ystävältäni, enkä saa rahallista tukea työlleni. En halua lisätä sovellukseen minkäänlaisia mainoksia enkä pyytää rahaa pelkästä sovelluksen käytöstä. Jos haluat tukea työtäni ja auttaa minua parantamaan tuotoksiani tulevaisuudessa, harkitsethan lahjoittavasi, kiitos. :)</value>
   </data>
   <data name="MsgBox_RestartApp" xml:space="preserve">
-    <value>Start applikasjonen pĺ nytt for ĺ bruke endringer.</value>
+    <value>Jotta muutokset tulisivat voimaan, ole hyvä ja käynnistä sovellus uudelleen.</value>
   </data>
   <data name="MsgBox_TitleRestartApp" xml:space="preserve">
-    <value>Start appen pĺ nytt</value>
+    <value>Käynnistä sovellus uudelleen</value>
   </data>
   <data name="MsgBox_Title_DonateHide" xml:space="preserve">
-    <value>Skjul donasjonsknappen</value>
+    <value>Piilota lahjoitusnappi</value>
   </data>
   <data name="Notif_AppStillRunning" xml:space="preserve">
-    <value>Sřknaden kjřrer fortsatt! Hvis du vil avslutte, hřyreklikk pĺ oppgavelinjeikonet og velg Avslutt!</value>
+    <value>Jos haluat postua, ole hyvä ja klikkaa hiiren oikealla näppäimellä tehtäväpalkin kuvaketta ja valitse Sulje!</value>
   </data>
   <data name="Notif_ItemCopied" xml:space="preserve">
-    <value>Varen er kopiert til utklippstavlen!</value>
+    <value>Kohde kopioitu leikepöydälle!</value>
   </data>
   <data name="Notif_Title_AppStillRunning" xml:space="preserve">
-    <value>Sřknaden kjřrer fortsatt!</value>
+    <value>Sovellus on edelleen käynnissä!</value>
   </data>
   <data name="Notif_Title_ItemCopied" xml:space="preserve">
-    <value>Varen er kopiert!</value>
+    <value>Kohde kopioitu!</value>
   </data>
   <data name="Options_Title" xml:space="preserve">
-    <value>alternativer</value>
+    <value>Asetukset</value>
   </data>
   <data name="Radio_Append" xml:space="preserve">
-    <value>Legg ved fil</value>
+    <value>Lisää tiedoston loppuun</value>
   </data>
   <data name="Radio_EmptyAndReplace" xml:space="preserve">
-    <value>Třm fil og erstatt</value>
+    <value>Tyhjennä tiedosto ja korvaa</value>
   </data>
   <data name="Radio_ExitApp" xml:space="preserve">
-    <value>Gĺ ut av programmet</value>
+    <value>Poistu sovelluksesta</value>
   </data>
   <data name="Radio_Minimize" xml:space="preserve">
-    <value>Minimer pĺ systemstatusfeltet</value>
+    <value>Pienennä tehtäväpalkkiin</value>
   </data>
   <data name="SaveAsTextFile" xml:space="preserve">
-    <value>Lagre historikk som tekstfil</value>
+    <value>Tallenna historia tekstitiedostona</value>
   </data>
 </root>

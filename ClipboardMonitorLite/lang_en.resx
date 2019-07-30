@@ -132,13 +132,13 @@
   <data name="Btn_Close" xml:space="preserve">
     <value>Close</value>
   </data>
-  <data name="Button_EmptyClipboard" xml:space="preserve">
+  <data name="Btn_EmptyClipboard" xml:space="preserve">
     <value>Empty Clipboard</value>
   </data>
-  <data name="Button_EmptyHistory" xml:space="preserve">
+  <data name="Btn_EmptyHistory" xml:space="preserve">
     <value>Empty History</value>
   </data>
-  <data name="Button_MoreOptions" xml:space="preserve">
+  <data name="Btn_MoreOptions" xml:space="preserve">
     <value>Options</value>
   </data>
   <data name="Check_AutoClearClipboard" xml:space="preserve">

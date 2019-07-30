@@ -70,7 +70,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sřke om.
+        ///   Looks up a localized string similar to Bruk.
         /// </summary>
         internal static string Btn_Apply {
             get {
@@ -108,27 +108,27 @@ namespace ClipboardMonitorLite {
         /// <summary>
         ///   Looks up a localized string similar to Tom utklippstavle.
         /// </summary>
-        internal static string Button_EmptyClipboard {
+        internal static string Btn_EmptyClipboard {
             get {
-                return ResourceManager.GetString("Button_EmptyClipboard", resourceCulture);
+                return ResourceManager.GetString("Btn_EmptyClipboard", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Tom historie.
         /// </summary>
-        internal static string Button_EmptyHistory {
+        internal static string Btn_EmptyHistory {
             get {
-                return ResourceManager.GetString("Button_EmptyHistory", resourceCulture);
+                return ResourceManager.GetString("Btn_EmptyHistory", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to alternativer.
         /// </summary>
-        internal static string Button_MoreOptions {
+        internal static string Btn_MoreOptions {
             get {
-                return ResourceManager.GetString("Button_MoreOptions", resourceCulture);
+                return ResourceManager.GetString("Btn_MoreOptions", resourceCulture);
             }
         }
         
@@ -151,7 +151,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ĺpent med Windows.
+        ///   Looks up a localized string similar to Brukes med Windows.
         /// </summary>
         internal static string Check_OpenWithWin {
             get {

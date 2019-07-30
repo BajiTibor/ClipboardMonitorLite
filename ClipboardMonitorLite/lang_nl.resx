@@ -118,170 +118,172 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Btn_About" xml:space="preserve">
-    <value>Handle om</value>
+    <value>Informatie Over</value>
   </data>
   <data name="Btn_Apply" xml:space="preserve">
-    <value>Bruk</value>
+    <value>Opslaan</value>
   </data>
   <data name="Btn_Browse" xml:space="preserve">
-    <value>Sřk</value>
+    <value>Zoeken</value>
   </data>
   <data name="Btn_CheckForUpdates" xml:space="preserve">
-    <value>Se etter oppdateringer</value>
+    <value>Zoeken naar Updates</value>
   </data>
   <data name="Btn_Close" xml:space="preserve">
-    <value>Lukk</value>
+    <value>Sluiten</value>
   </data>
   <data name="Btn_EmptyClipboard" xml:space="preserve">
-    <value>Tom utklippstavle</value>
+    <value>Leeg Klembord</value>
   </data>
   <data name="Btn_EmptyHistory" xml:space="preserve">
-    <value>Tom historie</value>
+    <value>Leeg Geschiedenis</value>
   </data>
   <data name="Btn_MoreOptions" xml:space="preserve">
-    <value>alternativer</value>
+    <value>Opties</value>
   </data>
   <data name="Check_AutoClearClipboard" xml:space="preserve">
-    <value>Klar utklippstavle automatisk</value>
+    <value>Leeg Klembord Automatisch</value>
   </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
-    <value>Gi meg beskjed hvis jeg kopierer noe</value>
+    <value>Laat een notificatie zien als ik iets kopieer</value>
   </data>
   <data name="Check_OpenWithWin" xml:space="preserve">
-    <value>Brukes med Windows</value>
+    <value>Open met Windows</value>
   </data>
   <data name="Check_SaveToFile" xml:space="preserve">
-    <value>Lagre til fil</value>
+    <value>Opslaan naar Bestand</value>
   </data>
   <data name="Check_ShowDonation" xml:space="preserve">
-    <value>Vis donasjonsknapp pĺ hovedskjema</value>
+    <value>Laat een Donatie knop zien op het hoofdvenster</value>
   </data>
   <data name="Check_StartMinimized" xml:space="preserve">
-    <value>Start minimert</value>
+    <value>Start het programma geminimaliseerd</value>
   </data>
   <data name="Check_UpdateOnStartup" xml:space="preserve">
-    <value>Oppdatering ved oppstart</value>
+    <value>Update als het programma opgestart word</value>
   </data>
   <data name="Check_UseWhiteIcon" xml:space="preserve">
-    <value>Bruk det hvite ikonet i system oppgavelinjen</value>
+    <value>Gebruik een wit icoon op de taakbalk</value>
   </data>
   <data name="Check_WriteInRealTime" xml:space="preserve">
-    <value>Skriv i sanntid</value>
+    <value>Toevoegen in echte tijd</value>
   </data>
   <data name="ComboBox_Time_Hour" xml:space="preserve">
-    <value>Time</value>
+    <value>Uur</value>
   </data>
   <data name="ComboBox_Time_Min" xml:space="preserve">
-    <value>Minutt</value>
+    <value>Minuut</value>
   </data>
   <data name="ComboBox_Time_Sec" xml:space="preserve">
-    <value>Sekund</value>
+    <value>Seconde</value>
   </data>
   <data name="File_TextFile" xml:space="preserve">
-    <value>Tekstfil | * .txt</value>
+    <value>Tekst Bestand|*.txt</value>
   </data>
   <data name="GroupBox_Actions" xml:space="preserve">
-    <value>handlinger</value>
+    <value>Acties</value>
   </data>
   <data name="GroupBox_BehaviourAndVisuals" xml:space="preserve">
-    <value>Atferd og visuelle</value>
+    <value>Gedrag en visuelen</value>
   </data>
   <data name="GroupBox_CopiedItems" xml:space="preserve">
-    <value>Kopierte gjenstander</value>
+    <value>Gekopieerde bestanden</value>
   </data>
   <data name="GroupBox_General" xml:space="preserve">
-    <value>Generell</value>
+    <value>Algemeen</value>
   </data>
   <data name="GroupBox_SaveToFileSettings" xml:space="preserve">
-    <value>Lagre i filinnstillinger</value>
+    <value>Opslaan naar bestand opties</value>
   </data>
   <data name="GroupBox_UpdateAndCurrentVersion" xml:space="preserve">
-    <value>Oppdater og aktuell versjonsinfo</value>
+    <value>Update en huidige versie</value>
   </data>
   <data name="Label_Every" xml:space="preserve">
-    <value>Hver</value>
+    <value>iedere</value>
   </data>
   <data name="Label_FileLocation" xml:space="preserve">
-    <value>Filplassering</value>
+    <value>Bestandslocatie</value>
   </data>
   <data name="Label_Lang" xml:space="preserve">
-    <value>Sprĺk</value>
+    <value>Taal</value>
   </data>
   <data name="Label_NoAdminRights" xml:space="preserve">
-    <value>Unnskyld! Virker som om du ikke har noen administrator
-rettigheter, eller applikasjonen mislyktes
-Hvis du vil starte opp som sĺdan, kan du prřve
-for ĺ starte programmet pĺ nytt som administrator.</value>
+    <value>Sorry! Het lijkt erop dat je dit
+programma hebt opgestard zonder
+administratieve rechten. Probeer
+het programma nog maals op te
+starten als administrator.</value>
   </data>
   <data name="Label_ShowNotificationFor" xml:space="preserve">
-    <value>Vis varsel for (sekunder)</value>
+    <value>Laat notificatie zien voor (Seconde)</value>
   </data>
   <data name="Label_Version" xml:space="preserve">
-    <value>Versjon</value>
+    <value>Versie </value>
   </data>
   <data name="Label_WhenMainWindowClosed" xml:space="preserve">
-    <value>Nĺr jeg lukker hovedvinduet</value>
+    <value>Als ik het hoofdvenster sluit</value>
   </data>
   <data name="Label_WriteRealTimeInfo" xml:space="preserve">
-    <value>Hvis sanntid er slĺtt av, vil
-applikasjonen vil bare fĺ tilgang til og
-skriv til filen nĺr den er lukket.</value>
+    <value>Als Real Time uitgezet is, zal
+de applicatie alleen toegang
+krijgen en schrijven als het
+bestand gesloten is.</value>
   </data>
   <data name="Main_Title" xml:space="preserve">
-    <value>Utklippstavle Monitor Lite</value>
+    <value>Clipboard Monitor Lite</value>
   </data>
   <data name="Menu_EmptyClipboard" xml:space="preserve">
-    <value>Tom utklippstavle</value>
+    <value>Leeg Klembord</value>
   </data>
   <data name="Menu_EmptyHistory" xml:space="preserve">
-    <value>Tom historie</value>
+    <value>Leeg Geschiedenis</value>
   </data>
   <data name="Menu_Exit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Verlaten</value>
   </data>
   <data name="Menu_Restore" xml:space="preserve">
-    <value>Ĺpen</value>
+    <value>Openen</value>
   </data>
   <data name="MsgBox_DonateHide" xml:space="preserve">
-    <value>Jeg skal skjule knappen med en gang, men fřr jeg gjřr det, ville jeg bare si, jeg jobber med denne applikasjonen stort sett alene, med litt hjelp fra noen fĺ venner, men jeg fĺr ingen řkonomisk střtte, jeg har ikke noe řnske om ĺ be om penger fra folk bare for ĺ bruke denne applikasjonen, og jeg nekter ĺ ta med annonser i noen form. Hvis du řnsker ĺ střtte arbeidet mitt og hjelpe meg med ĺ forbedre dem i fremtiden, kan du vurdere ĺ donere, takk! :)</value>
+    <value>Ik zal meteen de knop verschuilen, maar voordat ik dit doe, wil ik even zeggen dat ik alleen werk aan deze applicatie, met wat hulp van een paar vrienden, maar ik krijg geen financiële steun. Ik heb geen behoeften om mensen te vragen voor geld om deze applicatie te gebruiken, en ik wil geen advertenties in de applicatie plaatsen, om welke vorm dan ook. Als je mij wilt steunen en mijn werk verbeteren in de toekomst, denk dan misschien aan doneren als optie van steun.. Bedankt! : )</value>
   </data>
   <data name="MsgBox_RestartApp" xml:space="preserve">
-    <value>Start applikasjonen pĺ nytt for ĺ bruke endringer.</value>
+    <value>Om de veranderingen te laten werken, herstart de applicatie.</value>
   </data>
   <data name="MsgBox_TitleRestartApp" xml:space="preserve">
-    <value>Start appen pĺ nytt</value>
+    <value>Herstart de app</value>
   </data>
   <data name="MsgBox_Title_DonateHide" xml:space="preserve">
-    <value>Skjul donasjonsknappen</value>
+    <value>Verschuil de Donatie knop</value>
   </data>
   <data name="Notif_AppStillRunning" xml:space="preserve">
-    <value>Sřknaden kjřrer fortsatt! Hvis du vil avslutte, hřyreklikk pĺ oppgavelinjeikonet og velg Avslutt!</value>
+    <value>De applicatie is nog actief! Als je de applicatie wilt beëindigen, druk dan met de rechtermuisknop op het taakbalk icoontje, en druk op "Afsluiten".</value>
   </data>
   <data name="Notif_ItemCopied" xml:space="preserve">
-    <value>Varen er kopiert til utklippstavlen!</value>
+    <value>Item gekopieerd naar klembord!</value>
   </data>
   <data name="Notif_Title_AppStillRunning" xml:space="preserve">
-    <value>Sřknaden kjřrer fortsatt!</value>
+    <value>Applicatie is nog actief!</value>
   </data>
   <data name="Notif_Title_ItemCopied" xml:space="preserve">
-    <value>Varen er kopiert!</value>
+    <value>Item gekopieerd!</value>
   </data>
   <data name="Options_Title" xml:space="preserve">
-    <value>alternativer</value>
+    <value>Opties</value>
   </data>
   <data name="Radio_Append" xml:space="preserve">
-    <value>Legg ved fil</value>
+    <value>Toevoegen tot bestand</value>
   </data>
   <data name="Radio_EmptyAndReplace" xml:space="preserve">
-    <value>Třm fil og erstatt</value>
+    <value>Leeg bestand en vervang het bestand</value>
   </data>
   <data name="Radio_ExitApp" xml:space="preserve">
-    <value>Gĺ ut av programmet</value>
+    <value>Beëindig de applicatie</value>
   </data>
   <data name="Radio_Minimize" xml:space="preserve">
-    <value>Minimer pĺ systemstatusfeltet</value>
+    <value>Minimalizeer in de systeembalk</value>
   </data>
   <data name="SaveAsTextFile" xml:space="preserve">
-    <value>Lagre historikk som tekstfil</value>
+    <value>Sla geschiedenis op als tekst bestand</value>
   </data>
 </root>

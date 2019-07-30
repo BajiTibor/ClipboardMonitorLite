@@ -8,6 +8,7 @@ namespace ClipboardMonitorLite
 {
     public partial class MainForm : Form
     {
+        private FormControls controls;
         private Updates updates;
         private FormActions formActions;
         private TimeCalculate timeToClear;
@@ -20,8 +21,9 @@ namespace ClipboardMonitorLite
         private ResourceManager resManager;
         public MainForm()
         {
-            resManager = new ResourceManager($"ClipboardMonitorLite.lang_{Properties.Settings.Default.CurrentLanguage}", 
+            resManager = new ResourceManager($"ClipboardMonitorLite.lang_{LanguageCode.LanguageList[Properties.Settings.Default.CurrentLanguage]}", 
                 Assembly.GetExecutingAssembly());
+            controls = new FormControls();
             updates = new Updates();
             donate = new Donate();
             formActions = new FormActions();
@@ -51,11 +53,11 @@ namespace ClipboardMonitorLite
             btn_Donate.DataBindings.Add("Visible", Properties.Settings.Default, "DisplayDonate",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            SetLanguage();
+            EnumSetLang();
 
             ClipChange.ClipboardUpdate += ClipChange_ClipboardUpdate;
-            btn_EmptyClipboard.Click += clipboardAction.ClearClip_Click;
-            btn_ClearHistory.Click += clipboardAction.ClearHistory_Click;
+            Btn_EmptyClipboard.Click += clipboardAction.ClearClip_Click;
+            Btn_EmptyHistory.Click += clipboardAction.ClearHistory_Click;
             emptyClipboardToolStripMenuItem.Click += clipboardAction.ClearClip_Click;
             emptyHistoryToolStripMenuItem.Click += clipboardAction.ClearHistory_Click;
             exitToolStripMenuItem.Click += formActions.ExitToolStripMenuItem_Click;
@@ -132,7 +134,7 @@ namespace ClipboardMonitorLite
             {
                 timeToClear = new TimeCalculate();
                 timeToClear.CalculateToSeconds(Properties.Settings.Default.AutoClsTime,
-                    Properties.Settings.Default.AutoClsType);
+                    Properties.Settings.Default.AutoClsTimeType);
                 timerEmptyClipboard.Start();
             }
             else
@@ -167,8 +169,9 @@ namespace ClipboardMonitorLite
         {
             Form optionsForm = new OptionsForm();
             optionsForm.ShowDialog();
+            optionsForm.Dispose();
             InitSettings();
-            SetLanguage();
+            EnumSetLang();
         }
 
         private void TimerEmptyClipboard_Tick(object sender, EventArgs e)
@@ -189,23 +192,19 @@ namespace ClipboardMonitorLite
             }
         }
 
-        private void SetLanguage()
+        private void EnumSetLang()
         {
-            resManager = new ResourceManager($"ClipboardMonitorLite.lang_{Properties.Settings.Default.CurrentLanguage}",
+            resManager = new ResourceManager($"ClipboardMonitorLite.lang_{LanguageCode.LanguageList[Properties.Settings.Default.CurrentLanguage]}",
                 Assembly.GetExecutingAssembly());
+
+            foreach (var item in controls.AllControl(this))
+            {
+                if (!(item is ComboBox) && !(item.Name.Contains("DONOTMODIFY")))
+                {
+                    item.Text = resManager.GetString(item.Name);
+                }
+            }
             Text = resManager.GetString("Main_Title");
-            groupBox_copiedItems.Text = resManager.GetString("GroupBox_CopiedItems");
-            groupBox_Actions.Text = resManager.GetString("GroupBox_Actions");
-            btn_EmptyClipboard.Text = resManager.GetString("Button_EmptyClipboard");
-            btn_ClearHistory.Text = resManager.GetString("Button_EmptyHistory");
-            btn_options.Text = resManager.GetString("Button_MoreOptions");
-            restoreToolStripMenuItem.Text = resManager.GetString("Menu_Restore");
-            emptyClipboardToolStripMenuItem.Text = resManager.GetString("Menu_EmptyClipboard");
-            emptyHistoryToolStripMenuItem.Text = resManager.GetString("Menu_EmptyHistory");
-            exitToolStripMenuItem.Text = resManager.GetString("Menu_Exit");
-            notificationIcon.Text = resManager.GetString("Main_Title");
-            notificationIcon.BalloonTipText = resManager.GetString("Notif_AppStillRunning");
-            notificationIcon.BalloonTipTitle = resManager.GetString("Notif_Title_AppStillRunning");
         }
 
     }

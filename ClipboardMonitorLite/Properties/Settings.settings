@@ -23,9 +23,6 @@
     <Setting Name="AutoClsTime" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">10</Value>
     </Setting>
-    <Setting Name="AutoClsType" Type="System.String" Scope="User">
-      <Value Profile="(Default)">minutes</Value>
-    </Setting>
     <Setting Name="OpenWithWin" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
@@ -62,8 +59,11 @@
     <Setting Name="AutoCheckUpdates" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="CurrentLanguage" Type="System.String" Scope="User">
-      <Value Profile="(Default)">en</Value>
+    <Setting Name="CurrentLanguage" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="AutoClsTimeType" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>
 </SettingsFile>

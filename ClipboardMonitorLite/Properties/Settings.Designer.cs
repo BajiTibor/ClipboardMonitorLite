@@ -109,18 +109,6 @@ namespace ClipboardMonitorLite.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("minutes")]
-        public string AutoClsType {
-            get {
-                return ((string)(this["AutoClsType"]));
-            }
-            set {
-                this["AutoClsType"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool OpenWithWin {
             get {
@@ -265,13 +253,25 @@ namespace ClipboardMonitorLite.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("en")]
-        public string CurrentLanguage {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int CurrentLanguage {
             get {
-                return ((string)(this["CurrentLanguage"]));
+                return ((int)(this["CurrentLanguage"]));
             }
             set {
                 this["CurrentLanguage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int AutoClsTimeType {
+            get {
+                return ((int)(this["AutoClsTimeType"]));
+            }
+            set {
+                this["AutoClsTimeType"] = value;
             }
         }
     }

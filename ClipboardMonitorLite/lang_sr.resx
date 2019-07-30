@@ -118,170 +118,170 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Btn_About" xml:space="preserve">
-    <value>Handle om</value>
+    <value>О програму</value>
   </data>
   <data name="Btn_Apply" xml:space="preserve">
-    <value>Bruk</value>
+    <value>Примени</value>
   </data>
   <data name="Btn_Browse" xml:space="preserve">
-    <value>Sřk</value>
+    <value>Прелистај</value>
   </data>
   <data name="Btn_CheckForUpdates" xml:space="preserve">
-    <value>Se etter oppdateringer</value>
+    <value>Провери за нову верзију</value>
   </data>
   <data name="Btn_Close" xml:space="preserve">
-    <value>Lukk</value>
+    <value>Затвори</value>
   </data>
   <data name="Btn_EmptyClipboard" xml:space="preserve">
-    <value>Tom utklippstavle</value>
+    <value>Изпразни копирани текст</value>
   </data>
   <data name="Btn_EmptyHistory" xml:space="preserve">
-    <value>Tom historie</value>
+    <value>Избриши Историју</value>
   </data>
   <data name="Btn_MoreOptions" xml:space="preserve">
-    <value>alternativer</value>
+    <value>Опције</value>
   </data>
   <data name="Check_AutoClearClipboard" xml:space="preserve">
-    <value>Klar utklippstavle automatisk</value>
+    <value>Аутоматски Избриши копирани текст</value>
   </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
-    <value>Gi meg beskjed hvis jeg kopierer noe</value>
+    <value>Обавести ме ако ископирам нешто</value>
   </data>
   <data name="Check_OpenWithWin" xml:space="preserve">
-    <value>Brukes med Windows</value>
+    <value>Отвори са Windows</value>
   </data>
   <data name="Check_SaveToFile" xml:space="preserve">
-    <value>Lagre til fil</value>
+    <value>Запамти датотеку</value>
   </data>
   <data name="Check_ShowDonation" xml:space="preserve">
-    <value>Vis donasjonsknapp pĺ hovedskjema</value>
+    <value>Прикажи дугме за донацију на главну форму</value>
   </data>
   <data name="Check_StartMinimized" xml:space="preserve">
-    <value>Start minimert</value>
+    <value>Почни минимазиран</value>
   </data>
   <data name="Check_UpdateOnStartup" xml:space="preserve">
-    <value>Oppdatering ved oppstart</value>
+    <value>Ажурирај на покретанје</value>
   </data>
   <data name="Check_UseWhiteIcon" xml:space="preserve">
-    <value>Bruk det hvite ikonet i system oppgavelinjen</value>
+    <value>Користи белу иконицу у систем таскбар</value>
   </data>
   <data name="Check_WriteInRealTime" xml:space="preserve">
-    <value>Skriv i sanntid</value>
+    <value>Пиши у реално време</value>
   </data>
   <data name="ComboBox_Time_Hour" xml:space="preserve">
-    <value>Time</value>
+    <value>Сат</value>
   </data>
   <data name="ComboBox_Time_Min" xml:space="preserve">
-    <value>Minutt</value>
+    <value>Минут</value>
   </data>
   <data name="ComboBox_Time_Sec" xml:space="preserve">
-    <value>Sekund</value>
+    <value>Секунда</value>
   </data>
   <data name="File_TextFile" xml:space="preserve">
-    <value>Tekstfil | * .txt</value>
+    <value>Текст податак|*.txt</value>
   </data>
   <data name="GroupBox_Actions" xml:space="preserve">
-    <value>handlinger</value>
+    <value>Акције</value>
   </data>
   <data name="GroupBox_BehaviourAndVisuals" xml:space="preserve">
-    <value>Atferd og visuelle</value>
+    <value>Понашање и  Визуали</value>
   </data>
   <data name="GroupBox_CopiedItems" xml:space="preserve">
-    <value>Kopierte gjenstander</value>
+    <value>Копирани предмети</value>
   </data>
   <data name="GroupBox_General" xml:space="preserve">
-    <value>Generell</value>
+    <value>Генерално</value>
   </data>
   <data name="GroupBox_SaveToFileSettings" xml:space="preserve">
-    <value>Lagre i filinnstillinger</value>
+    <value>Запамти у подешавања за датотеку</value>
   </data>
   <data name="GroupBox_UpdateAndCurrentVersion" xml:space="preserve">
-    <value>Oppdater og aktuell versjonsinfo</value>
+    <value>Ажурирана верзија и информација о тренутној верзији</value>
   </data>
   <data name="Label_Every" xml:space="preserve">
-    <value>Hver</value>
+    <value>Сви</value>
   </data>
   <data name="Label_FileLocation" xml:space="preserve">
-    <value>Filplassering</value>
+    <value>Локација Датотеке</value>
   </data>
   <data name="Label_Lang" xml:space="preserve">
-    <value>Sprĺk</value>
+    <value>Језик</value>
   </data>
   <data name="Label_NoAdminRights" xml:space="preserve">
-    <value>Unnskyld! Virker som om du ikke har noen administrator
-rettigheter, eller applikasjonen mislyktes
-Hvis du vil starte opp som sĺdan, kan du prřve
-for ĺ starte programmet pĺ nytt som administrator.</value>
+    <value>Извини! Изгледа да немаш административни
+приступ, или апликација није успела да
+се покрене, покушај да рестартујеш
+апликацију као администратор.</value>
   </data>
   <data name="Label_ShowNotificationFor" xml:space="preserve">
-    <value>Vis varsel for (sekunder)</value>
+    <value>Прикажи нотификацију за (Секунде)</value>
   </data>
   <data name="Label_Version" xml:space="preserve">
-    <value>Versjon</value>
+    <value>Верзија </value>
   </data>
   <data name="Label_WhenMainWindowClosed" xml:space="preserve">
-    <value>Nĺr jeg lukker hovedvinduet</value>
+    <value>Када затворим главни прозор</value>
   </data>
   <data name="Label_WriteRealTimeInfo" xml:space="preserve">
-    <value>Hvis sanntid er slĺtt av, vil
-applikasjonen vil bare fĺ tilgang til og
-skriv til filen nĺr den er lukket.</value>
+    <value>Ако је реално време икључено, апликација
+ће само приступити и писати у датотеку
+када је затворена.</value>
   </data>
   <data name="Main_Title" xml:space="preserve">
-    <value>Utklippstavle Monitor Lite</value>
+    <value>Clipboard Monitor Lite</value>
   </data>
   <data name="Menu_EmptyClipboard" xml:space="preserve">
-    <value>Tom utklippstavle</value>
+    <value>Изпразни Копирани текст</value>
   </data>
   <data name="Menu_EmptyHistory" xml:space="preserve">
-    <value>Tom historie</value>
+    <value>Изпразни Историју</value>
   </data>
   <data name="Menu_Exit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Затвори</value>
   </data>
   <data name="Menu_Restore" xml:space="preserve">
-    <value>Ĺpen</value>
+    <value>Отвори</value>
   </data>
   <data name="MsgBox_DonateHide" xml:space="preserve">
-    <value>Jeg skal skjule knappen med en gang, men fřr jeg gjřr det, ville jeg bare si, jeg jobber med denne applikasjonen stort sett alene, med litt hjelp fra noen fĺ venner, men jeg fĺr ingen řkonomisk střtte, jeg har ikke noe řnske om ĺ be om penger fra folk bare for ĺ bruke denne applikasjonen, og jeg nekter ĺ ta med annonser i noen form. Hvis du řnsker ĺ střtte arbeidet mitt og hjelpe meg med ĺ forbedre dem i fremtiden, kan du vurdere ĺ donere, takk! :)</value>
+    <value>Сакрићу дугме одмах, али пре него што то урадим, само сам хтео да кажем, ја радим на овој апликацији углавном сам, са помоћ од неких пријатеља, али не добијам никакву финанцијску помоћ, и немам намеру да тражим новац од народа само да би користили ову апликацију, и ја одбијам да убацим реклама у будућности, у било којој форми. Ако би сте желели да подржите моји посао и да ми помогнете да их унапредим у будућност, молим вас да размислите о донацији, хвала вам! :)</value>
   </data>
   <data name="MsgBox_RestartApp" xml:space="preserve">
-    <value>Start applikasjonen pĺ nytt for ĺ bruke endringer.</value>
+    <value>Да примениш промене, молимо вас да рестартујете апликацију.</value>
   </data>
   <data name="MsgBox_TitleRestartApp" xml:space="preserve">
-    <value>Start appen pĺ nytt</value>
+    <value>Рестартуј апликацију</value>
   </data>
   <data name="MsgBox_Title_DonateHide" xml:space="preserve">
-    <value>Skjul donasjonsknappen</value>
+    <value>Сакриј дугме за донацију</value>
   </data>
   <data name="Notif_AppStillRunning" xml:space="preserve">
-    <value>Sřknaden kjřrer fortsatt! Hvis du vil avslutte, hřyreklikk pĺ oppgavelinjeikonet og velg Avslutt!</value>
+    <value>Апликација још увер ради! Ако желите да изађете, молимо вас да десним кликом кликнете на таскбар иконицу и изаберете Затвори!</value>
   </data>
   <data name="Notif_ItemCopied" xml:space="preserve">
-    <value>Varen er kopiert til utklippstavlen!</value>
+    <value>Предмет копиран у clipboard!</value>
   </data>
   <data name="Notif_Title_AppStillRunning" xml:space="preserve">
-    <value>Sřknaden kjřrer fortsatt!</value>
+    <value>Апликација још увер ради!</value>
   </data>
   <data name="Notif_Title_ItemCopied" xml:space="preserve">
-    <value>Varen er kopiert!</value>
+    <value>Предмет копиран!</value>
   </data>
   <data name="Options_Title" xml:space="preserve">
-    <value>alternativer</value>
+    <value>Опције</value>
   </data>
   <data name="Radio_Append" xml:space="preserve">
-    <value>Legg ved fil</value>
+    <value>Додати датотеку</value>
   </data>
   <data name="Radio_EmptyAndReplace" xml:space="preserve">
-    <value>Třm fil og erstatt</value>
+    <value>Изпразни датотеку и замени</value>
   </data>
   <data name="Radio_ExitApp" xml:space="preserve">
-    <value>Gĺ ut av programmet</value>
+    <value>Изађи из апликације</value>
   </data>
   <data name="Radio_Minimize" xml:space="preserve">
-    <value>Minimer pĺ systemstatusfeltet</value>
+    <value>Минимазирај на системску подлогу</value>
   </data>
   <data name="SaveAsTextFile" xml:space="preserve">
-    <value>Lagre historikk som tekstfil</value>
+    <value>Запамти историју као текст податак</value>
   </data>
 </root>

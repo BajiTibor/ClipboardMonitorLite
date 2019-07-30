@@ -29,112 +29,112 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsForm));
-            this.groupBox_General = new System.Windows.Forms.GroupBox();
-            this.groupBox_Update = new System.Windows.Forms.GroupBox();
-            this.btn_about = new System.Windows.Forms.Button();
-            this.btn_checkForUpdates = new System.Windows.Forms.Button();
-            this.check_UpdateOnStartup = new System.Windows.Forms.CheckBox();
+            this.GroupBox_General = new System.Windows.Forms.GroupBox();
+            this.GroupBox_UpdateAndCurrentVersion = new System.Windows.Forms.GroupBox();
+            this.Btn_About = new System.Windows.Forms.Button();
+            this.Btn_CheckForUpdates = new System.Windows.Forms.Button();
+            this.Check_UpdateOnStartup = new System.Windows.Forms.CheckBox();
             this.txt_updateInfo = new System.Windows.Forms.RichTextBox();
-            this.groupBox_SaveSettings = new System.Windows.Forms.GroupBox();
-            this.label_WriteRealTimeInfo = new System.Windows.Forms.Label();
-            this.check_writeInRealTime = new System.Windows.Forms.CheckBox();
-            this.radio_replace = new System.Windows.Forms.RadioButton();
-            this.radio_append = new System.Windows.Forms.RadioButton();
-            this.btn_browse = new System.Windows.Forms.Button();
-            this.label_FileLocation = new System.Windows.Forms.Label();
+            this.GroupBox_SaveToFileSettings = new System.Windows.Forms.GroupBox();
+            this.Label_WriteRealTimeInfo = new System.Windows.Forms.Label();
+            this.Check_WriteInRealTime = new System.Windows.Forms.CheckBox();
+            this.Radio_EmptyAndReplace = new System.Windows.Forms.RadioButton();
+            this.Radio_Append = new System.Windows.Forms.RadioButton();
+            this.Btn_Browse = new System.Windows.Forms.Button();
+            this.Label_FileLocation = new System.Windows.Forms.Label();
             this.txt_FileLocation = new System.Windows.Forms.TextBox();
-            this.groupBox_Behaviour = new System.Windows.Forms.GroupBox();
+            this.GroupBox_BehaviourAndVisuals = new System.Windows.Forms.GroupBox();
             this.combo_lang = new System.Windows.Forms.ComboBox();
-            this.label_Lang = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.check_HideDonate = new System.Windows.Forms.CheckBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.radio_ExitOnClose = new System.Windows.Forms.RadioButton();
-            this.radio_MinimizeOnClose = new System.Windows.Forms.RadioButton();
-            this.label_WhenMainWinClosed = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.check_StartMinimized = new System.Windows.Forms.CheckBox();
+            this.Label_Lang = new System.Windows.Forms.Label();
+            this.DONOTMODIFY7 = new System.Windows.Forms.Label();
+            this.Check_ShowDonation = new System.Windows.Forms.CheckBox();
+            this.DONOTMODIFY6 = new System.Windows.Forms.Label();
+            this.Radio_ExitApp = new System.Windows.Forms.RadioButton();
+            this.Radio_Minimize = new System.Windows.Forms.RadioButton();
+            this.Label_WhenMainWindowClosed = new System.Windows.Forms.Label();
+            this.DONOTMODIFY5 = new System.Windows.Forms.Label();
+            this.Check_StartMinimized = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.check_openWithWindows = new System.Windows.Forms.CheckBox();
+            this.DONOTMODIFY4 = new System.Windows.Forms.Label();
+            this.DONOTMODIFY3 = new System.Windows.Forms.Label();
+            this.DONOTMODIFY2 = new System.Windows.Forms.Label();
+            this.DONOTMODIFY1 = new System.Windows.Forms.Label();
+            this.Check_OpenWithWin = new System.Windows.Forms.CheckBox();
             this.combo_timeFormat = new System.Windows.Forms.ComboBox();
             this.numeric_clearAfter = new System.Windows.Forms.NumericUpDown();
-            this.label_every = new System.Windows.Forms.Label();
-            this.check_AutoClearHistory = new System.Windows.Forms.CheckBox();
-            this.label_ShowNotificationFor = new System.Windows.Forms.Label();
+            this.Label_Every = new System.Windows.Forms.Label();
+            this.Check_AutoClearClipboard = new System.Windows.Forms.CheckBox();
+            this.Label_ShowNotificationFor = new System.Windows.Forms.Label();
             this.numeric_notifTimeout = new System.Windows.Forms.NumericUpDown();
-            this.check_SaveToFile = new System.Windows.Forms.CheckBox();
-            this.check_NotifyOfCopy = new System.Windows.Forms.CheckBox();
-            this.check_UseWhiteIcon = new System.Windows.Forms.CheckBox();
-            this.label_NoAdmin = new System.Windows.Forms.Label();
-            this.btn_apply = new System.Windows.Forms.Button();
-            this.btn_close = new System.Windows.Forms.Button();
+            this.Check_SaveToFile = new System.Windows.Forms.CheckBox();
+            this.Check_NotifyOfCopy = new System.Windows.Forms.CheckBox();
+            this.Check_UseWhiteIcon = new System.Windows.Forms.CheckBox();
+            this.Label_NoAdminRights = new System.Windows.Forms.Label();
+            this.Btn_Apply = new System.Windows.Forms.Button();
+            this.Btn_Close = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.label_version = new System.Windows.Forms.Label();
-            this.groupBox_General.SuspendLayout();
-            this.groupBox_Update.SuspendLayout();
-            this.groupBox_SaveSettings.SuspendLayout();
-            this.groupBox_Behaviour.SuspendLayout();
+            this.Label_Version = new System.Windows.Forms.Label();
+            this.GroupBox_General.SuspendLayout();
+            this.GroupBox_UpdateAndCurrentVersion.SuspendLayout();
+            this.GroupBox_SaveToFileSettings.SuspendLayout();
+            this.GroupBox_BehaviourAndVisuals.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_clearAfter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_notifTimeout)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox_General
+            // GroupBox_General
             // 
-            this.groupBox_General.Controls.Add(this.groupBox_Update);
-            this.groupBox_General.Controls.Add(this.groupBox_SaveSettings);
-            this.groupBox_General.Controls.Add(this.groupBox_Behaviour);
-            this.groupBox_General.Location = new System.Drawing.Point(12, 12);
-            this.groupBox_General.Name = "groupBox_General";
-            this.groupBox_General.Size = new System.Drawing.Size(720, 561);
-            this.groupBox_General.TabIndex = 0;
-            this.groupBox_General.TabStop = false;
-            this.groupBox_General.Text = "General";
+            this.GroupBox_General.Controls.Add(this.GroupBox_UpdateAndCurrentVersion);
+            this.GroupBox_General.Controls.Add(this.GroupBox_SaveToFileSettings);
+            this.GroupBox_General.Controls.Add(this.GroupBox_BehaviourAndVisuals);
+            this.GroupBox_General.Location = new System.Drawing.Point(12, 12);
+            this.GroupBox_General.Name = "GroupBox_General";
+            this.GroupBox_General.Size = new System.Drawing.Size(720, 561);
+            this.GroupBox_General.TabIndex = 0;
+            this.GroupBox_General.TabStop = false;
+            this.GroupBox_General.Text = "General";
             // 
-            // groupBox_Update
+            // GroupBox_UpdateAndCurrentVersion
             // 
-            this.groupBox_Update.Controls.Add(this.btn_about);
-            this.groupBox_Update.Controls.Add(this.btn_checkForUpdates);
-            this.groupBox_Update.Controls.Add(this.check_UpdateOnStartup);
-            this.groupBox_Update.Controls.Add(this.txt_updateInfo);
-            this.groupBox_Update.Location = new System.Drawing.Point(362, 245);
-            this.groupBox_Update.Name = "groupBox_Update";
-            this.groupBox_Update.Size = new System.Drawing.Size(350, 256);
-            this.groupBox_Update.TabIndex = 2;
-            this.groupBox_Update.TabStop = false;
-            this.groupBox_Update.Text = "Update and current version";
+            this.GroupBox_UpdateAndCurrentVersion.Controls.Add(this.Btn_About);
+            this.GroupBox_UpdateAndCurrentVersion.Controls.Add(this.Btn_CheckForUpdates);
+            this.GroupBox_UpdateAndCurrentVersion.Controls.Add(this.Check_UpdateOnStartup);
+            this.GroupBox_UpdateAndCurrentVersion.Controls.Add(this.txt_updateInfo);
+            this.GroupBox_UpdateAndCurrentVersion.Location = new System.Drawing.Point(362, 245);
+            this.GroupBox_UpdateAndCurrentVersion.Name = "GroupBox_UpdateAndCurrentVersion";
+            this.GroupBox_UpdateAndCurrentVersion.Size = new System.Drawing.Size(350, 256);
+            this.GroupBox_UpdateAndCurrentVersion.TabIndex = 2;
+            this.GroupBox_UpdateAndCurrentVersion.TabStop = false;
+            this.GroupBox_UpdateAndCurrentVersion.Text = "Update and current version";
             // 
-            // btn_about
+            // Btn_About
             // 
-            this.btn_about.Enabled = false;
-            this.btn_about.Location = new System.Drawing.Point(214, 148);
-            this.btn_about.Name = "btn_about";
-            this.btn_about.Size = new System.Drawing.Size(130, 50);
-            this.btn_about.TabIndex = 3;
-            this.btn_about.Text = "About";
-            this.btn_about.UseVisualStyleBackColor = true;
+            this.Btn_About.Enabled = false;
+            this.Btn_About.Location = new System.Drawing.Point(214, 148);
+            this.Btn_About.Name = "Btn_About";
+            this.Btn_About.Size = new System.Drawing.Size(130, 50);
+            this.Btn_About.TabIndex = 3;
+            this.Btn_About.Text = "About";
+            this.Btn_About.UseVisualStyleBackColor = true;
             // 
-            // btn_checkForUpdates
+            // Btn_CheckForUpdates
             // 
-            this.btn_checkForUpdates.Location = new System.Drawing.Point(6, 148);
-            this.btn_checkForUpdates.Name = "btn_checkForUpdates";
-            this.btn_checkForUpdates.Size = new System.Drawing.Size(130, 50);
-            this.btn_checkForUpdates.TabIndex = 2;
-            this.btn_checkForUpdates.Text = "Check for updates";
-            this.btn_checkForUpdates.UseVisualStyleBackColor = true;
+            this.Btn_CheckForUpdates.Location = new System.Drawing.Point(6, 148);
+            this.Btn_CheckForUpdates.Name = "Btn_CheckForUpdates";
+            this.Btn_CheckForUpdates.Size = new System.Drawing.Size(130, 50);
+            this.Btn_CheckForUpdates.TabIndex = 2;
+            this.Btn_CheckForUpdates.Text = "Check for updates";
+            this.Btn_CheckForUpdates.UseVisualStyleBackColor = true;
             // 
-            // check_UpdateOnStartup
+            // Check_UpdateOnStartup
             // 
-            this.check_UpdateOnStartup.AutoSize = true;
-            this.check_UpdateOnStartup.Location = new System.Drawing.Point(10, 213);
-            this.check_UpdateOnStartup.Name = "check_UpdateOnStartup";
-            this.check_UpdateOnStartup.Size = new System.Drawing.Size(241, 24);
-            this.check_UpdateOnStartup.TabIndex = 1;
-            this.check_UpdateOnStartup.Text = "Check for updates on startup";
-            this.check_UpdateOnStartup.UseVisualStyleBackColor = true;
+            this.Check_UpdateOnStartup.AutoSize = true;
+            this.Check_UpdateOnStartup.Location = new System.Drawing.Point(10, 213);
+            this.Check_UpdateOnStartup.Name = "Check_UpdateOnStartup";
+            this.Check_UpdateOnStartup.Size = new System.Drawing.Size(241, 24);
+            this.Check_UpdateOnStartup.TabIndex = 1;
+            this.Check_UpdateOnStartup.Text = "Check for updates on startup";
+            this.Check_UpdateOnStartup.UseVisualStyleBackColor = true;
             // 
             // txt_updateInfo
             // 
@@ -146,85 +146,85 @@
             this.txt_updateInfo.TabIndex = 0;
             this.txt_updateInfo.Text = "";
             // 
-            // groupBox_SaveSettings
+            // GroupBox_SaveToFileSettings
             // 
-            this.groupBox_SaveSettings.Controls.Add(this.label_WriteRealTimeInfo);
-            this.groupBox_SaveSettings.Controls.Add(this.check_writeInRealTime);
-            this.groupBox_SaveSettings.Controls.Add(this.radio_replace);
-            this.groupBox_SaveSettings.Controls.Add(this.radio_append);
-            this.groupBox_SaveSettings.Controls.Add(this.btn_browse);
-            this.groupBox_SaveSettings.Controls.Add(this.label_FileLocation);
-            this.groupBox_SaveSettings.Controls.Add(this.txt_FileLocation);
-            this.groupBox_SaveSettings.Location = new System.Drawing.Point(362, 25);
-            this.groupBox_SaveSettings.Name = "groupBox_SaveSettings";
-            this.groupBox_SaveSettings.Size = new System.Drawing.Size(350, 217);
-            this.groupBox_SaveSettings.TabIndex = 1;
-            this.groupBox_SaveSettings.TabStop = false;
-            this.groupBox_SaveSettings.Text = "Save to file settings";
+            this.GroupBox_SaveToFileSettings.Controls.Add(this.Label_WriteRealTimeInfo);
+            this.GroupBox_SaveToFileSettings.Controls.Add(this.Check_WriteInRealTime);
+            this.GroupBox_SaveToFileSettings.Controls.Add(this.Radio_EmptyAndReplace);
+            this.GroupBox_SaveToFileSettings.Controls.Add(this.Radio_Append);
+            this.GroupBox_SaveToFileSettings.Controls.Add(this.Btn_Browse);
+            this.GroupBox_SaveToFileSettings.Controls.Add(this.Label_FileLocation);
+            this.GroupBox_SaveToFileSettings.Controls.Add(this.txt_FileLocation);
+            this.GroupBox_SaveToFileSettings.Location = new System.Drawing.Point(362, 25);
+            this.GroupBox_SaveToFileSettings.Name = "GroupBox_SaveToFileSettings";
+            this.GroupBox_SaveToFileSettings.Size = new System.Drawing.Size(350, 217);
+            this.GroupBox_SaveToFileSettings.TabIndex = 1;
+            this.GroupBox_SaveToFileSettings.TabStop = false;
+            this.GroupBox_SaveToFileSettings.Text = "Save to file settings";
             // 
-            // label_WriteRealTimeInfo
+            // Label_WriteRealTimeInfo
             // 
-            this.label_WriteRealTimeInfo.AutoSize = true;
-            this.label_WriteRealTimeInfo.Location = new System.Drawing.Point(33, 147);
-            this.label_WriteRealTimeInfo.Name = "label_WriteRealTimeInfo";
-            this.label_WriteRealTimeInfo.Size = new System.Drawing.Size(81, 20);
-            this.label_WriteRealTimeInfo.TabIndex = 6;
-            this.label_WriteRealTimeInfo.Text = "labExplain\r\n";
+            this.Label_WriteRealTimeInfo.AutoSize = true;
+            this.Label_WriteRealTimeInfo.Location = new System.Drawing.Point(33, 147);
+            this.Label_WriteRealTimeInfo.Name = "Label_WriteRealTimeInfo";
+            this.Label_WriteRealTimeInfo.Size = new System.Drawing.Size(123, 20);
+            this.Label_WriteRealTimeInfo.TabIndex = 6;
+            this.Label_WriteRealTimeInfo.Text = "RealtimeExplain";
             // 
-            // check_writeInRealTime
+            // Check_WriteInRealTime
             // 
-            this.check_writeInRealTime.AutoSize = true;
-            this.check_writeInRealTime.Enabled = false;
-            this.check_writeInRealTime.Location = new System.Drawing.Point(6, 114);
-            this.check_writeInRealTime.Name = "check_writeInRealTime";
-            this.check_writeInRealTime.Size = new System.Drawing.Size(176, 24);
-            this.check_writeInRealTime.TabIndex = 5;
-            this.check_writeInRealTime.Text = "Write file in real time";
-            this.check_writeInRealTime.UseVisualStyleBackColor = true;
+            this.Check_WriteInRealTime.AutoSize = true;
+            this.Check_WriteInRealTime.Enabled = false;
+            this.Check_WriteInRealTime.Location = new System.Drawing.Point(6, 114);
+            this.Check_WriteInRealTime.Name = "Check_WriteInRealTime";
+            this.Check_WriteInRealTime.Size = new System.Drawing.Size(176, 24);
+            this.Check_WriteInRealTime.TabIndex = 5;
+            this.Check_WriteInRealTime.Text = "Write file in real time";
+            this.Check_WriteInRealTime.UseVisualStyleBackColor = true;
             // 
-            // radio_replace
+            // Radio_EmptyAndReplace
             // 
-            this.radio_replace.AutoSize = true;
-            this.radio_replace.Checked = true;
-            this.radio_replace.Enabled = false;
-            this.radio_replace.Location = new System.Drawing.Point(134, 83);
-            this.radio_replace.Name = "radio_replace";
-            this.radio_replace.Size = new System.Drawing.Size(190, 24);
-            this.radio_replace.TabIndex = 4;
-            this.radio_replace.TabStop = true;
-            this.radio_replace.Text = "Empty file and replace";
-            this.radio_replace.UseVisualStyleBackColor = true;
+            this.Radio_EmptyAndReplace.AutoSize = true;
+            this.Radio_EmptyAndReplace.Checked = true;
+            this.Radio_EmptyAndReplace.Enabled = false;
+            this.Radio_EmptyAndReplace.Location = new System.Drawing.Point(134, 83);
+            this.Radio_EmptyAndReplace.Name = "Radio_EmptyAndReplace";
+            this.Radio_EmptyAndReplace.Size = new System.Drawing.Size(190, 24);
+            this.Radio_EmptyAndReplace.TabIndex = 4;
+            this.Radio_EmptyAndReplace.TabStop = true;
+            this.Radio_EmptyAndReplace.Text = "Empty file and replace";
+            this.Radio_EmptyAndReplace.UseVisualStyleBackColor = true;
             // 
-            // radio_append
+            // Radio_Append
             // 
-            this.radio_append.AutoSize = true;
-            this.radio_append.Enabled = false;
-            this.radio_append.Location = new System.Drawing.Point(6, 83);
-            this.radio_append.Name = "radio_append";
-            this.radio_append.Size = new System.Drawing.Size(114, 24);
-            this.radio_append.TabIndex = 3;
-            this.radio_append.Text = "Append file";
-            this.radio_append.UseVisualStyleBackColor = true;
+            this.Radio_Append.AutoSize = true;
+            this.Radio_Append.Enabled = false;
+            this.Radio_Append.Location = new System.Drawing.Point(6, 83);
+            this.Radio_Append.Name = "Radio_Append";
+            this.Radio_Append.Size = new System.Drawing.Size(114, 24);
+            this.Radio_Append.TabIndex = 3;
+            this.Radio_Append.Text = "Append file";
+            this.Radio_Append.UseVisualStyleBackColor = true;
             // 
-            // btn_browse
+            // Btn_Browse
             // 
-            this.btn_browse.Enabled = false;
-            this.btn_browse.Location = new System.Drawing.Point(266, 48);
-            this.btn_browse.Name = "btn_browse";
-            this.btn_browse.Size = new System.Drawing.Size(78, 26);
-            this.btn_browse.TabIndex = 2;
-            this.btn_browse.Text = "Browse";
-            this.btn_browse.UseVisualStyleBackColor = true;
-            this.btn_browse.Click += new System.EventHandler(this.Btn_browse_Click);
+            this.Btn_Browse.Enabled = false;
+            this.Btn_Browse.Location = new System.Drawing.Point(266, 48);
+            this.Btn_Browse.Name = "Btn_Browse";
+            this.Btn_Browse.Size = new System.Drawing.Size(78, 26);
+            this.Btn_Browse.TabIndex = 2;
+            this.Btn_Browse.Text = "Browse";
+            this.Btn_Browse.UseVisualStyleBackColor = true;
+            this.Btn_Browse.Click += new System.EventHandler(this.Btn_browse_Click);
             // 
-            // label_FileLocation
+            // Label_FileLocation
             // 
-            this.label_FileLocation.AutoSize = true;
-            this.label_FileLocation.Location = new System.Drawing.Point(6, 25);
-            this.label_FileLocation.Name = "label_FileLocation";
-            this.label_FileLocation.Size = new System.Drawing.Size(93, 20);
-            this.label_FileLocation.TabIndex = 1;
-            this.label_FileLocation.Text = "File location";
+            this.Label_FileLocation.AutoSize = true;
+            this.Label_FileLocation.Location = new System.Drawing.Point(6, 25);
+            this.Label_FileLocation.Name = "Label_FileLocation";
+            this.Label_FileLocation.Size = new System.Drawing.Size(93, 20);
+            this.Label_FileLocation.TabIndex = 1;
+            this.Label_FileLocation.Text = "File location";
             // 
             // txt_FileLocation
             // 
@@ -234,141 +234,147 @@
             this.txt_FileLocation.Size = new System.Drawing.Size(254, 26);
             this.txt_FileLocation.TabIndex = 0;
             // 
-            // groupBox_Behaviour
+            // GroupBox_BehaviourAndVisuals
             // 
-            this.groupBox_Behaviour.Controls.Add(this.combo_lang);
-            this.groupBox_Behaviour.Controls.Add(this.label_Lang);
-            this.groupBox_Behaviour.Controls.Add(this.label13);
-            this.groupBox_Behaviour.Controls.Add(this.check_HideDonate);
-            this.groupBox_Behaviour.Controls.Add(this.label12);
-            this.groupBox_Behaviour.Controls.Add(this.radio_ExitOnClose);
-            this.groupBox_Behaviour.Controls.Add(this.radio_MinimizeOnClose);
-            this.groupBox_Behaviour.Controls.Add(this.label_WhenMainWinClosed);
-            this.groupBox_Behaviour.Controls.Add(this.label10);
-            this.groupBox_Behaviour.Controls.Add(this.check_StartMinimized);
-            this.groupBox_Behaviour.Controls.Add(this.label9);
-            this.groupBox_Behaviour.Controls.Add(this.label6);
-            this.groupBox_Behaviour.Controls.Add(this.label5);
-            this.groupBox_Behaviour.Controls.Add(this.label4);
-            this.groupBox_Behaviour.Controls.Add(this.label3);
-            this.groupBox_Behaviour.Controls.Add(this.check_openWithWindows);
-            this.groupBox_Behaviour.Controls.Add(this.combo_timeFormat);
-            this.groupBox_Behaviour.Controls.Add(this.numeric_clearAfter);
-            this.groupBox_Behaviour.Controls.Add(this.label_every);
-            this.groupBox_Behaviour.Controls.Add(this.check_AutoClearHistory);
-            this.groupBox_Behaviour.Controls.Add(this.label_ShowNotificationFor);
-            this.groupBox_Behaviour.Controls.Add(this.numeric_notifTimeout);
-            this.groupBox_Behaviour.Controls.Add(this.check_SaveToFile);
-            this.groupBox_Behaviour.Controls.Add(this.check_NotifyOfCopy);
-            this.groupBox_Behaviour.Controls.Add(this.check_UseWhiteIcon);
-            this.groupBox_Behaviour.Location = new System.Drawing.Point(6, 25);
-            this.groupBox_Behaviour.Name = "groupBox_Behaviour";
-            this.groupBox_Behaviour.Size = new System.Drawing.Size(350, 530);
-            this.groupBox_Behaviour.TabIndex = 1;
-            this.groupBox_Behaviour.TabStop = false;
-            this.groupBox_Behaviour.Text = "Behaviour and visuals";
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.combo_lang);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Label_Lang);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.DONOTMODIFY7);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_ShowDonation);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.DONOTMODIFY6);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Radio_ExitApp);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Radio_Minimize);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Label_WhenMainWindowClosed);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.DONOTMODIFY5);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_StartMinimized);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.label9);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.DONOTMODIFY4);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.DONOTMODIFY3);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.DONOTMODIFY2);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.DONOTMODIFY1);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_OpenWithWin);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.combo_timeFormat);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.numeric_clearAfter);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Label_Every);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_AutoClearClipboard);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Label_ShowNotificationFor);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.numeric_notifTimeout);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_SaveToFile);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_NotifyOfCopy);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_UseWhiteIcon);
+            this.GroupBox_BehaviourAndVisuals.Location = new System.Drawing.Point(6, 25);
+            this.GroupBox_BehaviourAndVisuals.Name = "GroupBox_BehaviourAndVisuals";
+            this.GroupBox_BehaviourAndVisuals.Size = new System.Drawing.Size(350, 530);
+            this.GroupBox_BehaviourAndVisuals.TabIndex = 1;
+            this.GroupBox_BehaviourAndVisuals.TabStop = false;
+            this.GroupBox_BehaviourAndVisuals.Text = "Behaviour and visuals";
             // 
             // combo_lang
             // 
             this.combo_lang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combo_lang.FormattingEnabled = true;
             this.combo_lang.Items.AddRange(new object[] {
-            "en",
-            "hu",
-            "no"});
+            "English",
+            "Hungarian",
+            "Norwegian",
+            "Finnish",
+            "Filipino",
+            "Dutch",
+            "Serbian",
+            "Danish",
+            "Polish"});
             this.combo_lang.Location = new System.Drawing.Point(103, 413);
             this.combo_lang.Name = "combo_lang";
             this.combo_lang.Size = new System.Drawing.Size(116, 28);
             this.combo_lang.TabIndex = 23;
             this.combo_lang.SelectedIndexChanged += new System.EventHandler(this.Combo_lang_SelectedIndexChanged);
             // 
-            // label_Lang
+            // Label_Lang
             // 
-            this.label_Lang.AutoSize = true;
-            this.label_Lang.Location = new System.Drawing.Point(2, 416);
-            this.label_Lang.Name = "label_Lang";
-            this.label_Lang.Size = new System.Drawing.Size(60, 20);
-            this.label_Lang.TabIndex = 22;
-            this.label_Lang.Text = "label14";
+            this.Label_Lang.AutoSize = true;
+            this.Label_Lang.Location = new System.Drawing.Point(2, 416);
+            this.Label_Lang.Name = "Label_Lang";
+            this.Label_Lang.Size = new System.Drawing.Size(81, 20);
+            this.Label_Lang.TabIndex = 22;
+            this.Label_Lang.Text = "Language";
             // 
-            // label13
+            // DONOTMODIFY7
             // 
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label13.Location = new System.Drawing.Point(0, 400);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(350, 2);
-            this.label13.TabIndex = 21;
+            this.DONOTMODIFY7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DONOTMODIFY7.Location = new System.Drawing.Point(0, 400);
+            this.DONOTMODIFY7.Name = "DONOTMODIFY7";
+            this.DONOTMODIFY7.Size = new System.Drawing.Size(350, 2);
+            this.DONOTMODIFY7.TabIndex = 21;
             // 
-            // check_HideDonate
+            // Check_ShowDonation
             // 
-            this.check_HideDonate.AutoSize = true;
-            this.check_HideDonate.Checked = true;
-            this.check_HideDonate.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_HideDonate.Location = new System.Drawing.Point(6, 370);
-            this.check_HideDonate.Name = "check_HideDonate";
-            this.check_HideDonate.Size = new System.Drawing.Size(307, 24);
-            this.check_HideDonate.TabIndex = 20;
-            this.check_HideDonate.Text = "Show donation button on main window";
-            this.check_HideDonate.UseVisualStyleBackColor = true;
-            this.check_HideDonate.CheckedChanged += new System.EventHandler(this.Check_HideDonate_CheckedChanged);
+            this.Check_ShowDonation.AutoSize = true;
+            this.Check_ShowDonation.Checked = true;
+            this.Check_ShowDonation.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Check_ShowDonation.Location = new System.Drawing.Point(6, 370);
+            this.Check_ShowDonation.Name = "Check_ShowDonation";
+            this.Check_ShowDonation.Size = new System.Drawing.Size(307, 24);
+            this.Check_ShowDonation.TabIndex = 20;
+            this.Check_ShowDonation.Text = "Show donation button on main window";
+            this.Check_ShowDonation.UseVisualStyleBackColor = true;
+            this.Check_ShowDonation.CheckedChanged += new System.EventHandler(this.Check_HideDonate_CheckedChanged);
             // 
-            // label12
+            // DONOTMODIFY6
             // 
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label12.Location = new System.Drawing.Point(0, 360);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(350, 2);
-            this.label12.TabIndex = 19;
+            this.DONOTMODIFY6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DONOTMODIFY6.Location = new System.Drawing.Point(0, 360);
+            this.DONOTMODIFY6.Name = "DONOTMODIFY6";
+            this.DONOTMODIFY6.Size = new System.Drawing.Size(350, 2);
+            this.DONOTMODIFY6.TabIndex = 19;
             // 
-            // radio_ExitOnClose
+            // Radio_ExitApp
             // 
-            this.radio_ExitOnClose.AutoSize = true;
-            this.radio_ExitOnClose.Checked = true;
-            this.radio_ExitOnClose.Location = new System.Drawing.Point(6, 333);
-            this.radio_ExitOnClose.Name = "radio_ExitOnClose";
-            this.radio_ExitOnClose.Size = new System.Drawing.Size(167, 24);
-            this.radio_ExitOnClose.TabIndex = 18;
-            this.radio_ExitOnClose.TabStop = true;
-            this.radio_ExitOnClose.Text = "Exit the application";
-            this.radio_ExitOnClose.UseVisualStyleBackColor = true;
+            this.Radio_ExitApp.AutoSize = true;
+            this.Radio_ExitApp.Checked = true;
+            this.Radio_ExitApp.Location = new System.Drawing.Point(6, 333);
+            this.Radio_ExitApp.Name = "Radio_ExitApp";
+            this.Radio_ExitApp.Size = new System.Drawing.Size(167, 24);
+            this.Radio_ExitApp.TabIndex = 18;
+            this.Radio_ExitApp.TabStop = true;
+            this.Radio_ExitApp.Text = "Exit the application";
+            this.Radio_ExitApp.UseVisualStyleBackColor = true;
             // 
-            // radio_MinimizeOnClose
+            // Radio_Minimize
             // 
-            this.radio_MinimizeOnClose.AutoSize = true;
-            this.radio_MinimizeOnClose.Location = new System.Drawing.Point(6, 305);
-            this.radio_MinimizeOnClose.Name = "radio_MinimizeOnClose";
-            this.radio_MinimizeOnClose.Size = new System.Drawing.Size(201, 24);
-            this.radio_MinimizeOnClose.TabIndex = 17;
-            this.radio_MinimizeOnClose.Text = "Minimize on system tray";
-            this.radio_MinimizeOnClose.UseVisualStyleBackColor = true;
-            this.radio_MinimizeOnClose.CheckedChanged += new System.EventHandler(this.Radio_MinimizeOnClose_CheckedChanged);
+            this.Radio_Minimize.AutoSize = true;
+            this.Radio_Minimize.Location = new System.Drawing.Point(6, 305);
+            this.Radio_Minimize.Name = "Radio_Minimize";
+            this.Radio_Minimize.Size = new System.Drawing.Size(201, 24);
+            this.Radio_Minimize.TabIndex = 17;
+            this.Radio_Minimize.Text = "Minimize on system tray";
+            this.Radio_Minimize.UseVisualStyleBackColor = true;
+            this.Radio_Minimize.CheckedChanged += new System.EventHandler(this.Radio_MinimizeOnClose_CheckedChanged);
             // 
-            // label_WhenMainWinClosed
+            // Label_WhenMainWindowClosed
             // 
-            this.label_WhenMainWinClosed.AutoSize = true;
-            this.label_WhenMainWinClosed.Location = new System.Drawing.Point(6, 282);
-            this.label_WhenMainWinClosed.Name = "label_WhenMainWinClosed";
-            this.label_WhenMainWinClosed.Size = new System.Drawing.Size(230, 20);
-            this.label_WhenMainWinClosed.TabIndex = 16;
-            this.label_WhenMainWinClosed.Text = "When I close the main Window:";
+            this.Label_WhenMainWindowClosed.AutoSize = true;
+            this.Label_WhenMainWindowClosed.Location = new System.Drawing.Point(6, 282);
+            this.Label_WhenMainWindowClosed.Name = "Label_WhenMainWindowClosed";
+            this.Label_WhenMainWindowClosed.Size = new System.Drawing.Size(230, 20);
+            this.Label_WhenMainWindowClosed.TabIndex = 16;
+            this.Label_WhenMainWindowClosed.Text = "When I close the main Window:";
             // 
-            // label10
+            // DONOTMODIFY5
             // 
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label10.Location = new System.Drawing.Point(0, 280);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(350, 2);
-            this.label10.TabIndex = 15;
+            this.DONOTMODIFY5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DONOTMODIFY5.Location = new System.Drawing.Point(0, 280);
+            this.DONOTMODIFY5.Name = "DONOTMODIFY5";
+            this.DONOTMODIFY5.Size = new System.Drawing.Size(350, 2);
+            this.DONOTMODIFY5.TabIndex = 15;
             // 
-            // check_StartMinimized
+            // Check_StartMinimized
             // 
-            this.check_StartMinimized.AutoSize = true;
-            this.check_StartMinimized.Location = new System.Drawing.Point(6, 250);
-            this.check_StartMinimized.Name = "check_StartMinimized";
-            this.check_StartMinimized.Size = new System.Drawing.Size(144, 24);
-            this.check_StartMinimized.TabIndex = 14;
-            this.check_StartMinimized.Text = "Start Minimized";
-            this.check_StartMinimized.UseVisualStyleBackColor = true;
+            this.Check_StartMinimized.AutoSize = true;
+            this.Check_StartMinimized.Location = new System.Drawing.Point(6, 250);
+            this.Check_StartMinimized.Name = "Check_StartMinimized";
+            this.Check_StartMinimized.Size = new System.Drawing.Size(144, 24);
+            this.Check_StartMinimized.TabIndex = 14;
+            this.Check_StartMinimized.Text = "Start Minimized";
+            this.Check_StartMinimized.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -378,47 +384,47 @@
             this.label9.Size = new System.Drawing.Size(350, 2);
             this.label9.TabIndex = 13;
             // 
-            // label6
+            // DONOTMODIFY4
             // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(0, 215);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(350, 2);
-            this.label6.TabIndex = 12;
+            this.DONOTMODIFY4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DONOTMODIFY4.Location = new System.Drawing.Point(0, 215);
+            this.DONOTMODIFY4.Name = "DONOTMODIFY4";
+            this.DONOTMODIFY4.Size = new System.Drawing.Size(350, 2);
+            this.DONOTMODIFY4.TabIndex = 12;
             // 
-            // label5
+            // DONOTMODIFY3
             // 
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(0, 155);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(350, 2);
-            this.label5.TabIndex = 11;
+            this.DONOTMODIFY3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DONOTMODIFY3.Location = new System.Drawing.Point(0, 155);
+            this.DONOTMODIFY3.Name = "DONOTMODIFY3";
+            this.DONOTMODIFY3.Size = new System.Drawing.Size(350, 2);
+            this.DONOTMODIFY3.TabIndex = 11;
             // 
-            // label4
+            // DONOTMODIFY2
             // 
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(0, 115);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(350, 2);
-            this.label4.TabIndex = 10;
+            this.DONOTMODIFY2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DONOTMODIFY2.Location = new System.Drawing.Point(0, 115);
+            this.DONOTMODIFY2.Name = "DONOTMODIFY2";
+            this.DONOTMODIFY2.Size = new System.Drawing.Size(350, 2);
+            this.DONOTMODIFY2.TabIndex = 10;
             // 
-            // label3
+            // DONOTMODIFY1
             // 
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(0, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(350, 2);
-            this.label3.TabIndex = 2;
+            this.DONOTMODIFY1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DONOTMODIFY1.Location = new System.Drawing.Point(0, 50);
+            this.DONOTMODIFY1.Name = "DONOTMODIFY1";
+            this.DONOTMODIFY1.Size = new System.Drawing.Size(350, 2);
+            this.DONOTMODIFY1.TabIndex = 2;
             // 
-            // check_openWithWindows
+            // Check_OpenWithWin
             // 
-            this.check_openWithWindows.AutoSize = true;
-            this.check_openWithWindows.Location = new System.Drawing.Point(6, 220);
-            this.check_openWithWindows.Name = "check_openWithWindows";
-            this.check_openWithWindows.Size = new System.Drawing.Size(228, 24);
-            this.check_openWithWindows.TabIndex = 9;
-            this.check_openWithWindows.Text = "Open when Windows starts";
-            this.check_openWithWindows.UseVisualStyleBackColor = true;
+            this.Check_OpenWithWin.AutoSize = true;
+            this.Check_OpenWithWin.Location = new System.Drawing.Point(6, 220);
+            this.Check_OpenWithWin.Name = "Check_OpenWithWin";
+            this.Check_OpenWithWin.Size = new System.Drawing.Size(228, 24);
+            this.Check_OpenWithWin.TabIndex = 9;
+            this.Check_OpenWithWin.Text = "Open when Windows starts";
+            this.Check_OpenWithWin.UseVisualStyleBackColor = true;
             // 
             // combo_timeFormat
             // 
@@ -458,33 +464,33 @@
             0,
             0});
             // 
-            // label_every
+            // Label_Every
             // 
-            this.label_every.AutoSize = true;
-            this.label_every.Location = new System.Drawing.Point(25, 187);
-            this.label_every.Name = "label_every";
-            this.label_every.Size = new System.Drawing.Size(48, 20);
-            this.label_every.TabIndex = 6;
-            this.label_every.Text = "Every";
+            this.Label_Every.AutoSize = true;
+            this.Label_Every.Location = new System.Drawing.Point(25, 187);
+            this.Label_Every.Name = "Label_Every";
+            this.Label_Every.Size = new System.Drawing.Size(48, 20);
+            this.Label_Every.TabIndex = 6;
+            this.Label_Every.Text = "Every";
             // 
-            // check_AutoClearHistory
+            // Check_AutoClearClipboard
             // 
-            this.check_AutoClearHistory.AutoSize = true;
-            this.check_AutoClearHistory.Location = new System.Drawing.Point(6, 160);
-            this.check_AutoClearHistory.Name = "check_AutoClearHistory";
-            this.check_AutoClearHistory.Size = new System.Drawing.Size(309, 24);
-            this.check_AutoClearHistory.TabIndex = 5;
-            this.check_AutoClearHistory.Text = "Automatically clear my clipboard history";
-            this.check_AutoClearHistory.UseVisualStyleBackColor = true;
+            this.Check_AutoClearClipboard.AutoSize = true;
+            this.Check_AutoClearClipboard.Location = new System.Drawing.Point(6, 160);
+            this.Check_AutoClearClipboard.Name = "Check_AutoClearClipboard";
+            this.Check_AutoClearClipboard.Size = new System.Drawing.Size(309, 24);
+            this.Check_AutoClearClipboard.TabIndex = 5;
+            this.Check_AutoClearClipboard.Text = "Automatically clear my clipboard history";
+            this.Check_AutoClearClipboard.UseVisualStyleBackColor = true;
             // 
-            // label_ShowNotificationFor
+            // Label_ShowNotificationFor
             // 
-            this.label_ShowNotificationFor.AutoSize = true;
-            this.label_ShowNotificationFor.Location = new System.Drawing.Point(25, 87);
-            this.label_ShowNotificationFor.Name = "label_ShowNotificationFor";
-            this.label_ShowNotificationFor.Size = new System.Drawing.Size(231, 20);
-            this.label_ShowNotificationFor.TabIndex = 4;
-            this.label_ShowNotificationFor.Text = "Show notification for: (seconds)";
+            this.Label_ShowNotificationFor.AutoSize = true;
+            this.Label_ShowNotificationFor.Location = new System.Drawing.Point(25, 87);
+            this.Label_ShowNotificationFor.Name = "Label_ShowNotificationFor";
+            this.Label_ShowNotificationFor.Size = new System.Drawing.Size(231, 20);
+            this.Label_ShowNotificationFor.TabIndex = 4;
+            this.Label_ShowNotificationFor.Text = "Show notification for: (seconds)";
             // 
             // numeric_notifTimeout
             // 
@@ -508,86 +514,86 @@
             0,
             0});
             // 
-            // check_SaveToFile
+            // Check_SaveToFile
             // 
-            this.check_SaveToFile.AutoSize = true;
-            this.check_SaveToFile.Location = new System.Drawing.Point(6, 125);
-            this.check_SaveToFile.Name = "check_SaveToFile";
-            this.check_SaveToFile.Size = new System.Drawing.Size(337, 24);
-            this.check_SaveToFile.TabIndex = 2;
-            this.check_SaveToFile.Text = "Save the clipboard history to a local text file";
-            this.check_SaveToFile.UseVisualStyleBackColor = true;
+            this.Check_SaveToFile.AutoSize = true;
+            this.Check_SaveToFile.Location = new System.Drawing.Point(6, 125);
+            this.Check_SaveToFile.Name = "Check_SaveToFile";
+            this.Check_SaveToFile.Size = new System.Drawing.Size(337, 24);
+            this.Check_SaveToFile.TabIndex = 2;
+            this.Check_SaveToFile.Text = "Save the clipboard history to a local text file";
+            this.Check_SaveToFile.UseVisualStyleBackColor = true;
             // 
-            // check_NotifyOfCopy
+            // Check_NotifyOfCopy
             // 
-            this.check_NotifyOfCopy.AutoSize = true;
-            this.check_NotifyOfCopy.Location = new System.Drawing.Point(6, 55);
-            this.check_NotifyOfCopy.Name = "check_NotifyOfCopy";
-            this.check_NotifyOfCopy.Size = new System.Drawing.Size(300, 24);
-            this.check_NotifyOfCopy.TabIndex = 1;
-            this.check_NotifyOfCopy.Text = "Notify me when my clipboard changes";
-            this.check_NotifyOfCopy.UseVisualStyleBackColor = true;
+            this.Check_NotifyOfCopy.AutoSize = true;
+            this.Check_NotifyOfCopy.Location = new System.Drawing.Point(6, 55);
+            this.Check_NotifyOfCopy.Name = "Check_NotifyOfCopy";
+            this.Check_NotifyOfCopy.Size = new System.Drawing.Size(300, 24);
+            this.Check_NotifyOfCopy.TabIndex = 1;
+            this.Check_NotifyOfCopy.Text = "Notify me when my clipboard changes";
+            this.Check_NotifyOfCopy.UseVisualStyleBackColor = true;
             // 
-            // check_UseWhiteIcon
+            // Check_UseWhiteIcon
             // 
-            this.check_UseWhiteIcon.AutoSize = true;
-            this.check_UseWhiteIcon.Location = new System.Drawing.Point(6, 25);
-            this.check_UseWhiteIcon.Name = "check_UseWhiteIcon";
-            this.check_UseWhiteIcon.Size = new System.Drawing.Size(265, 24);
-            this.check_UseWhiteIcon.TabIndex = 0;
-            this.check_UseWhiteIcon.Text = "Use white icon in the system tray";
-            this.check_UseWhiteIcon.UseVisualStyleBackColor = true;
+            this.Check_UseWhiteIcon.AutoSize = true;
+            this.Check_UseWhiteIcon.Location = new System.Drawing.Point(6, 25);
+            this.Check_UseWhiteIcon.Name = "Check_UseWhiteIcon";
+            this.Check_UseWhiteIcon.Size = new System.Drawing.Size(265, 24);
+            this.Check_UseWhiteIcon.TabIndex = 0;
+            this.Check_UseWhiteIcon.Text = "Use white icon in the system tray";
+            this.Check_UseWhiteIcon.UseVisualStyleBackColor = true;
             // 
-            // label_NoAdmin
+            // Label_NoAdminRights
             // 
-            this.label_NoAdmin.AutoSize = true;
-            this.label_NoAdmin.Location = new System.Drawing.Point(93, 576);
-            this.label_NoAdmin.Name = "label_NoAdmin";
-            this.label_NoAdmin.Size = new System.Drawing.Size(303, 60);
-            this.label_NoAdmin.TabIndex = 5;
-            this.label_NoAdmin.Text = "Sorry! You don\'t have admin rights, or the\r\napplication failed to launch as one, " +
+            this.Label_NoAdminRights.AutoSize = true;
+            this.Label_NoAdminRights.Location = new System.Drawing.Point(93, 576);
+            this.Label_NoAdminRights.Name = "Label_NoAdminRights";
+            this.Label_NoAdminRights.Size = new System.Drawing.Size(303, 60);
+            this.Label_NoAdminRights.TabIndex = 5;
+            this.Label_NoAdminRights.Text = "Sorry! You don\'t have admin rights, or the\r\napplication failed to launch as one, " +
     "please\r\ntry to run the app as administrator!";
-            this.label_NoAdmin.Visible = false;
+            this.Label_NoAdminRights.Visible = false;
             // 
-            // btn_apply
+            // Btn_Apply
             // 
-            this.btn_apply.Location = new System.Drawing.Point(492, 579);
-            this.btn_apply.Name = "btn_apply";
-            this.btn_apply.Size = new System.Drawing.Size(117, 53);
-            this.btn_apply.TabIndex = 3;
-            this.btn_apply.Text = "Apply";
-            this.btn_apply.UseVisualStyleBackColor = true;
-            this.btn_apply.Click += new System.EventHandler(this.Btn_apply_Click);
+            this.Btn_Apply.Location = new System.Drawing.Point(492, 579);
+            this.Btn_Apply.Name = "Btn_Apply";
+            this.Btn_Apply.Size = new System.Drawing.Size(117, 53);
+            this.Btn_Apply.TabIndex = 3;
+            this.Btn_Apply.Text = "Apply";
+            this.Btn_Apply.UseVisualStyleBackColor = true;
+            this.Btn_Apply.Click += new System.EventHandler(this.Btn_apply_Click);
             // 
-            // btn_close
+            // Btn_Close
             // 
-            this.btn_close.Location = new System.Drawing.Point(615, 579);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(117, 53);
-            this.btn_close.TabIndex = 4;
-            this.btn_close.Text = "Close";
-            this.btn_close.UseVisualStyleBackColor = true;
-            this.btn_close.Click += new System.EventHandler(this.Btn_close_Click);
+            this.Btn_Close.Location = new System.Drawing.Point(615, 579);
+            this.Btn_Close.Name = "Btn_Close";
+            this.Btn_Close.Size = new System.Drawing.Size(117, 53);
+            this.Btn_Close.TabIndex = 4;
+            this.Btn_Close.Text = "Close";
+            this.Btn_Close.UseVisualStyleBackColor = true;
+            this.Btn_Close.Click += new System.EventHandler(this.Btn_close_Click);
             // 
-            // label_version
+            // Label_Version
             // 
-            this.label_version.AutoSize = true;
-            this.label_version.Location = new System.Drawing.Point(14, 612);
-            this.label_version.Name = "label_version";
-            this.label_version.Size = new System.Drawing.Size(60, 20);
-            this.label_version.TabIndex = 5;
-            this.label_version.Text = "label13";
+            this.Label_Version.AutoSize = true;
+            this.Label_Version.Location = new System.Drawing.Point(14, 612);
+            this.Label_Version.Name = "Label_Version";
+            this.Label_Version.Size = new System.Drawing.Size(63, 20);
+            this.Label_Version.TabIndex = 5;
+            this.Label_Version.Text = "Version";
             // 
             // OptionsForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(748, 644);
             this.ControlBox = false;
-            this.Controls.Add(this.label_NoAdmin);
-            this.Controls.Add(this.label_version);
-            this.Controls.Add(this.btn_close);
-            this.Controls.Add(this.btn_apply);
-            this.Controls.Add(this.groupBox_General);
+            this.Controls.Add(this.Label_NoAdminRights);
+            this.Controls.Add(this.Label_Version);
+            this.Controls.Add(this.Btn_Close);
+            this.Controls.Add(this.Btn_Apply);
+            this.Controls.Add(this.GroupBox_General);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -595,13 +601,13 @@
             this.Name = "OptionsForm";
             this.ShowInTaskbar = false;
             this.Text = "Options";
-            this.groupBox_General.ResumeLayout(false);
-            this.groupBox_Update.ResumeLayout(false);
-            this.groupBox_Update.PerformLayout();
-            this.groupBox_SaveSettings.ResumeLayout(false);
-            this.groupBox_SaveSettings.PerformLayout();
-            this.groupBox_Behaviour.ResumeLayout(false);
-            this.groupBox_Behaviour.PerformLayout();
+            this.GroupBox_General.ResumeLayout(false);
+            this.GroupBox_UpdateAndCurrentVersion.ResumeLayout(false);
+            this.GroupBox_UpdateAndCurrentVersion.PerformLayout();
+            this.GroupBox_SaveToFileSettings.ResumeLayout(false);
+            this.GroupBox_SaveToFileSettings.PerformLayout();
+            this.GroupBox_BehaviourAndVisuals.ResumeLayout(false);
+            this.GroupBox_BehaviourAndVisuals.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_clearAfter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_notifTimeout)).EndInit();
             this.ResumeLayout(false);
@@ -611,50 +617,50 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox_General;
-        private System.Windows.Forms.GroupBox groupBox_SaveSettings;
-        private System.Windows.Forms.GroupBox groupBox_Behaviour;
-        private System.Windows.Forms.Label label_ShowNotificationFor;
+        private System.Windows.Forms.GroupBox GroupBox_General;
+        private System.Windows.Forms.GroupBox GroupBox_SaveToFileSettings;
+        private System.Windows.Forms.GroupBox GroupBox_BehaviourAndVisuals;
+        private System.Windows.Forms.Label Label_ShowNotificationFor;
         private System.Windows.Forms.NumericUpDown numeric_notifTimeout;
-        private System.Windows.Forms.CheckBox check_SaveToFile;
-        private System.Windows.Forms.CheckBox check_NotifyOfCopy;
-        private System.Windows.Forms.CheckBox check_UseWhiteIcon;
+        private System.Windows.Forms.CheckBox Check_SaveToFile;
+        private System.Windows.Forms.CheckBox Check_NotifyOfCopy;
+        private System.Windows.Forms.CheckBox Check_UseWhiteIcon;
         private System.Windows.Forms.ComboBox combo_timeFormat;
         private System.Windows.Forms.NumericUpDown numeric_clearAfter;
-        private System.Windows.Forms.Label label_every;
-        private System.Windows.Forms.CheckBox check_AutoClearHistory;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox check_openWithWindows;
-        private System.Windows.Forms.RadioButton radio_replace;
-        private System.Windows.Forms.RadioButton radio_append;
-        private System.Windows.Forms.Button btn_browse;
-        private System.Windows.Forms.Label label_FileLocation;
+        private System.Windows.Forms.Label Label_Every;
+        private System.Windows.Forms.CheckBox Check_AutoClearClipboard;
+        private System.Windows.Forms.Label DONOTMODIFY4;
+        private System.Windows.Forms.Label DONOTMODIFY3;
+        private System.Windows.Forms.Label DONOTMODIFY2;
+        private System.Windows.Forms.Label DONOTMODIFY1;
+        private System.Windows.Forms.CheckBox Check_OpenWithWin;
+        private System.Windows.Forms.RadioButton Radio_EmptyAndReplace;
+        private System.Windows.Forms.RadioButton Radio_Append;
+        private System.Windows.Forms.Button Btn_Browse;
+        private System.Windows.Forms.Label Label_FileLocation;
         private System.Windows.Forms.TextBox txt_FileLocation;
-        private System.Windows.Forms.Label label_WriteRealTimeInfo;
-        private System.Windows.Forms.CheckBox check_writeInRealTime;
+        private System.Windows.Forms.Label Label_WriteRealTimeInfo;
+        private System.Windows.Forms.CheckBox Check_WriteInRealTime;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btn_apply;
-        private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.Button Btn_Apply;
+        private System.Windows.Forms.Button Btn_Close;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
-        private System.Windows.Forms.Label label_NoAdmin;
-        private System.Windows.Forms.CheckBox check_StartMinimized;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RadioButton radio_ExitOnClose;
-        private System.Windows.Forms.RadioButton radio_MinimizeOnClose;
-        private System.Windows.Forms.Label label_WhenMainWinClosed;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.CheckBox check_HideDonate;
-        private System.Windows.Forms.GroupBox groupBox_Update;
+        private System.Windows.Forms.Label Label_NoAdminRights;
+        private System.Windows.Forms.CheckBox Check_StartMinimized;
+        private System.Windows.Forms.Label DONOTMODIFY5;
+        private System.Windows.Forms.RadioButton Radio_ExitApp;
+        private System.Windows.Forms.RadioButton Radio_Minimize;
+        private System.Windows.Forms.Label Label_WhenMainWindowClosed;
+        private System.Windows.Forms.Label DONOTMODIFY6;
+        private System.Windows.Forms.CheckBox Check_ShowDonation;
+        private System.Windows.Forms.GroupBox GroupBox_UpdateAndCurrentVersion;
         private System.Windows.Forms.RichTextBox txt_updateInfo;
-        private System.Windows.Forms.Button btn_about;
-        private System.Windows.Forms.Button btn_checkForUpdates;
-        private System.Windows.Forms.CheckBox check_UpdateOnStartup;
-        private System.Windows.Forms.Label label_version;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button Btn_About;
+        private System.Windows.Forms.Button Btn_CheckForUpdates;
+        private System.Windows.Forms.CheckBox Check_UpdateOnStartup;
+        private System.Windows.Forms.Label Label_Version;
+        private System.Windows.Forms.Label DONOTMODIFY7;
         private System.Windows.Forms.ComboBox combo_lang;
-        private System.Windows.Forms.Label label_Lang;
+        private System.Windows.Forms.Label Label_Lang;
     }
 }

@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.groupBox_copiedItems = new System.Windows.Forms.GroupBox();
+            this.GroupBox_CopiedItems = new System.Windows.Forms.GroupBox();
             this.CopiedItemBox = new System.Windows.Forms.RichTextBox();
-            this.btn_EmptyClipboard = new System.Windows.Forms.Button();
-            this.groupBox_Actions = new System.Windows.Forms.GroupBox();
-            this.btn_options = new System.Windows.Forms.Button();
-            this.btn_ClearHistory = new System.Windows.Forms.Button();
+            this.Btn_EmptyClipboard = new System.Windows.Forms.Button();
+            this.GroupBox_Actions = new System.Windows.Forms.GroupBox();
+            this.Btn_MoreOptions = new System.Windows.Forms.Button();
+            this.Btn_EmptyHistory = new System.Windows.Forms.Button();
             this.notificationIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.MenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.restoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,20 +44,20 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Donate = new System.Windows.Forms.Button();
             this.timerEmptyClipboard = new System.Windows.Forms.Timer(this.components);
-            this.groupBox_copiedItems.SuspendLayout();
-            this.groupBox_Actions.SuspendLayout();
+            this.GroupBox_CopiedItems.SuspendLayout();
+            this.GroupBox_Actions.SuspendLayout();
             this.MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox_copiedItems
+            // GroupBox_CopiedItems
             // 
-            this.groupBox_copiedItems.Controls.Add(this.CopiedItemBox);
-            this.groupBox_copiedItems.Location = new System.Drawing.Point(12, 12);
-            this.groupBox_copiedItems.Name = "groupBox_copiedItems";
-            this.groupBox_copiedItems.Size = new System.Drawing.Size(510, 370);
-            this.groupBox_copiedItems.TabIndex = 1;
-            this.groupBox_copiedItems.TabStop = false;
-            this.groupBox_copiedItems.Text = "Copied items";
+            this.GroupBox_CopiedItems.Controls.Add(this.CopiedItemBox);
+            this.GroupBox_CopiedItems.Location = new System.Drawing.Point(12, 12);
+            this.GroupBox_CopiedItems.Name = "GroupBox_CopiedItems";
+            this.GroupBox_CopiedItems.Size = new System.Drawing.Size(510, 370);
+            this.GroupBox_CopiedItems.TabIndex = 1;
+            this.GroupBox_CopiedItems.TabStop = false;
+            this.GroupBox_CopiedItems.Text = "Copied items";
             // 
             // CopiedItemBox
             // 
@@ -69,45 +69,45 @@
             this.CopiedItemBox.TabIndex = 0;
             this.CopiedItemBox.Text = "";
             // 
-            // btn_EmptyClipboard
+            // Btn_EmptyClipboard
             // 
-            this.btn_EmptyClipboard.Location = new System.Drawing.Point(6, 25);
-            this.btn_EmptyClipboard.Name = "btn_EmptyClipboard";
-            this.btn_EmptyClipboard.Size = new System.Drawing.Size(156, 35);
-            this.btn_EmptyClipboard.TabIndex = 0;
-            this.btn_EmptyClipboard.Text = "Empty Clipboard";
-            this.btn_EmptyClipboard.UseVisualStyleBackColor = true;
+            this.Btn_EmptyClipboard.Location = new System.Drawing.Point(6, 25);
+            this.Btn_EmptyClipboard.Name = "Btn_EmptyClipboard";
+            this.Btn_EmptyClipboard.Size = new System.Drawing.Size(156, 35);
+            this.Btn_EmptyClipboard.TabIndex = 0;
+            this.Btn_EmptyClipboard.Text = "Empty Clipboard";
+            this.Btn_EmptyClipboard.UseVisualStyleBackColor = true;
             // 
-            // groupBox_Actions
+            // GroupBox_Actions
             // 
-            this.groupBox_Actions.Controls.Add(this.btn_options);
-            this.groupBox_Actions.Controls.Add(this.btn_ClearHistory);
-            this.groupBox_Actions.Controls.Add(this.btn_EmptyClipboard);
-            this.groupBox_Actions.Location = new System.Drawing.Point(18, 388);
-            this.groupBox_Actions.Name = "groupBox_Actions";
-            this.groupBox_Actions.Size = new System.Drawing.Size(170, 155);
-            this.groupBox_Actions.TabIndex = 3;
-            this.groupBox_Actions.TabStop = false;
-            this.groupBox_Actions.Text = "Actions";
+            this.GroupBox_Actions.Controls.Add(this.Btn_MoreOptions);
+            this.GroupBox_Actions.Controls.Add(this.Btn_EmptyHistory);
+            this.GroupBox_Actions.Controls.Add(this.Btn_EmptyClipboard);
+            this.GroupBox_Actions.Location = new System.Drawing.Point(18, 388);
+            this.GroupBox_Actions.Name = "GroupBox_Actions";
+            this.GroupBox_Actions.Size = new System.Drawing.Size(170, 155);
+            this.GroupBox_Actions.TabIndex = 3;
+            this.GroupBox_Actions.TabStop = false;
+            this.GroupBox_Actions.Text = "Actions";
             // 
-            // btn_options
+            // Btn_MoreOptions
             // 
-            this.btn_options.Location = new System.Drawing.Point(6, 106);
-            this.btn_options.Name = "btn_options";
-            this.btn_options.Size = new System.Drawing.Size(156, 35);
-            this.btn_options.TabIndex = 2;
-            this.btn_options.Text = "More options";
-            this.btn_options.UseVisualStyleBackColor = true;
-            this.btn_options.Click += new System.EventHandler(this.Btn_options_Click);
+            this.Btn_MoreOptions.Location = new System.Drawing.Point(6, 106);
+            this.Btn_MoreOptions.Name = "Btn_MoreOptions";
+            this.Btn_MoreOptions.Size = new System.Drawing.Size(156, 35);
+            this.Btn_MoreOptions.TabIndex = 2;
+            this.Btn_MoreOptions.Text = "More options";
+            this.Btn_MoreOptions.UseVisualStyleBackColor = true;
+            this.Btn_MoreOptions.Click += new System.EventHandler(this.Btn_options_Click);
             // 
-            // btn_ClearHistory
+            // Btn_EmptyHistory
             // 
-            this.btn_ClearHistory.Location = new System.Drawing.Point(6, 66);
-            this.btn_ClearHistory.Name = "btn_ClearHistory";
-            this.btn_ClearHistory.Size = new System.Drawing.Size(156, 35);
-            this.btn_ClearHistory.TabIndex = 1;
-            this.btn_ClearHistory.Text = "Empty History";
-            this.btn_ClearHistory.UseVisualStyleBackColor = true;
+            this.Btn_EmptyHistory.Location = new System.Drawing.Point(6, 66);
+            this.Btn_EmptyHistory.Name = "Btn_EmptyHistory";
+            this.Btn_EmptyHistory.Size = new System.Drawing.Size(156, 35);
+            this.Btn_EmptyHistory.TabIndex = 1;
+            this.Btn_EmptyHistory.Text = "Empty History";
+            this.Btn_EmptyHistory.UseVisualStyleBackColor = true;
             // 
             // notificationIcon
             // 
@@ -176,8 +176,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(534, 550);
             this.Controls.Add(this.btn_Donate);
-            this.Controls.Add(this.groupBox_Actions);
-            this.Controls.Add(this.groupBox_copiedItems);
+            this.Controls.Add(this.GroupBox_Actions);
+            this.Controls.Add(this.GroupBox_CopiedItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -186,8 +186,8 @@
             this.Text = "Clipboard Monitor Lite";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
-            this.groupBox_copiedItems.ResumeLayout(false);
-            this.groupBox_Actions.ResumeLayout(false);
+            this.GroupBox_CopiedItems.ResumeLayout(false);
+            this.GroupBox_Actions.ResumeLayout(false);
             this.MenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -195,18 +195,18 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox_copiedItems;
+        private System.Windows.Forms.GroupBox GroupBox_CopiedItems;
         private System.Windows.Forms.RichTextBox CopiedItemBox;
-        private System.Windows.Forms.Button btn_EmptyClipboard;
-        private System.Windows.Forms.GroupBox groupBox_Actions;
-        private System.Windows.Forms.Button btn_ClearHistory;
+        private System.Windows.Forms.Button Btn_EmptyClipboard;
+        private System.Windows.Forms.GroupBox GroupBox_Actions;
+        private System.Windows.Forms.Button Btn_EmptyHistory;
         private System.Windows.Forms.NotifyIcon notificationIcon;
         private System.Windows.Forms.ContextMenuStrip MenuStrip;
         private System.Windows.Forms.ToolStripMenuItem restoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem emptyClipboardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem emptyHistoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.Button btn_options;
+        private System.Windows.Forms.Button Btn_MoreOptions;
         private System.Windows.Forms.Button btn_Donate;
         private System.Windows.Forms.Timer timerEmptyClipboard;
     }

@@ -1,0 +1,8 @@
+﻿-Make updater better and move obvious with more options!
+	(Alert if new update, option for auto-update, notify when updated)
+-Make start with windows actually work
+	(Need admin rights)
+-Make sure it doesn't crash
+	(Seemingly from copying a lot of things)
+-Clipboard history clears itself after changing language, why?
+-When SaveToFile location is empty, it stays empty for some reason, need logic!

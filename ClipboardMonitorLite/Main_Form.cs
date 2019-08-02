@@ -21,6 +21,7 @@ namespace ClipboardMonitorLite
         private ResourceManager resManager;
         public MainForm()
         {
+            SettingsFileUpdate.RestoreSettings();
             resManager = new ResourceManager($"ClipboardMonitorLite.lang_{LanguageCode.LanguageList[Properties.Settings.Default.CurrentLanguage]}", 
                 Assembly.GetExecutingAssembly());
             controls = new FormControls();

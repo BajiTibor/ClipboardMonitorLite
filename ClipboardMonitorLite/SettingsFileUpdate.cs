@@ -26,7 +26,7 @@ namespace ClipboardMonitorLite
         /// Restore our settings backup if any.
         /// Used to persist settings across updates.
         /// </summary>
-        private static void RestoreSettings() // Implement a way to see if app just updated or not.
+        public static void RestoreSettings() // Implement a way to see if app just updated or not.
         {
             //Restore settings after application update            
             string destFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.PerUserRoamingAndLocal).FilePath;

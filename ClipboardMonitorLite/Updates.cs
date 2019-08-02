@@ -36,6 +36,7 @@ namespace ClipboardMonitorLite
                 else
                 {
                     Properties.Settings.Default.NeedsUpdate = true;
+                    SettingsFileUpdate.BackupSettings();
                     await UpdateApplicationGitHub();
                     Properties.Settings.Default.UpdateInformation += "Update found!\n" +
                         "Please restart the application to install!";

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -25,7 +26,14 @@ namespace ClipboardMonitorLite
 
         public static void OnClipboardUpdate(EventArgs e)
         {
-            ClipboardUpdate?.Invoke(null, e);
+            try
+            {
+                ClipboardUpdate?.Invoke(null, e);
+            }
+            catch(Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
         }
 
         private class NotificationForm : Form

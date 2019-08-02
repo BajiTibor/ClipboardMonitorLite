@@ -118,6 +118,7 @@
     <Compile Include="ClipChange.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Donate.cs" />
+    <Compile Include="ExceptionHandling.cs" />
     <Compile Include="FileOperation.cs" />
     <Compile Include="FormActions.cs" />
     <Compile Include="LanguageCode.cs" />

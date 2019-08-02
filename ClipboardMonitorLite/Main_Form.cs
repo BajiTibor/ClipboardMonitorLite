@@ -73,7 +73,7 @@ namespace ClipboardMonitorLite
                 virtualClipboard.LastCopied = tempText;
                 virtualClipboard.History += ($"{CurrentlyCopiedItem}\n");
 
-                if (Properties.Settings.Default.WriteInRealTime)
+                if (Properties.Settings.Default.WriteInRealTime && Properties.Settings.Default.SaveToFile)
                 {
                     file.WriteToFile(virtualClipboard);
                 }
@@ -199,15 +199,12 @@ namespace ClipboardMonitorLite
 
             foreach (var item in controls.AllControl(this))
             {
-                if (!(item is ComboBox) && !(item.Name.Contains("DONOTMODIFY")))
+                if (!(item is ComboBox) && !(item.Name.Contains("DONOTMODIFY") && !(item is RichTextBox)))
                 {
                     item.Text = resManager.GetString(item.Name);
                 }
             }
             Text = resManager.GetString("Main_Title");
         }
-
     }
-
-    
 }

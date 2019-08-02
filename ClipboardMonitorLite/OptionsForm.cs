@@ -178,7 +178,7 @@ namespace ClipboardMonitorLite
 
             foreach (var item in controls.AllControl(this))
             {
-                if (!(item is ComboBox) && !(item.Name.Contains("DONOTMODIFY")))
+                if (!(item is ComboBox) && !(item.Name.Contains("DONOTMODIFY") && !(item is RichTextBox)))
                 {
                     item.Text = resManager.GetString(item.Name);
                 }

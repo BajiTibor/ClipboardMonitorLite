@@ -1,8 +1,8 @@
-﻿-Make updater better and move obvious with more options!
+﻿-Make updater better and move obvious with more options! SOLVED
 	(Alert if new update, option for auto-update, notify when updated)
--Make start with windows actually work
+-Make start with windows actually work (Might solve later on)
 	(Need admin rights)
--Make sure it doesn't crash
+-Make sure it doesn't crash SOLVED (I guess? Needs testing, a lot)
 	(Seemingly from copying a lot of things)
 -Clipboard history clears itself after changing language, why? SOLVED
 -When SaveToFile location is empty, it stays empty for some reason, need logic! SOLVED

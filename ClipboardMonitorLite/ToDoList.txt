@@ -6,3 +6,7 @@
 	(Seemingly from copying a lot of things)
 -Clipboard history clears itself after changing language, why? SOLVED
 -When SaveToFile location is empty, it stays empty for some reason, need logic! SOLVED
+-Make a "generate new file every startup" option.
+        (This would generate and assign a new text file to save the clipboard history)
+-Prepare online functionality
+        (Possibly even the LAN bit)

@@ -5,16 +5,19 @@ namespace ClipboardMonitorLite
 {
     public class FormControls
     {
-        public List<Control> AllControl(Control parent)
+        public List<Control> AllControl(Control parent) //That's a lie, only a few that can be translated
         {
             List<Control> list = new List<Control>();
             foreach (Control item in parent.Controls)
             {
-                if (item is GroupBox)
+                if (item is Label || item is GroupBox || item is Button || item is CheckBox || item is RadioButton)
                 {
-                    list.AddRange(AllControl(item));
+                    if (item is GroupBox)
+                    {
+                        list.AddRange(AllControl(item));
+                    }
+                    list.Add(item);
                 }
-                list.Add(item);
             }
             return list;
         }

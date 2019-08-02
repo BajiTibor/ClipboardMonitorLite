@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Reflection;
 using System.Resources;
 using System.Windows.Forms;
@@ -18,10 +19,13 @@ namespace ClipboardMonitorLite
             updates = new Updates();
             controls = new FormControls();
             InitializeComponent();
-            BindAllProperties();
+            //BindAllProperties();
             EnumSetLang();
+            BindAllProperties();
             if (!Check_OpenWithWin.Enabled)
                 Label_NoAdminRights.Visible = true;
+
+            
 
             Btn_CheckForUpdates.Click += updates.Btn_checkForUpdates_Click;
         }
@@ -62,6 +66,14 @@ namespace ClipboardMonitorLite
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
             numeric_notifTimeout.DataBindings.Add("Enabled", Properties.Settings.Default, "NotifyCopy",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            /*
+            GroupBox_SaveToFileSettings.DataBindings.Add("Enabled", Properties.Settings.Default, "SaveToFile",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+                */
+
+            Label_WriteRealTimeInfo.DataBindings.Add("Visible", Properties.Settings.Default, "SaveToFile",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
             txt_FileLocation.DataBindings.Add("Enabled", Properties.Settings.Default, "SaveToFile",
@@ -178,7 +190,7 @@ namespace ClipboardMonitorLite
 
             foreach (var item in controls.AllControl(this))
             {
-                if (!(item is ComboBox) && !(item.Name.Contains("DONOTMODIFY") && !(item is RichTextBox)))
+                if (!(item is ComboBox) && !(item.Name.Contains("DONOTMODIFY") && !(item is RichTextBox) && !(item is TextBox)))
                 {
                     item.Text = resManager.GetString(item.Name);
                 }
@@ -187,6 +199,7 @@ namespace ClipboardMonitorLite
             Assembly assembly = Assembly.GetExecutingAssembly();
             FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
             Label_Version.Text += fvi.FileVersion;
+            
         }
     }
 }

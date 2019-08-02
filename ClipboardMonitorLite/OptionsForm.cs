@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.IO;
 using System.Reflection;
 using System.Resources;
 using System.Windows.Forms;
@@ -19,15 +18,15 @@ namespace ClipboardMonitorLite
             updates = new Updates();
             controls = new FormControls();
             InitializeComponent();
-            //BindAllProperties();
             EnumSetLang();
             BindAllProperties();
             if (!Check_OpenWithWin.Enabled)
                 Label_NoAdminRights.Visible = true;
 
             
-
             Btn_CheckForUpdates.Click += updates.Btn_checkForUpdates_Click;
+            if (Properties.Settings.Default.AutoCheckUpdates)
+                Btn_CheckForUpdates.PerformClick();
         }
 
         private void BindAllProperties()
@@ -67,11 +66,6 @@ namespace ClipboardMonitorLite
 
             numeric_notifTimeout.DataBindings.Add("Enabled", Properties.Settings.Default, "NotifyCopy",
                 true, DataSourceUpdateMode.OnPropertyChanged);
-
-            /*
-            GroupBox_SaveToFileSettings.DataBindings.Add("Enabled", Properties.Settings.Default, "SaveToFile",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-                */
 
             Label_WriteRealTimeInfo.DataBindings.Add("Visible", Properties.Settings.Default, "SaveToFile",
                 true, DataSourceUpdateMode.OnPropertyChanged);
@@ -113,6 +107,9 @@ namespace ClipboardMonitorLite
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
             combo_lang.DataBindings.Add("SelectedIndex", Properties.Settings.Default, "CurrentLanguage",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            txt_updateInfo.DataBindings.Add("Text", Properties.Settings.Default, "UpdateInformation",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
         }

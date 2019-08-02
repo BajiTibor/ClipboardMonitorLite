@@ -16,14 +16,41 @@ namespace ClipboardMonitorLite
             }
         }
 
+        private async Task FetchUpdateInfo()
+        {
+            Properties.Settings.Default.UpdateInformation = "";
+            Properties.Settings.Default.UpdateInformation += ("Starting update...\n");
+            using (var manager = await UpdateManager.GitHubUpdateManager(Constants.UpdateURL))
+            {
+                UpdateInfo result;
+                result = await manager.CheckForUpdate();
+
+                Properties.Settings.Default.UpdateInformation += ("Update info:\n" +
+                    $"Currently installed version: {result.CurrentlyInstalledVersion.Version}\n" +
+                    $"Latest version released: {result.FutureReleaseEntry.Version}\n");
+                if (result.ReleasesToApply.Count == 0)
+                {
+                    Properties.Settings.Default.NeedsUpdate = false;
+                    Properties.Settings.Default.UpdateInformation += "No need to update.";
+                }
+                else
+                {
+                    Properties.Settings.Default.NeedsUpdate = true;
+                    await UpdateApplicationGitHub();
+                    Properties.Settings.Default.UpdateInformation += "Update found!\n" +
+                        "Please restart the application to install!";
+                }
+            }
+        }
+
         public async void Btn_checkForUpdates_Click(object sender, EventArgs e)
         {
-            await UpdateApplicationGitHub();
+            await FetchUpdateInfo();
         }
 
         public async void Update()
         {
-            await UpdateApplicationGitHub();
+            await FetchUpdateInfo();
         }
 
         public string GetVersionNumber()

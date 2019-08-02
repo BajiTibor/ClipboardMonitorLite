@@ -29,11 +29,7 @@ namespace ClipboardMonitorLite
 
         private void InvokePropertyChanged(PropertyChangedEventArgs e)
         {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, e);
-            }
+            PropertyChanged?.Invoke(this, e);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

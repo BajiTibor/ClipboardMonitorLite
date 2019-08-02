@@ -111,6 +111,18 @@ namespace ClipboardMonitorLite
 
         private void InitSettings()
         {
+
+            if(Properties.Settings.Default.NeedsUpdate && Properties.Settings.Default.AutoCheckUpdates)
+            {
+                updates.Update();
+                if (Properties.Settings.Default.NeedsUpdate)
+                {
+                    notificationIcon.BalloonTipText = "New update availabe! Please restart to receive!";
+                    notificationIcon.BalloonTipTitle = "New update!";
+                    notificationIcon.ShowBalloonTip(Properties.Settings.Default.NotificationTimeout);
+                }   
+            }
+
             if (Properties.Settings.Default.AdminCheck)
             {
                 if (!autoRunApplication.RunChecks().Equals(0))

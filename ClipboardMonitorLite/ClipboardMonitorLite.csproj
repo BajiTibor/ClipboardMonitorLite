@@ -180,6 +180,7 @@
     <Compile Include="StartWithWindows.cs" />
     <Compile Include="TimeCalculate.cs" />
     <Compile Include="TimeFormat.cs" />
+    <Compile Include="UpdateInformation.cs" />
     <Compile Include="Updates.cs" />
     <Compile Include="VirtualClipboard.cs" />
     <EmbeddedResource Include="lang_da.resx">

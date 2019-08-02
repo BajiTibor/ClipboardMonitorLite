@@ -274,5 +274,29 @@ namespace ClipboardMonitorLite.Properties {
                 this["AutoClsTimeType"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UpdateInformation {
+            get {
+                return ((string)(this["UpdateInformation"]));
+            }
+            set {
+                this["UpdateInformation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool NeedsUpdate {
+            get {
+                return ((bool)(this["NeedsUpdate"]));
+            }
+            set {
+                this["NeedsUpdate"] = value;
+            }
+        }
     }
 }

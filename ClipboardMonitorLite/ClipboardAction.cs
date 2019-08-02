@@ -22,5 +22,9 @@ namespace ClipboardMonitorLite
             _virtualClipboard.History = string.Empty;
         }
 
+        public void SetClipboardText(string text)
+        {
+            Clipboard.SetText(text);
+        }
     }
 }

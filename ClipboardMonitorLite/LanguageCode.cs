@@ -4,15 +4,15 @@
     {
         public static string[] LanguageList = new string[9]
         {
-            "en",
-            "hu",
-            "no",
-            "fi",
-            "fil",
-            "nl",
-            "sr",
-            "da",
-            "pl"
+            "en", // English
+            "hu", // Hungarian
+            "no", // Norwegian
+            "fi", // Finnish
+            "fil", // Filipino
+            "nl", // Dutch
+            "sr", // Serbian
+            "da", // Danish
+            "pl" // Polish
         };
 
         public enum Language

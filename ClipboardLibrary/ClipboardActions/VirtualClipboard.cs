@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace ClipboardMonitorLite
+namespace ClipboardLibrary
 {
     public class VirtualClipboard : INotifyPropertyChanged
     {

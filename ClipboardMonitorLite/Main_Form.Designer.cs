@@ -1,4 +1,4 @@
-﻿namespace ClipboardMonitorLite
+﻿namespace ClipboardLibrary
 {
     partial class MainForm
     {

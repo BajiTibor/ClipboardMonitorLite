@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClipboardMonitorLite {
+namespace ClipboardMonitorLite.Languages {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ClipboardMonitorLite {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class lang_fi {
+    internal class lang_sr {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal lang_fi() {
+        internal lang_sr() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ClipboardMonitorLite {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.lang_fi", typeof(lang_fi).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.Languages.lang_sr", typeof(lang_sr).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lisätietoja.
+        ///   Looks up a localized string similar to О програму.
         /// </summary>
         internal static string Btn_About {
             get {
@@ -70,7 +70,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hyväksy.
+        ///   Looks up a localized string similar to Примени.
         /// </summary>
         internal static string Btn_Apply {
             get {
@@ -79,7 +79,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Selaa.
+        ///   Looks up a localized string similar to Прелистај.
         /// </summary>
         internal static string Btn_Browse {
             get {
@@ -88,7 +88,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tarkasta päivitykset.
+        ///   Looks up a localized string similar to Провери за нову верзију.
         /// </summary>
         internal static string Btn_CheckForUpdates {
             get {
@@ -97,7 +97,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sulje.
+        ///   Looks up a localized string similar to Затвори.
         /// </summary>
         internal static string Btn_Close {
             get {
@@ -106,7 +106,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tyhjennä Leikepöytä.
+        ///   Looks up a localized string similar to Изпразни копирани текст.
         /// </summary>
         internal static string Btn_EmptyClipboard {
             get {
@@ -115,7 +115,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tyhjennä Historia.
+        ///   Looks up a localized string similar to Избриши Историју.
         /// </summary>
         internal static string Btn_EmptyHistory {
             get {
@@ -124,7 +124,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Asetukset.
+        ///   Looks up a localized string similar to Опције.
         /// </summary>
         internal static string Btn_MoreOptions {
             get {
@@ -133,7 +133,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tyhjennä leikepöytä automaattisesti.
+        ///   Looks up a localized string similar to Аутоматски Избриши копирани текст.
         /// </summary>
         internal static string Check_AutoClearClipboard {
             get {
@@ -142,7 +142,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Huomauta jos kopioin jotakin.
+        ///   Looks up a localized string similar to Обавести ме ако ископирам нешто.
         /// </summary>
         internal static string Check_NotifyOfCopy {
             get {
@@ -151,7 +151,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Avaa käyttäen Windowsia.
+        ///   Looks up a localized string similar to Отвори са Windows.
         /// </summary>
         internal static string Check_OpenWithWin {
             get {
@@ -160,7 +160,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tallenna tiedostoon.
+        ///   Looks up a localized string similar to Запамти датотеку.
         /// </summary>
         internal static string Check_SaveToFile {
             get {
@@ -169,7 +169,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Näytä Lahjoitus -nappula pääikkunnassa.
+        ///   Looks up a localized string similar to Прикажи дугме за донацију на главну форму.
         /// </summary>
         internal static string Check_ShowDonation {
             get {
@@ -178,7 +178,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Käynnistä pienennettynä.
+        ///   Looks up a localized string similar to Почни минимазиран.
         /// </summary>
         internal static string Check_StartMinimized {
             get {
@@ -187,7 +187,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Päivitä käynnistettäessä.
+        ///   Looks up a localized string similar to Ажурирај на покретанје.
         /// </summary>
         internal static string Check_UpdateOnStartup {
             get {
@@ -196,7 +196,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Käytä valkoista kuvaketta järjestelmän tehtäväpalkissa.
+        ///   Looks up a localized string similar to Користи белу иконицу у систем таскбар.
         /// </summary>
         internal static string Check_UseWhiteIcon {
             get {
@@ -205,7 +205,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kirjoita reaaliajassa.
+        ///   Looks up a localized string similar to Пиши у реално време.
         /// </summary>
         internal static string Check_WriteInRealTime {
             get {
@@ -214,7 +214,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tunti.
+        ///   Looks up a localized string similar to Сат.
         /// </summary>
         internal static string ComboBox_Time_Hour {
             get {
@@ -223,7 +223,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minuutti.
+        ///   Looks up a localized string similar to Минут.
         /// </summary>
         internal static string ComboBox_Time_Min {
             get {
@@ -232,7 +232,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sekunti.
+        ///   Looks up a localized string similar to Секунда.
         /// </summary>
         internal static string ComboBox_Time_Sec {
             get {
@@ -241,7 +241,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tekstitiedosto|*.txt.
+        ///   Looks up a localized string similar to Текст податак|*.txt.
         /// </summary>
         internal static string File_TextFile {
             get {
@@ -250,7 +250,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Toiminnot.
+        ///   Looks up a localized string similar to Акције.
         /// </summary>
         internal static string GroupBox_Actions {
             get {
@@ -259,7 +259,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Käytös ja Ulkomuoto.
+        ///   Looks up a localized string similar to Понашање и  Визуали.
         /// </summary>
         internal static string GroupBox_BehaviourAndVisuals {
             get {
@@ -268,7 +268,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kopioidut kohteet.
+        ///   Looks up a localized string similar to Копирани предмети.
         /// </summary>
         internal static string GroupBox_CopiedItems {
             get {
@@ -277,7 +277,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Yleinen.
+        ///   Looks up a localized string similar to Генерално.
         /// </summary>
         internal static string GroupBox_General {
             get {
@@ -286,7 +286,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tallenna tiedostoasetuksiin.
+        ///   Looks up a localized string similar to Запамти у подешавања за датотеку.
         /// </summary>
         internal static string GroupBox_SaveToFileSettings {
             get {
@@ -295,7 +295,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Päivityksen ja nykyisen sovellusversion tiedot.
+        ///   Looks up a localized string similar to Ажурирана верзија и информација о тренутној верзији.
         /// </summary>
         internal static string GroupBox_UpdateAndCurrentVersion {
             get {
@@ -304,7 +304,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Joka.
+        ///   Looks up a localized string similar to Сви.
         /// </summary>
         internal static string Label_Every {
             get {
@@ -313,7 +313,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tiedostosijainti.
+        ///   Looks up a localized string similar to Локација Датотеке.
         /// </summary>
         internal static string Label_FileLocation {
             get {
@@ -322,7 +322,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kieli.
+        ///   Looks up a localized string similar to Језик.
         /// </summary>
         internal static string Label_Lang {
             get {
@@ -331,11 +331,10 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hups! Näyttää siltä ettei sinulla ole
-        ///järjestelmänvalvojan oikeuksia, tai
-        ///sovellus ei käynnistynyt järjestelmänvalvojan
-        ///tilassa. Ole hyvä ja käynnistä sovellus
-        ///uudelleen järjestelmänvalvojana..
+        ///   Looks up a localized string similar to Извини! Изгледа да немаш административни
+        ///приступ, или апликација није успела да
+        ///се покрене, покушај да рестартујеш
+        ///апликацију као администратор..
         /// </summary>
         internal static string Label_NoAdminRights {
             get {
@@ -344,7 +343,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Näytä ilmoituksia (X) sekuntia.
+        ///   Looks up a localized string similar to Прикажи нотификацију за (Секунде).
         /// </summary>
         internal static string Label_ShowNotificationFor {
             get {
@@ -353,7 +352,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Versio .
+        ///   Looks up a localized string similar to Верзија .
         /// </summary>
         internal static string Label_Version {
             get {
@@ -362,7 +361,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kun suljen pääikkunan.
+        ///   Looks up a localized string similar to Када затворим главни прозор.
         /// </summary>
         internal static string Label_WhenMainWindowClosed {
             get {
@@ -371,9 +370,9 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Jos reaaliaika ei ole käytössä,
-        ///sovellus kirjoittaa tiedostoon
-        ///kun se suljetaan..
+        ///   Looks up a localized string similar to Ако је реално време икључено, апликација
+        ///ће само приступити и писати у датотеку
+        ///када је затворена..
         /// </summary>
         internal static string Label_WriteRealTimeInfo {
             get {
@@ -382,7 +381,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leikepöydän tarkasteluohjelma Lite.
+        ///   Looks up a localized string similar to Clipboard Monitor Lite.
         /// </summary>
         internal static string Main_Title {
             get {
@@ -391,7 +390,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tyhjennä Leikepöytä.
+        ///   Looks up a localized string similar to Изпразни Копирани текст.
         /// </summary>
         internal static string Menu_EmptyClipboard {
             get {
@@ -400,7 +399,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tyhjennnä Historia.
+        ///   Looks up a localized string similar to Изпразни Историју.
         /// </summary>
         internal static string Menu_EmptyHistory {
             get {
@@ -409,7 +408,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sulje.
+        ///   Looks up a localized string similar to Затвори.
         /// </summary>
         internal static string Menu_Exit {
             get {
@@ -418,7 +417,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Avaa.
+        ///   Looks up a localized string similar to Отвори.
         /// </summary>
         internal static string Menu_Restore {
             get {
@@ -427,7 +426,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Piilotan nappulan heti, mutta ennekuin teen niin halusin vain sanoa, että työstän tätä sovellusta pääasiallisesti yksin. Saan hieman apua muutamalta ystävältäni, enkä saa rahallista tukea työlleni. En halua lisätä sovellukseen minkäänlaisia mainoksia enkä pyytää rahaa pelkästä sovelluksen käytöstä. Jos haluat tukea työtäni ja auttaa minua parantamaan tuotoksiani tulevaisuudessa, harkitsethan lahjoittavasi, kiitos. :).
+        ///   Looks up a localized string similar to Сакрићу дугме одмах, али пре него што то урадим, само сам хтео да кажем, ја радим на овој апликацији углавном сам, са помоћ од неких пријатеља, али не добијам никакву финанцијску помоћ, и немам намеру да тражим новац од народа само да би користили ову апликацију, и ја одбијам да убацим реклама у будућности, у било којој форми. Ако би сте желели да подржите моји посао и да ми помогнете да их унапредим у будућност, молим вас да размислите о донацији, хвала вам! :).
         /// </summary>
         internal static string MsgBox_DonateHide {
             get {
@@ -436,7 +435,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Jotta muutokset tulisivat voimaan, ole hyvä ja käynnistä sovellus uudelleen..
+        ///   Looks up a localized string similar to Да примениш промене, молимо вас да рестартујете апликацију..
         /// </summary>
         internal static string MsgBox_RestartApp {
             get {
@@ -445,7 +444,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Piilota lahjoitusnappi.
+        ///   Looks up a localized string similar to Сакриј дугме за донацију.
         /// </summary>
         internal static string MsgBox_Title_DonateHide {
             get {
@@ -454,7 +453,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Käynnistä sovellus uudelleen.
+        ///   Looks up a localized string similar to Рестартуј апликацију.
         /// </summary>
         internal static string MsgBox_TitleRestartApp {
             get {
@@ -463,7 +462,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Jos haluat postua, ole hyvä ja klikkaa hiiren oikealla näppäimellä tehtäväpalkin kuvaketta ja valitse Sulje!.
+        ///   Looks up a localized string similar to Апликација још увер ради! Ако желите да изађете, молимо вас да десним кликом кликнете на таскбар иконицу и изаберете Затвори!.
         /// </summary>
         internal static string Notif_AppStillRunning {
             get {
@@ -472,7 +471,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kohde kopioitu leikepöydälle!.
+        ///   Looks up a localized string similar to Предмет копиран у clipboard!.
         /// </summary>
         internal static string Notif_ItemCopied {
             get {
@@ -481,7 +480,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sovellus on edelleen käynnissä!.
+        ///   Looks up a localized string similar to Апликација још увер ради!.
         /// </summary>
         internal static string Notif_Title_AppStillRunning {
             get {
@@ -490,7 +489,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kohde kopioitu!.
+        ///   Looks up a localized string similar to Предмет копиран!.
         /// </summary>
         internal static string Notif_Title_ItemCopied {
             get {
@@ -499,7 +498,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Asetukset.
+        ///   Looks up a localized string similar to Опције.
         /// </summary>
         internal static string Options_Title {
             get {
@@ -508,7 +507,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lisää tiedoston loppuun.
+        ///   Looks up a localized string similar to Додати датотеку.
         /// </summary>
         internal static string Radio_Append {
             get {
@@ -517,7 +516,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tyhjennä tiedosto ja korvaa.
+        ///   Looks up a localized string similar to Изпразни датотеку и замени.
         /// </summary>
         internal static string Radio_EmptyAndReplace {
             get {
@@ -526,7 +525,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Poistu sovelluksesta.
+        ///   Looks up a localized string similar to Изађи из апликације.
         /// </summary>
         internal static string Radio_ExitApp {
             get {
@@ -535,7 +534,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pienennä tehtäväpalkkiin.
+        ///   Looks up a localized string similar to Минимазирај на системску подлогу.
         /// </summary>
         internal static string Radio_Minimize {
             get {
@@ -544,7 +543,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tallenna historia tekstitiedostona.
+        ///   Looks up a localized string similar to Запамти историју као текст податак.
         /// </summary>
         internal static string SaveAsTextFile {
             get {

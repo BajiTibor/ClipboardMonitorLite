@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClipboardMonitorLite {
+namespace ClipboardMonitorLite.Languages {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ClipboardMonitorLite {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class lang_hu {
+    internal class lang_en {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal lang_hu() {
+        internal lang_en() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ClipboardMonitorLite {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.lang_hu", typeof(lang_hu).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.Languages.lang_en", typeof(lang_en).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Információ.
+        ///   Looks up a localized string similar to About.
         /// </summary>
         internal static string Btn_About {
             get {
@@ -70,7 +70,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Alkalmazás.
+        ///   Looks up a localized string similar to Apply.
         /// </summary>
         internal static string Btn_Apply {
             get {
@@ -79,7 +79,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File.
+        ///   Looks up a localized string similar to Browse.
         /// </summary>
         internal static string Btn_Browse {
             get {
@@ -88,7 +88,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Frissítések keresése.
+        ///   Looks up a localized string similar to Check for updates.
         /// </summary>
         internal static string Btn_CheckForUpdates {
             get {
@@ -97,7 +97,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bezárás.
+        ///   Looks up a localized string similar to Close.
         /// </summary>
         internal static string Btn_Close {
             get {
@@ -106,7 +106,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vágólap kiürítése.
+        ///   Looks up a localized string similar to Empty Clipboard.
         /// </summary>
         internal static string Btn_EmptyClipboard {
             get {
@@ -115,7 +115,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Előzmények törlése.
+        ///   Looks up a localized string similar to Empty History.
         /// </summary>
         internal static string Btn_EmptyHistory {
             get {
@@ -124,7 +124,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Beállítások.
+        ///   Looks up a localized string similar to Options.
         /// </summary>
         internal static string Btn_MoreOptions {
             get {
@@ -133,7 +133,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vágólap autómatikus kiürítése.
+        ///   Looks up a localized string similar to Auto clear clipboard.
         /// </summary>
         internal static string Check_AutoClearClipboard {
             get {
@@ -142,7 +142,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Értesíts, amikor kimásolok valamit.
+        ///   Looks up a localized string similar to Notify me if I copy something.
         /// </summary>
         internal static string Check_NotifyOfCopy {
             get {
@@ -151,7 +151,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Indulás Windows-al.
+        ///   Looks up a localized string similar to Open with Windows.
         /// </summary>
         internal static string Check_OpenWithWin {
             get {
@@ -160,7 +160,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kimásolt szövegek File-ba mentése.
+        ///   Looks up a localized string similar to Save to file.
         /// </summary>
         internal static string Check_SaveToFile {
             get {
@@ -169,7 +169,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Adomány gomb megjelenítése.
+        ///   Looks up a localized string similar to Show donation button on main form.
         /// </summary>
         internal static string Check_ShowDonation {
             get {
@@ -178,7 +178,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Indulás kicsiben.
+        ///   Looks up a localized string similar to Start MInimized.
         /// </summary>
         internal static string Check_StartMinimized {
             get {
@@ -187,7 +187,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Frissítés amikor az alkalmazás elindul.
+        ///   Looks up a localized string similar to Update on startup.
         /// </summary>
         internal static string Check_UpdateOnStartup {
             get {
@@ -196,7 +196,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Világos ikon használata a tálcán.
+        ///   Looks up a localized string similar to Use white icon in system taskbar.
         /// </summary>
         internal static string Check_UseWhiteIcon {
             get {
@@ -205,7 +205,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Valós-időben való file írás.
+        ///   Looks up a localized string similar to Write in real time.
         /// </summary>
         internal static string Check_WriteInRealTime {
             get {
@@ -214,7 +214,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Óra.
+        ///   Looks up a localized string similar to Hour.
         /// </summary>
         internal static string ComboBox_Time_Hour {
             get {
@@ -223,7 +223,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Perc.
+        ///   Looks up a localized string similar to Minute.
         /// </summary>
         internal static string ComboBox_Time_Min {
             get {
@@ -232,7 +232,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Másodperc.
+        ///   Looks up a localized string similar to Second.
         /// </summary>
         internal static string ComboBox_Time_Sec {
             get {
@@ -241,7 +241,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Szöveges file|*.txt.
+        ///   Looks up a localized string similar to Text file|*.txt.
         /// </summary>
         internal static string File_TextFile {
             get {
@@ -250,7 +250,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Műveletek.
+        ///   Looks up a localized string similar to Actions.
         /// </summary>
         internal static string GroupBox_Actions {
             get {
@@ -259,7 +259,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Viselkedés és kinézet.
+        ///   Looks up a localized string similar to Behaviour and Visuals.
         /// </summary>
         internal static string GroupBox_BehaviourAndVisuals {
             get {
@@ -268,7 +268,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kimásolt elemek.
+        ///   Looks up a localized string similar to Copied items.
         /// </summary>
         internal static string GroupBox_CopiedItems {
             get {
@@ -277,7 +277,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Általános.
+        ///   Looks up a localized string similar to General.
         /// </summary>
         internal static string GroupBox_General {
             get {
@@ -286,7 +286,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File-ba mentés beállításai.
+        ///   Looks up a localized string similar to Save to file settings.
         /// </summary>
         internal static string GroupBox_SaveToFileSettings {
             get {
@@ -295,7 +295,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Frissítés és jelenlegi verzió.
+        ///   Looks up a localized string similar to Update and current version info.
         /// </summary>
         internal static string GroupBox_UpdateAndCurrentVersion {
             get {
@@ -304,7 +304,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minden.
+        ///   Looks up a localized string similar to Every.
         /// </summary>
         internal static string Label_Every {
             get {
@@ -313,7 +313,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File helye.
+        ///   Looks up a localized string similar to File Location.
         /// </summary>
         internal static string Label_FileLocation {
             get {
@@ -322,7 +322,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nyelv.
+        ///   Looks up a localized string similar to Language.
         /// </summary>
         internal static string Label_Lang {
             get {
@@ -331,11 +331,10 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Úgy tűnik hogy nincs Admin jogod, illetve
-        ///az alkalmazás nem tudott újraindulni
-        ///admin jogokkal, kérlek próbáld meg
-        ///újraindítani az alkalmazást, mint
-        ///Adminisztrátor!.
+        ///   Looks up a localized string similar to Sorry! Seems like you have no admin
+        ///rights, or the application failed
+        ///to start up as such, please try
+        ///to restart the application as administrator..
         /// </summary>
         internal static string Label_NoAdminRights {
             get {
@@ -344,7 +343,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Értesítés megjelenítése (másodperc):.
+        ///   Looks up a localized string similar to Show notification for (Seconds).
         /// </summary>
         internal static string Label_ShowNotificationFor {
             get {
@@ -353,7 +352,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Verzió .
+        ///   Looks up a localized string similar to Version .
         /// </summary>
         internal static string Label_Version {
             get {
@@ -362,7 +361,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Amikor a fő ablakot bezárom.
+        ///   Looks up a localized string similar to When I close the main window.
         /// </summary>
         internal static string Label_WhenMainWindowClosed {
             get {
@@ -371,9 +370,9 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Amennyiben nem valós időben van file
-        ///hozzáférés, az alkalmazás kilépéskor
-        ///fog a file-ba írni..
+        ///   Looks up a localized string similar to If real time is turned off, the
+        ///application will only access and
+        ///write to the file when it&apos;s closed..
         /// </summary>
         internal static string Label_WriteRealTimeInfo {
             get {
@@ -382,7 +381,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vágólap-Monitor (Lite).
+        ///   Looks up a localized string similar to Clipboard Monitor Lite.
         /// </summary>
         internal static string Main_Title {
             get {
@@ -391,7 +390,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vágólap kiürítése.
+        ///   Looks up a localized string similar to Empty Clipboard.
         /// </summary>
         internal static string Menu_EmptyClipboard {
             get {
@@ -400,7 +399,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Előzmények törlése.
+        ///   Looks up a localized string similar to Empty History.
         /// </summary>
         internal static string Menu_EmptyHistory {
             get {
@@ -409,7 +408,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kilépés.
+        ///   Looks up a localized string similar to Exit.
         /// </summary>
         internal static string Menu_Exit {
             get {
@@ -418,7 +417,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Megnyit.
+        ///   Looks up a localized string similar to Open.
         /// </summary>
         internal static string Menu_Restore {
             get {
@@ -427,7 +426,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Azonnal el fogom rejteni! Viszont előtte szerettem volna valamit mondani. Ezt az alkalmazást leginkább egyedül fejlesztem, és nincs anyagi segítség, az alkalmazásért nem kérek pénzt, és nem vagyok hajlandó hírdetéseket tenni bele. Amennyiben van rá lehetőséged és tetszik az alkalmazás, kérlek gondold meg hogy adományozol, köszönöm! :).
+        ///   Looks up a localized string similar to I&apos;ll hide the button right away, but before doing so, I just wanted to say, I work on this application mostly alone, with some help from a few friends, but I get no financial aid, I have no desire to ask for money from people just to use this application, and I refuse to include ads in any form. If you&apos;d like to support my work and help me improve them in the future, please consider donating, thank you! :).
         /// </summary>
         internal static string MsgBox_DonateHide {
             get {
@@ -436,7 +435,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A változásokhoz kérlek indítsd újra az alkalmazást!.
+        ///   Looks up a localized string similar to To apply changes, please restart the application..
         /// </summary>
         internal static string MsgBox_RestartApp {
             get {
@@ -445,7 +444,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Adomány gomb elrejtése.
+        ///   Looks up a localized string similar to Hide donation button.
         /// </summary>
         internal static string MsgBox_Title_DonateHide {
             get {
@@ -454,7 +453,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Újraindítás.
+        ///   Looks up a localized string similar to Restart app.
         /// </summary>
         internal static string MsgBox_TitleRestartApp {
             get {
@@ -463,7 +462,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Az applikáció még fut! Amennyiben teljesen ki szeretne lépni, kattintson jobb gombbal az asztali ikonra és kattintson a Kilépésre..
+        ///   Looks up a localized string similar to The application is still running! If you&apos;d like to exit, please right click on the taskbar icon and choose Exit!.
         /// </summary>
         internal static string Notif_AppStillRunning {
             get {
@@ -472,7 +471,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Szöveg kimásolva!.
+        ///   Looks up a localized string similar to Item copied to clipboard!.
         /// </summary>
         internal static string Notif_ItemCopied {
             get {
@@ -481,7 +480,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Az applikáció a háttérben fut!.
+        ///   Looks up a localized string similar to Application still running!.
         /// </summary>
         internal static string Notif_Title_AppStillRunning {
             get {
@@ -490,7 +489,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Másolás megtörtént!.
+        ///   Looks up a localized string similar to Item copied!.
         /// </summary>
         internal static string Notif_Title_ItemCopied {
             get {
@@ -499,7 +498,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Beállítások.
+        ///   Looks up a localized string similar to Options.
         /// </summary>
         internal static string Options_Title {
             get {
@@ -508,7 +507,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kiegészítés.
+        ///   Looks up a localized string similar to Append file.
         /// </summary>
         internal static string Radio_Append {
             get {
@@ -517,7 +516,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File kiürítése és újraírása.
+        ///   Looks up a localized string similar to Empty file and replace.
         /// </summary>
         internal static string Radio_EmptyAndReplace {
             get {
@@ -526,7 +525,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kilépés.
+        ///   Looks up a localized string similar to Exit the application.
         /// </summary>
         internal static string Radio_ExitApp {
             get {
@@ -535,7 +534,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tálcára kicsibe.
+        ///   Looks up a localized string similar to Minimize on system tray.
         /// </summary>
         internal static string Radio_Minimize {
             get {
@@ -544,7 +543,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Előzmények elmentése szöveges file-ba.
+        ///   Looks up a localized string similar to Save history as text file.
         /// </summary>
         internal static string SaveAsTextFile {
             get {

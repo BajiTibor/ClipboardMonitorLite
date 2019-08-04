@@ -1,4 +1,4 @@
-﻿namespace ClipboardMonitorLite
+﻿namespace ClipboardLibrary
 {
     public class LanguageCode
     {

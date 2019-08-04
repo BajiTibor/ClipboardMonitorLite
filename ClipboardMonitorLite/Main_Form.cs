@@ -3,59 +3,44 @@ using System.Windows.Forms;
 using System.IO;
 using System.Resources;
 using System.Reflection;
+using ClipboardMonitorLite.UserSettings;
 
-namespace ClipboardMonitorLite
+namespace ClipboardLibrary
 {
     public partial class MainForm : Form
     {
         private FormControls controls;
-        private Updates updates;
         private FormActions formActions;
         private TimeCalculate timeToClear;
         private string CurrentlyCopiedItem { get; set; }
         private VirtualClipboard virtualClipboard;
         private ClipboardAction clipboardAction;
         private FileOperation file;
-        private StartWithWindows autoRunApplication;
         private Donate donate;
         private ResourceManager resManager;
         public MainForm()
         {
-            SettingsFileUpdate.RestoreSettings();
-            resManager = new ResourceManager($"ClipboardMonitorLite.lang_{LanguageCode.LanguageList[Properties.Settings.Default.CurrentLanguage]}", 
-                Assembly.GetExecutingAssembly());
-            controls = new FormControls();
-            updates = new Updates();
-            donate = new Donate();
-            formActions = new FormActions();
-            autoRunApplication = new StartWithWindows();
-            virtualClipboard = new VirtualClipboard();
-            clipboardAction = new ClipboardAction(virtualClipboard);
-            file = new FileOperation("");
-            if (Properties.Settings.Default.SaveFileLocation.Equals(string.Empty))
-            {
-                Properties.Settings.Default.SaveFileLocation = Directory.GetCurrentDirectory()
-                    + $"/{file.Format()}";
-            }
-            file.FilePath = Properties.Settings.Default.SaveFileLocation;
+            InitializeObjects();
             InitializeComponent();
             InitSettings();
-            
-            WindowState = Properties.Settings.Default.FormStartState;
+            EnumSetLang();
+            BindProperties();
+            BindEvents();
 
-            if (Properties.Settings.Default.AutoCheckUpdates)
-            {
-                updates.Update();
-            }
+            WindowState = CustomSettings.Default.FormStartState;
+        }
 
+        private void BindProperties()
+        {
             CopiedItemBox.DataBindings.Add("Text", virtualClipboard, "History",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            btn_Donate.DataBindings.Add("Visible", Properties.Settings.Default, "DisplayDonate",
+            btn_Donate.DataBindings.Add("Visible", CustomSettings.Default, "ShowDonateBtn",
                 true, DataSourceUpdateMode.OnPropertyChanged);
+        }
 
-            EnumSetLang();
-
+        private void BindEvents()
+        {
             ClipChange.ClipboardUpdate += ClipChange_ClipboardUpdate;
             Btn_EmptyClipboard.Click += clipboardAction.ClearClip_Click;
             Btn_EmptyHistory.Click += clipboardAction.ClearHistory_Click;
@@ -63,6 +48,25 @@ namespace ClipboardMonitorLite
             emptyHistoryToolStripMenuItem.Click += clipboardAction.ClearHistory_Click;
             exitToolStripMenuItem.Click += formActions.ExitToolStripMenuItem_Click;
             btn_Donate.Click += donate.Btn_Donate_Click;
+        }
+
+        private void InitializeObjects()
+        {
+            resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[CustomSettings.Default.CurrentLang]}",
+                Assembly.GetExecutingAssembly());
+            controls = new FormControls();
+            donate = new Donate();
+            formActions = new FormActions();
+            virtualClipboard = new VirtualClipboard();
+            clipboardAction = new ClipboardAction(virtualClipboard);
+
+            file = new FileOperation("");
+            if (CustomSettings.Default.SaveFileLocation.Equals(string.Empty))
+            {
+                CustomSettings.Default.SaveFileLocation = Directory.GetCurrentDirectory()
+                    + $"/{file.Format()}";
+            }
+            file.FilePath = CustomSettings.Default.SaveFileLocation;
         }
 
         private void ClipChange_ClipboardUpdate(object sender, EventArgs e)
@@ -74,16 +78,15 @@ namespace ClipboardMonitorLite
                 virtualClipboard.LastCopied = tempText;
                 virtualClipboard.History += ($"{CurrentlyCopiedItem}\n");
 
-                if (Properties.Settings.Default.WriteInRealTime && Properties.Settings.Default.SaveToFile)
-                {
+                if (CustomSettings.Default.SaveToFile)
                     file.WriteToFile(virtualClipboard);
-                }
+                
 
-                if (Properties.Settings.Default.NotifyCopy)
+                if (CustomSettings.Default.NotifyCopy)
                 {
                     notificationIcon.BalloonTipText = resManager.GetString("Notif_ItemCopied");
                     notificationIcon.BalloonTipTitle = resManager.GetString("Notif_Title_ItemCopied");
-                    notificationIcon.ShowBalloonTip(Properties.Settings.Default.NotificationTimeout);
+                    notificationIcon.ShowBalloonTip(4);
                 }
             }
         }
@@ -112,42 +115,18 @@ namespace ClipboardMonitorLite
 
         private void InitSettings()
         {
-
-            if(Properties.Settings.Default.NeedsUpdate && Properties.Settings.Default.AutoCheckUpdates)
-            {
-                updates.Update();
-                if (Properties.Settings.Default.NeedsUpdate)
-                {
-                    notificationIcon.BalloonTipText = "New update availabe! Please restart to receive!";
-                    notificationIcon.BalloonTipTitle = "New update!";
-                    notificationIcon.ShowBalloonTip(Properties.Settings.Default.NotificationTimeout);
-                }   
-            }
-
-            if (Properties.Settings.Default.AdminCheck)
-            {
-                if (!autoRunApplication.RunChecks().Equals(0))
-                {
-                    MessageBox.Show(Constants.Message_AdminErr, Constants.Title_Message_AdminErr,
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
            
-            file.FilePath = Properties.Settings.Default.SaveFileLocation;
-            if (Properties.Settings.Default.UseWhiteIcon)
-            {
-                notificationIcon.Icon = Constants.whiteIcon;
-            }
-            else
-            {
-                notificationIcon.Icon = Constants.darkIcon;
-            }
+            file.FilePath = CustomSettings.Default.SaveFileLocation;
 
-            if (Properties.Settings.Default.AutoClearClip)
+            if (CustomSettings.Default.UseWhiteIcon)
+                notificationIcon.Icon = Constants.whiteIcon;
+            else
+                notificationIcon.Icon = Constants.darkIcon;
+
+            if (!CustomSettings.Default.AutoClsTime.Equals(0))
             {
                 timeToClear = new TimeCalculate();
-                timeToClear.CalculateToSeconds(Properties.Settings.Default.AutoClsTime,
-                    Properties.Settings.Default.AutoClsTimeType);
+                timeToClear.CalculateToSeconds(CustomSettings.Default.AutoClsTime);
                 timerEmptyClipboard.Start();
             }
             else
@@ -161,7 +140,7 @@ namespace ClipboardMonitorLite
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Properties.Settings.Default.MinimizeOnClose && e.CloseReason == CloseReason.UserClosing)
+            if (CustomSettings.Default.MinimizeOnClose && e.CloseReason == CloseReason.UserClosing)
             {
                 e.Cancel = true;
                 WindowState = FormWindowState.Minimized;
@@ -169,8 +148,8 @@ namespace ClipboardMonitorLite
             }
             else
             {
-                Properties.Settings.Default.Save();
-                if (!Properties.Settings.Default.WriteInRealTime)
+                CustomSettings.Default.Save();
+                if (!CustomSettings.Default.RealTimeWrite)
                 {
                     file.WriteBeforeClosing(virtualClipboard);
                 }
@@ -198,19 +177,21 @@ namespace ClipboardMonitorLite
 
         private void FirstTimeUseMinimize()
         {
-            if (Properties.Settings.Default.FirstTimeUse)
+            if (CustomSettings.Default.FirstTimeUse)
             {
-                notificationIcon.ShowBalloonTip(Properties.Settings.Default.NotificationTimeout);
-                Properties.Settings.Default.FirstTimeUse = false;
+                notificationIcon.BalloonTipText = resManager.GetString("Notif_AppStillRunning");
+                notificationIcon.BalloonTipTitle = resManager.GetString("Notif_Title_AppStillRunning");
+                notificationIcon.ShowBalloonTip(4);
+                CustomSettings.Default.FirstTimeUse = false;
             }
         }
 
         private void EnumSetLang()
         {
-            resManager = new ResourceManager($"ClipboardMonitorLite.lang_{LanguageCode.LanguageList[Properties.Settings.Default.CurrentLanguage]}",
+            resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[CustomSettings.Default.CurrentLang]}",
                 Assembly.GetExecutingAssembly());
 
-            foreach (var item in controls.AllControl(this))
+            foreach (var item in controls.GetAllControl(this))
             {
                 if (!(item is ComboBox) && !(item.Name.Contains("DONOTMODIFY") && !(item is RichTextBox)))
                 {

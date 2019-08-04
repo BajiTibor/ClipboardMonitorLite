@@ -1,10 +1,10 @@
-﻿using System;
-using System.Diagnostics;
+﻿using ClipboardMonitorLite.UserSettings;
+using System;
 using System.Reflection;
 using System.Resources;
 using System.Windows.Forms;
 
-namespace ClipboardMonitorLite
+namespace ClipboardLibrary
 {
     public partial class OptionsForm : Form
     {
@@ -13,123 +13,89 @@ namespace ClipboardMonitorLite
         private FormControls controls;
         public OptionsForm()
         {
-            resManager = new ResourceManager($"ClipboardMonitorLite.lang_{LanguageCode.LanguageList[Properties.Settings.Default.CurrentLanguage]}",
+            InitializeObjects();
+            InitializeComponent();
+            InitializeLanguage();
+            InitializeProperties();
+            BindButtonEvents();
+        }
+
+        private void BindButtonEvents()
+        {
+            Btn_CheckForUpdates.Click += updates.Btn_checkForUpdates_Click;
+        }
+
+        private void InitializeObjects()
+        {
+            resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[CustomSettings.Default.CurrentLang]}",
                 Assembly.GetExecutingAssembly());
             updates = new Updates();
             controls = new FormControls();
-            InitializeComponent();
-            EnumSetLang();
-            BindAllProperties();
-            if (!Check_OpenWithWin.Enabled)
-                Label_NoAdminRights.Visible = true;
-
-            
-            Btn_CheckForUpdates.Click += updates.Btn_checkForUpdates_Click;
-            if (Properties.Settings.Default.AutoCheckUpdates)
-                Btn_CheckForUpdates.PerformClick();
         }
 
-        private void BindAllProperties()
+        private void InitializeProperties()
         {
-            Check_UseWhiteIcon.DataBindings.Add("Checked", Properties.Settings.Default, "UseWhiteIcon",
+            Check_UseWhiteIcon.DataBindings.Add("Checked", CustomSettings.Default, "UseWhiteIcon",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Check_NotifyOfCopy.DataBindings.Add("Checked", Properties.Settings.Default, "NotifyCopy",
+            Check_NotifyOfCopy.DataBindings.Add("Checked", CustomSettings.Default, "NotifyCopy",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            numeric_notifTimeout.DataBindings.Add("Value", Properties.Settings.Default, "NotificationTimeout",
+            Check_SaveToFile.DataBindings.Add("Checked", CustomSettings.Default, "SaveToFile",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Check_SaveToFile.DataBindings.Add("Checked", Properties.Settings.Default, "SaveToFile",
+            Check_AutoClearClipboard.DataBindings.Add("Checked", CustomSettings.Default, "AutoClearClip",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Check_AutoClearClipboard.DataBindings.Add("Checked", Properties.Settings.Default, "AutoClearClip",
+            numeric_clearAfter.DataBindings.Add("Value", CustomSettings.Default, "AutoClsTime",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            numeric_clearAfter.DataBindings.Add("Value", Properties.Settings.Default, "AutoClsTime",
+            txt_FileLocation.DataBindings.Add("Text", CustomSettings.Default, "SaveFileLocation",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            combo_timeFormat.DataBindings.Add("SelectedIndex", Properties.Settings.Default, "AutoClsTimeType",
+            Check_WriteInRealTime.DataBindings.Add("Checked", CustomSettings.Default, "RealTimeWrite",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Check_OpenWithWin.DataBindings.Add("Checked", Properties.Settings.Default, "OpenWithWin",
+            Label_WriteRealTimeInfo.DataBindings.Add("Visible", CustomSettings.Default, "SaveToFile",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            txt_FileLocation.DataBindings.Add("Text", Properties.Settings.Default, "SaveFileLocation",
+            txt_FileLocation.DataBindings.Add("Enabled", CustomSettings.Default, "SaveToFile",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Radio_Append.DataBindings.Add("Checked", Properties.Settings.Default, "AppendFile",
+            Btn_Browse.DataBindings.Add("Enabled", CustomSettings.Default, "SaveToFile",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Check_WriteInRealTime.DataBindings.Add("Checked", Properties.Settings.Default, "WriteInRealTime",
+            Check_WriteInRealTime.DataBindings.Add("Enabled", CustomSettings.Default, "SaveToFile",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            numeric_notifTimeout.DataBindings.Add("Enabled", Properties.Settings.Default, "NotifyCopy",
+            numeric_clearAfter.DataBindings.Add("Enabled", CustomSettings.Default, "AutoClearClip",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Label_WriteRealTimeInfo.DataBindings.Add("Visible", Properties.Settings.Default, "SaveToFile",
+            Radio_Minimize.DataBindings.Add("Checked", CustomSettings.Default, "MinimizeOnClose",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            txt_FileLocation.DataBindings.Add("Enabled", Properties.Settings.Default, "SaveToFile",
+            Check_ShowDonation.DataBindings.Add("Checked", CustomSettings.Default, "ShowDonateBtn",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Btn_Browse.DataBindings.Add("Enabled", Properties.Settings.Default, "SaveToFile",
+            combo_lang.DataBindings.Add("SelectedIndex", CustomSettings.Default, "CurrentLang",
                 true, DataSourceUpdateMode.OnPropertyChanged);
-
-            Radio_Append.DataBindings.Add("Enabled", Properties.Settings.Default, "SaveToFile",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-
-            Radio_EmptyAndReplace.DataBindings.Add("Enabled", Properties.Settings.Default, "SaveToFile",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-
-            Check_WriteInRealTime.DataBindings.Add("Enabled", Properties.Settings.Default, "SaveToFile",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-
-            numeric_clearAfter.DataBindings.Add("Enabled", Properties.Settings.Default, "AutoClearClip",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-
-            combo_timeFormat.DataBindings.Add("Enabled", Properties.Settings.Default, "AutoClearClip",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-
-            Check_OpenWithWin.DataBindings.Add("Enabled", Properties.Settings.Default, "CanRestartAsAdmin",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-
-            Check_StartMinimized.DataBindings.Add("Enabled", Properties.Settings.Default, "OpenWithWin",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-
-            Radio_Minimize.DataBindings.Add("Checked", Properties.Settings.Default, "MinimizeOnClose",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-
-            Check_ShowDonation.DataBindings.Add("Checked", Properties.Settings.Default, "DisplayDonate",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-
-            Check_UpdateOnStartup.DataBindings.Add("Checked", Properties.Settings.Default, "AutoCheckUpdates",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-
-            combo_lang.DataBindings.Add("SelectedIndex", Properties.Settings.Default, "CurrentLanguage",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-
-            txt_updateInfo.DataBindings.Add("Text", Properties.Settings.Default, "UpdateInformation",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-
         }
 
         private void Btn_browse_Click(object sender, EventArgs e)
         {
-
             saveFileDialog.Filter = resManager.GetString("File_TextFile");
             saveFileDialog.Title = resManager.GetString("SaveAsTextFile");
             saveFileDialog.ShowDialog();
 
             if (!saveFileDialog.FileName.Equals(string.Empty))
             {
-                Properties.Settings.Default.SaveFileLocation = saveFileDialog.FileName;
+                CustomSettings.Default.SaveFileLocation = saveFileDialog.FileName;
             }
         }
 
         private void Btn_apply_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.Save();
+            CustomSettings.Default.Save();
         }
 
         private void Btn_close_Click(object sender, EventArgs e)
@@ -142,50 +108,36 @@ namespace ClipboardMonitorLite
         {
             if (Check_StartMinimized.Checked)
             {
-                Properties.Settings.Default.FormStartState = FormWindowState.Minimized;
+                CustomSettings.Default.FormStartState = FormWindowState.Minimized;
             }
             else
             {
-                Properties.Settings.Default.FormStartState = FormWindowState.Normal;
-            }
-        }
-
-        private void Combo_timeFormat_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (combo_timeFormat.SelectedIndex.Equals((int)Time.Format.Seconds))
-            {
-                numeric_clearAfter.Value = 30;
-                numeric_clearAfter.Minimum = 30;
-                combo_timeFormat.SelectedIndex = (int)Time.Format.Seconds;
-            }
-            else
-            {
-                numeric_clearAfter.Minimum = 1;
+                CustomSettings.Default.FormStartState = FormWindowState.Normal;
             }
         }
 
         private void Check_HideDonate_CheckedChanged(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.FirstTimeHiding)
+            if (CustomSettings.Default.FirstTimeHiding)
             {
                 MessageBox.Show(resManager.GetString("MsgBox_DonateHide"), resManager.GetString("MsgBox_Title_DonateHide"),
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Properties.Settings.Default.FirstTimeHiding = false;
+                CustomSettings.Default.FirstTimeHiding = false;
             }
         }
 
         private void Combo_lang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default.CurrentLanguage = combo_lang.SelectedIndex;
-            EnumSetLang();
+            CustomSettings.Default.CurrentLang = combo_lang.SelectedIndex;
+            InitializeLanguage();
         }
 
-        private void EnumSetLang()
+        private void InitializeLanguage()
         {
-            resManager = new ResourceManager($"ClipboardMonitorLite.lang_{LanguageCode.LanguageList[Properties.Settings.Default.CurrentLanguage]}",
+            resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[CustomSettings.Default.CurrentLang]}",
                 Assembly.GetExecutingAssembly());
 
-            foreach (var item in controls.AllControl(this))
+            foreach (var item in controls.GetAllControl(this))
             {
                 if (!(item is ComboBox) && !(item.Name.Contains("DONOTMODIFY") && !(item is RichTextBox) && !(item is TextBox)))
                 {
@@ -193,10 +145,7 @@ namespace ClipboardMonitorLite
                 }
             }
             Text = resManager.GetString("Options_Title");
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
-            Label_Version.Text += fvi.FileVersion;
-            
+            Label_Version.Text += updates.GetVersionNumber();
         }
     }
 }

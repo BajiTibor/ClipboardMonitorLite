@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClipboardMonitorLite {
+namespace ClipboardMonitorLite.Languages {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ClipboardMonitorLite {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.lang_nl", typeof(lang_nl).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.Languages.lang_nl", typeof(lang_nl).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

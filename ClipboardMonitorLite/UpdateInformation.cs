@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClipboardMonitorLite
+namespace ClipboardLibrary
 {
     public class UpdateInformation : INotifyPropertyChanged
     {

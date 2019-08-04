@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace ClipboardMonitorLite
+namespace ClipboardLibrary
 {
     class TimeCalculate
     {
         public DateTime TargetDate { get; set; }
 
-        public void CalculateToSeconds(int time, int format)
+        public void CalculateToSeconds(int time, int format = (int)Time.Format.Minutes)
         {
             int tempTime = 0;
             switch (format)

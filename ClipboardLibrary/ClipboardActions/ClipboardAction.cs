@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ClipboardMonitorLite
+namespace ClipboardLibrary
 {
     public class ClipboardAction
     {

@@ -1,42 +1,31 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 
-namespace ClipboardMonitorLite
+namespace ClipboardLibrary
 {
     public class FileOperation
     {
-        ExceptionHandling ExHandler;
         public string FilePath { get; set; }
 
         public FileOperation(string filepath)
         {
             FilePath = filepath;
-            ExHandler = new ExceptionHandling();
         }
 
         public async void WriteToFile(VirtualClipboard clipboardContent)
         {
             try
             {
-                if (Properties.Settings.Default.AppendFile)
+                using (StreamWriter sw = File.AppendText(FilePath))
                 {
-                    using (StreamWriter sw = File.AppendText(FilePath))
-                    {
-                        await sw.WriteLineAsync(clipboardContent.LastCopied);
-                    }
-                }
-                else
-                {
-                    using (StreamWriter sw = new StreamWriter(FilePath))
-                    {
-                        await sw.WriteLineAsync(clipboardContent.LastCopied);
-                    }
+                    await sw.WriteLineAsync(clipboardContent.LastCopied);
                 }
             }
             catch (Exception ex)
             {
-                ExHandler.Silent(ex);
-            }   
+                Debug.WriteLine(ex.Message);
+            }
         }
 
         public void WriteBeforeClosing(VirtualClipboard clipboardContent)
@@ -50,7 +39,7 @@ namespace ClipboardMonitorLite
             }
             catch (Exception ex)
             {
-                ExHandler.Error(ex);
+                Debug.WriteLine(ex.Message);
             }
         }
 

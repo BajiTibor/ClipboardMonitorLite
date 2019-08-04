@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClipboardMonitorLite {
+namespace ClipboardMonitorLite.Languages {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ClipboardMonitorLite {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class lang_sr {
+    internal class lang_fil {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal lang_sr() {
+        internal lang_fil() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ClipboardMonitorLite {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.lang_sr", typeof(lang_sr).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.Languages.lang_fil", typeof(lang_fil).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to О програму.
+        ///   Looks up a localized string similar to Tungkol sa.
         /// </summary>
         internal static string Btn_About {
             get {
@@ -70,7 +70,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Примени.
+        ///   Looks up a localized string similar to I-apply.
         /// </summary>
         internal static string Btn_Apply {
             get {
@@ -79,7 +79,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Прелистај.
+        ///   Looks up a localized string similar to Mag-browse.
         /// </summary>
         internal static string Btn_Browse {
             get {
@@ -88,7 +88,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Провери за нову верзију.
+        ///   Looks up a localized string similar to Tumingin ng updates.
         /// </summary>
         internal static string Btn_CheckForUpdates {
             get {
@@ -97,7 +97,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Затвори.
+        ///   Looks up a localized string similar to Isara.
         /// </summary>
         internal static string Btn_Close {
             get {
@@ -106,7 +106,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Изпразни копирани текст.
+        ///   Looks up a localized string similar to Linisin ang Clipboard.
         /// </summary>
         internal static string Btn_EmptyClipboard {
             get {
@@ -115,7 +115,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Избриши Историју.
+        ///   Looks up a localized string similar to Linisin ang History.
         /// </summary>
         internal static string Btn_EmptyHistory {
             get {
@@ -124,7 +124,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Опције.
+        ///   Looks up a localized string similar to Opsiyon.
         /// </summary>
         internal static string Btn_MoreOptions {
             get {
@@ -133,7 +133,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Аутоматски Избриши копирани текст.
+        ///   Looks up a localized string similar to Auto clear clipboard.
         /// </summary>
         internal static string Check_AutoClearClipboard {
             get {
@@ -142,7 +142,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Обавести ме ако ископирам нешто.
+        ///   Looks up a localized string similar to Sabihan ako pag may na kopya ako.
         /// </summary>
         internal static string Check_NotifyOfCopy {
             get {
@@ -151,7 +151,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Отвори са Windows.
+        ///   Looks up a localized string similar to Buksan gamit ng windows.
         /// </summary>
         internal static string Check_OpenWithWin {
             get {
@@ -160,7 +160,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Запамти датотеку.
+        ///   Looks up a localized string similar to Save sa file.
         /// </summary>
         internal static string Check_SaveToFile {
             get {
@@ -169,7 +169,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Прикажи дугме за донацију на главну форму.
+        ///   Looks up a localized string similar to Ipakita ang donasyon sa main form.
         /// </summary>
         internal static string Check_ShowDonation {
             get {
@@ -178,7 +178,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Почни минимазиран.
+        ///   Looks up a localized string similar to Mag simula ng nakatago.
         /// </summary>
         internal static string Check_StartMinimized {
             get {
@@ -187,7 +187,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ажурирај на покретанје.
+        ///   Looks up a localized string similar to Mag-update pag bukas.
         /// </summary>
         internal static string Check_UpdateOnStartup {
             get {
@@ -196,7 +196,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Користи белу иконицу у систем таскбар.
+        ///   Looks up a localized string similar to Gamitin ang white icon sa system taskbar.
         /// </summary>
         internal static string Check_UseWhiteIcon {
             get {
@@ -205,7 +205,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Пиши у реално време.
+        ///   Looks up a localized string similar to Mag sulat in real time.
         /// </summary>
         internal static string Check_WriteInRealTime {
             get {
@@ -214,7 +214,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Сат.
+        ///   Looks up a localized string similar to Oras.
         /// </summary>
         internal static string ComboBox_Time_Hour {
             get {
@@ -223,7 +223,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Минут.
+        ///   Looks up a localized string similar to Minuto.
         /// </summary>
         internal static string ComboBox_Time_Min {
             get {
@@ -232,7 +232,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Секунда.
+        ///   Looks up a localized string similar to Segundo.
         /// </summary>
         internal static string ComboBox_Time_Sec {
             get {
@@ -241,7 +241,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Текст податак|*.txt.
+        ///   Looks up a localized string similar to Text file|*.txt.
         /// </summary>
         internal static string File_TextFile {
             get {
@@ -250,7 +250,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Акције.
+        ///   Looks up a localized string similar to Aksyon.
         /// </summary>
         internal static string GroupBox_Actions {
             get {
@@ -259,7 +259,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Понашање и  Визуали.
+        ///   Looks up a localized string similar to Ugali at Visual.
         /// </summary>
         internal static string GroupBox_BehaviourAndVisuals {
             get {
@@ -268,7 +268,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Копирани предмети.
+        ///   Looks up a localized string similar to Kinopyang mga item.
         /// </summary>
         internal static string GroupBox_CopiedItems {
             get {
@@ -277,7 +277,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Генерално.
+        ///   Looks up a localized string similar to Pangkalahatan.
         /// </summary>
         internal static string GroupBox_General {
             get {
@@ -286,7 +286,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Запамти у подешавања за датотеку.
+        ///   Looks up a localized string similar to Save to file settings.
         /// </summary>
         internal static string GroupBox_SaveToFileSettings {
             get {
@@ -295,7 +295,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ажурирана верзија и информација о тренутној верзији.
+        ///   Looks up a localized string similar to Ang update at ang impormasyon ng kasulukuyang bersyon.
         /// </summary>
         internal static string GroupBox_UpdateAndCurrentVersion {
             get {
@@ -304,7 +304,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Сви.
+        ///   Looks up a localized string similar to bawat.
         /// </summary>
         internal static string Label_Every {
             get {
@@ -313,7 +313,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Локација Датотеке.
+        ///   Looks up a localized string similar to Lokasyon ng File.
         /// </summary>
         internal static string Label_FileLocation {
             get {
@@ -322,7 +322,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Језик.
+        ///   Looks up a localized string similar to Wika.
         /// </summary>
         internal static string Label_Lang {
             get {
@@ -331,10 +331,9 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Извини! Изгледа да немаш административни
-        ///приступ, или апликација није успела да
-        ///се покрене, покушај да рестартујеш
-        ///апликацију као администратор..
+        ///   Looks up a localized string similar to Paumanhin! Mukhang wala kang admin rights, O ang
+        ///application ay nabigong mag start up, subukan
+        ///irestart ang application as administrator..
         /// </summary>
         internal static string Label_NoAdminRights {
             get {
@@ -343,7 +342,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Прикажи нотификацију за (Секунде).
+        ///   Looks up a localized string similar to Ipakita ang notification sa segundo.
         /// </summary>
         internal static string Label_ShowNotificationFor {
             get {
@@ -352,7 +351,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Верзија .
+        ///   Looks up a localized string similar to Bersyon .
         /// </summary>
         internal static string Label_Version {
             get {
@@ -361,7 +360,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Када затворим главни прозор.
+        ///   Looks up a localized string similar to Pag sinara ang main window.
         /// </summary>
         internal static string Label_WhenMainWindowClosed {
             get {
@@ -370,9 +369,9 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ако је реално време икључено, апликација
-        ///ће само приступити и писати у датотеку
-        ///када је затворена..
+        ///   Looks up a localized string similar to Kung ang real time ay nakapatay, ang
+        ///application ay maaring lamang ma-access
+        ///at mabago ang file pag isinara..
         /// </summary>
         internal static string Label_WriteRealTimeInfo {
             get {
@@ -390,7 +389,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Изпразни Копирани текст.
+        ///   Looks up a localized string similar to Linisin ang clipboard.
         /// </summary>
         internal static string Menu_EmptyClipboard {
             get {
@@ -399,7 +398,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Изпразни Историју.
+        ///   Looks up a localized string similar to Linisin ang history.
         /// </summary>
         internal static string Menu_EmptyHistory {
             get {
@@ -408,7 +407,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Затвори.
+        ///   Looks up a localized string similar to Isara.
         /// </summary>
         internal static string Menu_Exit {
             get {
@@ -417,7 +416,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Отвори.
+        ///   Looks up a localized string similar to Buksan.
         /// </summary>
         internal static string Menu_Restore {
             get {
@@ -426,7 +425,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Сакрићу дугме одмах, али пре него што то урадим, само сам хтео да кажем, ја радим на овој апликацији углавном сам, са помоћ од неких пријатеља, али не добијам никакву финанцијску помоћ, и немам намеру да тражим новац од народа само да би користили ову апликацију, и ја одбијам да убацим реклама у будућности, у било којој форми. Ако би сте желели да подржите моји посао и да ми помогнете да их унапредим у будућност, молим вас да размислите о донацији, хвала вам! :).
+        ///   Looks up a localized string similar to I&apos;ll hide the button right away, but before doing so, I just wanted to say, I work on this application mostly alone, with some help from a few friends, but I get no financial aid, I have no desire to ask for money from people just to use this application, and I refuse to include ads in any form. If you&apos;d like to support my work and help me improve them in the future, please consider donating, thank you! :).
         /// </summary>
         internal static string MsgBox_DonateHide {
             get {
@@ -435,7 +434,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Да примениш промене, молимо вас да рестартујете апликацију..
+        ///   Looks up a localized string similar to Para mag apply ang mga bago, kaylangan i-restart and application..
         /// </summary>
         internal static string MsgBox_RestartApp {
             get {
@@ -444,7 +443,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Сакриј дугме за донацију.
+        ///   Looks up a localized string similar to Itago ang donation button.
         /// </summary>
         internal static string MsgBox_Title_DonateHide {
             get {
@@ -453,7 +452,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Рестартуј апликацију.
+        ///   Looks up a localized string similar to I-restart ang app.
         /// </summary>
         internal static string MsgBox_TitleRestartApp {
             get {
@@ -462,7 +461,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Апликација још увер ради! Ако желите да изађете, молимо вас да десним кликом кликнете на таскбар иконицу и изаберете Затвори!.
+        ///   Looks up a localized string similar to Ang application ay tumatakbo pa rin! Kung gusto mong isara, i-right click sa taskbar icon at isara ito!.
         /// </summary>
         internal static string Notif_AppStillRunning {
             get {
@@ -471,7 +470,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Предмет копиран у clipboard!.
+        ///   Looks up a localized string similar to Nakopya na ang item sa clipboard!.
         /// </summary>
         internal static string Notif_ItemCopied {
             get {
@@ -480,7 +479,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Апликација још увер ради!.
+        ///   Looks up a localized string similar to Ang application ay tumatakbo pa rin!.
         /// </summary>
         internal static string Notif_Title_AppStillRunning {
             get {
@@ -489,7 +488,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Предмет копиран!.
+        ///   Looks up a localized string similar to Nakopya na ang item!.
         /// </summary>
         internal static string Notif_Title_ItemCopied {
             get {
@@ -498,7 +497,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Опције.
+        ///   Looks up a localized string similar to Opsyon.
         /// </summary>
         internal static string Options_Title {
             get {
@@ -507,7 +506,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Додати датотеку.
+        ///   Looks up a localized string similar to Mag dagdag sa file.
         /// </summary>
         internal static string Radio_Append {
             get {
@@ -516,7 +515,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Изпразни датотеку и замени.
+        ///   Looks up a localized string similar to Linisin ang file at palitan.
         /// </summary>
         internal static string Radio_EmptyAndReplace {
             get {
@@ -525,7 +524,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Изађи из апликације.
+        ///   Looks up a localized string similar to Isara ang application.
         /// </summary>
         internal static string Radio_ExitApp {
             get {
@@ -534,7 +533,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Минимазирај на системску подлогу.
+        ///   Looks up a localized string similar to Itago sa system tray.
         /// </summary>
         internal static string Radio_Minimize {
             get {
@@ -543,7 +542,7 @@ namespace ClipboardMonitorLite {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Запамти историју као текст податак.
+        ///   Looks up a localized string similar to I-save ang history as text file.
         /// </summary>
         internal static string SaveAsTextFile {
             get {

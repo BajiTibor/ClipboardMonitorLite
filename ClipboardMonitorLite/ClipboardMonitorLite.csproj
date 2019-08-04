@@ -65,7 +65,22 @@
     <ManifestKeyFile>ClipboardMonitorLite_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon_dark.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>Custom</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DeltaCompressionDotNet, Version=1.1.0.0, Culture=neutral, PublicKeyToken=1d14d6e5194e7f4a, processorArchitecture=MSIL">
@@ -115,51 +130,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClipboardAction.cs" />
-    <Compile Include="ClipChange.cs" />
-    <Compile Include="Constants.cs" />
-    <Compile Include="Donate.cs" />
-    <Compile Include="ExceptionHandling.cs" />
-    <Compile Include="FileOperation.cs" />
+    <Compile Include="Helpers\Constants.cs" />
+    <Compile Include="Helpers\Donate.cs" />
     <Compile Include="FormActions.cs" />
-    <Compile Include="LanguageCode.cs" />
+    <Compile Include="Languages\LanguageCode.cs" />
     <Compile Include="FormControls.cs" />
-    <Compile Include="lang_da.Designer.cs">
+    <Compile Include="Languages\lang_da.Designer.cs">
       <DependentUpon>lang_da.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="lang_nl.Designer.cs">
+    <Compile Include="Languages\lang_nl.Designer.cs">
       <DependentUpon>lang_nl.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="lang_fil.Designer.cs">
+    <Compile Include="Languages\lang_fil.Designer.cs">
       <DependentUpon>lang_fil.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="lang_sr.Designer.cs">
+    <Compile Include="Languages\lang_sr.Designer.cs">
       <DependentUpon>lang_sr.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="lang_fi.Designer.cs">
+    <Compile Include="Languages\lang_fi.Designer.cs">
       <DependentUpon>lang_fi.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="lang_no.Designer.cs">
+    <Compile Include="Languages\lang_no.Designer.cs">
       <DependentUpon>lang_no.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="lang_en.Designer.cs">
+    <Compile Include="Languages\lang_en.Designer.cs">
       <DependentUpon>lang_en.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="lang_hu.Designer.cs">
+    <Compile Include="Languages\lang_hu.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>lang_hu.resx</DependentUpon>
@@ -178,43 +189,51 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SettingsFileUpdate.cs" />
-    <Compile Include="StartWithWindows.cs" />
-    <Compile Include="TimeCalculate.cs" />
-    <Compile Include="TimeFormat.cs" />
+    <Compile Include="Resources\MainResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\TimeCalculate.cs" />
+    <Compile Include="Helpers\TimeFormat.cs" />
     <Compile Include="UpdateInformation.cs" />
     <Compile Include="Updates.cs" />
-    <Compile Include="VirtualClipboard.cs" />
-    <EmbeddedResource Include="lang_da.resx">
+    <Compile Include="UserSettings\CustomSettings.cs" />
+    <Compile Include="UserSettings\CustomSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>CustomSettings.settings</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Languages\lang_da.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_da.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="lang_nl.resx">
+    <EmbeddedResource Include="Languages\lang_nl.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_nl.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="lang_fil.resx">
+    <EmbeddedResource Include="Languages\lang_fil.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_fil.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="lang_pl.resx" />
-    <EmbeddedResource Include="lang_sr.resx">
+    <EmbeddedResource Include="Languages\lang_pl.resx" />
+    <EmbeddedResource Include="Languages\lang_sr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_sr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="lang_fi.resx">
+    <EmbeddedResource Include="Languages\lang_fi.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_fi.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="lang_no.resx">
+    <EmbeddedResource Include="Languages\lang_no.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_no.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="lang_en.resx">
+    <EmbeddedResource Include="Languages\lang_en.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_en.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="lang_hu.resx">
+    <EmbeddedResource Include="Languages\lang_hu.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_hu.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -234,8 +253,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="ClipboardMonitorLite_TemporaryKey.pfx" />
+    <EmbeddedResource Include="Resources\MainResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -245,6 +268,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="UserSettings\CustomSettings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>CustomSettings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -274,7 +301,13 @@
     <None Include="Resources\buymc2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ToDoList.txt" />
+    <Content Include="ProjectHelper\ToDoList.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClipboardLibrary\ClipboardLibrary.csproj">
+      <Project>{de30e62c-8860-4870-bd4c-ecfe25f9e322}</Project>
+      <Name>ClipboardLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

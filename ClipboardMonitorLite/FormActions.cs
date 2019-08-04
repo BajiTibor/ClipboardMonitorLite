@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ClipboardMonitorLite
+namespace ClipboardLibrary
 {
     public class FormActions
     {

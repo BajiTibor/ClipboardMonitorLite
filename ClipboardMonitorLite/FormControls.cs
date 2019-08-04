@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace ClipboardMonitorLite
+namespace ClipboardLibrary
 {
     public class FormControls
     {
-        public List<Control> AllControl(Control parent) //That's a lie, only a few that can be translated
+        public List<Control> GetAllControl(Control parent) //That's a lie, only a few that can be translated
         {
             List<Control> list = new List<Control>();
             foreach (Control item in parent.Controls)
@@ -14,7 +14,7 @@ namespace ClipboardMonitorLite
                 {
                     if (item is GroupBox)
                     {
-                        list.AddRange(AllControl(item));
+                        list.AddRange(GetAllControl(item));
                     }
                     list.Add(item);
                 }

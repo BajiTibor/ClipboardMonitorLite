@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace ClipboardMonitorLite
+namespace ClipboardLibrary
 {
     public class Donate
     {
-        ExceptionHandling ExHandler;
         public Donate()
         {
-            ExHandler = new ExceptionHandling();
         }
 
         public void Btn_Donate_Click(object sender, EventArgs e)
@@ -19,7 +17,7 @@ namespace ClipboardMonitorLite
             }
             catch (Exception ex)
             {
-                ExHandler.Error(ex);
+                Debug.WriteLine(ex.Message);
             }
         }
     }

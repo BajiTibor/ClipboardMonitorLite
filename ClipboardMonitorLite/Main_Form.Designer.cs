@@ -1,4 +1,4 @@
-﻿namespace ClipboardLibrary
+﻿namespace ClipboardMonitorLite
 {
     partial class MainForm
     {
@@ -119,7 +119,6 @@
             this.notificationIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notificationIcon.Icon")));
             this.notificationIcon.Text = "Clipboard Monitor Lite";
             this.notificationIcon.Visible = true;
-            this.notificationIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotificationIcon_MouseDoubleClick);
             // 
             // MenuStrip
             // 
@@ -137,7 +136,6 @@
             this.restoreToolStripMenuItem.Name = "restoreToolStripMenuItem";
             this.restoreToolStripMenuItem.Size = new System.Drawing.Size(218, 32);
             this.restoreToolStripMenuItem.Text = "Restore";
-            this.restoreToolStripMenuItem.Click += new System.EventHandler(this.RestoreToolStripMenuItem_Click);
             // 
             // emptyClipboardToolStripMenuItem
             // 
@@ -184,8 +182,6 @@
             this.Name = "MainForm";
             this.ShowInTaskbar = false;
             this.Text = "Clipboard Monitor Lite";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
-            this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.GroupBox_CopiedItems.ResumeLayout(false);
             this.GroupBox_Actions.ResumeLayout(false);
             this.MenuStrip.ResumeLayout(false);

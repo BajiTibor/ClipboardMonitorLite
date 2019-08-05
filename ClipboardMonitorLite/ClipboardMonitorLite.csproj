@@ -130,6 +130,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppClosingCleanup.cs" />
+    <Compile Include="ChangeControl.cs" />
     <Compile Include="Helpers\Constants.cs" />
     <Compile Include="Helpers\Donate.cs" />
     <Compile Include="FormActions.cs" />
@@ -269,7 +271,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="UserSettings\CustomSettings.settings">
-      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>CustomSettings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>

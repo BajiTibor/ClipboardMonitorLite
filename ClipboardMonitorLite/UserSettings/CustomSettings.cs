@@ -6,7 +6,7 @@
     //  The PropertyChanged event is raised after a setting's value is changed.
     //  The SettingsLoaded event is raised after the setting values are loaded.
     //  The SettingsSaving event is raised before the setting values are saved.
-    internal sealed partial class CustomSettings {
+    public sealed partial class CustomSettings {
         
         public CustomSettings() {
             // // To add event handlers for saving and changing settings, uncomment the lines below:

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ClipboardLibrary
+namespace ClipboardMonitorLite
 {
     class TimeCalculate
     {

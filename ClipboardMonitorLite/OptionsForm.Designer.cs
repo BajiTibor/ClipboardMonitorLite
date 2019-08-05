@@ -1,4 +1,4 @@
-﻿namespace ClipboardLibrary
+﻿namespace ClipboardMonitorLite
 {
     partial class OptionsForm
     {

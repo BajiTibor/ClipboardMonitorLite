@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace ClipboardLibrary
+namespace ClipboardMonitorLite
 {
     public class FormControls
     {

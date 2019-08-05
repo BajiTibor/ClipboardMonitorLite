@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace ClipboardLibrary
+namespace ClipboardMonitorLite
 {
     public class Donate
     {

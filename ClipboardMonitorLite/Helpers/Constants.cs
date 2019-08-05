@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using ClipboardMonitorLite.Resources;
 
-namespace ClipboardLibrary
+namespace ClipboardMonitorLite
 {
     public static class Constants
     {

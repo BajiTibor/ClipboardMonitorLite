@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace ClipboardLibrary
+namespace ClipboardMonitorLite
 {
     public class Updates
     {

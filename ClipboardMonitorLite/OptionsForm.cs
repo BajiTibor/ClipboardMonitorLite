@@ -1,10 +1,9 @@
-﻿using ClipboardMonitorLite.UserSettings;
-using System;
+﻿using System;
 using System.Reflection;
 using System.Resources;
 using System.Windows.Forms;
 
-namespace ClipboardLibrary
+namespace ClipboardMonitorLite
 {
     public partial class OptionsForm : Form
     {
@@ -27,7 +26,7 @@ namespace ClipboardLibrary
 
         private void InitializeObjects()
         {
-            resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[CustomSettings.Default.CurrentLang]}",
+            resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[UserSettings.CustomSettings.Default.CurrentLang]}",
                 Assembly.GetExecutingAssembly());
             updates = new Updates();
             controls = new FormControls();
@@ -35,49 +34,49 @@ namespace ClipboardLibrary
 
         private void InitializeProperties()
         {
-            Check_UseWhiteIcon.DataBindings.Add("Checked", CustomSettings.Default, "UseWhiteIcon",
+            Check_UseWhiteIcon.DataBindings.Add("Checked", UserSettings.CustomSettings.Default, "UseWhiteIcon",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Check_NotifyOfCopy.DataBindings.Add("Checked", CustomSettings.Default, "NotifyCopy",
+            Check_NotifyOfCopy.DataBindings.Add("Checked", UserSettings.CustomSettings.Default, "NotifyCopy",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Check_SaveToFile.DataBindings.Add("Checked", CustomSettings.Default, "SaveToFile",
+            Check_SaveToFile.DataBindings.Add("Checked", UserSettings.CustomSettings.Default, "SaveToFile",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Check_AutoClearClipboard.DataBindings.Add("Checked", CustomSettings.Default, "AutoClearClip",
+            Check_AutoClearClipboard.DataBindings.Add("Checked", UserSettings.CustomSettings.Default, "AutoClearClip",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            numeric_clearAfter.DataBindings.Add("Value", CustomSettings.Default, "AutoClsTime",
+            numeric_clearAfter.DataBindings.Add("Value", UserSettings.CustomSettings.Default, "AutoClsTime",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            txt_FileLocation.DataBindings.Add("Text", CustomSettings.Default, "SaveFileLocation",
+            txt_FileLocation.DataBindings.Add("Text", UserSettings.CustomSettings.Default, "SaveFileLocation",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Check_WriteInRealTime.DataBindings.Add("Checked", CustomSettings.Default, "RealTimeWrite",
+            Check_WriteInRealTime.DataBindings.Add("Checked", UserSettings.CustomSettings.Default, "RealTimeWrite",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Label_WriteRealTimeInfo.DataBindings.Add("Visible", CustomSettings.Default, "SaveToFile",
+            Label_WriteRealTimeInfo.DataBindings.Add("Visible", UserSettings.CustomSettings.Default, "SaveToFile",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            txt_FileLocation.DataBindings.Add("Enabled", CustomSettings.Default, "SaveToFile",
+            txt_FileLocation.DataBindings.Add("Enabled", UserSettings.CustomSettings.Default, "SaveToFile",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Btn_Browse.DataBindings.Add("Enabled", CustomSettings.Default, "SaveToFile",
+            Btn_Browse.DataBindings.Add("Enabled", UserSettings.CustomSettings.Default, "SaveToFile",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Check_WriteInRealTime.DataBindings.Add("Enabled", CustomSettings.Default, "SaveToFile",
+            Check_WriteInRealTime.DataBindings.Add("Enabled", UserSettings.CustomSettings.Default, "SaveToFile",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            numeric_clearAfter.DataBindings.Add("Enabled", CustomSettings.Default, "AutoClearClip",
+            numeric_clearAfter.DataBindings.Add("Enabled", UserSettings.CustomSettings.Default, "AutoClearClip",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Radio_Minimize.DataBindings.Add("Checked", CustomSettings.Default, "MinimizeOnClose",
+            Radio_Minimize.DataBindings.Add("Checked", UserSettings.CustomSettings.Default, "MinimizeOnClose",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Check_ShowDonation.DataBindings.Add("Checked", CustomSettings.Default, "ShowDonateBtn",
+            Check_ShowDonation.DataBindings.Add("Checked", UserSettings.CustomSettings.Default, "ShowDonateBtn",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            combo_lang.DataBindings.Add("SelectedIndex", CustomSettings.Default, "CurrentLang",
+            combo_lang.DataBindings.Add("SelectedIndex", UserSettings.CustomSettings.Default, "CurrentLang",
                 true, DataSourceUpdateMode.OnPropertyChanged);
         }
 
@@ -89,13 +88,13 @@ namespace ClipboardLibrary
 
             if (!saveFileDialog.FileName.Equals(string.Empty))
             {
-                CustomSettings.Default.SaveFileLocation = saveFileDialog.FileName;
+                UserSettings.CustomSettings.Default.SaveFileLocation = saveFileDialog.FileName;
             }
         }
 
         private void Btn_apply_Click(object sender, EventArgs e)
         {
-            CustomSettings.Default.Save();
+            UserSettings.CustomSettings.Default.Save();
         }
 
         private void Btn_close_Click(object sender, EventArgs e)
@@ -108,33 +107,33 @@ namespace ClipboardLibrary
         {
             if (Check_StartMinimized.Checked)
             {
-                CustomSettings.Default.FormStartState = FormWindowState.Minimized;
+                UserSettings.CustomSettings.Default.FormStartState = FormWindowState.Minimized;
             }
             else
             {
-                CustomSettings.Default.FormStartState = FormWindowState.Normal;
+                UserSettings.CustomSettings.Default.FormStartState = FormWindowState.Normal;
             }
         }
 
         private void Check_HideDonate_CheckedChanged(object sender, EventArgs e)
         {
-            if (CustomSettings.Default.FirstTimeHiding)
+            if (UserSettings.CustomSettings.Default.FirstTimeHiding)
             {
                 MessageBox.Show(resManager.GetString("MsgBox_DonateHide"), resManager.GetString("MsgBox_Title_DonateHide"),
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CustomSettings.Default.FirstTimeHiding = false;
+                UserSettings.CustomSettings.Default.FirstTimeHiding = false;
             }
         }
 
         private void Combo_lang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CustomSettings.Default.CurrentLang = combo_lang.SelectedIndex;
+            UserSettings.CustomSettings.Default.CurrentLang = combo_lang.SelectedIndex;
             InitializeLanguage();
         }
 
         private void InitializeLanguage()
         {
-            resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[CustomSettings.Default.CurrentLang]}",
+            resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[UserSettings.CustomSettings.Default.CurrentLang]}",
                 Assembly.GetExecutingAssembly());
 
             foreach (var item in controls.GetAllControl(this))

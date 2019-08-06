@@ -1,26 +1,47 @@
-﻿using System;
-using System.Windows.Forms;
-using System.IO;
-using System.Resources;
-using System.Reflection;
-using ClipboardLibrary;
+﻿using System.Windows.Forms;
 
 namespace ClipboardMonitorLite
 {
     public partial class MainForm : Form
     {
+        ClipboardManager ClipManager;
+        public MainForm()
+        {
+            ClipManager = new ClipboardManager();
+            InitializeComponent();
+            BindProperties();
+        }
+
+        private void BindProperties()
+        {
+            CopiedItemBox.DataBindings.Add("Text", ClipManager, "ClipboardHistory",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+        }
+
+
+
+
+
+
+
+
+
+        /*
         private ClipboardMonitorLite.ChangeControl changeControl;
         private FormControls controls;
         private FormActions formActions;
         private TimeCalculate timeToClear;
         private string CurrentlyCopiedItem { get; set; }
         private VirtualClipboard virtualClipboard;
-        private ClipboardAction clipboardAction;
+        //private ClipboardAction clipboardAction;
         private FileOperation file;
         private Donate donate;
+        
+        
         private ResourceManager resManager;
         public MainForm()
         {
+            
             InitializeObjects();
             InitializeComponent();
             InitSettings();
@@ -29,13 +50,9 @@ namespace ClipboardMonitorLite
             BindEvents();
 
             WindowState = UserSettings.CustomSettings.Default.FormStartState;
+            
         }
-
-        private void InitFormActions()
-        {
-
-        }
-
+        
         private void BindProperties()
         {
             CopiedItemBox.DataBindings.Add("Text", virtualClipboard, "History",
@@ -44,9 +61,10 @@ namespace ClipboardMonitorLite
             btn_Donate.DataBindings.Add("Visible", UserSettings.CustomSettings.Default, "ShowDonateBtn",
                 true, DataSourceUpdateMode.OnPropertyChanged);
         }
-
+        
         private void BindEvents()
         {
+            
             ClipChange.ClipboardUpdate += ClipChange_ClipboardUpdate;
             Btn_EmptyClipboard.Click += clipboardAction.ClearClip_Click;
             Btn_EmptyHistory.Click += clipboardAction.ClearHistory_Click;
@@ -58,16 +76,18 @@ namespace ClipboardMonitorLite
             restoreToolStripMenuItem.Click += formActions.RestoreFormObject;
             notificationIcon.MouseDoubleClick += formActions.RestoreFormObject;
             FormClosing += formActions.FormClosing;
+            
         }
 
         private void InitializeObjects()
         {
             resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[UserSettings.CustomSettings.Default.CurrentLang]}",
                 Assembly.GetExecutingAssembly());
+            
             controls = new FormControls();
             donate = new Donate();
             virtualClipboard = new VirtualClipboard();
-            clipboardAction = new ClipboardAction(virtualClipboard);
+            //clipboardAction = new ClipboardAction(virtualClipboard);
             changeControl = new ClipboardMonitorLite.ChangeControl();
 
             file = new FileOperation("");
@@ -79,8 +99,9 @@ namespace ClipboardMonitorLite
             file.FilePath = UserSettings.CustomSettings.Default.SaveFileLocation;
 
             formActions = new FormActions(notificationIcon, virtualClipboard, resManager, file);
+            
         }
-
+        
         private void ClipChange_ClipboardUpdate(object sender, EventArgs e)
         {
             string tempText = Clipboard.GetText();
@@ -96,12 +117,12 @@ namespace ClipboardMonitorLite
 
                 if (UserSettings.CustomSettings.Default.NotifyCopy)
                 {
-                    changeControl.ChangeText(notificationIcon); // Holy fuck this works
-                    /*
+                    changeControl.ChangeText(notificationIcon); 
+                    
                     notificationIcon.BalloonTipText = resManager.GetString("Notif_ItemCopied");
                     notificationIcon.BalloonTipTitle = resManager.GetString("Notif_Title_ItemCopied");
                     notificationIcon.ShowBalloonTip(4);
-                    */
+                    
                 }
             }
         }
@@ -161,5 +182,9 @@ namespace ClipboardMonitorLite
             }
             Text = resManager.GetString("Main_Title");
         }
+    
+    }
+    */
+
     }
 }

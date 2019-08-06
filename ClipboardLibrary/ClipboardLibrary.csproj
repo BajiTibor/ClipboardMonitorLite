@@ -42,8 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClipboardActions\ClipboardAction.cs" />
-    <Compile Include="ClipboardActions\ClipChange.cs" />
     <Compile Include="ClipboardActions\VirtualClipboard.cs" />
     <Compile Include="FileActions\FileOperation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

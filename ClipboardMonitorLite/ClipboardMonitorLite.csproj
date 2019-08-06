@@ -183,6 +183,11 @@
     <Compile Include="Main_Form.Designer.cs">
       <DependentUpon>Main_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="NEWLY CREATED\Clipboard\ClipboardAction.cs" />
+    <Compile Include="NEWLY CREATED\Clipboard\ClipboardManager.cs" />
+    <Compile Include="NEWLY CREATED\Clipboard\ClipboardProperties.cs" />
+    <Compile Include="NEWLY CREATED\Clipboard\ClipboardChangeEvent.cs" />
+    <Compile Include="NEWLY CREATED\Clipboard\PassClipboardContent.cs" />
     <Compile Include="OptionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +316,7 @@
       <Name>ClipboardLibrary</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

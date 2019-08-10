@@ -32,8 +32,19 @@ namespace ClipboardMonitorLite
             }
         }
 
+        private async void CheckFilePresence()
+        {
+            if (!File.Exists(FilePath))
+            {
+                File.CreateText();
+            }
+        }
+
         public string FilePath { get; set; }
 
-        
+        public string FileNameFormat()
+        {
+            return $"{DateTime.Now.ToString("MM_dd_yyyy_HH_mm_ss")}_ClipboardHistory.txt";
+        }
     }
 }

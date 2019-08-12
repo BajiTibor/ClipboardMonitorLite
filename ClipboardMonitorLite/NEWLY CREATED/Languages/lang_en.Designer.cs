@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClipboardMonitorLite.Languages {
+namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ClipboardMonitorLite.Languages {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class lang_da {
+    internal class lang_en {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal lang_da() {
+        internal lang_en() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ClipboardMonitorLite.Languages {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.Languages.lang_da", typeof(lang_da).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.NEWLY_CREATED.Languages.lang_en", typeof(lang_en).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Information.
+        ///   Looks up a localized string similar to About.
         /// </summary>
         internal static string Btn_About {
             get {
@@ -70,7 +70,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Anvend.
+        ///   Looks up a localized string similar to Apply.
         /// </summary>
         internal static string Btn_Apply {
             get {
@@ -79,7 +79,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Udforsk.
+        ///   Looks up a localized string similar to Browse.
         /// </summary>
         internal static string Btn_Browse {
             get {
@@ -88,7 +88,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Find opdateringer.
+        ///   Looks up a localized string similar to Check for updates.
         /// </summary>
         internal static string Btn_CheckForUpdates {
             get {
@@ -97,7 +97,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Afslut.
+        ///   Looks up a localized string similar to Close.
         /// </summary>
         internal static string Btn_Close {
             get {
@@ -106,7 +106,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fjern Kopieret.
+        ///   Looks up a localized string similar to Empty Clipboard.
         /// </summary>
         internal static string Btn_EmptyClipboard {
             get {
@@ -115,7 +115,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fjern Historie.
+        ///   Looks up a localized string similar to Empty History.
         /// </summary>
         internal static string Btn_EmptyHistory {
             get {
@@ -124,7 +124,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Indstillinger.
+        ///   Looks up a localized string similar to Options.
         /// </summary>
         internal static string Btn_MoreOptions {
             get {
@@ -133,7 +133,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Selv-rens Kopier.
+        ///   Looks up a localized string similar to Auto clear clipboard.
         /// </summary>
         internal static string Check_AutoClearClipboard {
             get {
@@ -142,7 +142,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Oplys mig ved kopiering.
+        ///   Looks up a localized string similar to Notify me if I copy something.
         /// </summary>
         internal static string Check_NotifyOfCopy {
             get {
@@ -151,7 +151,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Åben med Windows.
+        ///   Looks up a localized string similar to Open with Windows.
         /// </summary>
         internal static string Check_OpenWithWin {
             get {
@@ -160,7 +160,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gem til fil.
+        ///   Looks up a localized string similar to Save to file.
         /// </summary>
         internal static string Check_SaveToFile {
             get {
@@ -169,7 +169,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vis donations-knappen.
+        ///   Looks up a localized string similar to Show donation button on main form.
         /// </summary>
         internal static string Check_ShowDonation {
             get {
@@ -178,7 +178,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Start Minimeret.
+        ///   Looks up a localized string similar to Start MInimized.
         /// </summary>
         internal static string Check_StartMinimized {
             get {
@@ -187,7 +187,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Opdatér ved opstart.
+        ///   Looks up a localized string similar to Update on startup.
         /// </summary>
         internal static string Check_UpdateOnStartup {
             get {
@@ -196,7 +196,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Brug hvidt ikon i proceslinjen.
+        ///   Looks up a localized string similar to Use white icon in system taskbar.
         /// </summary>
         internal static string Check_UseWhiteIcon {
             get {
@@ -205,7 +205,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gem løbende.
+        ///   Looks up a localized string similar to Write in real time.
         /// </summary>
         internal static string Check_WriteInRealTime {
             get {
@@ -214,7 +214,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Time.
+        ///   Looks up a localized string similar to Hour.
         /// </summary>
         internal static string ComboBox_Time_Hour {
             get {
@@ -223,7 +223,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minut.
+        ///   Looks up a localized string similar to Minute.
         /// </summary>
         internal static string ComboBox_Time_Min {
             get {
@@ -232,7 +232,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sekund.
+        ///   Looks up a localized string similar to Second.
         /// </summary>
         internal static string ComboBox_Time_Sec {
             get {
@@ -241,7 +241,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tekst fil|*.txt.
+        ///   Looks up a localized string similar to Text file|*.txt.
         /// </summary>
         internal static string File_TextFile {
             get {
@@ -250,7 +250,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Foretagelser.
+        ///   Looks up a localized string similar to Actions.
         /// </summary>
         internal static string GroupBox_Actions {
             get {
@@ -259,7 +259,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Anvendelse og Visuelt.
+        ///   Looks up a localized string similar to Behaviour and Visuals.
         /// </summary>
         internal static string GroupBox_BehaviourAndVisuals {
             get {
@@ -268,7 +268,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kopierede elementer.
+        ///   Looks up a localized string similar to Copied items.
         /// </summary>
         internal static string GroupBox_CopiedItems {
             get {
@@ -277,7 +277,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Generelt.
+        ///   Looks up a localized string similar to General.
         /// </summary>
         internal static string GroupBox_General {
             get {
@@ -286,7 +286,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gem indstillinger til fil.
+        ///   Looks up a localized string similar to Save to file settings.
         /// </summary>
         internal static string GroupBox_SaveToFileSettings {
             get {
@@ -295,7 +295,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vedrørende nuværende version og opdatering.
+        ///   Looks up a localized string similar to Update and current version info.
         /// </summary>
         internal static string GroupBox_UpdateAndCurrentVersion {
             get {
@@ -304,7 +304,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hver.
+        ///   Looks up a localized string similar to Every.
         /// </summary>
         internal static string Label_Every {
             get {
@@ -313,7 +313,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fil beliggenhed.
+        ///   Looks up a localized string similar to File Location.
         /// </summary>
         internal static string Label_FileLocation {
             get {
@@ -322,7 +322,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sprog.
+        ///   Looks up a localized string similar to Language.
         /// </summary>
         internal static string Label_Lang {
             get {
@@ -331,10 +331,10 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Beklager! Du har vidst ikke
-        ///administrator-rettigheder, Genstart
-        ///programmet med administrator-rettigheder
-        ///for optimal funktionalitet..
+        ///   Looks up a localized string similar to Sorry! Seems like you have no admin
+        ///rights, or the application failed
+        ///to start up as such, please try
+        ///to restart the application as administrator..
         /// </summary>
         internal static string Label_NoAdminRights {
             get {
@@ -343,7 +343,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vis notifikation i (sekunder).
+        ///   Looks up a localized string similar to Show notification for (Seconds).
         /// </summary>
         internal static string Label_ShowNotificationFor {
             get {
@@ -361,7 +361,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ved lukning af hovedvinduet.
+        ///   Looks up a localized string similar to When I close the main window.
         /// </summary>
         internal static string Label_WhenMainWindowClosed {
             get {
@@ -370,8 +370,9 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hvis der ikke gemmes løbende, vil programmet
-        ///kun gemme filen, når filen er lukket..
+        ///   Looks up a localized string similar to If real time is turned off, the
+        ///application will only access and
+        ///write to the file when it&apos;s closed..
         /// </summary>
         internal static string Label_WriteRealTimeInfo {
             get {
@@ -389,7 +390,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tøm elementer.
+        ///   Looks up a localized string similar to Empty Clipboard.
         /// </summary>
         internal static string Menu_EmptyClipboard {
             get {
@@ -398,7 +399,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tøm historie.
+        ///   Looks up a localized string similar to Empty History.
         /// </summary>
         internal static string Menu_EmptyHistory {
             get {
@@ -407,7 +408,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Afslut.
+        ///   Looks up a localized string similar to Exit.
         /// </summary>
         internal static string Menu_Exit {
             get {
@@ -416,7 +417,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Åben.
+        ///   Looks up a localized string similar to Open.
         /// </summary>
         internal static string Menu_Restore {
             get {
@@ -425,7 +426,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Jeg skjuler knappen med det samme, men først vil jeg lige sige at jeg arbejder helt alene på dette projekt og har fået venner til at hjælpe med oversættelser, men jeg får ingen intægt og vil ikke spørge folk om penge og jeg nægter at dynge reklamer indover. Hvis du vil støtte programmet og forbedringer hertil, kan du altid donere, jeg ville blive yderst taknemmelig! :).
+        ///   Looks up a localized string similar to I&apos;ll hide the button right away, but before doing so, I just wanted to say, I work on this application mostly alone, with some help from a few friends, but I get no financial aid, I have no desire to ask for money from people just to use this application, and I refuse to include ads in any form. If you&apos;d like to support my work and help me improve them in the future, please consider donating, thank you! :).
         /// </summary>
         internal static string MsgBox_DonateHide {
             get {
@@ -434,7 +435,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Genstart programmet for at ændringerne kan træde i kraft.
+        ///   Looks up a localized string similar to To apply changes, please restart the application..
         /// </summary>
         internal static string MsgBox_RestartApp {
             get {
@@ -443,7 +444,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Skjul donationsknappen.
+        ///   Looks up a localized string similar to Hide donation button.
         /// </summary>
         internal static string MsgBox_Title_DonateHide {
             get {
@@ -452,7 +453,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Genstart program.
+        ///   Looks up a localized string similar to Restart app.
         /// </summary>
         internal static string MsgBox_TitleRestartApp {
             get {
@@ -461,7 +462,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Programmet kører stadigt! For at afslutte, højre-klik venligst på proceslinje ikonet og vælg Afslut!.
+        ///   Looks up a localized string similar to The application is still running! If you&apos;d like to exit, please right click on the taskbar icon and choose Exit!.
         /// </summary>
         internal static string Notif_AppStillRunning {
             get {
@@ -470,7 +471,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Element kopieret!.
+        ///   Looks up a localized string similar to Item copied to clipboard!.
         /// </summary>
         internal static string Notif_ItemCopied {
             get {
@@ -479,7 +480,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Programmet kører stadigt!.
+        ///   Looks up a localized string similar to Application still running!.
         /// </summary>
         internal static string Notif_Title_AppStillRunning {
             get {
@@ -488,7 +489,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Element kopieret!.
+        ///   Looks up a localized string similar to Item copied!.
         /// </summary>
         internal static string Notif_Title_ItemCopied {
             get {
@@ -497,7 +498,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Indstillinger.
+        ///   Looks up a localized string similar to Options.
         /// </summary>
         internal static string Options_Title {
             get {
@@ -506,7 +507,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tilføj fil.
+        ///   Looks up a localized string similar to Append file.
         /// </summary>
         internal static string Radio_Append {
             get {
@@ -515,7 +516,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tøm fil og erstat.
+        ///   Looks up a localized string similar to Empty file and replace.
         /// </summary>
         internal static string Radio_EmptyAndReplace {
             get {
@@ -524,7 +525,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Afslut programmet.
+        ///   Looks up a localized string similar to Exit the application.
         /// </summary>
         internal static string Radio_ExitApp {
             get {
@@ -533,7 +534,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minimér til proceslinje.
+        ///   Looks up a localized string similar to Minimize on system tray.
         /// </summary>
         internal static string Radio_Minimize {
             get {
@@ -542,7 +543,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gem historien til text fil.
+        ///   Looks up a localized string similar to Save history as text file.
         /// </summary>
         internal static string SaveAsTextFile {
             get {

@@ -34,9 +34,9 @@ namespace ClipboardMonitorLite
 
         private async void CheckFilePresence()
         {
-            if (!File.Exists(FilePath))
+            if (FilePath.Equals("EMPTY"))
             {
-                File.CreateText();
+                // Set the settings to be a new file
             }
         }
 

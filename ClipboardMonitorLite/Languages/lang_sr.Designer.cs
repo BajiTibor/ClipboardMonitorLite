@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
+namespace ClipboardMonitorLite.Languages {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class lang_da {
+    internal class lang_sr {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal lang_da() {
+        internal lang_sr() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.NEWLY_CREATED.Languages.lang_da", typeof(lang_da).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.Languages.lang_sr", typeof(lang_sr).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Information.
+        ///   Looks up a localized string similar to О програму.
         /// </summary>
         internal static string Btn_About {
             get {
@@ -70,7 +70,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Anvend.
+        ///   Looks up a localized string similar to Примени.
         /// </summary>
         internal static string Btn_Apply {
             get {
@@ -79,7 +79,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Udforsk.
+        ///   Looks up a localized string similar to Прелистај.
         /// </summary>
         internal static string Btn_Browse {
             get {
@@ -88,7 +88,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Find opdateringer.
+        ///   Looks up a localized string similar to Провери за нову верзију.
         /// </summary>
         internal static string Btn_CheckForUpdates {
             get {
@@ -97,7 +97,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Afslut.
+        ///   Looks up a localized string similar to Затвори.
         /// </summary>
         internal static string Btn_Close {
             get {
@@ -106,7 +106,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fjern Kopieret.
+        ///   Looks up a localized string similar to Изпразни копирани текст.
         /// </summary>
         internal static string Btn_EmptyClipboard {
             get {
@@ -115,7 +115,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fjern Historie.
+        ///   Looks up a localized string similar to Избриши Историју.
         /// </summary>
         internal static string Btn_EmptyHistory {
             get {
@@ -124,7 +124,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Indstillinger.
+        ///   Looks up a localized string similar to Опције.
         /// </summary>
         internal static string Btn_MoreOptions {
             get {
@@ -133,7 +133,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Selv-rens Kopier.
+        ///   Looks up a localized string similar to Аутоматски Избриши копирани текст.
         /// </summary>
         internal static string Check_AutoClearClipboard {
             get {
@@ -142,7 +142,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Oplys mig ved kopiering.
+        ///   Looks up a localized string similar to Обавести ме ако ископирам нешто.
         /// </summary>
         internal static string Check_NotifyOfCopy {
             get {
@@ -151,7 +151,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Åben med Windows.
+        ///   Looks up a localized string similar to Отвори са Windows.
         /// </summary>
         internal static string Check_OpenWithWin {
             get {
@@ -160,7 +160,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gem til fil.
+        ///   Looks up a localized string similar to Запамти датотеку.
         /// </summary>
         internal static string Check_SaveToFile {
             get {
@@ -169,7 +169,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vis donations-knappen.
+        ///   Looks up a localized string similar to Прикажи дугме за донацију на главну форму.
         /// </summary>
         internal static string Check_ShowDonation {
             get {
@@ -178,7 +178,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Start Minimeret.
+        ///   Looks up a localized string similar to Почни минимазиран.
         /// </summary>
         internal static string Check_StartMinimized {
             get {
@@ -187,7 +187,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Opdatér ved opstart.
+        ///   Looks up a localized string similar to Ажурирај на покретанје.
         /// </summary>
         internal static string Check_UpdateOnStartup {
             get {
@@ -196,7 +196,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Brug hvidt ikon i proceslinjen.
+        ///   Looks up a localized string similar to Користи белу иконицу у систем таскбар.
         /// </summary>
         internal static string Check_UseWhiteIcon {
             get {
@@ -205,7 +205,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gem løbende.
+        ///   Looks up a localized string similar to Пиши у реално време.
         /// </summary>
         internal static string Check_WriteInRealTime {
             get {
@@ -214,7 +214,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Time.
+        ///   Looks up a localized string similar to Сат.
         /// </summary>
         internal static string ComboBox_Time_Hour {
             get {
@@ -223,7 +223,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minut.
+        ///   Looks up a localized string similar to Минут.
         /// </summary>
         internal static string ComboBox_Time_Min {
             get {
@@ -232,7 +232,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sekund.
+        ///   Looks up a localized string similar to Секунда.
         /// </summary>
         internal static string ComboBox_Time_Sec {
             get {
@@ -241,7 +241,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tekst fil|*.txt.
+        ///   Looks up a localized string similar to Текст податак|*.txt.
         /// </summary>
         internal static string File_TextFile {
             get {
@@ -250,7 +250,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Foretagelser.
+        ///   Looks up a localized string similar to Акције.
         /// </summary>
         internal static string GroupBox_Actions {
             get {
@@ -259,7 +259,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Anvendelse og Visuelt.
+        ///   Looks up a localized string similar to Понашање и  Визуали.
         /// </summary>
         internal static string GroupBox_BehaviourAndVisuals {
             get {
@@ -268,7 +268,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kopierede elementer.
+        ///   Looks up a localized string similar to Копирани предмети.
         /// </summary>
         internal static string GroupBox_CopiedItems {
             get {
@@ -277,7 +277,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Generelt.
+        ///   Looks up a localized string similar to Генерално.
         /// </summary>
         internal static string GroupBox_General {
             get {
@@ -286,7 +286,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gem indstillinger til fil.
+        ///   Looks up a localized string similar to Запамти у подешавања за датотеку.
         /// </summary>
         internal static string GroupBox_SaveToFileSettings {
             get {
@@ -295,7 +295,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vedrørende nuværende version og opdatering.
+        ///   Looks up a localized string similar to Ажурирана верзија и информација о тренутној верзији.
         /// </summary>
         internal static string GroupBox_UpdateAndCurrentVersion {
             get {
@@ -304,7 +304,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hver.
+        ///   Looks up a localized string similar to Сви.
         /// </summary>
         internal static string Label_Every {
             get {
@@ -313,7 +313,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fil beliggenhed.
+        ///   Looks up a localized string similar to Локација Датотеке.
         /// </summary>
         internal static string Label_FileLocation {
             get {
@@ -322,7 +322,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sprog.
+        ///   Looks up a localized string similar to Језик.
         /// </summary>
         internal static string Label_Lang {
             get {
@@ -331,10 +331,10 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Beklager! Du har vidst ikke
-        ///administrator-rettigheder, Genstart
-        ///programmet med administrator-rettigheder
-        ///for optimal funktionalitet..
+        ///   Looks up a localized string similar to Извини! Изгледа да немаш административни
+        ///приступ, или апликација није успела да
+        ///се покрене, покушај да рестартујеш
+        ///апликацију као администратор..
         /// </summary>
         internal static string Label_NoAdminRights {
             get {
@@ -343,7 +343,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vis notifikation i (sekunder).
+        ///   Looks up a localized string similar to Прикажи нотификацију за (Секунде).
         /// </summary>
         internal static string Label_ShowNotificationFor {
             get {
@@ -352,7 +352,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Version .
+        ///   Looks up a localized string similar to Верзија .
         /// </summary>
         internal static string Label_Version {
             get {
@@ -361,7 +361,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ved lukning af hovedvinduet.
+        ///   Looks up a localized string similar to Када затворим главни прозор.
         /// </summary>
         internal static string Label_WhenMainWindowClosed {
             get {
@@ -370,8 +370,9 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hvis der ikke gemmes løbende, vil programmet
-        ///kun gemme filen, når filen er lukket..
+        ///   Looks up a localized string similar to Ако је реално време икључено, апликација
+        ///ће само приступити и писати у датотеку
+        ///када је затворена..
         /// </summary>
         internal static string Label_WriteRealTimeInfo {
             get {
@@ -389,7 +390,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tøm elementer.
+        ///   Looks up a localized string similar to Изпразни Копирани текст.
         /// </summary>
         internal static string Menu_EmptyClipboard {
             get {
@@ -398,7 +399,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tøm historie.
+        ///   Looks up a localized string similar to Изпразни Историју.
         /// </summary>
         internal static string Menu_EmptyHistory {
             get {
@@ -407,7 +408,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Afslut.
+        ///   Looks up a localized string similar to Затвори.
         /// </summary>
         internal static string Menu_Exit {
             get {
@@ -416,7 +417,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Åben.
+        ///   Looks up a localized string similar to Отвори.
         /// </summary>
         internal static string Menu_Restore {
             get {
@@ -425,7 +426,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Jeg skjuler knappen med det samme, men først vil jeg lige sige at jeg arbejder helt alene på dette projekt og har fået venner til at hjælpe med oversættelser, men jeg får ingen intægt og vil ikke spørge folk om penge og jeg nægter at dynge reklamer indover. Hvis du vil støtte programmet og forbedringer hertil, kan du altid donere, jeg ville blive yderst taknemmelig! :).
+        ///   Looks up a localized string similar to Сакрићу дугме одмах, али пре него што то урадим, само сам хтео да кажем, ја радим на овој апликацији углавном сам, са помоћ од неких пријатеља, али не добијам никакву финанцијску помоћ, и немам намеру да тражим новац од народа само да би користили ову апликацију, и ја одбијам да убацим реклама у будућности, у било којој форми. Ако би сте желели да подржите моји посао и да ми помогнете да их унапредим у будућност, молим вас да размислите о донацији, хвала вам! :).
         /// </summary>
         internal static string MsgBox_DonateHide {
             get {
@@ -434,7 +435,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Genstart programmet for at ændringerne kan træde i kraft.
+        ///   Looks up a localized string similar to Да примениш промене, молимо вас да рестартујете апликацију..
         /// </summary>
         internal static string MsgBox_RestartApp {
             get {
@@ -443,7 +444,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Skjul donationsknappen.
+        ///   Looks up a localized string similar to Сакриј дугме за донацију.
         /// </summary>
         internal static string MsgBox_Title_DonateHide {
             get {
@@ -452,7 +453,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Genstart program.
+        ///   Looks up a localized string similar to Рестартуј апликацију.
         /// </summary>
         internal static string MsgBox_TitleRestartApp {
             get {
@@ -461,7 +462,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Programmet kører stadigt! For at afslutte, højre-klik venligst på proceslinje ikonet og vælg Afslut!.
+        ///   Looks up a localized string similar to Апликација још увер ради! Ако желите да изађете, молимо вас да десним кликом кликнете на таскбар иконицу и изаберете Затвори!.
         /// </summary>
         internal static string Notif_AppStillRunning {
             get {
@@ -470,7 +471,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Element kopieret!.
+        ///   Looks up a localized string similar to Предмет копиран у clipboard!.
         /// </summary>
         internal static string Notif_ItemCopied {
             get {
@@ -479,7 +480,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Programmet kører stadigt!.
+        ///   Looks up a localized string similar to Апликација још увер ради!.
         /// </summary>
         internal static string Notif_Title_AppStillRunning {
             get {
@@ -488,7 +489,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Element kopieret!.
+        ///   Looks up a localized string similar to Предмет копиран!.
         /// </summary>
         internal static string Notif_Title_ItemCopied {
             get {
@@ -497,7 +498,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Indstillinger.
+        ///   Looks up a localized string similar to Опције.
         /// </summary>
         internal static string Options_Title {
             get {
@@ -506,7 +507,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tilføj fil.
+        ///   Looks up a localized string similar to Додати датотеку.
         /// </summary>
         internal static string Radio_Append {
             get {
@@ -515,7 +516,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tøm fil og erstat.
+        ///   Looks up a localized string similar to Изпразни датотеку и замени.
         /// </summary>
         internal static string Radio_EmptyAndReplace {
             get {
@@ -524,7 +525,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Afslut programmet.
+        ///   Looks up a localized string similar to Изађи из апликације.
         /// </summary>
         internal static string Radio_ExitApp {
             get {
@@ -533,7 +534,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minimér til proceslinje.
+        ///   Looks up a localized string similar to Минимазирај на системску подлогу.
         /// </summary>
         internal static string Radio_Minimize {
             get {
@@ -542,7 +543,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gem historien til text fil.
+        ///   Looks up a localized string similar to Запамти историју као текст податак.
         /// </summary>
         internal static string SaveAsTextFile {
             get {

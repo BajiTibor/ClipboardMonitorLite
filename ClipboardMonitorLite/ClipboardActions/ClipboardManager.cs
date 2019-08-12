@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace ClipboardMonitorLite
+namespace ClipboardMonitorLite.ClipboardActions
 {
     public class ClipboardManager : INotifyPropertyChanged
     {
@@ -92,7 +92,7 @@ namespace ClipboardMonitorLite
             {
                 ClipboardUpdate?.Invoke(null, e);
             }
-            catch (Exception ex)
+            catch
             {
                 
             }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
+namespace ClipboardMonitorLite.Languages {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class lang_fil {
+    internal class lang_fi {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal lang_fil() {
+        internal lang_fi() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.NEWLY_CREATED.Languages.lang_fil", typeof(lang_fil).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.Languages.lang_fi", typeof(lang_fi).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tungkol sa.
+        ///   Looks up a localized string similar to Lisätietoja.
         /// </summary>
         internal static string Btn_About {
             get {
@@ -70,7 +70,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to I-apply.
+        ///   Looks up a localized string similar to Hyväksy.
         /// </summary>
         internal static string Btn_Apply {
             get {
@@ -79,7 +79,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mag-browse.
+        ///   Looks up a localized string similar to Selaa.
         /// </summary>
         internal static string Btn_Browse {
             get {
@@ -88,7 +88,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tumingin ng updates.
+        ///   Looks up a localized string similar to Tarkasta päivitykset.
         /// </summary>
         internal static string Btn_CheckForUpdates {
             get {
@@ -97,7 +97,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Isara.
+        ///   Looks up a localized string similar to Sulje.
         /// </summary>
         internal static string Btn_Close {
             get {
@@ -106,7 +106,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Linisin ang Clipboard.
+        ///   Looks up a localized string similar to Tyhjennä Leikepöytä.
         /// </summary>
         internal static string Btn_EmptyClipboard {
             get {
@@ -115,7 +115,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Linisin ang History.
+        ///   Looks up a localized string similar to Tyhjennä Historia.
         /// </summary>
         internal static string Btn_EmptyHistory {
             get {
@@ -124,7 +124,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Opsiyon.
+        ///   Looks up a localized string similar to Asetukset.
         /// </summary>
         internal static string Btn_MoreOptions {
             get {
@@ -133,7 +133,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Auto clear clipboard.
+        ///   Looks up a localized string similar to Tyhjennä leikepöytä automaattisesti.
         /// </summary>
         internal static string Check_AutoClearClipboard {
             get {
@@ -142,7 +142,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sabihan ako pag may na kopya ako.
+        ///   Looks up a localized string similar to Huomauta jos kopioin jotakin.
         /// </summary>
         internal static string Check_NotifyOfCopy {
             get {
@@ -151,7 +151,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Buksan gamit ng windows.
+        ///   Looks up a localized string similar to Avaa käyttäen Windowsia.
         /// </summary>
         internal static string Check_OpenWithWin {
             get {
@@ -160,7 +160,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Save sa file.
+        ///   Looks up a localized string similar to Tallenna tiedostoon.
         /// </summary>
         internal static string Check_SaveToFile {
             get {
@@ -169,7 +169,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ipakita ang donasyon sa main form.
+        ///   Looks up a localized string similar to Näytä Lahjoitus -nappula pääikkunnassa.
         /// </summary>
         internal static string Check_ShowDonation {
             get {
@@ -178,7 +178,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mag simula ng nakatago.
+        ///   Looks up a localized string similar to Käynnistä pienennettynä.
         /// </summary>
         internal static string Check_StartMinimized {
             get {
@@ -187,7 +187,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mag-update pag bukas.
+        ///   Looks up a localized string similar to Päivitä käynnistettäessä.
         /// </summary>
         internal static string Check_UpdateOnStartup {
             get {
@@ -196,7 +196,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gamitin ang white icon sa system taskbar.
+        ///   Looks up a localized string similar to Käytä valkoista kuvaketta järjestelmän tehtäväpalkissa.
         /// </summary>
         internal static string Check_UseWhiteIcon {
             get {
@@ -205,7 +205,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mag sulat in real time.
+        ///   Looks up a localized string similar to Kirjoita reaaliajassa.
         /// </summary>
         internal static string Check_WriteInRealTime {
             get {
@@ -214,7 +214,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Oras.
+        ///   Looks up a localized string similar to Tunti.
         /// </summary>
         internal static string ComboBox_Time_Hour {
             get {
@@ -223,7 +223,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minuto.
+        ///   Looks up a localized string similar to Minuutti.
         /// </summary>
         internal static string ComboBox_Time_Min {
             get {
@@ -232,7 +232,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Segundo.
+        ///   Looks up a localized string similar to Sekunti.
         /// </summary>
         internal static string ComboBox_Time_Sec {
             get {
@@ -241,7 +241,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Text file|*.txt.
+        ///   Looks up a localized string similar to Tekstitiedosto|*.txt.
         /// </summary>
         internal static string File_TextFile {
             get {
@@ -250,7 +250,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Aksyon.
+        ///   Looks up a localized string similar to Toiminnot.
         /// </summary>
         internal static string GroupBox_Actions {
             get {
@@ -259,7 +259,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ugali at Visual.
+        ///   Looks up a localized string similar to Käytös ja Ulkomuoto.
         /// </summary>
         internal static string GroupBox_BehaviourAndVisuals {
             get {
@@ -268,7 +268,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kinopyang mga item.
+        ///   Looks up a localized string similar to Kopioidut kohteet.
         /// </summary>
         internal static string GroupBox_CopiedItems {
             get {
@@ -277,7 +277,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pangkalahatan.
+        ///   Looks up a localized string similar to Yleinen.
         /// </summary>
         internal static string GroupBox_General {
             get {
@@ -286,7 +286,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Save to file settings.
+        ///   Looks up a localized string similar to Tallenna tiedostoasetuksiin.
         /// </summary>
         internal static string GroupBox_SaveToFileSettings {
             get {
@@ -295,7 +295,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ang update at ang impormasyon ng kasulukuyang bersyon.
+        ///   Looks up a localized string similar to Päivityksen ja nykyisen sovellusversion tiedot.
         /// </summary>
         internal static string GroupBox_UpdateAndCurrentVersion {
             get {
@@ -304,7 +304,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to bawat.
+        ///   Looks up a localized string similar to Joka.
         /// </summary>
         internal static string Label_Every {
             get {
@@ -313,7 +313,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lokasyon ng File.
+        ///   Looks up a localized string similar to Tiedostosijainti.
         /// </summary>
         internal static string Label_FileLocation {
             get {
@@ -322,7 +322,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wika.
+        ///   Looks up a localized string similar to Kieli.
         /// </summary>
         internal static string Label_Lang {
             get {
@@ -331,9 +331,11 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Paumanhin! Mukhang wala kang admin rights, O ang
-        ///application ay nabigong mag start up, subukan
-        ///irestart ang application as administrator..
+        ///   Looks up a localized string similar to Hups! Näyttää siltä ettei sinulla ole
+        ///järjestelmänvalvojan oikeuksia, tai
+        ///sovellus ei käynnistynyt järjestelmänvalvojan
+        ///tilassa. Ole hyvä ja käynnistä sovellus
+        ///uudelleen järjestelmänvalvojana..
         /// </summary>
         internal static string Label_NoAdminRights {
             get {
@@ -342,7 +344,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ipakita ang notification sa segundo.
+        ///   Looks up a localized string similar to Näytä ilmoituksia (X) sekuntia.
         /// </summary>
         internal static string Label_ShowNotificationFor {
             get {
@@ -351,7 +353,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bersyon .
+        ///   Looks up a localized string similar to Versio .
         /// </summary>
         internal static string Label_Version {
             get {
@@ -360,7 +362,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pag sinara ang main window.
+        ///   Looks up a localized string similar to Kun suljen pääikkunan.
         /// </summary>
         internal static string Label_WhenMainWindowClosed {
             get {
@@ -369,9 +371,9 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kung ang real time ay nakapatay, ang
-        ///application ay maaring lamang ma-access
-        ///at mabago ang file pag isinara..
+        ///   Looks up a localized string similar to Jos reaaliaika ei ole käytössä,
+        ///sovellus kirjoittaa tiedostoon
+        ///kun se suljetaan..
         /// </summary>
         internal static string Label_WriteRealTimeInfo {
             get {
@@ -380,7 +382,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Clipboard Monitor Lite.
+        ///   Looks up a localized string similar to Leikepöydän tarkasteluohjelma Lite.
         /// </summary>
         internal static string Main_Title {
             get {
@@ -389,7 +391,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Linisin ang clipboard.
+        ///   Looks up a localized string similar to Tyhjennä Leikepöytä.
         /// </summary>
         internal static string Menu_EmptyClipboard {
             get {
@@ -398,7 +400,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Linisin ang history.
+        ///   Looks up a localized string similar to Tyhjennnä Historia.
         /// </summary>
         internal static string Menu_EmptyHistory {
             get {
@@ -407,7 +409,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Isara.
+        ///   Looks up a localized string similar to Sulje.
         /// </summary>
         internal static string Menu_Exit {
             get {
@@ -416,7 +418,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Buksan.
+        ///   Looks up a localized string similar to Avaa.
         /// </summary>
         internal static string Menu_Restore {
             get {
@@ -425,7 +427,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to I&apos;ll hide the button right away, but before doing so, I just wanted to say, I work on this application mostly alone, with some help from a few friends, but I get no financial aid, I have no desire to ask for money from people just to use this application, and I refuse to include ads in any form. If you&apos;d like to support my work and help me improve them in the future, please consider donating, thank you! :).
+        ///   Looks up a localized string similar to Piilotan nappulan heti, mutta ennekuin teen niin halusin vain sanoa, että työstän tätä sovellusta pääasiallisesti yksin. Saan hieman apua muutamalta ystävältäni, enkä saa rahallista tukea työlleni. En halua lisätä sovellukseen minkäänlaisia mainoksia enkä pyytää rahaa pelkästä sovelluksen käytöstä. Jos haluat tukea työtäni ja auttaa minua parantamaan tuotoksiani tulevaisuudessa, harkitsethan lahjoittavasi, kiitos. :).
         /// </summary>
         internal static string MsgBox_DonateHide {
             get {
@@ -434,7 +436,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Para mag apply ang mga bago, kaylangan i-restart and application..
+        ///   Looks up a localized string similar to Jotta muutokset tulisivat voimaan, ole hyvä ja käynnistä sovellus uudelleen..
         /// </summary>
         internal static string MsgBox_RestartApp {
             get {
@@ -443,7 +445,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Itago ang donation button.
+        ///   Looks up a localized string similar to Piilota lahjoitusnappi.
         /// </summary>
         internal static string MsgBox_Title_DonateHide {
             get {
@@ -452,7 +454,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to I-restart ang app.
+        ///   Looks up a localized string similar to Käynnistä sovellus uudelleen.
         /// </summary>
         internal static string MsgBox_TitleRestartApp {
             get {
@@ -461,7 +463,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ang application ay tumatakbo pa rin! Kung gusto mong isara, i-right click sa taskbar icon at isara ito!.
+        ///   Looks up a localized string similar to Jos haluat postua, ole hyvä ja klikkaa hiiren oikealla näppäimellä tehtäväpalkin kuvaketta ja valitse Sulje!.
         /// </summary>
         internal static string Notif_AppStillRunning {
             get {
@@ -470,7 +472,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nakopya na ang item sa clipboard!.
+        ///   Looks up a localized string similar to Kohde kopioitu leikepöydälle!.
         /// </summary>
         internal static string Notif_ItemCopied {
             get {
@@ -479,7 +481,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ang application ay tumatakbo pa rin!.
+        ///   Looks up a localized string similar to Sovellus on edelleen käynnissä!.
         /// </summary>
         internal static string Notif_Title_AppStillRunning {
             get {
@@ -488,7 +490,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nakopya na ang item!.
+        ///   Looks up a localized string similar to Kohde kopioitu!.
         /// </summary>
         internal static string Notif_Title_ItemCopied {
             get {
@@ -497,7 +499,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Opsyon.
+        ///   Looks up a localized string similar to Asetukset.
         /// </summary>
         internal static string Options_Title {
             get {
@@ -506,7 +508,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mag dagdag sa file.
+        ///   Looks up a localized string similar to Lisää tiedoston loppuun.
         /// </summary>
         internal static string Radio_Append {
             get {
@@ -515,7 +517,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Linisin ang file at palitan.
+        ///   Looks up a localized string similar to Tyhjennä tiedosto ja korvaa.
         /// </summary>
         internal static string Radio_EmptyAndReplace {
             get {
@@ -524,7 +526,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Isara ang application.
+        ///   Looks up a localized string similar to Poistu sovelluksesta.
         /// </summary>
         internal static string Radio_ExitApp {
             get {
@@ -533,7 +535,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Itago sa system tray.
+        ///   Looks up a localized string similar to Pienennä tehtäväpalkkiin.
         /// </summary>
         internal static string Radio_Minimize {
             get {
@@ -542,7 +544,7 @@ namespace ClipboardMonitorLite.NEWLY_CREATED.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to I-save ang history as text file.
+        ///   Looks up a localized string similar to Tallenna historia tekstitiedostona.
         /// </summary>
         internal static string SaveAsTextFile {
             get {

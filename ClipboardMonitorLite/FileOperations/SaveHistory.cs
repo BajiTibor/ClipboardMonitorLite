@@ -2,8 +2,10 @@
 using System.IO;
 using System.ComponentModel;
 using System.Diagnostics;
+using ClipboardMonitorLite.ClipboardActions;
 
-namespace ClipboardMonitorLite
+
+namespace ClipboardMonitorLite.FileOperations
 {
     public class SaveHistory
     {

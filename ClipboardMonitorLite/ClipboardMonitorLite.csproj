@@ -130,13 +130,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppClosingCleanup.cs" />
-    <Compile Include="ChangeControl.cs" />
-    <Compile Include="Helpers\Constants.cs" />
-    <Compile Include="Helpers\Donate.cs" />
-    <Compile Include="FormActions.cs" />
+    <Compile Include="ClipboardActions\ClipboardCleaner.cs" />
+    <Compile Include="FormControls\ChangeLanguage.cs" />
     <Compile Include="Languages\LanguageCode.cs" />
-    <Compile Include="FormControls.cs" />
+    <Compile Include="FormControls\FormControls.cs" />
     <Compile Include="Languages\lang_da.Designer.cs">
       <DependentUpon>lang_da.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -183,8 +180,8 @@
     <Compile Include="Main_Form.Designer.cs">
       <DependentUpon>Main_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="NEWLY CREATED\Clipboard\ClipboardManager.cs" />
-    <Compile Include="NEWLY CREATED\File\SaveHistory.cs" />
+    <Compile Include="ClipboardActions\ClipboardManager.cs" />
+    <Compile Include="FileOperations\SaveHistory.cs" />
     <Compile Include="OptionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,16 +194,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MainResources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Helpers\TimeCalculate.cs" />
-    <Compile Include="Helpers\TimeFormat.cs" />
-    <Compile Include="UpdateInformation.cs" />
-    <Compile Include="Updates.cs" />
-    <Compile Include="UserSettings\CustomSettings.cs" />
-    <Compile Include="UserSettings\CustomSettings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>CustomSettings.settings</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Languages\lang_da.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -272,10 +259,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="UserSettings\CustomSettings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>CustomSettings.Designer.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -303,9 +286,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\buymc2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ProjectHelper\ToDoList.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClipboardLibrary\ClipboardLibrary.csproj">

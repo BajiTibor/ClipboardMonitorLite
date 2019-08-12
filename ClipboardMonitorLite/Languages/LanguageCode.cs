@@ -17,9 +17,9 @@
 
         public enum Language
         {
-            English,
-            Hungarian,
-            Norwegian,
+            English, // = 0
+            Hungarian, // = 1
+            Norwegian, // = 2 ...
             Finnish,
             Filipino,
             Dutch,

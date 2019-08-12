@@ -7,9 +7,9 @@ namespace ClipboardMonitorLite
 {
     public partial class OptionsForm : Form
     {
-        private Updates updates;
-        private ResourceManager resManager;
-        private FormControls controls;
+        //private Updates updates;
+        //private ResourceManager resManager;
+        //private FormControls controls;
         public OptionsForm()
         {
             InitializeObjects();
@@ -21,19 +21,19 @@ namespace ClipboardMonitorLite
 
         private void BindButtonEvents()
         {
-            Btn_CheckForUpdates.Click += updates.Btn_checkForUpdates_Click;
+            //Btn_CheckForUpdates.Click += updates.Btn_checkForUpdates_Click;
         }
 
         private void InitializeObjects()
         {
-            resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[UserSettings.CustomSettings.Default.CurrentLang]}",
-                Assembly.GetExecutingAssembly());
-            updates = new Updates();
-            controls = new FormControls();
+            //resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[UserSettings.CustomSettings.Default.CurrentLang]}", Assembly.GetExecutingAssembly());
+            //updates = new Updates();
+            //controls = new FormControls();
         }
 
         private void InitializeProperties()
         {
+            /*
             Check_UseWhiteIcon.DataBindings.Add("Checked", UserSettings.CustomSettings.Default, "UseWhiteIcon",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
@@ -78,10 +78,12 @@ namespace ClipboardMonitorLite
 
             combo_lang.DataBindings.Add("SelectedIndex", UserSettings.CustomSettings.Default, "CurrentLang",
                 true, DataSourceUpdateMode.OnPropertyChanged);
+                */
         }
 
         private void Btn_browse_Click(object sender, EventArgs e)
         {
+            /*
             saveFileDialog.Filter = resManager.GetString("File_TextFile");
             saveFileDialog.Title = resManager.GetString("SaveAsTextFile");
             saveFileDialog.ShowDialog();
@@ -90,11 +92,12 @@ namespace ClipboardMonitorLite
             {
                 UserSettings.CustomSettings.Default.SaveFileLocation = saveFileDialog.FileName;
             }
+            */
         }
 
         private void Btn_apply_Click(object sender, EventArgs e)
         {
-            UserSettings.CustomSettings.Default.Save();
+            //UserSettings.CustomSettings.Default.Save();
         }
 
         private void Btn_close_Click(object sender, EventArgs e)
@@ -105,6 +108,7 @@ namespace ClipboardMonitorLite
 
         private void Radio_MinimizeOnClose_CheckedChanged(object sender, EventArgs e)
         {
+            /*
             if (Check_StartMinimized.Checked)
             {
                 UserSettings.CustomSettings.Default.FormStartState = FormWindowState.Minimized;
@@ -113,26 +117,30 @@ namespace ClipboardMonitorLite
             {
                 UserSettings.CustomSettings.Default.FormStartState = FormWindowState.Normal;
             }
+            */
         }
 
         private void Check_HideDonate_CheckedChanged(object sender, EventArgs e)
         {
+            /*
             if (UserSettings.CustomSettings.Default.FirstTimeHiding)
             {
                 MessageBox.Show(resManager.GetString("MsgBox_DonateHide"), resManager.GetString("MsgBox_Title_DonateHide"),
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 UserSettings.CustomSettings.Default.FirstTimeHiding = false;
             }
+            */
         }
 
         private void Combo_lang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            UserSettings.CustomSettings.Default.CurrentLang = combo_lang.SelectedIndex;
-            InitializeLanguage();
+            //UserSettings.CustomSettings.Default.CurrentLang = combo_lang.SelectedIndex;
+            //InitializeLanguage();
         }
 
         private void InitializeLanguage()
         {
+            /*
             resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[UserSettings.CustomSettings.Default.CurrentLang]}",
                 Assembly.GetExecutingAssembly());
 
@@ -145,6 +153,7 @@ namespace ClipboardMonitorLite
             }
             Text = resManager.GetString("Options_Title");
             Label_Version.Text += updates.GetVersionNumber();
+            */
         }
     }
 }

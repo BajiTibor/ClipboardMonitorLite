@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace ClipboardMonitorLite
+namespace ClipboardMonitorLite.FormControls
 {
-    public class FormControls
+    public class FormControl
     {
         public List<Control> GetAllControl(Control parent) //That's a lie, only a few that can be translated
         {

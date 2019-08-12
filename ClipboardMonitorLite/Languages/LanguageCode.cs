@@ -1,4 +1,4 @@
-﻿namespace ClipboardMonitorLite
+﻿namespace ClipboardMonitorLite.Languages
 {
     public class LanguageCode
     {
@@ -17,9 +17,9 @@
 
         public enum Language
         {
-            English, // = 0
-            Hungarian, // = 1
-            Norwegian, // = 2 ...
+            English,
+            Hungarian,
+            Norwegian,
             Finnish,
             Filipino,
             Dutch,

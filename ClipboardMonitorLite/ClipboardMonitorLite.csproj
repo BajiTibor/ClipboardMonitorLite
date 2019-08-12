@@ -131,9 +131,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClipboardActions\ClipboardCleaner.cs" />
+    <Compile Include="FormControls\ButtonActions.cs" />
     <Compile Include="FormControls\ChangeLanguage.cs" />
     <Compile Include="Languages\LanguageCode.cs" />
-    <Compile Include="FormControls\FormControls.cs" />
+    <Compile Include="FormControls\FormControl.cs" />
     <Compile Include="Languages\lang_da.Designer.cs">
       <DependentUpon>lang_da.resx</DependentUpon>
       <AutoGen>True</AutoGen>

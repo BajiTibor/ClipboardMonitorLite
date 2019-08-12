@@ -1,21 +1,34 @@
 ﻿using System.Windows.Forms;
+using ClipboardMonitorLite.ClipboardActions;
+using ClipboardMonitorLite.FormControls;
 
 namespace ClipboardMonitorLite
 {
     public partial class MainForm : Form
     {
         ClipboardManager ClipManager;
+        ButtonActions ButtonActions;
         public MainForm()
         {
             ClipManager = new ClipboardManager();
+            ButtonActions = new ButtonActions();
             InitializeComponent();
             BindProperties();
+            BindButtonActions();
         }
 
         private void BindProperties()
         {
+            
+
             CopiedItemBox.DataBindings.Add("Text", ClipManager, "ClipboardHistory",
                 true, DataSourceUpdateMode.OnPropertyChanged);
+        }
+
+        private void BindButtonActions()
+        {
+            Resize += ButtonActions.HideWindowClick;
+            restoreToolStripMenuItem.Click += ButtonActions.RestoreWindowClick;
         }
 
 

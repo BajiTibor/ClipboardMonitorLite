@@ -71,6 +71,7 @@ namespace ClipboardMonitorLite.ClipboardActions
         public void ClearHistory()
         {
             ClearClip();
+            ClipboardHistory = string.Empty;
         }
 
         internal static class Methods

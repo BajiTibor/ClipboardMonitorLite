@@ -11,16 +11,14 @@ namespace ClipboardMonitorLite
         public MainForm()
         {
             ClipManager = new ClipboardManager();
-            ButtonActions = new ButtonActions();
             InitializeComponent();
+            ButtonActions = new ButtonActions(ClipManager, notificationIcon);
             BindProperties();
             BindButtonActions();
         }
 
         private void BindProperties()
         {
-            
-
             CopiedItemBox.DataBindings.Add("Text", ClipManager, "ClipboardHistory",
                 true, DataSourceUpdateMode.OnPropertyChanged);
         }
@@ -29,6 +27,13 @@ namespace ClipboardMonitorLite
         {
             Resize += ButtonActions.HideWindowClick;
             restoreToolStripMenuItem.Click += ButtonActions.RestoreWindowClick;
+            Btn_EmptyHistory.Click += ButtonActions.ClearHistoryClick;
+            Btn_EmptyClipboard.Click += ButtonActions.ClearClipboardClick;
+            btn_Donate.Click += ButtonActions.DonationClick;
+            emptyHistoryToolStripMenuItem.Click += ButtonActions.ClearHistoryClick;
+            emptyClipboardToolStripMenuItem.Click += ButtonActions.ClearClipboardClick;
+            exitToolStripMenuItem.Click += ButtonActions.ExitApplicationClick;
+            notificationIcon.DoubleClick += ButtonActions.RestoreWindowClick;
         }
 
 

@@ -178,7 +178,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.ShowInTaskbar = false;
             this.Text = "Clipboard Monitor Lite";
             this.GroupBox_CopiedItems.ResumeLayout(false);
             this.GroupBox_Actions.ResumeLayout(false);

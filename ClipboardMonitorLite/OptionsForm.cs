@@ -2,16 +2,19 @@
 using System.Reflection;
 using System.Resources;
 using System.Windows.Forms;
+using ClipboardMonitorLite.SettingsManager;
+using ClipboardMonitorLite.FormControls;
 
 namespace ClipboardMonitorLite
 {
     public partial class OptionsForm : Form
     {
-        //private Updates updates;
-        //private ResourceManager resManager;
-        //private FormControls controls;
-        public OptionsForm()
+        private Settings _settings;
+        private SettingsControls _controls;
+        public OptionsForm(Settings settings)
         {
+            _settings = settings;
+            _controls = new SettingsControls(_settings);
             InitializeObjects();
             InitializeComponent();
             InitializeLanguage();
@@ -21,64 +24,49 @@ namespace ClipboardMonitorLite
 
         private void BindButtonEvents()
         {
-            //Btn_CheckForUpdates.Click += updates.Btn_checkForUpdates_Click;
+            Check_StartMinimized.CheckedChanged += _controls.MinimizeCheckChange;
         }
 
         private void InitializeObjects()
         {
-            //resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[UserSettings.CustomSettings.Default.CurrentLang]}", Assembly.GetExecutingAssembly());
-            //updates = new Updates();
-            //controls = new FormControls();
+            
         }
 
         private void InitializeProperties()
         {
-            /*
-            Check_UseWhiteIcon.DataBindings.Add("Checked", UserSettings.CustomSettings.Default, "UseWhiteIcon",
+            Check_UseWhiteIcon.DataBindings.Add("Checked", _settings, "UsingWhiteTrayIcon",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Check_NotifyOfCopy.DataBindings.Add("Checked", UserSettings.CustomSettings.Default, "NotifyCopy",
+            Check_NotifyOfCopy.DataBindings.Add("Checked", _settings, "NotifyClipboardChange",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Check_SaveToFile.DataBindings.Add("Checked", UserSettings.CustomSettings.Default, "SaveToFile",
+            Check_SaveToFile.DataBindings.Add("Checked", _settings, "SaveClipboardHistory",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Check_AutoClearClipboard.DataBindings.Add("Checked", UserSettings.CustomSettings.Default, "AutoClearClip",
+            Check_AutoClearClipboard.DataBindings.Add("Checked", _settings, "AutoClearClipboardHistory",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            numeric_clearAfter.DataBindings.Add("Value", UserSettings.CustomSettings.Default, "AutoClsTime",
+            numeric_clearAfter.DataBindings.Add("Value", _settings, "ClearBetween",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            txt_FileLocation.DataBindings.Add("Text", UserSettings.CustomSettings.Default, "SaveFileLocation",
+            Check_StartMinimized.DataBindings.Add("Checked", _settings, "StartMinimized",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Check_WriteInRealTime.DataBindings.Add("Checked", UserSettings.CustomSettings.Default, "RealTimeWrite",
+            Radio_Minimize.DataBindings.Add("Checked", _settings, "MinimizeOnClose", // MinimizeOnClose
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Label_WriteRealTimeInfo.DataBindings.Add("Visible", UserSettings.CustomSettings.Default, "SaveToFile",
+            Check_ShowDonation.DataBindings.Add("Checked", _settings, "ShowDonation",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            txt_FileLocation.DataBindings.Add("Enabled", UserSettings.CustomSettings.Default, "SaveToFile",
+            combo_lang.DataBindings.Add("SelectedIndex", _settings, "CurrentlySelectedLanguage",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Btn_Browse.DataBindings.Add("Enabled", UserSettings.CustomSettings.Default, "SaveToFile",
+            txt_FileLocation.DataBindings.Add("Text", _settings, "HistoryFileLocation",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            Check_WriteInRealTime.DataBindings.Add("Enabled", UserSettings.CustomSettings.Default, "SaveToFile",
+            Check_WriteInRealTime.DataBindings.Add("Checked", _settings, "WriteInRealTime",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-            numeric_clearAfter.DataBindings.Add("Enabled", UserSettings.CustomSettings.Default, "AutoClearClip",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-
-            Radio_Minimize.DataBindings.Add("Checked", UserSettings.CustomSettings.Default, "MinimizeOnClose",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-
-            Check_ShowDonation.DataBindings.Add("Checked", UserSettings.CustomSettings.Default, "ShowDonateBtn",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-
-            combo_lang.DataBindings.Add("SelectedIndex", UserSettings.CustomSettings.Default, "CurrentLang",
-                true, DataSourceUpdateMode.OnPropertyChanged);
-                */
         }
 
         private void Btn_browse_Click(object sender, EventArgs e)
@@ -97,7 +85,7 @@ namespace ClipboardMonitorLite
 
         private void Btn_apply_Click(object sender, EventArgs e)
         {
-            //UserSettings.CustomSettings.Default.Save();
+
         }
 
         private void Btn_close_Click(object sender, EventArgs e)
@@ -106,30 +94,9 @@ namespace ClipboardMonitorLite
             Dispose();
         }
 
-        private void Radio_MinimizeOnClose_CheckedChanged(object sender, EventArgs e)
-        {
-            /*
-            if (Check_StartMinimized.Checked)
-            {
-                UserSettings.CustomSettings.Default.FormStartState = FormWindowState.Minimized;
-            }
-            else
-            {
-                UserSettings.CustomSettings.Default.FormStartState = FormWindowState.Normal;
-            }
-            */
-        }
-
         private void Check_HideDonate_CheckedChanged(object sender, EventArgs e)
         {
-            /*
-            if (UserSettings.CustomSettings.Default.FirstTimeHiding)
-            {
-                MessageBox.Show(resManager.GetString("MsgBox_DonateHide"), resManager.GetString("MsgBox_Title_DonateHide"),
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                UserSettings.CustomSettings.Default.FirstTimeHiding = false;
-            }
-            */
+            
         }
 
         private void Combo_lang_SelectedIndexChanged(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Diagnostics;
+using System.Windows.Forms;
 using ClipboardMonitorLite.ClipboardActions;
 using ClipboardMonitorLite.FormControls;
 using ClipboardMonitorLite.SettingsManager;
@@ -10,13 +11,23 @@ namespace ClipboardMonitorLite
         ClipboardManager ClipManager;
         ButtonActions ButtonActions;
         Settings Settings;
+        CreateJsonFile file;
+        HandleSettings _settingsHandler;
         public MainForm()
         {
+            _settingsHandler = new HandleSettings();
             ClipManager = new ClipboardManager();
             InitializeComponent();
             ButtonActions = new ButtonActions(ClipManager, notificationIcon);
             Settings = new Settings();
-            Settings.SettingsFileLocation();
+            Settings.HistoryFileLocation = "C:/urmom";
+
+            file = new CreateJsonFile(Settings);
+
+            file.CreateFile();
+
+            Settings = _settingsHandler.LoadSettingsFile();
+
             BindProperties();
             BindButtonActions();
         }

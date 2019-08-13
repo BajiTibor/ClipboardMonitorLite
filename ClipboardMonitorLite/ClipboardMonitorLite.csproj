@@ -148,6 +148,7 @@
     <Compile Include="ClipboardActions\ClipboardCleaner.cs" />
     <Compile Include="FormControls\ButtonActions.cs" />
     <Compile Include="FormControls\ChangeLanguage.cs" />
+    <Compile Include="FormControls\SettingsControls.cs" />
     <Compile Include="Languages\LanguageCode.cs" />
     <Compile Include="FormControls\FormControl.cs" />
     <Compile Include="Languages\lang_da.Designer.cs">
@@ -206,13 +207,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Constants.cs" />
     <Compile Include="Resources\MainResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MainResources.resx</DependentUpon>
     </Compile>
     <Compile Include="SettingsManager\CreateJsonFile.cs" />
-    <Compile Include="SettingsManager\SaveSettings.cs" />
+    <Compile Include="SettingsManager\HandleSettings.cs" />
     <Compile Include="SettingsManager\Settings.cs" />
     <EmbeddedResource Include="Languages\lang_da.resx">
       <Generator>ResXFileCodeGenerator</Generator>

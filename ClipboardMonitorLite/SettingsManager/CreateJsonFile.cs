@@ -1,31 +1,22 @@
-﻿using System;
-using Newtonsoft.Json;
-using ClipboardMonitorLite.FileOperations;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
 
 namespace ClipboardMonitorLite.SettingsManager
 {
     public class CreateJsonFile
     {
-        Settings Settings;
+        private Settings _settings;
+        private HandleSettings _saveSettings;
         public CreateJsonFile(Settings settings)
         {
-            Settings = settings;
-            
+            _settings = settings;
+            _saveSettings = new HandleSettings();
         }
 
         public void CreateFile()
         {
-            string converted = JsonConvert.SerializeObject(Settings);
-
+            string converted = JsonConvert.SerializeObject(_settings, Formatting.Indented);
+            _saveSettings.WriteSettingsFile(converted);
         }
 
-        private string SettingsFileLocation()
-        {
-            return Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + $"\\AppSettings\\ClipboardManagerLite\\settings.json";
-        }
     }
 }

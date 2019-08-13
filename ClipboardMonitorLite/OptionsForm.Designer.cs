@@ -41,6 +41,7 @@
             this.Label_FileLocation = new System.Windows.Forms.Label();
             this.txt_FileLocation = new System.Windows.Forms.TextBox();
             this.GroupBox_BehaviourAndVisuals = new System.Windows.Forms.GroupBox();
+            this.Label_Minutes = new System.Windows.Forms.Label();
             this.combo_lang = new System.Windows.Forms.ComboBox();
             this.Label_Lang = new System.Windows.Forms.Label();
             this.DONOTMODIFY7 = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@
             this.Btn_Close = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.Label_Version = new System.Windows.Forms.Label();
-            this.Label_Minutes = new System.Windows.Forms.Label();
             this.GroupBox_General.SuspendLayout();
             this.GroupBox_UpdateAndCurrentVersion.SuspendLayout();
             this.GroupBox_SaveToFileSettings.SuspendLayout();
@@ -220,6 +220,15 @@
             this.GroupBox_BehaviourAndVisuals.TabStop = false;
             this.GroupBox_BehaviourAndVisuals.Text = "Behaviour and visuals";
             // 
+            // Label_Minutes
+            // 
+            this.Label_Minutes.AutoSize = true;
+            this.Label_Minutes.Location = new System.Drawing.Point(205, 187);
+            this.Label_Minutes.Name = "Label_Minutes";
+            this.Label_Minutes.Size = new System.Drawing.Size(65, 20);
+            this.Label_Minutes.TabIndex = 24;
+            this.Label_Minutes.Text = "Minutes";
+            // 
             // combo_lang
             // 
             this.combo_lang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -299,7 +308,6 @@
             this.Radio_Minimize.TabIndex = 17;
             this.Radio_Minimize.Text = "Minimize on system tray";
             this.Radio_Minimize.UseVisualStyleBackColor = true;
-            this.Radio_Minimize.CheckedChanged += new System.EventHandler(this.Radio_MinimizeOnClose_CheckedChanged);
             // 
             // Label_WhenMainWindowClosed
             // 
@@ -468,15 +476,6 @@
             this.Label_Version.Size = new System.Drawing.Size(63, 20);
             this.Label_Version.TabIndex = 5;
             this.Label_Version.Text = "Version";
-            // 
-            // Label_Minutes
-            // 
-            this.Label_Minutes.AutoSize = true;
-            this.Label_Minutes.Location = new System.Drawing.Point(205, 187);
-            this.Label_Minutes.Name = "Label_Minutes";
-            this.Label_Minutes.Size = new System.Drawing.Size(65, 20);
-            this.Label_Minutes.TabIndex = 24;
-            this.Label_Minutes.Text = "Minutes";
             // 
             // OptionsForm
             // 

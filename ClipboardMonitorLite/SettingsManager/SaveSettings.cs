@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClipboardMonitorLite.SettingsManager
 {
-    public class SaveSettings
+    public class HandleSettings
     {
         public async void WriteSettingsFile(string jsonFile, string filePath)
         {

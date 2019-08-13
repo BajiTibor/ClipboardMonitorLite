@@ -1,28 +1,21 @@
-﻿using System;
-using System.Windows.Forms;
-using System.Collections.Generic;
+﻿using System.Windows.Forms;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
-using System.Diagnostics;
 
 namespace ClipboardMonitorLite.SettingsManager
 {
     public class Settings : INotifyPropertyChanged
     {
-        Icon icon;
-        public Icon SystemTrayIconStyle
+        bool usingWhiteIcon;
+        public bool UsingWhiteTrayIcon
         {
             get
             {
-                return icon;
+                return usingWhiteIcon;
             }
             set
             {
-                icon = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("SystemTrayIconStyle"));
+                usingWhiteIcon = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("UsingWhiteTrayIcon"));
             }
         }
 
@@ -149,6 +142,34 @@ namespace ClipboardMonitorLite.SettingsManager
             {
                 writeRealTime = value;
                 InvokePropertyChanged(new PropertyChangedEventArgs("WriteInRealTime"));
+            }
+        }
+
+        int clearBetweenMinutes;
+        public int ClearBetween
+        {
+            get
+            {
+                return clearBetweenMinutes;
+            }
+            set
+            {
+                clearBetweenMinutes = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("ClearBetween"));
+            }
+        }
+
+        bool startMinimized;
+        public bool StartMinimized
+        {
+            get
+            {
+                return startMinimized;
+            }
+            set
+            {
+                startMinimized = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("StartMinimized"));
             }
         }
 

@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
 using ClipboardMonitorLite.ClipboardActions;
 using ClipboardMonitorLite.FormControls;
+using ClipboardMonitorLite.SettingsManager;
 
 namespace ClipboardMonitorLite
 {
@@ -8,11 +9,14 @@ namespace ClipboardMonitorLite
     {
         ClipboardManager ClipManager;
         ButtonActions ButtonActions;
+        Settings Settings;
         public MainForm()
         {
             ClipManager = new ClipboardManager();
             InitializeComponent();
             ButtonActions = new ButtonActions(ClipManager, notificationIcon);
+            Settings = new Settings();
+            Settings.SettingsFileLocation();
             BindProperties();
             BindButtonActions();
         }

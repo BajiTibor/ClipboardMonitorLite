@@ -211,6 +211,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MainResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SettingsManager\CreateJsonFile.cs" />
+    <Compile Include="SettingsManager\SaveSettings.cs" />
     <Compile Include="SettingsManager\Settings.cs" />
     <EmbeddedResource Include="Languages\lang_da.resx">
       <Generator>ResXFileCodeGenerator</Generator>

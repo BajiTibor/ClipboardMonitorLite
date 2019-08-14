@@ -98,6 +98,7 @@
             this.Btn_MoreOptions.TabIndex = 2;
             this.Btn_MoreOptions.Text = "More options";
             this.Btn_MoreOptions.UseVisualStyleBackColor = true;
+            this.Btn_MoreOptions.Click += new System.EventHandler(this.Btn_MoreOptions_Click);
             // 
             // Btn_EmptyHistory
             // 

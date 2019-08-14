@@ -67,6 +67,9 @@ namespace ClipboardMonitorLite
             Check_WriteInRealTime.DataBindings.Add("Checked", _settings, "WriteInRealTime",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
+            numeric_clearAfter.DataBindings.Add("Enabled", _settings, "AutoClearClipboardHistory",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
         }
 
         private void Btn_browse_Click(object sender, EventArgs e)
@@ -84,11 +87,6 @@ namespace ClipboardMonitorLite
         }
 
         private void Btn_apply_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Btn_close_Click(object sender, EventArgs e)
         {
             Close();
             Dispose();

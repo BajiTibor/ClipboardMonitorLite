@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 using ClipboardMonitorLite.ClipboardActions;
 using ClipboardMonitorLite.FormControls;
@@ -8,25 +9,21 @@ namespace ClipboardMonitorLite
 {
     public partial class MainForm : Form
     {
-        ClipboardManager ClipManager;
-        ButtonActions ButtonActions;
-        Settings Settings;
-        CreateJsonFile file;
+        ClipboardManager _clipManager;
+        ButtonActions _buttonActions;
+        Settings _settings;
+        CreateJsonFile _file;
         HandleSettings _settingsHandler;
         public MainForm()
         {
             _settingsHandler = new HandleSettings();
-            ClipManager = new ClipboardManager();
+            _clipManager = new ClipboardManager();
             InitializeComponent();
-            ButtonActions = new ButtonActions(ClipManager, notificationIcon);
-            Settings = new Settings();
-            Settings.HistoryFileLocation = "C:/urmom";
+            _buttonActions = new ButtonActions(_clipManager, notificationIcon);
+            _settings = new Settings();
+            _file = new CreateJsonFile();
 
-            file = new CreateJsonFile(Settings);
-
-            file.CreateFile();
-
-            Settings = _settingsHandler.LoadSettingsFile();
+            _settings = _settingsHandler.LoadSettingsFile();
 
             BindProperties();
             BindButtonActions();
@@ -34,21 +31,29 @@ namespace ClipboardMonitorLite
 
         private void BindProperties()
         {
-            CopiedItemBox.DataBindings.Add("Text", ClipManager, "ClipboardHistory",
+            CopiedItemBox.DataBindings.Add("Text", _clipManager, "ClipboardHistory",
                 true, DataSourceUpdateMode.OnPropertyChanged);
         }
 
         private void BindButtonActions()
         {
-            Resize += ButtonActions.HideWindowClick;
-            restoreToolStripMenuItem.Click += ButtonActions.RestoreWindowClick;
-            Btn_EmptyHistory.Click += ButtonActions.ClearHistoryClick;
-            Btn_EmptyClipboard.Click += ButtonActions.ClearClipboardClick;
-            btn_Donate.Click += ButtonActions.DonationClick;
-            emptyHistoryToolStripMenuItem.Click += ButtonActions.ClearHistoryClick;
-            emptyClipboardToolStripMenuItem.Click += ButtonActions.ClearClipboardClick;
-            exitToolStripMenuItem.Click += ButtonActions.ExitApplicationClick;
-            notificationIcon.DoubleClick += ButtonActions.RestoreWindowClick;
+            Resize += _buttonActions.HideWindowClick;
+            restoreToolStripMenuItem.Click += _buttonActions.RestoreWindowClick;
+            Btn_EmptyHistory.Click += _buttonActions.ClearHistoryClick;
+            Btn_EmptyClipboard.Click += _buttonActions.ClearClipboardClick;
+            btn_Donate.Click += _buttonActions.DonationClick;
+            emptyHistoryToolStripMenuItem.Click += _buttonActions.ClearHistoryClick;
+            emptyClipboardToolStripMenuItem.Click += _buttonActions.ClearClipboardClick;
+            exitToolStripMenuItem.Click += _buttonActions.ExitApplicationClick;
+            notificationIcon.DoubleClick += _buttonActions.RestoreWindowClick;
+        }
+
+        private void Btn_MoreOptions_Click(object sender, EventArgs e)
+        {
+            OptionsForm form = new OptionsForm(_settings);
+            form.ShowDialog();
+            form.Dispose();
+            _file.CreateFile(_settings);
         }
 
 

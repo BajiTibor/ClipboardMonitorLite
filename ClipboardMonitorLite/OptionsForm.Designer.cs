@@ -64,7 +64,6 @@
             this.Check_NotifyOfCopy = new System.Windows.Forms.CheckBox();
             this.Check_UseWhiteIcon = new System.Windows.Forms.CheckBox();
             this.Btn_Apply = new System.Windows.Forms.Button();
-            this.Btn_Close = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.Label_Version = new System.Windows.Forms.Label();
             this.GroupBox_General.SuspendLayout();
@@ -450,23 +449,13 @@
             // 
             // Btn_Apply
             // 
-            this.Btn_Apply.Location = new System.Drawing.Point(492, 579);
+            this.Btn_Apply.Location = new System.Drawing.Point(615, 579);
             this.Btn_Apply.Name = "Btn_Apply";
             this.Btn_Apply.Size = new System.Drawing.Size(117, 53);
             this.Btn_Apply.TabIndex = 3;
             this.Btn_Apply.Text = "Apply";
             this.Btn_Apply.UseVisualStyleBackColor = true;
             this.Btn_Apply.Click += new System.EventHandler(this.Btn_apply_Click);
-            // 
-            // Btn_Close
-            // 
-            this.Btn_Close.Location = new System.Drawing.Point(615, 579);
-            this.Btn_Close.Name = "Btn_Close";
-            this.Btn_Close.Size = new System.Drawing.Size(117, 53);
-            this.Btn_Close.TabIndex = 4;
-            this.Btn_Close.Text = "Close";
-            this.Btn_Close.UseVisualStyleBackColor = true;
-            this.Btn_Close.Click += new System.EventHandler(this.Btn_close_Click);
             // 
             // Label_Version
             // 
@@ -483,7 +472,6 @@
             this.ClientSize = new System.Drawing.Size(748, 644);
             this.ControlBox = false;
             this.Controls.Add(this.Label_Version);
-            this.Controls.Add(this.Btn_Close);
             this.Controls.Add(this.Btn_Apply);
             this.Controls.Add(this.GroupBox_General);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -527,7 +515,6 @@
         private System.Windows.Forms.CheckBox Check_WriteInRealTime;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button Btn_Apply;
-        private System.Windows.Forms.Button Btn_Close;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.CheckBox Check_StartMinimized;
         private System.Windows.Forms.Label DONOTMODIFY5;

@@ -14,10 +14,12 @@ namespace ClipboardMonitorLite.FormControls
         private Form CurrentForm;
         private ClipboardManager ClipActions;
         private NotifyIcon NotificationIcon;
+        private FormControl _formControl;
         public ButtonActions(ClipboardManager clipManager, NotifyIcon icon)
         {
             ClipActions = clipManager;
             NotificationIcon = icon;
+            _formControl = new FormControl();
         }
         public void ClearClipboardClick(object sender, EventArgs e)
         {
@@ -31,12 +33,12 @@ namespace ClipboardMonitorLite.FormControls
 
         public void RestoreWindowClick(object sender, EventArgs e)
         {
-            ShowWindow(GetLastFormInteractedWith());
+            ShowWindow(_formControl.GetLastFormInteractedWith());
         }
 
         public void HideWindowClick(object sender, EventArgs e)
         {
-            HideWindow(GetLastFormInteractedWith());
+            HideWindow(_formControl.GetLastFormInteractedWith());
         }
 
         public void DonationClick(object sender, EventArgs e)
@@ -67,17 +69,6 @@ namespace ClipboardMonitorLite.FormControls
             form.ShowInTaskbar = true;
         }
 
-        private Form GetLastFormInteractedWith()
-        {
-            if (CurrentForm == null)
-            {
-                CurrentForm = Application.OpenForms.Cast<Form>().FirstOrDefault();
-            }
-            else
-            {
-                return CurrentForm;
-            }
-            return CurrentForm;
-        }
+        
     }
 }

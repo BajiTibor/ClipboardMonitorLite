@@ -4,6 +4,7 @@ using System.Resources;
 using System.Windows.Forms;
 using ClipboardMonitorLite.SettingsManager;
 using ClipboardMonitorLite.FormControls;
+using ClipboardMonitorLite.Languages;
 
 namespace ClipboardMonitorLite
 {
@@ -11,11 +12,12 @@ namespace ClipboardMonitorLite
     {
         private Settings _settings;
         private SettingsControls _controls;
+        private SetLanguageOnForm _langChange;
         public OptionsForm(Settings settings)
         {
+            _langChange = new SetLanguageOnForm();
             _settings = settings;
             _controls = new SettingsControls(_settings);
-            InitializeObjects();
             InitializeComponent();
             InitializeLanguage();
             InitializeProperties();
@@ -25,11 +27,6 @@ namespace ClipboardMonitorLite
         private void BindButtonEvents()
         {
             Check_StartMinimized.CheckedChanged += _controls.MinimizeCheckChange;
-        }
-
-        private void InitializeObjects()
-        {
-            
         }
 
         private void InitializeProperties()
@@ -70,6 +67,15 @@ namespace ClipboardMonitorLite
             numeric_clearAfter.DataBindings.Add("Enabled", _settings, "AutoClearClipboardHistory",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
+            txt_FileLocation.DataBindings.Add("Enabled", _settings, "SaveClipboardHistory",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            Btn_Browse.DataBindings.Add("Enabled", _settings, "SaveClipboardHistory",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            Check_WriteInRealTime.DataBindings.Add("Enabled", _settings, "SaveClipboardHistory",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
         }
 
         private void Btn_browse_Click(object sender, EventArgs e)
@@ -99,26 +105,14 @@ namespace ClipboardMonitorLite
 
         private void Combo_lang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //UserSettings.CustomSettings.Default.CurrentLang = combo_lang.SelectedIndex;
-            //InitializeLanguage();
+            _settings.CurrentlySelectedLanguage = combo_lang.SelectedIndex;
+            //DONOTMODIFY666.Text = combo_lang.SelectedIndex.ToString();
+            InitializeLanguage();
         }
 
         private void InitializeLanguage()
         {
-            /*
-            resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[UserSettings.CustomSettings.Default.CurrentLang]}",
-                Assembly.GetExecutingAssembly());
-
-            foreach (var item in controls.GetAllControl(this))
-            {
-                if (!(item is ComboBox) && !(item.Name.Contains("DONOTMODIFY") && !(item is RichTextBox) && !(item is TextBox)))
-                {
-                    item.Text = resManager.GetString(item.Name);
-                }
-            }
-            Text = resManager.GetString("Options_Title");
-            Label_Version.Text += updates.GetVersionNumber();
-            */
+            _langChange.SetLang(_settings, this);
         }
     }
 }

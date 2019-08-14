@@ -147,7 +147,7 @@
   <ItemGroup>
     <Compile Include="ClipboardActions\ClipboardCleaner.cs" />
     <Compile Include="FormControls\ButtonActions.cs" />
-    <Compile Include="FormControls\ChangeLanguage.cs" />
+    <Compile Include="FormControls\FileBrowser.cs" />
     <Compile Include="FormControls\SettingsControls.cs" />
     <Compile Include="Languages\LanguageCode.cs" />
     <Compile Include="FormControls\FormControl.cs" />
@@ -191,6 +191,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>lang_hu.resx</DependentUpon>
     </Compile>
+    <Compile Include="Languages\SetLanguageOnForm.cs" />
     <Compile Include="Main_Form.cs">
       <SubType>Form</SubType>
     </Compile>

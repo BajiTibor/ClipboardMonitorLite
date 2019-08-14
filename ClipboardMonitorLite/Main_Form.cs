@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Windows.Forms;
 using ClipboardMonitorLite.ClipboardActions;
 using ClipboardMonitorLite.FormControls;
+using ClipboardMonitorLite.Languages;
 using ClipboardMonitorLite.SettingsManager;
 
 namespace ClipboardMonitorLite
@@ -14,17 +14,17 @@ namespace ClipboardMonitorLite
         Settings _settings;
         CreateJsonFile _file;
         HandleSettings _settingsHandler;
+        SetLanguageOnForm _langChange;
         public MainForm()
         {
             _settingsHandler = new HandleSettings();
             _clipManager = new ClipboardManager();
             InitializeComponent();
             _buttonActions = new ButtonActions(_clipManager, notificationIcon);
-            _settings = new Settings();
             _file = new CreateJsonFile();
-
             _settings = _settingsHandler.LoadSettingsFile();
-
+            _langChange = new SetLanguageOnForm();
+            EnumSetLang();
             BindProperties();
             BindButtonActions();
         }
@@ -54,6 +54,7 @@ namespace ClipboardMonitorLite
             form.ShowDialog();
             form.Dispose();
             _file.CreateFile(_settings);
+            _langChange.SetLang(_settings, this);
         }
 
 
@@ -205,24 +206,10 @@ namespace ClipboardMonitorLite
         }
 
         
-
+    */
         private void EnumSetLang()
         {
-            resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[UserSettings.CustomSettings.Default.CurrentLang]}",
-                Assembly.GetExecutingAssembly());
-
-            foreach (var item in controls.GetAllControl(this))
-            {
-                if (!(item is ComboBox) && !(item.Name.Contains("DONOTMODIFY") && !(item is RichTextBox)))
-                {
-                    item.Text = resManager.GetString(item.Name);
-                }
-            }
-            Text = resManager.GetString("Main_Title");
+            _langChange.SetLang(_settings, this);
         }
-    
-    }
-    */
-
     }
 }

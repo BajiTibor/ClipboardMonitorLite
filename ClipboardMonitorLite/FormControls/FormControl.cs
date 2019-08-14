@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace ClipboardMonitorLite.FormControls
 {
     public class FormControl
     {
+        private Form CurrentForm;
         public List<Control> GetAllControl(Control parent) //That's a lie, only a few that can be translated
         {
             List<Control> list = new List<Control>();
@@ -20,6 +22,19 @@ namespace ClipboardMonitorLite.FormControls
                 }
             }
             return list;
+        }
+
+        public Form GetLastFormInteractedWith()
+        {
+            if (CurrentForm == null)
+            {
+                CurrentForm = Application.OpenForms.Cast<Form>().FirstOrDefault();
+            }
+            else
+            {
+                return CurrentForm;
+            }
+            return CurrentForm;
         }
     }
 }

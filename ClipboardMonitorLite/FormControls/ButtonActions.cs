@@ -11,6 +11,7 @@ using ClipboardMonitorLite.SettingsManager;
 using System.Resources;
 using ClipboardMonitorLite.Languages;
 using System.Reflection;
+using ClipboardMonitorLite.FileOperations;
 
 namespace ClipboardMonitorLite.FormControls
 {
@@ -22,12 +23,16 @@ namespace ClipboardMonitorLite.FormControls
         private Form ActiveForm;
         private Settings _settings;
         private ResourceManager resManager;
-        public ButtonActions(ClipboardManager clipManager, NotifyIcon icon, Form form, Settings settings)
+        private SaveHistory _history;
+        private bool exitFileWritten;
+        public ButtonActions(ClipboardManager clipManager, NotifyIcon icon, Form form, Settings settings, SaveHistory history)
         {
+            exitFileWritten = false;
             ActiveForm = form;
             _clipActions = clipManager;
             NotificationIcon = icon;
             _settings = settings;
+            _history = history;
             _formControl = new FormControl();
             _settings.PropertyChanged += _settings_PropertyChanged;
             _clipActions.PropertyChanged += _clipActions_PropertyChanged;
@@ -38,9 +43,7 @@ namespace ClipboardMonitorLite.FormControls
         {
             if (_settings.NotifyClipboardChange)
             {
-                resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[_settings.CurrentlySelectedLanguage]}",
-                Assembly.GetExecutingAssembly());
-
+                RefreshResourceManager();
                 NotificationIcon.BalloonTipText = resManager.GetString("Notif_ItemCopied");
                 NotificationIcon.BalloonTipTitle = resManager.GetString("Notif_Title_ItemCopied");
                 NotificationIcon.ShowBalloonTip(4);
@@ -53,6 +56,21 @@ namespace ClipboardMonitorLite.FormControls
             {
                 SetIconStyle();
             }
+        }
+
+        public void OpenFileBrowserClick(object sender, EventArgs e)
+        {
+            RefreshResourceManager();
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = resManager.GetString("File_TextFile");
+            dialog.Title = resManager.GetString("SaveAsTextFile");
+            dialog.ShowDialog();
+
+            if (!dialog.FileName.Equals(string.Empty))
+            {
+                _settings.HistoryFileLocation = dialog.FileName;
+            }
+
         }
 
         public void ClearClipboardClick(object sender, EventArgs e)
@@ -77,6 +95,11 @@ namespace ClipboardMonitorLite.FormControls
 
         public void ExitApplicationClick(object sender, EventArgs e)
         {
+            if (_settings.SaveClipboardHistory && !_settings.WriteInRealTime && !exitFileWritten)
+            {
+                _history.WriteBeforeExit();
+                exitFileWritten = true;
+            }
             NotificationIcon.Visible = false;
             NotificationIcon.Dispose();
             Application.Exit();
@@ -100,6 +123,10 @@ namespace ClipboardMonitorLite.FormControls
                 ActiveForm.ShowInTaskbar = false;
                 ActiveForm.WindowState = FormWindowState.Minimized;
             }
+            else
+            {
+                ExitApplicationClick(sender, e);
+            }
         }
 
         private void SetIconStyle()
@@ -108,6 +135,12 @@ namespace ClipboardMonitorLite.FormControls
                 NotificationIcon.Icon = Resources.MainResources.icon_white;
             else
                 NotificationIcon.Icon = Resources.MainResources.icon_dark;
+        }
+
+        private void RefreshResourceManager()
+        {
+            resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[_settings.CurrentlySelectedLanguage]}",
+                Assembly.GetExecutingAssembly());
         }
     }
 }

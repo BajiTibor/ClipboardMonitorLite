@@ -13,8 +13,10 @@ namespace ClipboardMonitorLite
         private Settings _settings;
         private SettingsControls _controls;
         private SetLanguageOnForm _langChange;
-        public OptionsForm(Settings settings)
+        private ButtonActions _buttonActions;
+        public OptionsForm(Settings settings, ButtonActions buttonActions)
         {
+            _buttonActions = buttonActions;
             _langChange = new SetLanguageOnForm();
             _settings = settings;
             _controls = new SettingsControls(_settings);
@@ -27,6 +29,7 @@ namespace ClipboardMonitorLite
         private void BindButtonEvents()
         {
             Check_StartMinimized.CheckedChanged += _controls.MinimizeCheckChange;
+            Btn_Browse.Click += _buttonActions.OpenFileBrowserClick;
         }
 
         private void InitializeProperties()
@@ -76,20 +79,6 @@ namespace ClipboardMonitorLite
             Check_WriteInRealTime.DataBindings.Add("Enabled", _settings, "SaveClipboardHistory",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
-        }
-
-        private void Btn_browse_Click(object sender, EventArgs e)
-        {
-            /*
-            saveFileDialog.Filter = resManager.GetString("File_TextFile");
-            saveFileDialog.Title = resManager.GetString("SaveAsTextFile");
-            saveFileDialog.ShowDialog();
-
-            if (!saveFileDialog.FileName.Equals(string.Empty))
-            {
-                UserSettings.CustomSettings.Default.SaveFileLocation = saveFileDialog.FileName;
-            }
-            */
         }
 
         private void Btn_apply_Click(object sender, EventArgs e)

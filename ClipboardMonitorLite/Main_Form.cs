@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using ClipboardMonitorLite.ClipboardActions;
+using ClipboardMonitorLite.FileOperations;
 using ClipboardMonitorLite.FormControls;
 using ClipboardMonitorLite.Languages;
 using ClipboardMonitorLite.SettingsManager;
@@ -15,6 +16,7 @@ namespace ClipboardMonitorLite
         CreateJsonFile _file;
         HandleSettings _settingsHandler;
         SetLanguageOnForm _langChange;
+        SaveHistory _historyFile;
         public MainForm()
         {
             _settingsHandler = new HandleSettings();
@@ -22,11 +24,13 @@ namespace ClipboardMonitorLite
             InitializeComponent();
             _file = new CreateJsonFile();
             _settings = _settingsHandler.LoadSettingsFile();
+            _historyFile = new SaveHistory(_clipManager, _settings);
             _langChange = new SetLanguageOnForm();
-            _buttonActions = new ButtonActions(_clipManager, notificationIcon, this, _settings);
+            _buttonActions = new ButtonActions(_clipManager, notificationIcon, this, _settings, _historyFile);
             EnumSetLang();
             BindProperties();
             BindButtonActions();
+            
         }
 
         private void BindProperties()
@@ -50,9 +54,11 @@ namespace ClipboardMonitorLite
             FormClosing += _buttonActions.FormClosing;
         }
 
+        
+
         private void Btn_MoreOptions_Click(object sender, EventArgs e)
         {
-            OptionsForm form = new OptionsForm(_settings);
+            OptionsForm form = new OptionsForm(_settings, _buttonActions);
             form.ShowDialog();
             form.Dispose();
             _file.CreateFile(_settings);

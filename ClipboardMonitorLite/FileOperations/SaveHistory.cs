@@ -3,28 +3,42 @@ using System.IO;
 using System.ComponentModel;
 using System.Diagnostics;
 using ClipboardMonitorLite.ClipboardActions;
-
+using ClipboardMonitorLite.SettingsManager;
+using ClipboardMonitorLite.Resources;
 
 namespace ClipboardMonitorLite.FileOperations
 {
     public class SaveHistory
     {
-        ClipboardManager ClipManager;
-        public SaveHistory(ClipboardManager clipManager)
+        ClipboardManager _clipManager;
+        private Settings _settings;
+        public SaveHistory(ClipboardManager clipManager, Settings settings)
         {
-            ClipManager = clipManager;
-            ClipManager.PropertyChanged += ClipManager_PropertyChanged;
+            _clipManager = clipManager;
+            _settings = settings;
+            FilePath = _settings.HistoryFileLocation;
+            _clipManager.PropertyChanged += SaveNewItem;
+            _settings.PropertyChanged += _settings_PropertyChanged;
+            InitialFilePath();
         }
 
-        private async void ClipManager_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void _settings_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName.Equals("CurrentlyCopiedItem"))
+            if (e.PropertyName.Equals("HistoryFileLocation"))
+            {
+                FilePath = _settings.HistoryFileLocation;
+            }
+        }
+
+        private async void SaveNewItem(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName.Equals("CurrentlyCopiedItem") && _settings.WriteInRealTime)
             {
                 try
                 {
                     using (StreamWriter sw = File.AppendText(FilePath))
                     {
-                        await sw.WriteLineAsync(ClipManager.CurrentlyCopiedItem);
+                        await sw.WriteLineAsync(_clipManager.CurrentlyCopiedItem);
                     }
                 }
                 catch (Exception ex)
@@ -34,19 +48,22 @@ namespace ClipboardMonitorLite.FileOperations
             }
         }
 
-        private async void CheckFilePresence()
+        public void WriteBeforeExit()
         {
-            if (FilePath.Equals("EMPTY"))
+            using (StreamWriter sw = File.AppendText(FilePath))
             {
-                // Set the settings to be a new file
+                sw.WriteLine(_clipManager.ClipboardHistory);
+            }
+        }
+
+        private void InitialFilePath()
+        {
+            if (string.IsNullOrEmpty(_settings.HistoryFileLocation))
+            {
+                _settings.HistoryFileLocation = Constants.DefaultHistoryFileDirectory;
             }
         }
 
         public string FilePath { get; set; }
-
-        public string FileNameFormat()
-        {
-            return $"{DateTime.Now.ToString("MM_dd_yyyy_HH_mm_ss")}_ClipboardHistory.txt";
-        }
     }
 }

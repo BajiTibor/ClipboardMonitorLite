@@ -170,7 +170,6 @@
             this.Btn_Browse.TabIndex = 2;
             this.Btn_Browse.Text = "Browse";
             this.Btn_Browse.UseVisualStyleBackColor = true;
-            this.Btn_Browse.Click += new System.EventHandler(this.Btn_browse_Click);
             // 
             // Label_FileLocation
             // 

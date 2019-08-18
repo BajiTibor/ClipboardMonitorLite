@@ -95,7 +95,6 @@ namespace ClipboardMonitorLite
         private void Combo_lang_SelectedIndexChanged(object sender, EventArgs e)
         {
             _settings.CurrentlySelectedLanguage = combo_lang.SelectedIndex;
-            //DONOTMODIFY666.Text = combo_lang.SelectedIndex.ToString();
             InitializeLanguage();
         }
 

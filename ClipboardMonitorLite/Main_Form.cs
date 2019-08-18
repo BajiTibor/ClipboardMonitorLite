@@ -54,8 +54,6 @@ namespace ClipboardMonitorLite
             FormClosing += _buttonActions.FormClosing;
         }
 
-        
-
         private void Btn_MoreOptions_Click(object sender, EventArgs e)
         {
             OptionsForm form = new OptionsForm(_settings, _buttonActions);

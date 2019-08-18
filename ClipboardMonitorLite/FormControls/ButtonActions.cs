@@ -1,10 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClipboardMonitorLite.ClipboardActions;
 using ClipboardMonitorLite.SettingsManager;
@@ -19,7 +15,6 @@ namespace ClipboardMonitorLite.FormControls
     {
         private ClipboardManager _clipActions;
         private NotifyIcon NotificationIcon;
-        private FormControl _formControl;
         private Form ActiveForm;
         private Settings _settings;
         private ResourceManager resManager;
@@ -33,10 +28,10 @@ namespace ClipboardMonitorLite.FormControls
             NotificationIcon = icon;
             _settings = settings;
             _history = history;
-            _formControl = new FormControl();
             _settings.PropertyChanged += _settings_PropertyChanged;
             _clipActions.PropertyChanged += _clipActions_PropertyChanged;
             SetIconStyle();
+            form.WindowState = _settings.StartupWindowState;
         }
 
         private void _clipActions_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -86,11 +81,6 @@ namespace ClipboardMonitorLite.FormControls
         public void DonationClick(object sender, EventArgs e)
         {
             Process.Start(Resources.MainResources.url_KoFi);
-        }
-
-        public void ShowOptionsWindowClick(object sender, EventArgs e)
-        {
-
         }
 
         public void ExitApplicationClick(object sender, EventArgs e)

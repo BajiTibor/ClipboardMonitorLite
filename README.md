@@ -1,4 +1,5 @@
 # Clipboard Monitor Lite
+[![BCH compliance](https://bettercodehub.com/edge/badge/SolluxKarkat/ClipboardMonitorLite?branch=master)](https://bettercodehub.com/)
 ### A simple, easy to use clipboard monitoring application.
 
 ## Download latest release

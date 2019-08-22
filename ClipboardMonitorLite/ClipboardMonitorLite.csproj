@@ -148,7 +148,6 @@
     <Compile Include="ClipboardActions\ClipboardCleaner.cs" />
     <Compile Include="FormControls\ButtonActions.cs" />
     <Compile Include="FormControls\FileBrowser.cs" />
-    <Compile Include="FormControls\SettingsControls.cs" />
     <Compile Include="Languages\LanguageCode.cs" />
     <Compile Include="FormControls\FormControl.cs" />
     <Compile Include="Languages\lang_da.Designer.cs">

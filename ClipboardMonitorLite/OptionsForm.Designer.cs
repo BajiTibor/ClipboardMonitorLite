@@ -66,7 +66,6 @@
             this.Btn_Apply = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.Label_Version = new System.Windows.Forms.Label();
-            this.DONOTMODIFY666 = new System.Windows.Forms.Label();
             this.GroupBox_General.SuspendLayout();
             this.GroupBox_UpdateAndCurrentVersion.SuspendLayout();
             this.GroupBox_SaveToFileSettings.SuspendLayout();
@@ -276,7 +275,6 @@
             this.Check_ShowDonation.TabIndex = 20;
             this.Check_ShowDonation.Text = "Show donation button on main window";
             this.Check_ShowDonation.UseVisualStyleBackColor = true;
-            this.Check_ShowDonation.CheckedChanged += new System.EventHandler(this.Check_HideDonate_CheckedChanged);
             // 
             // DONOTMODIFY6
             // 
@@ -466,21 +464,11 @@
             this.Label_Version.TabIndex = 5;
             this.Label_Version.Text = "Version";
             // 
-            // DONOTMODIFY666
-            // 
-            this.DONOTMODIFY666.AutoSize = true;
-            this.DONOTMODIFY666.Location = new System.Drawing.Point(282, 579);
-            this.DONOTMODIFY666.Name = "DONOTMODIFY666";
-            this.DONOTMODIFY666.Size = new System.Drawing.Size(51, 20);
-            this.DONOTMODIFY666.TabIndex = 6;
-            this.DONOTMODIFY666.Text = "label1";
-            // 
             // OptionsForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(748, 644);
             this.ControlBox = false;
-            this.Controls.Add(this.DONOTMODIFY666);
             this.Controls.Add(this.Label_Version);
             this.Controls.Add(this.Btn_Apply);
             this.Controls.Add(this.GroupBox_General);
@@ -542,6 +530,5 @@
         private System.Windows.Forms.ComboBox combo_lang;
         private System.Windows.Forms.Label Label_Lang;
         private System.Windows.Forms.Label Label_Minutes;
-        private System.Windows.Forms.Label DONOTMODIFY666;
     }
 }

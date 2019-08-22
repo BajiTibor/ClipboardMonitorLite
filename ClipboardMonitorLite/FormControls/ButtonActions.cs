@@ -31,7 +31,17 @@ namespace ClipboardMonitorLite.FormControls
             _settings.PropertyChanged += _settings_PropertyChanged;
             _clipActions.PropertyChanged += _clipActions_PropertyChanged;
             SetIconStyle();
-            form.WindowState = _settings.StartupWindowState;
+            SetWindowStartupState();
+            //form.WindowState = _settings.StartupWindowState;
+        }
+
+        private void SetWindowStartupState()
+        {
+            if (_settings.StartMinimized.Equals(true))
+            {
+                ActiveForm.ShowInTaskbar = false;
+                ActiveForm.WindowState = FormWindowState.Minimized;
+            }
         }
 
         private void _clipActions_PropertyChanged(object sender, PropertyChangedEventArgs e)

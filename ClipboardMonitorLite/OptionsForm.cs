@@ -11,7 +11,6 @@ namespace ClipboardMonitorLite
     public partial class OptionsForm : Form
     {
         private Settings _settings;
-        private SettingsControls _controls;
         private SetLanguageOnForm _langChange;
         private ButtonActions _buttonActions;
         public OptionsForm(Settings settings, ButtonActions buttonActions)
@@ -19,7 +18,6 @@ namespace ClipboardMonitorLite
             _buttonActions = buttonActions;
             _langChange = new SetLanguageOnForm();
             _settings = settings;
-            _controls = new SettingsControls(_settings);
             InitializeComponent();
             InitializeLanguage();
             InitializeProperties();
@@ -28,7 +26,6 @@ namespace ClipboardMonitorLite
 
         private void BindButtonEvents()
         {
-            Check_StartMinimized.CheckedChanged += _controls.MinimizeCheckChange;
             Btn_Browse.Click += _buttonActions.OpenFileBrowserClick;
         }
 
@@ -85,11 +82,6 @@ namespace ClipboardMonitorLite
         {
             Close();
             Dispose();
-        }
-
-        private void Check_HideDonate_CheckedChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void Combo_lang_SelectedIndexChanged(object sender, EventArgs e)

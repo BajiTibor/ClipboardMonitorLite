@@ -61,20 +61,6 @@ namespace ClipboardMonitorLite.SettingsManager
             }
         }
 
-        FormWindowState startState;
-        public FormWindowState StartupWindowState
-        {
-            get
-            {
-                return startState;
-            }
-            set
-            {
-                startState = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("StartupWindowState"));
-            }
-        }
-
         bool minimizeOnClose;
         public bool MinimizeOnClose
         {

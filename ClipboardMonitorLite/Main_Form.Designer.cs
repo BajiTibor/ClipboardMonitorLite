@@ -157,7 +157,7 @@
             // 
             // btn_Donate
             // 
-            this.btn_Donate.Image = global::ClipboardMonitorLite.Properties.Resources.buymc2;
+            this.btn_Donate.Image = global::ClipboardMonitorLite.Resources.MainResources.buymc2;
             this.btn_Donate.Location = new System.Drawing.Point(210, 440);
             this.btn_Donate.Name = "btn_Donate";
             this.btn_Donate.Size = new System.Drawing.Size(315, 70);

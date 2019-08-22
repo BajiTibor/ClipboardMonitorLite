@@ -5,6 +5,7 @@ using ClipboardMonitorLite.FileOperations;
 using ClipboardMonitorLite.FormControls;
 using ClipboardMonitorLite.Languages;
 using ClipboardMonitorLite.SettingsManager;
+using ClipboardMonitorLite.Updates;
 
 namespace ClipboardMonitorLite
 {
@@ -17,6 +18,7 @@ namespace ClipboardMonitorLite
         HandleSettings _settingsHandler;
         SetLanguageOnForm _langChange;
         SaveHistory _historyFile;
+        Update _update;
         public MainForm()
         {
             _settingsHandler = new HandleSettings();
@@ -30,7 +32,13 @@ namespace ClipboardMonitorLite
             EnumSetLang();
             BindProperties();
             BindButtonActions();
-            
+            _update = new Update();
+            CheckForUpdates();
+        }
+
+        private async void CheckForUpdates()
+        {
+            await _update.FetchUpdateInfo();
         }
 
         private void BindProperties()

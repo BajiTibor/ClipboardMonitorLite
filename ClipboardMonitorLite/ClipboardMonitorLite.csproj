@@ -216,6 +216,7 @@
     <Compile Include="SettingsManager\CreateJsonFile.cs" />
     <Compile Include="SettingsManager\HandleSettings.cs" />
     <Compile Include="SettingsManager\Settings.cs" />
+    <Compile Include="Updates\Update.cs" />
     <EmbeddedResource Include="Languages\lang_da.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_da.Designer.cs</LastGenOutput>

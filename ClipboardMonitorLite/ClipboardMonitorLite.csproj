@@ -308,12 +308,6 @@
   <ItemGroup>
     <None Include="Resources\buymc2.png" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClipboardLibrary\ClipboardLibrary.csproj">
-      <Project>{de30e62c-8860-4870-bd4c-ecfe25f9e322}</Project>
-      <Name>ClipboardLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

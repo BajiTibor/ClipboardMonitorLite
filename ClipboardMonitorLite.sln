@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClipboardMonitorLite", "ClipboardMonitorLite\ClipboardMonitorLite.csproj", "{F7AA0F1C-CB0C-4DF3-A473-34B0D5EEF3E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClipboardLibrary", "ClipboardLibrary\ClipboardLibrary.csproj", "{DE30E62C-8860-4870-BD4C-ECFE25F9E322}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{F7AA0F1C-CB0C-4DF3-A473-34B0D5EEF3E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7AA0F1C-CB0C-4DF3-A473-34B0D5EEF3E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7AA0F1C-CB0C-4DF3-A473-34B0D5EEF3E6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DE30E62C-8860-4870-BD4C-ECFE25F9E322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DE30E62C-8860-4870-BD4C-ECFE25F9E322}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE30E62C-8860-4870-BD4C-ECFE25F9E322}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DE30E62C-8860-4870-BD4C-ECFE25F9E322}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

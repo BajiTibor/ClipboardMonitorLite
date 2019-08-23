@@ -2,15 +2,18 @@
 using System.IO;
 using Newtonsoft.Json;
 using ClipboardMonitorLite.Resources;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ClipboardMonitorLite.Exceptions;
 
 namespace ClipboardMonitorLite.SettingsManager
 {
     public class HandleSettings
     {
+        private ExceptionHandling _exceptions;
+        public HandleSettings()
+        {
+            _exceptions = new ExceptionHandling();
+        }
+        
         public async void WriteSettingsFile(string jsonFile)
         {
             if (!Directory.Exists(Constants.SettingsDirectory))
@@ -19,9 +22,9 @@ namespace ClipboardMonitorLite.SettingsManager
                 {
                     Directory.CreateDirectory(Constants.SettingsDirectory);
                 }
-                catch
+                catch (Exception e)
                 {
-
+                    _exceptions.Handle(e);
                 }
             }
             try
@@ -31,9 +34,9 @@ namespace ClipboardMonitorLite.SettingsManager
                     await sw.WriteLineAsync(jsonFile);
                 }
             }
-            catch
+            catch (Exception e)
             {
-
+                _exceptions.Handle(e);
             }
         }
 
@@ -45,13 +48,11 @@ namespace ClipboardMonitorLite.SettingsManager
                 Settings settings = JsonConvert.DeserializeObject<Settings>(File.ReadAllText(Constants.SettingsFilePath));
                 tempSettings = settings;
             }
-            catch
+            catch (Exception e)
             {
-
+                _exceptions.Handle(e);
             }
             return tempSettings;
         }
-
-
     }
 }

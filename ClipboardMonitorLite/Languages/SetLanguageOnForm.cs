@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Resources;
 using ClipboardMonitorLite.FormControls;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClipboardMonitorLite.SettingsManager;
 
@@ -22,7 +17,8 @@ namespace ClipboardMonitorLite.Languages
             _settings = settings;
             _resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[_settings.CurrentlySelectedLanguage]}",
                 Assembly.GetExecutingAssembly());
-            foreach (var item in _controls.GetAllControl(CurrentForm))
+
+            foreach (var item in _controls.GetControlsForTranslation(CurrentForm))
             {
                 if (!(item is ComboBox) && !(item.Name.Contains("DONOTMODIFY") && !(item is RichTextBox)))
                 {

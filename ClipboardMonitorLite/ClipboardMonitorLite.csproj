@@ -104,8 +104,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClipboardActions\ClipboardCleaner.cs" />
+    <Compile Include="Exceptions\ExceptionHandling.cs" />
     <Compile Include="FormControls\ButtonActions.cs" />
-    <Compile Include="FormControls\FileBrowser.cs" />
     <Compile Include="Languages\LanguageCode.cs" />
     <Compile Include="FormControls\FormControl.cs" />
     <Compile Include="Languages\lang_da.Designer.cs">

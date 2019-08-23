@@ -1,16 +1,17 @@
 ﻿using System;
+using System.Reflection;
 using System.Windows.Forms;
-using ClipboardMonitorLite.SettingsManager;
-using ClipboardMonitorLite.FormControls;
 using ClipboardMonitorLite.Languages;
+using ClipboardMonitorLite.FormControls;
+using ClipboardMonitorLite.SettingsManager;
 
 namespace ClipboardMonitorLite
 {
     public partial class OptionsForm : Form
     {
         private Settings _settings;
-        private SetLanguageOnForm _langChange;
         private ButtonActions _buttonActions;
+        private SetLanguageOnForm _langChange;
         public OptionsForm(Settings settings, ButtonActions buttonActions)
         {
             _buttonActions = buttonActions;
@@ -91,6 +92,7 @@ namespace ClipboardMonitorLite
         private void InitializeLanguage()
         {
             _langChange.SetLang(_settings, this);
+            Label_Version.Text += Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
     }
 }

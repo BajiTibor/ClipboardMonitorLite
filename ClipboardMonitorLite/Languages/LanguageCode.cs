@@ -14,18 +14,5 @@
             "da", // Danish
             "pl" // Polish
         };
-
-        public enum Language
-        {
-            English,
-            Hungarian,
-            Norwegian,
-            Finnish,
-            Filipino,
-            Dutch,
-            Serbian,
-            Danish,
-            Polish
-        }
     }
 }

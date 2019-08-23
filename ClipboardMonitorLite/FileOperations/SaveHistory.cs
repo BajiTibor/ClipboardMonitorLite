@@ -1,15 +1,16 @@
 ﻿using System;
 using System.IO;
-using System.ComponentModel;
 using System.Diagnostics;
-using ClipboardMonitorLite.ClipboardActions;
-using ClipboardMonitorLite.SettingsManager;
+using System.ComponentModel;
 using ClipboardMonitorLite.Resources;
+using ClipboardMonitorLite.SettingsManager;
+using ClipboardMonitorLite.ClipboardActions;
 
 namespace ClipboardMonitorLite.FileOperations
 {
     public class SaveHistory
     {
+        public string FilePath { get; set; }
         ClipboardManager _clipManager;
         private Settings _settings;
         public SaveHistory(ClipboardManager clipManager, Settings settings)
@@ -64,6 +65,5 @@ namespace ClipboardMonitorLite.FileOperations
             }
         }
 
-        public string FilePath { get; set; }
     }
 }

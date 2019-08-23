@@ -1,10 +1,10 @@
-﻿using System.Windows.Forms;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 namespace ClipboardMonitorLite.SettingsManager
 {
     public class Settings : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         bool usingWhiteIcon;
         public bool UsingWhiteTrayIcon
         {
@@ -164,6 +164,5 @@ namespace ClipboardMonitorLite.SettingsManager
             PropertyChanged?.Invoke(this, e);
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

@@ -1,13 +1,11 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace ClipboardMonitorLite.FormControls
 {
     public class FormControl
     {
-        private Form CurrentForm;
-        public List<Control> GetAllControl(Control parent) //That's a lie, only a few that can be translated
+        public List<Control> GetControlsForTranslation(Control parent) //That's a lie, only a few that can be translated
         {
             List<Control> list = new List<Control>();
             foreach (Control item in parent.Controls)
@@ -16,25 +14,12 @@ namespace ClipboardMonitorLite.FormControls
                 {
                     if (item is GroupBox)
                     {
-                        list.AddRange(GetAllControl(item));
+                        list.AddRange(GetControlsForTranslation(item));
                     }
                     list.Add(item);
                 }
             }
             return list;
-        }
-
-        public Form GetLastFormInteractedWith()
-        {
-            if (CurrentForm == null)
-            {
-                CurrentForm = Application.OpenForms.Cast<Form>().FirstOrDefault();
-            }
-            else
-            {
-                return CurrentForm;
-            }
-            return CurrentForm;
         }
     }
 }

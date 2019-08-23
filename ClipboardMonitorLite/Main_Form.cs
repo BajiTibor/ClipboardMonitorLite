@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Windows.Forms;
-using ClipboardMonitorLite.ClipboardActions;
-using ClipboardMonitorLite.FileOperations;
-using ClipboardMonitorLite.FormControls;
 using ClipboardMonitorLite.Languages;
+using ClipboardMonitorLite.FormControls;
+using ClipboardMonitorLite.FileOperations;
 using ClipboardMonitorLite.SettingsManager;
+using ClipboardMonitorLite.ClipboardActions;
 
 namespace ClipboardMonitorLite
 {
     public partial class MainForm : Form
     {
-        ClipboardManager _clipManager;
-        ButtonActions _buttonActions;
         Settings _settings;
         CreateJsonFile _file;
-        HandleSettings _settingsHandler;
-        SetLanguageOnForm _langChange;
         SaveHistory _historyFile;
+        ButtonActions _buttonActions;
+        SetLanguageOnForm _langChange;
+        ClipboardManager _clipManager;
+        HandleSettings _settingsHandler;
         public MainForm()
         {
             _settingsHandler = new HandleSettings();

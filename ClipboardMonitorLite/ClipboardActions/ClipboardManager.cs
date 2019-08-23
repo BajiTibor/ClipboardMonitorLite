@@ -1,21 +1,25 @@
 ﻿using System;
+using System.Windows.Forms;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
+using ClipboardMonitorLite.Exceptions;
 
 namespace ClipboardMonitorLite.ClipboardActions
 {
     public class ClipboardManager : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-        public static event EventHandler ClipboardUpdate;
-        static NotificationForm _form = new NotificationForm();
         string clipboardhistory;
         string currentlycopieditem;
+        static NotificationForm _form;
+        private static ExceptionHandling _exception;
+        public static event EventHandler ClipboardUpdate;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public ClipboardManager()
         {
             ClipboardUpdate += ClipboardChangeEvent_ClipboardUpdate;
+            _exception = new ExceptionHandling();
+            _form = new NotificationForm();
         }
 
         private void ClipboardChangeEvent_ClipboardUpdate(object sender, EventArgs e)
@@ -93,9 +97,9 @@ namespace ClipboardMonitorLite.ClipboardActions
             {
                 ClipboardUpdate?.Invoke(null, e);
             }
-            catch
+            catch (Exception ex)
             {
-                
+                _exception.Handle(ex);
             }
         }
 

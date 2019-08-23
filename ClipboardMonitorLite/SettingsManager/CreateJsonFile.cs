@@ -12,9 +12,11 @@ namespace ClipboardMonitorLite.SettingsManager
 
         public void CreateFile(Settings _settings)
         {
-            string converted = JsonConvert.SerializeObject(_settings, Formatting.Indented);
-            _saveSettings.WriteSettingsFile(converted);
+            if (!_settings.Equals(null))
+            {
+                string converted = JsonConvert.SerializeObject(_settings, Formatting.Indented);
+                _saveSettings.WriteSettingsFile(converted);
+            }
         }
-
     }
 }

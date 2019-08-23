@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsForm));
             this.GroupBox_General = new System.Windows.Forms.GroupBox();
-            this.GroupBox_UpdateAndCurrentVersion = new System.Windows.Forms.GroupBox();
-            this.Btn_About = new System.Windows.Forms.Button();
-            this.Btn_CheckForUpdates = new System.Windows.Forms.Button();
-            this.txt_updateInfo = new System.Windows.Forms.RichTextBox();
             this.GroupBox_SaveToFileSettings = new System.Windows.Forms.GroupBox();
             this.Label_WriteRealTimeInfo = new System.Windows.Forms.Label();
             this.Check_WriteInRealTime = new System.Windows.Forms.CheckBox();
@@ -67,7 +63,6 @@
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.Label_Version = new System.Windows.Forms.Label();
             this.GroupBox_General.SuspendLayout();
-            this.GroupBox_UpdateAndCurrentVersion.SuspendLayout();
             this.GroupBox_SaveToFileSettings.SuspendLayout();
             this.GroupBox_BehaviourAndVisuals.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_clearAfter)).BeginInit();
@@ -75,7 +70,6 @@
             // 
             // GroupBox_General
             // 
-            this.GroupBox_General.Controls.Add(this.GroupBox_UpdateAndCurrentVersion);
             this.GroupBox_General.Controls.Add(this.GroupBox_SaveToFileSettings);
             this.GroupBox_General.Controls.Add(this.GroupBox_BehaviourAndVisuals);
             this.GroupBox_General.Location = new System.Drawing.Point(12, 12);
@@ -84,47 +78,6 @@
             this.GroupBox_General.TabIndex = 0;
             this.GroupBox_General.TabStop = false;
             this.GroupBox_General.Text = "General";
-            // 
-            // GroupBox_UpdateAndCurrentVersion
-            // 
-            this.GroupBox_UpdateAndCurrentVersion.Controls.Add(this.Btn_About);
-            this.GroupBox_UpdateAndCurrentVersion.Controls.Add(this.Btn_CheckForUpdates);
-            this.GroupBox_UpdateAndCurrentVersion.Controls.Add(this.txt_updateInfo);
-            this.GroupBox_UpdateAndCurrentVersion.Location = new System.Drawing.Point(362, 245);
-            this.GroupBox_UpdateAndCurrentVersion.Name = "GroupBox_UpdateAndCurrentVersion";
-            this.GroupBox_UpdateAndCurrentVersion.Size = new System.Drawing.Size(350, 256);
-            this.GroupBox_UpdateAndCurrentVersion.TabIndex = 2;
-            this.GroupBox_UpdateAndCurrentVersion.TabStop = false;
-            this.GroupBox_UpdateAndCurrentVersion.Text = "Update and current version";
-            // 
-            // Btn_About
-            // 
-            this.Btn_About.Enabled = false;
-            this.Btn_About.Location = new System.Drawing.Point(214, 148);
-            this.Btn_About.Name = "Btn_About";
-            this.Btn_About.Size = new System.Drawing.Size(130, 50);
-            this.Btn_About.TabIndex = 3;
-            this.Btn_About.Text = "About";
-            this.Btn_About.UseVisualStyleBackColor = true;
-            // 
-            // Btn_CheckForUpdates
-            // 
-            this.Btn_CheckForUpdates.Location = new System.Drawing.Point(6, 148);
-            this.Btn_CheckForUpdates.Name = "Btn_CheckForUpdates";
-            this.Btn_CheckForUpdates.Size = new System.Drawing.Size(130, 50);
-            this.Btn_CheckForUpdates.TabIndex = 2;
-            this.Btn_CheckForUpdates.Text = "Check for updates";
-            this.Btn_CheckForUpdates.UseVisualStyleBackColor = true;
-            // 
-            // txt_updateInfo
-            // 
-            this.txt_updateInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_updateInfo.Location = new System.Drawing.Point(6, 28);
-            this.txt_updateInfo.Name = "txt_updateInfo";
-            this.txt_updateInfo.ReadOnly = true;
-            this.txt_updateInfo.Size = new System.Drawing.Size(338, 114);
-            this.txt_updateInfo.TabIndex = 0;
-            this.txt_updateInfo.Text = "";
             // 
             // GroupBox_SaveToFileSettings
             // 
@@ -480,7 +433,6 @@
             this.ShowInTaskbar = false;
             this.Text = "Options";
             this.GroupBox_General.ResumeLayout(false);
-            this.GroupBox_UpdateAndCurrentVersion.ResumeLayout(false);
             this.GroupBox_SaveToFileSettings.ResumeLayout(false);
             this.GroupBox_SaveToFileSettings.PerformLayout();
             this.GroupBox_BehaviourAndVisuals.ResumeLayout(false);
@@ -521,10 +473,6 @@
         private System.Windows.Forms.Label Label_WhenMainWindowClosed;
         private System.Windows.Forms.Label DONOTMODIFY6;
         private System.Windows.Forms.CheckBox Check_ShowDonation;
-        private System.Windows.Forms.GroupBox GroupBox_UpdateAndCurrentVersion;
-        private System.Windows.Forms.RichTextBox txt_updateInfo;
-        private System.Windows.Forms.Button Btn_About;
-        private System.Windows.Forms.Button Btn_CheckForUpdates;
         private System.Windows.Forms.Label Label_Version;
         private System.Windows.Forms.Label DONOTMODIFY7;
         private System.Windows.Forms.ComboBox combo_lang;

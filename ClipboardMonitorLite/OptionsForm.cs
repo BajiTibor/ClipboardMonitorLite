@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Reflection;
-using System.Resources;
 using System.Windows.Forms;
 using ClipboardMonitorLite.SettingsManager;
 using ClipboardMonitorLite.FormControls;

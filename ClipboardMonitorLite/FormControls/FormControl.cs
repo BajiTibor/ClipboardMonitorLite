@@ -5,7 +5,7 @@ namespace ClipboardMonitorLite.FormControls
 {
     public class FormControl
     {
-        public List<Control> GetControlsForTranslation(Control parent) //That's a lie, only a few that can be translated
+        public List<Control> GetControlsForTranslation(Control parent)
         {
             List<Control> list = new List<Control>();
             foreach (Control item in parent.Controls)

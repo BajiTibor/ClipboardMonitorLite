@@ -1,7 +1,7 @@
-﻿using System.Reflection;
-using System.Resources;
-using ClipboardMonitorLite.FormControls;
+﻿using System.Resources;
+using System.Reflection;
 using System.Windows.Forms;
+using ClipboardMonitorLite.FormControls;
 using ClipboardMonitorLite.SettingsManager;
 
 namespace ClipboardMonitorLite.Languages

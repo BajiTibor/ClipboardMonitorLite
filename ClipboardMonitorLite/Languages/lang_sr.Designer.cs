@@ -223,15 +223,6 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Минут.
-        /// </summary>
-        internal static string ComboBox_Time_Min {
-            get {
-                return ResourceManager.GetString("ComboBox_Time_Min", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Секунда.
         /// </summary>
         internal static string ComboBox_Time_Sec {
@@ -327,6 +318,15 @@ namespace ClipboardMonitorLite.Languages {
         internal static string Label_Lang {
             get {
                 return ResourceManager.GetString("Label_Lang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Минут.
+        /// </summary>
+        internal static string Label_Minutes {
+            get {
+                return ResourceManager.GetString("Label_Minutes", resourceCulture);
             }
         }
         

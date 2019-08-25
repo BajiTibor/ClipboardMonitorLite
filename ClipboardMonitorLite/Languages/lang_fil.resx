@@ -171,9 +171,6 @@
   <data name="ComboBox_Time_Hour" xml:space="preserve">
     <value>Oras</value>
   </data>
-  <data name="ComboBox_Time_Min" xml:space="preserve">
-    <value>Minuto</value>
-  </data>
   <data name="ComboBox_Time_Sec" xml:space="preserve">
     <value>Segundo</value>
   </data>
@@ -206,6 +203,9 @@
   </data>
   <data name="Label_Lang" xml:space="preserve">
     <value>Wika</value>
+  </data>
+  <data name="Label_Minutes" xml:space="preserve">
+    <value>Minuto</value>
   </data>
   <data name="Label_NoAdminRights" xml:space="preserve">
     <value>Paumanhin! Mukhang wala kang admin rights, O ang

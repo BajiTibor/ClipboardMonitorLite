@@ -51,6 +51,7 @@ namespace ClipboardMonitorLite
             exitToolStripMenuItem.Click += _buttonActions.ExitApplicationClick;
             notificationIcon.DoubleClick += _buttonActions.RestoreWindowClick;
             FormClosing += _buttonActions.FormClosing;
+            CopiedItemBox.LinkClicked += _buttonActions.LinkClicked;
         }
 
         private void Btn_MoreOptions_Click(object sender, EventArgs e)

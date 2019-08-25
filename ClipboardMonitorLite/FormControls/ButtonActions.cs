@@ -77,6 +77,11 @@ namespace ClipboardMonitorLite.FormControls
 
         }
 
+        public void LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            Process.Start(e.LinkText);
+        }
+
         public void ClearClipboardClick(object sender, EventArgs e)
         {
             _clipActions.ClearClip();

@@ -171,9 +171,6 @@
   <data name="ComboBox_Time_Hour" xml:space="preserve">
     <value>Godzina</value>
   </data>
-  <data name="ComboBox_Time_Min" xml:space="preserve">
-    <value>Minuta</value>
-  </data>
   <data name="ComboBox_Time_Sec" xml:space="preserve">
     <value>Sekunda</value>
   </data>
@@ -206,6 +203,9 @@
   </data>
   <data name="Label_Lang" xml:space="preserve">
     <value>Język</value>
+  </data>
+  <data name="Label_Minutes" xml:space="preserve">
+    <value>Minuta</value>
   </data>
   <data name="Label_NoAdminRights" xml:space="preserve">
     <value>Brak uprawnień administratora, lub aplikacja ich nie posiada, proszę spróbować uruchomić ją ponownie jako administrator.</value>

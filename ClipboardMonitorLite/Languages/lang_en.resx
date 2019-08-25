@@ -171,9 +171,6 @@
   <data name="ComboBox_Time_Hour" xml:space="preserve">
     <value>Hour</value>
   </data>
-  <data name="ComboBox_Time_Min" xml:space="preserve">
-    <value>Minute</value>
-  </data>
   <data name="ComboBox_Time_Sec" xml:space="preserve">
     <value>Second</value>
   </data>
@@ -206,6 +203,9 @@
   </data>
   <data name="Label_Lang" xml:space="preserve">
     <value>Language</value>
+  </data>
+  <data name="Label_Minutes" xml:space="preserve">
+    <value>Minute</value>
   </data>
   <data name="Label_NoAdminRights" xml:space="preserve">
     <value>Sorry! Seems like you have no admin

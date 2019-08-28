@@ -43,14 +43,17 @@ namespace ClipboardMonitorLite.SettingsManager
         public Settings LoadSettingsFile()
         {
             Settings tempSettings = new Settings();
-            try
+            if (File.Exists(Constants.SettingsFilePath))
             {
-                Settings settings = JsonConvert.DeserializeObject<Settings>(File.ReadAllText(Constants.SettingsFilePath));
-                tempSettings = settings;
-            }
-            catch (Exception e)
-            {
-                _exceptions.Handle(e);
+                try
+                {
+                    Settings settings = JsonConvert.DeserializeObject<Settings>(File.ReadAllText(Constants.SettingsFilePath));
+                    tempSettings = settings;
+                }
+                catch (Exception e)
+                {
+                    _exceptions.Handle(e);
+                }
             }
             return tempSettings;
         }

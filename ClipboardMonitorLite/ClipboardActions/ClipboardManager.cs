@@ -3,6 +3,11 @@ using System.Windows.Forms;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using ClipboardMonitorLite.Exceptions;
+using ClipboardMonitorLite.Resources;
+using ClipboardMonitorLite.Cloud;
+using System.Diagnostics;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ClipboardMonitorLite.ClipboardActions
 {
@@ -14,12 +19,24 @@ namespace ClipboardMonitorLite.ClipboardActions
         private static ExceptionHandling _exception;
         public static event EventHandler ClipboardUpdate;
         public event PropertyChangedEventHandler PropertyChanged;
+        private CloudInteractions _cloud;
 
         public ClipboardManager()
         {
             ClipboardUpdate += ClipboardChangeEvent_ClipboardUpdate;
             _exception = new ExceptionHandling();
             _form = new NotificationForm();
+            _cloud = new CloudInteractions();
+            _cloud.MessageRecieved += MessageRecieved;
+        }
+
+        private void MessageRecieved(object sender, EventArgs e)
+        {
+            var args = e as MessageEventArgs;
+            if(args != null)
+            {
+                GetTextFromCloud(args.User, args.Message);
+            }
         }
 
         private void ClipboardChangeEvent_ClipboardUpdate(object sender, EventArgs e)
@@ -29,6 +46,15 @@ namespace ClipboardMonitorLite.ClipboardActions
             {
                 CurrentlyCopiedItem = CopiedItem;
                 ClipboardHistory += ($"{CopiedItem}\n");
+            }
+            _cloud.SendText(Constants.MachineName, CopiedItem);
+        }
+        
+        public void GetTextFromCloud(string MachineName, string Text)
+        {
+            if (MachineName.Equals(Constants.MachineName))
+            {
+                Clipboard.SetText(Text);
             }
         }
 

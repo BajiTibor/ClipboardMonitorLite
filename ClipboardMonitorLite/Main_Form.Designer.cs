@@ -66,7 +66,7 @@
             this.CopiedItemBox.Name = "CopiedItemBox";
             this.CopiedItemBox.ReadOnly = true;
             this.CopiedItemBox.Size = new System.Drawing.Size(498, 339);
-            this.CopiedItemBox.TabIndex = 0;
+            this.CopiedItemBox.TabIndex = 1;
             this.CopiedItemBox.Text = "";
             // 
             // Btn_EmptyClipboard
@@ -74,7 +74,7 @@
             this.Btn_EmptyClipboard.Location = new System.Drawing.Point(6, 25);
             this.Btn_EmptyClipboard.Name = "Btn_EmptyClipboard";
             this.Btn_EmptyClipboard.Size = new System.Drawing.Size(156, 35);
-            this.Btn_EmptyClipboard.TabIndex = 0;
+            this.Btn_EmptyClipboard.TabIndex = 2;
             this.Btn_EmptyClipboard.Text = "Empty Clipboard";
             this.Btn_EmptyClipboard.UseVisualStyleBackColor = true;
             // 
@@ -95,7 +95,7 @@
             this.Btn_MoreOptions.Location = new System.Drawing.Point(6, 106);
             this.Btn_MoreOptions.Name = "Btn_MoreOptions";
             this.Btn_MoreOptions.Size = new System.Drawing.Size(156, 35);
-            this.Btn_MoreOptions.TabIndex = 2;
+            this.Btn_MoreOptions.TabIndex = 4;
             this.Btn_MoreOptions.Text = "More options";
             this.Btn_MoreOptions.UseVisualStyleBackColor = true;
             this.Btn_MoreOptions.Click += new System.EventHandler(this.Btn_MoreOptions_Click);
@@ -105,7 +105,7 @@
             this.Btn_EmptyHistory.Location = new System.Drawing.Point(6, 66);
             this.Btn_EmptyHistory.Name = "Btn_EmptyHistory";
             this.Btn_EmptyHistory.Size = new System.Drawing.Size(156, 35);
-            this.Btn_EmptyHistory.TabIndex = 1;
+            this.Btn_EmptyHistory.TabIndex = 3;
             this.Btn_EmptyHistory.Text = "Empty History";
             this.Btn_EmptyHistory.UseVisualStyleBackColor = true;
             // 
@@ -158,10 +158,10 @@
             // btn_Donate
             // 
             this.btn_Donate.Image = global::ClipboardMonitorLite.Resources.MainResources.buymc2;
-            this.btn_Donate.Location = new System.Drawing.Point(210, 440);
+            this.btn_Donate.Location = new System.Drawing.Point(207, 436);
             this.btn_Donate.Name = "btn_Donate";
             this.btn_Donate.Size = new System.Drawing.Size(315, 70);
-            this.btn_Donate.TabIndex = 4;
+            this.btn_Donate.TabIndex = 5;
             this.btn_Donate.UseVisualStyleBackColor = true;
             // 
             // timerEmptyClipboard

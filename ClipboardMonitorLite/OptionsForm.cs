@@ -63,6 +63,9 @@ namespace ClipboardMonitorLite
             Check_WriteInRealTime.DataBindings.Add("Checked", _settings, "WriteInRealTime",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
+            Check_OpenWithWin.DataBindings.Add("Checked", _settings, "StartWithWindows",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
             numeric_clearAfter.DataBindings.Add("Enabled", _settings, "AutoClearClipboardHistory",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 

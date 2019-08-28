@@ -17,6 +17,7 @@ namespace ClipboardMonitorLite
         SetLanguageOnForm _langChange;
         ClipboardManager _clipManager;
         HandleSettings _settingsHandler;
+        WinStartup _startup;
         public MainForm()
         {
             _settingsHandler = new HandleSettings();
@@ -27,6 +28,7 @@ namespace ClipboardMonitorLite
             _historyFile = new SaveHistory(_clipManager, _settings);
             _langChange = new SetLanguageOnForm();
             _buttonActions = new ButtonActions(_clipManager, notificationIcon, this, _settings, _historyFile);
+            _startup = new WinStartup(_settings);
             EnumSetLang();
             BindProperties();
             BindButtonActions();

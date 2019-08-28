@@ -159,6 +159,20 @@ namespace ClipboardMonitorLite.SettingsManager
             }
         }
 
+        bool startWithWin;
+        public bool StartWithWindows
+        {
+            get
+            {
+                return startWithWin;
+            }
+            set
+            {
+                startWithWin = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("StartWithWindows"));
+            }
+        }
+
         private void InvokePropertyChanged(PropertyChangedEventArgs e)
         {
             PropertyChanged?.Invoke(this, e);

@@ -105,6 +105,7 @@
   <ItemGroup>
     <Compile Include="ClipboardActions\ClipboardCleaner.cs" />
     <Compile Include="Exceptions\ExceptionHandling.cs" />
+    <Compile Include="FileOperations\WinStartup.cs" />
     <Compile Include="FormControls\ButtonActions.cs" />
     <Compile Include="Languages\LanguageCode.cs" />
     <Compile Include="FormControls\FormControl.cs" />
@@ -266,6 +267,16 @@
   <ItemGroup>
     <None Include="Resources\buymc2.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

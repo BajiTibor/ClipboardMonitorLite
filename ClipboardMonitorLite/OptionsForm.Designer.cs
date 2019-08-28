@@ -62,6 +62,7 @@
             this.Btn_Apply = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.Label_Version = new System.Windows.Forms.Label();
+            this.Check_OpenWithWin = new System.Windows.Forms.CheckBox();
             this.GroupBox_General.SuspendLayout();
             this.GroupBox_SaveToFileSettings.SuspendLayout();
             this.GroupBox_BehaviourAndVisuals.SuspendLayout();
@@ -109,7 +110,7 @@
             this.Check_WriteInRealTime.Location = new System.Drawing.Point(6, 86);
             this.Check_WriteInRealTime.Name = "Check_WriteInRealTime";
             this.Check_WriteInRealTime.Size = new System.Drawing.Size(176, 24);
-            this.Check_WriteInRealTime.TabIndex = 5;
+            this.Check_WriteInRealTime.TabIndex = 13;
             this.Check_WriteInRealTime.Text = "Write file in real time";
             this.Check_WriteInRealTime.UseVisualStyleBackColor = true;
             // 
@@ -119,7 +120,7 @@
             this.Btn_Browse.Location = new System.Drawing.Point(266, 48);
             this.Btn_Browse.Name = "Btn_Browse";
             this.Btn_Browse.Size = new System.Drawing.Size(78, 26);
-            this.Btn_Browse.TabIndex = 2;
+            this.Btn_Browse.TabIndex = 12;
             this.Btn_Browse.Text = "Browse";
             this.Btn_Browse.UseVisualStyleBackColor = true;
             // 
@@ -138,10 +139,11 @@
             this.txt_FileLocation.Location = new System.Drawing.Point(6, 48);
             this.txt_FileLocation.Name = "txt_FileLocation";
             this.txt_FileLocation.Size = new System.Drawing.Size(254, 26);
-            this.txt_FileLocation.TabIndex = 0;
+            this.txt_FileLocation.TabIndex = 11;
             // 
             // GroupBox_BehaviourAndVisuals
             // 
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_OpenWithWin);
             this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Label_Minutes);
             this.GroupBox_BehaviourAndVisuals.Controls.Add(this.combo_lang);
             this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Label_Lang);
@@ -197,7 +199,7 @@
             this.combo_lang.Location = new System.Drawing.Point(103, 413);
             this.combo_lang.Name = "combo_lang";
             this.combo_lang.Size = new System.Drawing.Size(116, 28);
-            this.combo_lang.TabIndex = 23;
+            this.combo_lang.TabIndex = 10;
             this.combo_lang.SelectedIndexChanged += new System.EventHandler(this.Combo_lang_SelectedIndexChanged);
             // 
             // Label_Lang
@@ -225,7 +227,7 @@
             this.Check_ShowDonation.Location = new System.Drawing.Point(6, 370);
             this.Check_ShowDonation.Name = "Check_ShowDonation";
             this.Check_ShowDonation.Size = new System.Drawing.Size(307, 24);
-            this.Check_ShowDonation.TabIndex = 20;
+            this.Check_ShowDonation.TabIndex = 9;
             this.Check_ShowDonation.Text = "Show donation button on main window";
             this.Check_ShowDonation.UseVisualStyleBackColor = true;
             // 
@@ -244,7 +246,7 @@
             this.Radio_ExitApp.Location = new System.Drawing.Point(6, 333);
             this.Radio_ExitApp.Name = "Radio_ExitApp";
             this.Radio_ExitApp.Size = new System.Drawing.Size(167, 24);
-            this.Radio_ExitApp.TabIndex = 18;
+            this.Radio_ExitApp.TabIndex = 8;
             this.Radio_ExitApp.TabStop = true;
             this.Radio_ExitApp.Text = "Exit the application";
             this.Radio_ExitApp.UseVisualStyleBackColor = true;
@@ -255,7 +257,7 @@
             this.Radio_Minimize.Location = new System.Drawing.Point(6, 305);
             this.Radio_Minimize.Name = "Radio_Minimize";
             this.Radio_Minimize.Size = new System.Drawing.Size(201, 24);
-            this.Radio_Minimize.TabIndex = 17;
+            this.Radio_Minimize.TabIndex = 7;
             this.Radio_Minimize.Text = "Minimize on system tray";
             this.Radio_Minimize.UseVisualStyleBackColor = true;
             // 
@@ -279,10 +281,10 @@
             // Check_StartMinimized
             // 
             this.Check_StartMinimized.AutoSize = true;
-            this.Check_StartMinimized.Location = new System.Drawing.Point(6, 236);
+            this.Check_StartMinimized.Location = new System.Drawing.Point(6, 253);
             this.Check_StartMinimized.Name = "Check_StartMinimized";
             this.Check_StartMinimized.Size = new System.Drawing.Size(144, 24);
-            this.Check_StartMinimized.TabIndex = 14;
+            this.Check_StartMinimized.TabIndex = 6;
             this.Check_StartMinimized.Text = "Start Minimized";
             this.Check_StartMinimized.UseVisualStyleBackColor = true;
             // 
@@ -342,7 +344,7 @@
             0});
             this.numeric_clearAfter.Name = "numeric_clearAfter";
             this.numeric_clearAfter.Size = new System.Drawing.Size(120, 26);
-            this.numeric_clearAfter.TabIndex = 7;
+            this.numeric_clearAfter.TabIndex = 5;
             this.numeric_clearAfter.Value = new decimal(new int[] {
             10,
             0,
@@ -364,7 +366,7 @@
             this.Check_AutoClearClipboard.Location = new System.Drawing.Point(6, 160);
             this.Check_AutoClearClipboard.Name = "Check_AutoClearClipboard";
             this.Check_AutoClearClipboard.Size = new System.Drawing.Size(309, 24);
-            this.Check_AutoClearClipboard.TabIndex = 5;
+            this.Check_AutoClearClipboard.TabIndex = 4;
             this.Check_AutoClearClipboard.Text = "Automatically clear my clipboard history";
             this.Check_AutoClearClipboard.UseVisualStyleBackColor = true;
             // 
@@ -374,7 +376,7 @@
             this.Check_SaveToFile.Location = new System.Drawing.Point(6, 125);
             this.Check_SaveToFile.Name = "Check_SaveToFile";
             this.Check_SaveToFile.Size = new System.Drawing.Size(337, 24);
-            this.Check_SaveToFile.TabIndex = 2;
+            this.Check_SaveToFile.TabIndex = 3;
             this.Check_SaveToFile.Text = "Save the clipboard history to a local text file";
             this.Check_SaveToFile.UseVisualStyleBackColor = true;
             // 
@@ -384,7 +386,7 @@
             this.Check_NotifyOfCopy.Location = new System.Drawing.Point(6, 71);
             this.Check_NotifyOfCopy.Name = "Check_NotifyOfCopy";
             this.Check_NotifyOfCopy.Size = new System.Drawing.Size(300, 24);
-            this.Check_NotifyOfCopy.TabIndex = 1;
+            this.Check_NotifyOfCopy.TabIndex = 2;
             this.Check_NotifyOfCopy.Text = "Notify me when my clipboard changes";
             this.Check_NotifyOfCopy.UseVisualStyleBackColor = true;
             // 
@@ -394,7 +396,7 @@
             this.Check_UseWhiteIcon.Location = new System.Drawing.Point(6, 25);
             this.Check_UseWhiteIcon.Name = "Check_UseWhiteIcon";
             this.Check_UseWhiteIcon.Size = new System.Drawing.Size(265, 24);
-            this.Check_UseWhiteIcon.TabIndex = 0;
+            this.Check_UseWhiteIcon.TabIndex = 1;
             this.Check_UseWhiteIcon.Text = "Use white icon in the system tray";
             this.Check_UseWhiteIcon.UseVisualStyleBackColor = true;
             // 
@@ -403,7 +405,7 @@
             this.Btn_Apply.Location = new System.Drawing.Point(615, 579);
             this.Btn_Apply.Name = "Btn_Apply";
             this.Btn_Apply.Size = new System.Drawing.Size(117, 53);
-            this.Btn_Apply.TabIndex = 3;
+            this.Btn_Apply.TabIndex = 14;
             this.Btn_Apply.Text = "Apply";
             this.Btn_Apply.UseVisualStyleBackColor = true;
             this.Btn_Apply.Click += new System.EventHandler(this.Btn_apply_Click);
@@ -416,6 +418,16 @@
             this.Label_Version.Size = new System.Drawing.Size(63, 20);
             this.Label_Version.TabIndex = 5;
             this.Label_Version.Text = "Version";
+            // 
+            // Check_OpenWithWin
+            // 
+            this.Check_OpenWithWin.AutoSize = true;
+            this.Check_OpenWithWin.Location = new System.Drawing.Point(6, 223);
+            this.Check_OpenWithWin.Name = "Check_OpenWithWin";
+            this.Check_OpenWithWin.Size = new System.Drawing.Size(178, 24);
+            this.Check_OpenWithWin.TabIndex = 25;
+            this.Check_OpenWithWin.Text = "Open With Windows";
+            this.Check_OpenWithWin.UseVisualStyleBackColor = true;
             // 
             // OptionsForm
             // 
@@ -478,5 +490,6 @@
         private System.Windows.Forms.ComboBox combo_lang;
         private System.Windows.Forms.Label Label_Lang;
         private System.Windows.Forms.Label Label_Minutes;
+        private System.Windows.Forms.CheckBox Check_OpenWithWin;
     }
 }

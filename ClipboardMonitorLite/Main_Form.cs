@@ -6,6 +6,7 @@ using ClipboardMonitorLite.FileOperations;
 using ClipboardMonitorLite.SettingsManager;
 using ClipboardMonitorLite.ClipboardActions;
 using ClipboardMonitorLite.Cloud;
+using System.ComponentModel;
 
 namespace ClipboardMonitorLite
 {

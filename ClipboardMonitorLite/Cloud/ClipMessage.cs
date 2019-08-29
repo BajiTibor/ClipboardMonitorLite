@@ -25,6 +25,21 @@ namespace ClipboardMonitorLite.Cloud
             }
         }
 
+
+        private string machine;
+        public string MachineName
+        {
+            get
+            {
+                return machine;
+            }
+            set
+            {
+                machine = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("MachineName"));
+            }
+        }
+
         private void InvokePropertyChanged(PropertyChangedEventArgs e)
         {
             PropertyChanged?.Invoke(this, e);

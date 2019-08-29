@@ -16,7 +16,7 @@ namespace ClipboardMonitorLite.Cloud
         private ClipMessage _message;
         public CloudInteractions(ClipMessage message)
         {
-            connection = new HubConnectionBuilder().WithUrl("https://localhost:5001/broadcast").Build();
+            connection = new HubConnectionBuilder().WithUrl("http://clipmanagerweb.azurewebsites.net/broadcast").Build();
             worker = new BackgroundWorker();
             worker.DoWork += new DoWorkEventHandler(HandleMessages);
             _message = message;

@@ -20,23 +20,29 @@ namespace ClipboardMonitorLite.ClipboardActions
         public static event EventHandler ClipboardUpdate;
         public event PropertyChangedEventHandler PropertyChanged;
         private CloudInteractions _cloud;
+        private ClipMessage _message;
 
-        public ClipboardManager()
+        public ClipboardManager(ClipMessage message)
         {
             ClipboardUpdate += ClipboardChangeEvent_ClipboardUpdate;
             _exception = new ExceptionHandling();
             _form = new NotificationForm();
-            _cloud = new CloudInteractions();
-            _cloud.MessageRecieved += MessageRecieved;
+            _message = message;
+            _cloud = new CloudInteractions(_message);
+            _message.PropertyChanged += MessageChanged;
         }
 
-        private void MessageRecieved(object sender, EventArgs e)
+        private void MessageChanged(object sender, PropertyChangedEventArgs e)
         {
-            var args = e as MessageEventArgs;
-            if(args != null)
+            if (e.PropertyName.Equals("Message"))
             {
-                GetTextFromCloud(args.User, args.Message);
+                ChangeTextOnClip(_message.Message);
             }
+        }
+
+        public void ChangeTextOnClip(string text)
+        {
+            Clipboard.SetText(text);
         }
 
         private void ClipboardChangeEvent_ClipboardUpdate(object sender, EventArgs e)
@@ -50,14 +56,6 @@ namespace ClipboardMonitorLite.ClipboardActions
             _cloud.SendText(Constants.MachineName, CopiedItem);
         }
         
-        public void GetTextFromCloud(string MachineName, string Text)
-        {
-            if (MachineName.Equals(Constants.MachineName))
-            {
-                Clipboard.SetText(Text);
-            }
-        }
-
         public string ClipboardHistory
         {
             get

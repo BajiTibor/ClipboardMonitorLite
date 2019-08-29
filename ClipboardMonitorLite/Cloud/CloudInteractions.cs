@@ -5,61 +5,49 @@ using System.Threading.Tasks;
 using System;
 using System.Threading;
 using System.Windows;
+using System.ComponentModel;
 
 namespace ClipboardMonitorLite.Cloud
 {
     public class CloudInteractions
     {
         private HubConnection connection;
-        public event EventHandler MessageRecieved;
-        public CloudInteractions()
+        public BackgroundWorker worker;
+        private ClipMessage _message;
+        public CloudInteractions(ClipMessage message)
         {
             connection = new HubConnectionBuilder().WithUrl("https://localhost:5001/broadcast").Build();
+            worker = new BackgroundWorker();
+            worker.DoWork += new DoWorkEventHandler(HandleMessages);
+            _message = message;
             FetchText();
         }
 
         private async void FetchText()
         {
-            await connection.StartAsync();
+            worker.RunWorkerAsync();
 
-            await Task.Factory.StartNew(
-                () => HandleMessages(),
-                TaskCreationOptions.LongRunning);
+            await connection.StartAsync();
         }
-        
+
         public async void SendText(string MachineName, string Text)
         {
             await connection.SendAsync("broadcastMessage", MachineName, Text);
         }
 
-        private void HandleMessages()
+        private void HandleMessages(object sender, DoWorkEventArgs args)
         {
+            BackgroundWorker worker = sender as BackgroundWorker;
+
             connection.On<string, string>("broadcastMessage", (user, message) =>
             {
                 if (user.Equals(Constants.MachineName))
                 {
-                    var args = new MessageEventArgs
-                    {
-                        User = user,
-                        Message = message
-                    };
-                    OnMessageRecieved(args);
+                    _message.Message = message;
                 }
             });
 
             Thread.Sleep(-1);
         }
-
-        protected virtual void OnMessageRecieved(EventArgs e)
-        {
-            EventHandler handler = MessageRecieved;
-            handler?.Invoke(this, e);
-        }
-    }
-
-    public class MessageEventArgs : EventArgs
-    {
-        public string User { get; set; }
-        public string Message { get; set;  }
     }
 }

@@ -181,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClipboardActions\ClipboardCleaner.cs" />
+    <Compile Include="Cloud\ClipMessage.cs" />
     <Compile Include="Cloud\CloudInteractions.cs" />
     <Compile Include="Exceptions\ExceptionHandling.cs" />
     <Compile Include="FileOperations\WinStartup.cs" />

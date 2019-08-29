@@ -5,6 +5,7 @@ using ClipboardMonitorLite.FormControls;
 using ClipboardMonitorLite.FileOperations;
 using ClipboardMonitorLite.SettingsManager;
 using ClipboardMonitorLite.ClipboardActions;
+using ClipboardMonitorLite.Cloud;
 
 namespace ClipboardMonitorLite
 {
@@ -18,10 +19,13 @@ namespace ClipboardMonitorLite
         ClipboardManager _clipManager;
         HandleSettings _settingsHandler;
         WinStartup _startup;
+        ClipMessage _message;
+        
         public MainForm()
         {
+            _message = new ClipMessage();
             _settingsHandler = new HandleSettings();
-            _clipManager = new ClipboardManager();
+            _clipManager = new ClipboardManager(_message);
             InitializeComponent();
             _file = new CreateJsonFile();
             _settings = _settingsHandler.LoadSettingsFile();
@@ -68,6 +72,11 @@ namespace ClipboardMonitorLite
         private void EnumSetLang()
         {
             _langChange.SetLang(_settings, this);
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            _clipManager.ChangeTextOnClip("Blah");
         }
     }
 }

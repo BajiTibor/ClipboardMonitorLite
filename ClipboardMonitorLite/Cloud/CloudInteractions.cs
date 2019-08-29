@@ -13,6 +13,7 @@ namespace ClipboardMonitorLite.Cloud
     {
         private HubConnection connection;
         private ClipMessage _message;
+        
         public CloudInteractions(ClipMessage message)
         {
             connection = new HubConnectionBuilder().WithUrl("http://clipmanagerweb.azurewebsites.net/broadcast").Build();
@@ -23,18 +24,6 @@ namespace ClipboardMonitorLite.Cloud
 
         private async void FetchText()
         {
-            await Task.Factory.StartNew(() => HandleMessages(), TaskCreationOptions.LongRunning);
-
-            await connection.StartAsync();
-        }
-
-        public async void SendText(string MachineName, string Text)
-        {
-            await connection.SendAsync("broadcastMessage", MachineName, Text);
-        }
-
-        private async Task HandleMessages()
-        {
             connection.On<string, string>("broadcastMessage", (user, message) =>
             {
                 //if (!user.Equals(Constants.MachineName))
@@ -42,10 +31,15 @@ namespace ClipboardMonitorLite.Cloud
                 _message.Message = message;
                 //}
 
-                
+
             });
 
-            await Task.Delay(-1);
+            await connection.StartAsync();
+        }
+
+        public async void SendText(string MachineName, string Text)
+        {
+            await connection.SendAsync("broadcastMessage", MachineName, Text);
         }
     }
 }

@@ -38,12 +38,22 @@ namespace ClipboardMonitorLite.ClipboardActions
             //    {
             //        ClipboardChangeEvent_ClipboardUpdate(sender, e);
             //    }
-            ClipboardChangeEvent_ClipboardUpdate(sender, e);
+            //ClipboardChangeEvent_ClipboardUpdate(sender, e);
+
+            SetFromCloud(sender, e);
         }
 
         public void ChangeTextOnClip(string text)
         {
             //Clipboard.SetText(text);
+            
+        }
+
+        private void SetFromCloud(object sender, EventArgs e)
+        {
+            string CopiedItem = _message.Message;
+            CurrentlyCopiedItem = CopiedItem;
+            ClipboardHistory += ($"{CopiedItem}\n");
         }
 
         private void ClipboardChangeEvent_ClipboardUpdate(object sender, EventArgs e)
@@ -80,8 +90,8 @@ namespace ClipboardMonitorLite.ClipboardActions
             set
             {
                 currentlycopieditem = value;
+                //Clipboard.SetText(value);
                 InvokePropertyChanged(new PropertyChangedEventArgs("CurrentlyCopiedItem"));
-                Clipboard.SetText(value);
             }
         }
 

@@ -59,6 +59,12 @@ namespace ClipboardMonitorLite
             notificationIcon.DoubleClick += _buttonActions.RestoreWindowClick;
             FormClosing += _buttonActions.FormClosing;
             CopiedItemBox.LinkClicked += _buttonActions.LinkClicked;
+            _clipManager.PropertyChanged += _clipManager_PropertyChanged;
+        }
+
+        private void _clipManager_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            Clipboard.SetText(_clipManager.CurrentlyCopiedItem);
         }
 
         private void Btn_MoreOptions_Click(object sender, EventArgs e)

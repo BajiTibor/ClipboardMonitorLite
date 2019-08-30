@@ -180,12 +180,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClipboardActions\ClipboardCleaner.cs" />
+    <Compile Include="ClipboardActions\AutoHistoryCleaner.cs" />
     <Compile Include="Cloud\ClipMessage.cs" />
     <Compile Include="Cloud\CloudInteractions.cs" />
     <Compile Include="Exceptions\ExceptionHandling.cs" />
     <Compile Include="FileOperations\WinStartup.cs" />
-    <Compile Include="FormControls\ButtonActions.cs" />
+    <Compile Include="FormControls\FormEvents.cs" />
     <Compile Include="Languages\LanguageCode.cs" />
     <Compile Include="FormControls\FormControl.cs" />
     <Compile Include="Languages\lang_da.Designer.cs">
@@ -252,7 +252,7 @@
       <DependentUpon>MainResources.resx</DependentUpon>
     </Compile>
     <Compile Include="SettingsManager\CreateJsonFile.cs" />
-    <Compile Include="SettingsManager\HandleSettings.cs" />
+    <Compile Include="SettingsManager\SettingsHandler.cs" />
     <Compile Include="SettingsManager\Settings.cs" />
     <EmbeddedResource Include="Languages\lang_da.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -6,10 +6,10 @@ using ClipboardMonitorLite.Exceptions;
 
 namespace ClipboardMonitorLite.SettingsManager
 {
-    public class HandleSettings
+    public class SettingsHandler
     {
         private ExceptionHandling _exceptions;
-        public HandleSettings()
+        public SettingsHandler()
         {
             _exceptions = new ExceptionHandling();
         }

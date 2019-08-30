@@ -1,11 +1,5 @@
-﻿using Microsoft.AspNetCore.SignalR.Client;
-using ClipboardMonitorLite.ClipboardActions;
-using ClipboardMonitorLite.Resources;
-using System.Threading.Tasks;
-using System;
-using System.Threading;
-using System.Windows;
-using System.ComponentModel;
+﻿using ClipboardMonitorLite.Resources;
+using Microsoft.AspNetCore.SignalR.Client;
 
 namespace ClipboardMonitorLite.Cloud
 {
@@ -19,19 +13,17 @@ namespace ClipboardMonitorLite.Cloud
             connection = new HubConnectionBuilder().WithUrl("http://clipmanagerweb.azurewebsites.net/broadcast").Build();
             //connection = new HubConnectionBuilder().WithUrl("https://localhost:5001/broadcast").Build();
             _message = message;
-            FetchText();
+            StartListening();
         }
 
-        private async void FetchText()
+        private async void StartListening()
         {
             connection.On<string, string>("broadcastMessage", (user, message) =>
             {
-                //if (!user.Equals(Constants.MachineName))
-                //{
-                _message.Message = message;
-                //}
-
-
+                if (!_message.MachineName.Equals(Constants.MachineName))
+                {
+                    _message.Message = message;
+                }
             });
 
             await connection.StartAsync();

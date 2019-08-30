@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace ClipboardMonitorLite.Cloud
 {
@@ -24,7 +19,6 @@ namespace ClipboardMonitorLite.Cloud
                 InvokePropertyChanged(new PropertyChangedEventArgs("Messsage"));
             }
         }
-
 
         private string machine;
         public string MachineName

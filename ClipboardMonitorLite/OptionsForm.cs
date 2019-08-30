@@ -10,9 +10,10 @@ namespace ClipboardMonitorLite
     public partial class OptionsForm : Form
     {
         private Settings _settings;
-        private ButtonActions _buttonActions;
+        private FormEvents _buttonActions;
         private SetLanguageOnForm _langChange;
-        public OptionsForm(Settings settings, ButtonActions buttonActions)
+
+        public OptionsForm(Settings settings, FormEvents buttonActions)
         {
             _buttonActions = buttonActions;
             _langChange = new SetLanguageOnForm();

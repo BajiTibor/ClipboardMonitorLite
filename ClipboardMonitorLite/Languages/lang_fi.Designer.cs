@@ -151,7 +151,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TRANSLATE.
+        ///   Looks up a localized string similar to Online tila.
         /// </summary>
         internal static string Check_OnlineMode {
             get {

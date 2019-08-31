@@ -147,6 +147,9 @@
   <data name="Check_NotifyOfCopy" xml:space="preserve">
     <value>Notify me if I copy something</value>
   </data>
+  <data name="Check_OnlineMode" xml:space="preserve">
+    <value>Online Mode</value>
+  </data>
   <data name="Check_OpenWithWin" xml:space="preserve">
     <value>Open with Windows</value>
   </data>

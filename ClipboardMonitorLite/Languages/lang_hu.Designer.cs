@@ -151,6 +151,15 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Online mód.
+        /// </summary>
+        internal static string Check_OnlineMode {
+            get {
+                return ResourceManager.GetString("Check_OnlineMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Indulás Windows-al.
         /// </summary>
         internal static string Check_OpenWithWin {

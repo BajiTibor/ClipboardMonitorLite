@@ -1,8 +1,8 @@
 ﻿using System;
 using System.IO;
-using System.Diagnostics;
 using System.ComponentModel;
 using ClipboardMonitorLite.Resources;
+using ClipboardMonitorLite.Exceptions;
 using ClipboardMonitorLite.SettingsManager;
 using ClipboardMonitorLite.ClipboardActions;
 
@@ -10,11 +10,14 @@ namespace ClipboardMonitorLite.FileOperations
 {
     public class SaveHistory
     {
-        public string FilePath { get; set; }
-        ClipboardManager _clipManager;
         private Settings _settings;
+        public string FilePath { get; set; }
+        private ClipboardManager _clipManager;
+        private ExceptionHandling _exceptionHandler;
+
         public SaveHistory(ClipboardManager clipManager, Settings settings)
         {
+            _exceptionHandler = new ExceptionHandling();
             _clipManager = clipManager;
             _settings = settings;
             FilePath = _settings.HistoryFileLocation;
@@ -44,7 +47,7 @@ namespace ClipboardMonitorLite.FileOperations
                 }
                 catch (Exception ex)
                 {
-                    Debug.WriteLine(ex.Message);
+                    _exceptionHandler.Handle(ex);
                 }
             }
         }
@@ -64,6 +67,5 @@ namespace ClipboardMonitorLite.FileOperations
                 _settings.HistoryFileLocation = Constants.DefaultHistoryFileDirectory;
             }
         }
-
     }
 }

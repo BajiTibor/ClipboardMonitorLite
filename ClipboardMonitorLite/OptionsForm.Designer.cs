@@ -37,6 +37,7 @@
             this.Label_FileLocation = new System.Windows.Forms.Label();
             this.txt_FileLocation = new System.Windows.Forms.TextBox();
             this.GroupBox_BehaviourAndVisuals = new System.Windows.Forms.GroupBox();
+            this.Check_OpenWithWin = new System.Windows.Forms.CheckBox();
             this.Label_Minutes = new System.Windows.Forms.Label();
             this.combo_lang = new System.Windows.Forms.ComboBox();
             this.Label_Lang = new System.Windows.Forms.Label();
@@ -62,7 +63,7 @@
             this.Btn_Apply = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.Label_Version = new System.Windows.Forms.Label();
-            this.Check_OpenWithWin = new System.Windows.Forms.CheckBox();
+            this.Check_OnlineMode = new System.Windows.Forms.CheckBox();
             this.GroupBox_General.SuspendLayout();
             this.GroupBox_SaveToFileSettings.SuspendLayout();
             this.GroupBox_BehaviourAndVisuals.SuspendLayout();
@@ -143,6 +144,7 @@
             // 
             // GroupBox_BehaviourAndVisuals
             // 
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_OnlineMode);
             this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_OpenWithWin);
             this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Label_Minutes);
             this.GroupBox_BehaviourAndVisuals.Controls.Add(this.combo_lang);
@@ -173,6 +175,16 @@
             this.GroupBox_BehaviourAndVisuals.TabStop = false;
             this.GroupBox_BehaviourAndVisuals.Text = "Behaviour and visuals";
             // 
+            // Check_OpenWithWin
+            // 
+            this.Check_OpenWithWin.AutoSize = true;
+            this.Check_OpenWithWin.Location = new System.Drawing.Point(6, 223);
+            this.Check_OpenWithWin.Name = "Check_OpenWithWin";
+            this.Check_OpenWithWin.Size = new System.Drawing.Size(178, 24);
+            this.Check_OpenWithWin.TabIndex = 25;
+            this.Check_OpenWithWin.Text = "Open With Windows";
+            this.Check_OpenWithWin.UseVisualStyleBackColor = true;
+            // 
             // Label_Minutes
             // 
             this.Label_Minutes.AutoSize = true;
@@ -196,7 +208,7 @@
             "Serbian",
             "Danish",
             "Polish"});
-            this.combo_lang.Location = new System.Drawing.Point(103, 413);
+            this.combo_lang.Location = new System.Drawing.Point(103, 445);
             this.combo_lang.Name = "combo_lang";
             this.combo_lang.Size = new System.Drawing.Size(116, 28);
             this.combo_lang.TabIndex = 10;
@@ -205,7 +217,7 @@
             // Label_Lang
             // 
             this.Label_Lang.AutoSize = true;
-            this.Label_Lang.Location = new System.Drawing.Point(2, 416);
+            this.Label_Lang.Location = new System.Drawing.Point(2, 448);
             this.Label_Lang.Name = "Label_Lang";
             this.Label_Lang.Size = new System.Drawing.Size(81, 20);
             this.Label_Lang.TabIndex = 22;
@@ -214,7 +226,7 @@
             // DONOTMODIFY7
             // 
             this.DONOTMODIFY7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DONOTMODIFY7.Location = new System.Drawing.Point(0, 400);
+            this.DONOTMODIFY7.Location = new System.Drawing.Point(0, 432);
             this.DONOTMODIFY7.Name = "DONOTMODIFY7";
             this.DONOTMODIFY7.Size = new System.Drawing.Size(350, 2);
             this.DONOTMODIFY7.TabIndex = 21;
@@ -224,7 +236,7 @@
             this.Check_ShowDonation.AutoSize = true;
             this.Check_ShowDonation.Checked = true;
             this.Check_ShowDonation.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Check_ShowDonation.Location = new System.Drawing.Point(6, 370);
+            this.Check_ShowDonation.Location = new System.Drawing.Point(6, 402);
             this.Check_ShowDonation.Name = "Check_ShowDonation";
             this.Check_ShowDonation.Size = new System.Drawing.Size(307, 24);
             this.Check_ShowDonation.TabIndex = 9;
@@ -234,7 +246,7 @@
             // DONOTMODIFY6
             // 
             this.DONOTMODIFY6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DONOTMODIFY6.Location = new System.Drawing.Point(0, 360);
+            this.DONOTMODIFY6.Location = new System.Drawing.Point(0, 392);
             this.DONOTMODIFY6.Name = "DONOTMODIFY6";
             this.DONOTMODIFY6.Size = new System.Drawing.Size(350, 2);
             this.DONOTMODIFY6.TabIndex = 19;
@@ -243,7 +255,7 @@
             // 
             this.Radio_ExitApp.AutoSize = true;
             this.Radio_ExitApp.Checked = true;
-            this.Radio_ExitApp.Location = new System.Drawing.Point(6, 333);
+            this.Radio_ExitApp.Location = new System.Drawing.Point(6, 365);
             this.Radio_ExitApp.Name = "Radio_ExitApp";
             this.Radio_ExitApp.Size = new System.Drawing.Size(167, 24);
             this.Radio_ExitApp.TabIndex = 8;
@@ -254,7 +266,7 @@
             // Radio_Minimize
             // 
             this.Radio_Minimize.AutoSize = true;
-            this.Radio_Minimize.Location = new System.Drawing.Point(6, 305);
+            this.Radio_Minimize.Location = new System.Drawing.Point(6, 337);
             this.Radio_Minimize.Name = "Radio_Minimize";
             this.Radio_Minimize.Size = new System.Drawing.Size(201, 24);
             this.Radio_Minimize.TabIndex = 7;
@@ -264,7 +276,7 @@
             // Label_WhenMainWindowClosed
             // 
             this.Label_WhenMainWindowClosed.AutoSize = true;
-            this.Label_WhenMainWindowClosed.Location = new System.Drawing.Point(6, 282);
+            this.Label_WhenMainWindowClosed.Location = new System.Drawing.Point(6, 314);
             this.Label_WhenMainWindowClosed.Name = "Label_WhenMainWindowClosed";
             this.Label_WhenMainWindowClosed.Size = new System.Drawing.Size(230, 20);
             this.Label_WhenMainWindowClosed.TabIndex = 16;
@@ -273,7 +285,7 @@
             // DONOTMODIFY5
             // 
             this.DONOTMODIFY5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DONOTMODIFY5.Location = new System.Drawing.Point(0, 280);
+            this.DONOTMODIFY5.Location = new System.Drawing.Point(0, 312);
             this.DONOTMODIFY5.Name = "DONOTMODIFY5";
             this.DONOTMODIFY5.Size = new System.Drawing.Size(350, 2);
             this.DONOTMODIFY5.TabIndex = 15;
@@ -419,15 +431,15 @@
             this.Label_Version.TabIndex = 5;
             this.Label_Version.Text = "Version";
             // 
-            // Check_OpenWithWin
+            // Check_OnlineMode
             // 
-            this.Check_OpenWithWin.AutoSize = true;
-            this.Check_OpenWithWin.Location = new System.Drawing.Point(6, 223);
-            this.Check_OpenWithWin.Name = "Check_OpenWithWin";
-            this.Check_OpenWithWin.Size = new System.Drawing.Size(178, 24);
-            this.Check_OpenWithWin.TabIndex = 25;
-            this.Check_OpenWithWin.Text = "Open With Windows";
-            this.Check_OpenWithWin.UseVisualStyleBackColor = true;
+            this.Check_OnlineMode.AutoSize = true;
+            this.Check_OnlineMode.Location = new System.Drawing.Point(6, 283);
+            this.Check_OnlineMode.Name = "Check_OnlineMode";
+            this.Check_OnlineMode.Size = new System.Drawing.Size(124, 24);
+            this.Check_OnlineMode.TabIndex = 26;
+            this.Check_OnlineMode.Text = "Online Mode";
+            this.Check_OnlineMode.UseVisualStyleBackColor = true;
             // 
             // OptionsForm
             // 
@@ -491,5 +503,6 @@
         private System.Windows.Forms.Label Label_Lang;
         private System.Windows.Forms.Label Label_Minutes;
         private System.Windows.Forms.CheckBox Check_OpenWithWin;
+        private System.Windows.Forms.CheckBox Check_OnlineMode;
     }
 }

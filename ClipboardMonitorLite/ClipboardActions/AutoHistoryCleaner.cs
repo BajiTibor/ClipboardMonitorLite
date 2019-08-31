@@ -3,12 +3,12 @@ using System.Windows.Forms;
 
 namespace ClipboardMonitorLite.ClipboardActions
 {
-    public class ClipboardCleaner
+    public class AutoHistoryCleaner
     {
         private ClipboardManager _clipManager;
         private int clearInterval;
         private Timer Timer;
-        public ClipboardCleaner(ClipboardManager Clip, Timer timer)
+        public AutoHistoryCleaner(ClipboardManager Clip, Timer timer)
         {
             _clipManager = Clip;
             Timer = timer;

@@ -42,7 +42,7 @@
             this.emptyClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emptyHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_Donate = new System.Windows.Forms.Button();
+            this.Btn_Donate = new System.Windows.Forms.Button();
             this.timerEmptyClipboard = new System.Windows.Forms.Timer(this.components);
             this.GroupBox_CopiedItems.SuspendLayout();
             this.GroupBox_Actions.SuspendLayout();
@@ -155,14 +155,14 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(218, 32);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
-            // btn_Donate
+            // Btn_Donate
             // 
-            this.btn_Donate.Image = global::ClipboardMonitorLite.Resources.MainResources.buymc2;
-            this.btn_Donate.Location = new System.Drawing.Point(207, 436);
-            this.btn_Donate.Name = "btn_Donate";
-            this.btn_Donate.Size = new System.Drawing.Size(315, 70);
-            this.btn_Donate.TabIndex = 5;
-            this.btn_Donate.UseVisualStyleBackColor = true;
+            this.Btn_Donate.Image = global::ClipboardMonitorLite.Resources.MainResources.buymc2;
+            this.Btn_Donate.Location = new System.Drawing.Point(201, 395);
+            this.Btn_Donate.Name = "Btn_Donate";
+            this.Btn_Donate.Size = new System.Drawing.Size(315, 70);
+            this.Btn_Donate.TabIndex = 5;
+            this.Btn_Donate.UseVisualStyleBackColor = true;
             // 
             // timerEmptyClipboard
             // 
@@ -172,7 +172,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(534, 550);
-            this.Controls.Add(this.btn_Donate);
+            this.Controls.Add(this.Btn_Donate);
             this.Controls.Add(this.GroupBox_Actions);
             this.Controls.Add(this.GroupBox_CopiedItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -201,7 +201,7 @@
         private System.Windows.Forms.ToolStripMenuItem emptyHistoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Button Btn_MoreOptions;
-        private System.Windows.Forms.Button btn_Donate;
+        private System.Windows.Forms.Button Btn_Donate;
         private System.Windows.Forms.Timer timerEmptyClipboard;
     }
 }

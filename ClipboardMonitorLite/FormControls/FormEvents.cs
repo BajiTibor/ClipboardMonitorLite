@@ -11,7 +11,7 @@ using ClipboardMonitorLite.ClipboardActions;
 
 namespace ClipboardMonitorLite.FormControls
 {
-    public class ButtonActions
+    public class FormEvents
     {
         private Form ActiveForm;
         private Settings _settings;
@@ -20,7 +20,7 @@ namespace ClipboardMonitorLite.FormControls
         private ResourceManager resManager;
         private NotifyIcon NotificationIcon;
         private ClipboardManager _clipActions;
-        public ButtonActions(ClipboardManager clipManager, NotifyIcon icon, Form form, Settings settings, SaveHistory history)
+        public FormEvents(ClipboardManager clipManager, NotifyIcon icon, Form form, Settings settings, SaveHistory history)
         {
             exitFileWritten = false;
             ActiveForm = form;
@@ -28,8 +28,8 @@ namespace ClipboardMonitorLite.FormControls
             NotificationIcon = icon;
             _settings = settings;
             _history = history;
-            _settings.PropertyChanged += _settings_PropertyChanged;
-            _clipActions.PropertyChanged += _clipActions_PropertyChanged;
+            _settings.PropertyChanged += ChangeIconStyle;
+            _clipActions.PropertyChanged += ShowCopyNotification;
             SetIconStyle();
             SetWindowStartupState();
         }
@@ -43,7 +43,7 @@ namespace ClipboardMonitorLite.FormControls
             }
         }
 
-        private void _clipActions_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void ShowCopyNotification(object sender, PropertyChangedEventArgs e)
         {
             if (_settings.NotifyClipboardChange && !string.IsNullOrWhiteSpace(_clipActions.CurrentlyCopiedItem))
             {
@@ -54,7 +54,7 @@ namespace ClipboardMonitorLite.FormControls
             }
         }
 
-        private void _settings_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void ChangeIconStyle(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName.Equals("UsingWhiteTrayIcon"))
             {

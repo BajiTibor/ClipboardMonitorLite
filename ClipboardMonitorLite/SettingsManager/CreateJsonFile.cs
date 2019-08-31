@@ -4,10 +4,10 @@ namespace ClipboardMonitorLite.SettingsManager
 {
     public class CreateJsonFile
     {
-        private HandleSettings _saveSettings;
+        private SettingsHandler _settingsManager;
         public CreateJsonFile()
         {
-            _saveSettings = new HandleSettings();
+            _settingsManager = new SettingsHandler();
         }
 
         public void CreateFile(Settings _settings)
@@ -15,7 +15,7 @@ namespace ClipboardMonitorLite.SettingsManager
             if (!_settings.Equals(null))
             {
                 string converted = JsonConvert.SerializeObject(_settings, Formatting.Indented);
-                _saveSettings.WriteSettingsFile(converted);
+                _settingsManager.WriteSettingsFile(converted);
             }
         }
     }

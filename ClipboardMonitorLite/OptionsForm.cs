@@ -10,9 +10,10 @@ namespace ClipboardMonitorLite
     public partial class OptionsForm : Form
     {
         private Settings _settings;
-        private ButtonActions _buttonActions;
+        private FormEvents _buttonActions;
         private SetLanguageOnForm _langChange;
-        public OptionsForm(Settings settings, ButtonActions buttonActions)
+
+        public OptionsForm(Settings settings, FormEvents buttonActions)
         {
             _buttonActions = buttonActions;
             _langChange = new SetLanguageOnForm();
@@ -64,6 +65,9 @@ namespace ClipboardMonitorLite
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
             Check_OpenWithWin.DataBindings.Add("Checked", _settings, "StartWithWindows",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            Check_OnlineMode.DataBindings.Add("Checked", _settings, "OnlineMode",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
             numeric_clearAfter.DataBindings.Add("Enabled", _settings, "AutoClearClipboardHistory",

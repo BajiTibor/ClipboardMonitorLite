@@ -147,6 +147,9 @@
   <data name="Check_NotifyOfCopy" xml:space="preserve">
     <value>Huomauta jos kopioin jotakin</value>
   </data>
+  <data name="Check_OnlineMode" xml:space="preserve">
+    <value>TRANSLATE</value>
+  </data>
   <data name="Check_OpenWithWin" xml:space="preserve">
     <value>Avaa käyttäen Windowsia</value>
   </data>

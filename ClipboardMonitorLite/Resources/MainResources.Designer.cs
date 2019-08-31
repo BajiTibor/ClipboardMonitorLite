@@ -91,16 +91,6 @@ namespace ClipboardMonitorLite.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap paypal_resized {
-            get {
-                object obj = ResourceManager.GetObject("paypal_resized", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to https://github.com/SolluxKarkat/ClipboardMonitorLite.
         /// </summary>
         internal static string url_GitHub {

@@ -10,10 +10,11 @@ namespace ClipboardMonitorLite.FileOperations
     public class WinStartup
     {
         private Settings _settings;
-        string shortcutName;
-        string shortcutPath;
-        string targetFileLocation;
-        string targetWorkingFolder;
+        private string shortcutName;
+        private string shortcutPath;
+        private string targetFileLocation;
+        private string targetWorkingFolder;
+
         public WinStartup(Settings settings)
         {
             _settings = settings;
@@ -22,6 +23,7 @@ namespace ClipboardMonitorLite.FileOperations
             targetFileLocation = Application.ExecutablePath;
             targetWorkingFolder = AppDomain.CurrentDomain.BaseDirectory;
             _settings.PropertyChanged += PropertyChanged;
+            CheckState();
         }
 
         private void PropertyChanged(object sender, PropertyChangedEventArgs e)

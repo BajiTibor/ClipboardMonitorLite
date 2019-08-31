@@ -47,7 +47,7 @@ Features ticked are already included and implemented, but some of them might onl
 
 - [ ] Non-Lite version - A much more feature-rich application with better long-term support
 - [ ] Windows Store version
-- [ ] Cloud support - Copy an item on one PC, and immediatelly paste it on another one
+- [x] Cloud support - Copy an item on one PC, and immediatelly paste it on another one
 - [ ] LAN support - Same concept as above, but without a server and database, everything in a local network
 - [ ] Calendar and Reminder features - Copy a date and add it to your personal reminder list (Non-lite version only)
 - [ ] Note support - Copy something and have it sent to a specific online note you have (Non-lite version only)

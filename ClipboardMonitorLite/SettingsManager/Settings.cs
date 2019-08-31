@@ -173,10 +173,24 @@ namespace ClipboardMonitorLite.SettingsManager
             }
         }
 
+        private bool onlineMode;
+
+        public bool OnlineMode
+        {
+            get
+            {
+                return onlineMode;
+            }
+            set
+            {
+                onlineMode = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("OnlineMode"));
+            }
+        }
+
         private void InvokePropertyChanged(PropertyChangedEventArgs e)
         {
             PropertyChanged?.Invoke(this, e);
         }
-
     }
 }

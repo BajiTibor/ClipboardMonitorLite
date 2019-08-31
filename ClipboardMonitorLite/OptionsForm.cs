@@ -67,6 +67,9 @@ namespace ClipboardMonitorLite
             Check_OpenWithWin.DataBindings.Add("Checked", _settings, "StartWithWindows",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
+            Check_OnlineMode.DataBindings.Add("Checked", _settings, "OnlineMode",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
             numeric_clearAfter.DataBindings.Add("Enabled", _settings, "AutoClearClipboardHistory",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 

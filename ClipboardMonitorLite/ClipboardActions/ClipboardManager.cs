@@ -6,7 +6,7 @@ using ClipboardMonitorLite.Cloud;
 using ClipboardMonitorLite.Resources;
 using System.Runtime.InteropServices;
 using ClipboardMonitorLite.Exceptions;
-using Microsoft.AspNetCore.SignalR.Client;
+using ClipboardMonitorLite.SettingsManager;
 
 namespace ClipboardMonitorLite.ClipboardActions
 {
@@ -20,11 +20,12 @@ namespace ClipboardMonitorLite.ClipboardActions
         private static ExceptionHandling _exception;
         public static event EventHandler ClipboardUpdate;
         public event PropertyChangedEventHandler PropertyChanged;
-        //private ConnectionState _connectionState;
+        private Settings _settings;
 
-        public ClipboardManager(CloudInteractions cloud, ClipMessage message)
+        public ClipboardManager(CloudInteractions cloud, ClipMessage message, Settings settings)
         {
             ClipboardUpdate += ClipboardChangeEvent_ClipboardUpdate;
+            _settings = settings;
             _exception = new ExceptionHandling();
             _form = new NotificationForm();
             _message = message;
@@ -50,8 +51,17 @@ namespace ClipboardMonitorLite.ClipboardActions
             {
                 CurrentlyCopiedItem = CopiedItem;
                 ClipboardHistory += ($"{CopiedItem}\n");
-                //if (_connectionState.IsConnectionAlive.Equals(HubConnectionState.Connected))
-                    _cloud.SendText(Constants.MachineName, CopiedItem);
+                if (_settings.OnlineMode)
+                {
+                    try
+                    {
+                        _cloud.SendText(Constants.MachineName, CopiedItem);
+                    }
+                    catch (Exception ex)
+                    {
+                        _exception.Handle(ex);
+                    }
+                }
             }
         }
 
@@ -65,7 +75,6 @@ namespace ClipboardMonitorLite.ClipboardActions
             ClipboardHistory = string.Empty;
         }
 
-        [STAThread]
         public void ChangeTextOnClip(string text)
         {
             try

@@ -147,6 +147,9 @@
   <data name="Check_NotifyOfCopy" xml:space="preserve">
     <value>Értesíts, amikor kimásolok valamit</value>
   </data>
+  <data name="Check_OnlineMode" xml:space="preserve">
+    <value>Online mód</value>
+  </data>
   <data name="Check_OpenWithWin" xml:space="preserve">
     <value>Indulás Windows-al</value>
   </data>

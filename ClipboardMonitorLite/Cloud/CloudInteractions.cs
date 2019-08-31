@@ -1,25 +1,44 @@
-﻿using ClipboardMonitorLite.Resources;
-using Microsoft.AspNetCore.SignalR.Client;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.SignalR.Client;
+using ClipboardMonitorLite.SettingsManager;
 
 namespace ClipboardMonitorLite.Cloud
 {
     public class CloudInteractions
     {
+        private Settings _settings;
         private ClipMessage _message;
         private HubConnection connection;
 
-        public CloudInteractions(ClipMessage message)
+        public CloudInteractions(ClipMessage message, Settings settings)
         {
             connection = new HubConnectionBuilder().WithUrl("http://clipmanagerweb.azurewebsites.net/broadcast").Build();
-
+            _settings = settings;
             _message = message;
 
-            StartListening();
+            if (_settings.OnlineMode)
+            {
+               StartListening();
+            }
+            _settings.PropertyChanged += OnlineModeChanged;
+        }
 
-            connection.Closed += Connection_Closed;
+        private void OnlineModeChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName.Equals("OnlineMode"))
+            {
+                if (_settings.OnlineMode)
+                    StartListening();
+                else
+                    StopConnection();
+            }
+        }
+
+        private async void StopConnection()
+        {
+            await connection.StopAsync();
         }
 
         private async void StartListening()
@@ -31,6 +50,7 @@ namespace ClipboardMonitorLite.Cloud
                 {
                     _message.Message = message;
                 });
+                connection.Closed += Connection_Closed;
             }
             catch
             {
@@ -50,9 +70,9 @@ namespace ClipboardMonitorLite.Cloud
         
         private async Task RetryConnection(int retries)
         {
-            int delay = 15000;
+            int delay = 5000;
             if (retries > 2)
-            { delay *= 2; }
+            { delay *= 6; }
             retries++;
             try
             {

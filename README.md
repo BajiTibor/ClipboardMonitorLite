@@ -6,7 +6,7 @@
 
 The following link will take you to the latest release of the application, download the "Setup.exe" file.
 
-[Version 1.5.0 - Windows](https://github.com/SolluxKarkat/ClipboardMonitorLite/releases/latest)
+[Downloading is currently disabled until the online account management is in place.](https://github.com/SolluxKarkat/ClipboardMonitorLite)
 
 ## Features
 

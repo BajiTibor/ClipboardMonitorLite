@@ -6,6 +6,7 @@ using ClipboardMonitorLite.Cloud;
 using ClipboardMonitorLite.Resources;
 using System.Runtime.InteropServices;
 using ClipboardMonitorLite.Exceptions;
+using Microsoft.AspNetCore.SignalR.Client;
 
 namespace ClipboardMonitorLite.ClipboardActions
 {
@@ -19,14 +20,15 @@ namespace ClipboardMonitorLite.ClipboardActions
         private static ExceptionHandling _exception;
         public static event EventHandler ClipboardUpdate;
         public event PropertyChangedEventHandler PropertyChanged;
+        //private ConnectionState _connectionState;
 
-        public ClipboardManager(ClipMessage message)
+        public ClipboardManager(CloudInteractions cloud, ClipMessage message)
         {
             ClipboardUpdate += ClipboardChangeEvent_ClipboardUpdate;
             _exception = new ExceptionHandling();
             _form = new NotificationForm();
             _message = message;
-            _cloud = new CloudInteractions(_message);
+            _cloud = cloud;
             _message.PropertyChanged += MessageChanged;
         }
 
@@ -48,7 +50,8 @@ namespace ClipboardMonitorLite.ClipboardActions
             {
                 CurrentlyCopiedItem = CopiedItem;
                 ClipboardHistory += ($"{CopiedItem}\n");
-                _cloud.SendText(Constants.MachineName, CopiedItem);
+                //if (_connectionState.IsConnectionAlive.Equals(HubConnectionState.Connected))
+                    _cloud.SendText(Constants.MachineName, CopiedItem);
             }
         }
 

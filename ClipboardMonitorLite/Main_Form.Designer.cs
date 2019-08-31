@@ -44,6 +44,8 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Btn_Donate = new System.Windows.Forms.Button();
             this.timerEmptyClipboard = new System.Windows.Forms.Timer(this.components);
+            this.Label_Connected_DONOTMODIFY = new System.Windows.Forms.Label();
+            this.Btn_Debug = new System.Windows.Forms.Button();
             this.GroupBox_CopiedItems.SuspendLayout();
             this.GroupBox_Actions.SuspendLayout();
             this.MenuStrip.SuspendLayout();
@@ -158,7 +160,7 @@
             // Btn_Donate
             // 
             this.Btn_Donate.Image = global::ClipboardMonitorLite.Resources.MainResources.buymc2;
-            this.Btn_Donate.Location = new System.Drawing.Point(207, 436);
+            this.Btn_Donate.Location = new System.Drawing.Point(201, 395);
             this.Btn_Donate.Name = "Btn_Donate";
             this.Btn_Donate.Size = new System.Drawing.Size(315, 70);
             this.Btn_Donate.TabIndex = 5;
@@ -168,10 +170,31 @@
             // 
             this.timerEmptyClipboard.Interval = 60000;
             // 
+            // Label_Connected_DONOTMODIFY
+            // 
+            this.Label_Connected_DONOTMODIFY.AutoSize = true;
+            this.Label_Connected_DONOTMODIFY.Location = new System.Drawing.Point(197, 523);
+            this.Label_Connected_DONOTMODIFY.Name = "Label_Connected_DONOTMODIFY";
+            this.Label_Connected_DONOTMODIFY.Size = new System.Drawing.Size(90, 20);
+            this.Label_Connected_DONOTMODIFY.TabIndex = 6;
+            this.Label_Connected_DONOTMODIFY.Text = "Connection";
+            // 
+            // Btn_Debug
+            // 
+            this.Btn_Debug.Location = new System.Drawing.Point(401, 494);
+            this.Btn_Debug.Name = "Btn_Debug";
+            this.Btn_Debug.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Debug.TabIndex = 7;
+            this.Btn_Debug.Text = "button1";
+            this.Btn_Debug.UseVisualStyleBackColor = true;
+            this.Btn_Debug.Click += new System.EventHandler(this.Btn_Debug_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(534, 550);
+            this.Controls.Add(this.Btn_Debug);
+            this.Controls.Add(this.Label_Connected_DONOTMODIFY);
             this.Controls.Add(this.Btn_Donate);
             this.Controls.Add(this.GroupBox_Actions);
             this.Controls.Add(this.GroupBox_CopiedItems);
@@ -184,6 +207,7 @@
             this.GroupBox_Actions.ResumeLayout(false);
             this.MenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -203,6 +227,8 @@
         private System.Windows.Forms.Button Btn_MoreOptions;
         private System.Windows.Forms.Button Btn_Donate;
         private System.Windows.Forms.Timer timerEmptyClipboard;
+        private System.Windows.Forms.Label Label_Connected_DONOTMODIFY;
+        private System.Windows.Forms.Button Btn_Debug;
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.ComponentModel;
 using ClipboardMonitorLite.Cloud;
 using ClipboardMonitorLite.Languages;
 using ClipboardMonitorLite.FormControls;
@@ -20,12 +21,14 @@ namespace ClipboardMonitorLite
         private SetLanguageOnForm _langChange;
         private ClipboardManager _clipManager;
         private SettingsHandler _settingsHandler;
-        
+        private CloudInteractions _cloud;
+
         public MainForm()
         {
             _message = new ClipMessage();
-            _settingsHandler = new SettingsManager.SettingsHandler();
-            _clipManager = new ClipboardManager(_message);
+            _settingsHandler = new SettingsHandler();
+            _cloud = new CloudInteractions(_message);
+            _clipManager = new ClipboardManager(_cloud, _message);
             InitializeComponent();
             _file = new CreateJsonFile();
             _settings = _settingsHandler.LoadSettingsFile();
@@ -36,14 +39,17 @@ namespace ClipboardMonitorLite
             EnumSetLang();
             BindProperties();
             BindButtonActions();
+            
         }
-
+        
         private void BindProperties()
         {
             CopiedItemBox.DataBindings.Add("Text", _clipManager, "ClipboardHistory",
                 true, DataSourceUpdateMode.OnPropertyChanged);
+
             Btn_Donate.DataBindings.Add("Visible", _settings, "ShowDonation",
                 true, DataSourceUpdateMode.OnPropertyChanged);
+
         }
 
         private void BindButtonActions()
@@ -71,6 +77,11 @@ namespace ClipboardMonitorLite
         private void EnumSetLang()
         {
             _langChange.SetLang(_settings, this);
+        }
+
+        private void Btn_Debug_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

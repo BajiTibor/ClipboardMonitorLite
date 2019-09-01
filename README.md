@@ -11,10 +11,10 @@ The following link will take you to the latest release of the application, downl
 ## Features
 
 * Lightweight, small and compact
-* Easy to install, updates automatically
 * Monitors the clipboard, and can fetch text as soon as you hit copy
 * Save copied text to a text file in real time, without having to paste it
 * Clear clipboard's content periodically or on demand
+* Get text copied on another PC almost instantly and paste it at will
 * Support for 10* languages
 
 _*More languages will be included in the future_

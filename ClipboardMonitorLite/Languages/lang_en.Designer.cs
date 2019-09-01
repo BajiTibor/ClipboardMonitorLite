@@ -205,6 +205,15 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Use Timestamp.
+        /// </summary>
+        internal static string Check_UseTimestamp {
+            get {
+                return ResourceManager.GetString("Check_UseTimestamp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Use white icon in system taskbar.
         /// </summary>
         internal static string Check_UseWhiteIcon {

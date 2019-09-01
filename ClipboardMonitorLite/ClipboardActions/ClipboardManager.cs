@@ -50,7 +50,17 @@ namespace ClipboardMonitorLite.ClipboardActions
             if (!string.IsNullOrWhiteSpace(CopiedItem) && !CopiedItem.Equals(currentlycopieditem))
             {
                 CurrentlyCopiedItem = CopiedItem;
-                ClipboardHistory += ($"{CopiedItem}\n");
+                var timeStamp = ($"{ DateTime.Now.ToShortTimeString() } - ");
+
+                if (_settings.UseTimestamp)
+                {
+                    ClipboardHistory += ($"{timeStamp}{CopiedItem}\n");
+                }
+                else
+                {
+                    ClipboardHistory += ($"{CopiedItem}\n");
+                }
+
                 if (_settings.OnlineMode)
                 {
                     try

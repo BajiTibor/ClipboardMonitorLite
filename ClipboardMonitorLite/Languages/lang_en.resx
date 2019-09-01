@@ -165,6 +165,9 @@
   <data name="Check_UpdateOnStartup" xml:space="preserve">
     <value>Update on startup</value>
   </data>
+  <data name="Check_UseTimestamp" xml:space="preserve">
+    <value>Use Timestamp</value>
+  </data>
   <data name="Check_UseWhiteIcon" xml:space="preserve">
     <value>Use white icon in system taskbar</value>
   </data>

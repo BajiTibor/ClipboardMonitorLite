@@ -205,6 +205,15 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Időpont megjelenítése.
+        /// </summary>
+        internal static string Check_UseTimestamp {
+            get {
+                return ResourceManager.GetString("Check_UseTimestamp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Világos ikon használata a tálcán.
         /// </summary>
         internal static string Check_UseWhiteIcon {

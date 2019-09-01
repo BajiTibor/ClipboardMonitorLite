@@ -18,6 +18,7 @@ namespace ClipboardMonitorLite.Cloud
             _settings = settings;
             _message = message;
 
+            onState.ConnectionLife = connection.State;
             if (_settings.OnlineMode)
             {
                StartListening();
@@ -51,6 +52,7 @@ namespace ClipboardMonitorLite.Cloud
                     _message.Message = message;
                 });
                 connection.Closed += Connection_Closed;
+                onState.ConnectionLife = connection.State;
             }
             catch
             {
@@ -65,7 +67,12 @@ namespace ClipboardMonitorLite.Cloud
 
         private async Task Connection_Closed(Exception arg)
         {
-            await RetryConnection(0);
+            onState.ConnectionLife = connection.State;
+            if (_settings.OnlineMode)
+            {
+                await RetryConnection(0);
+                onState.ConnectionLife = connection.State;
+            }
         }
         
         private async Task RetryConnection(int retries)

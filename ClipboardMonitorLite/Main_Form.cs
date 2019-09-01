@@ -22,6 +22,7 @@ namespace ClipboardMonitorLite
         private ClipboardManager _clipManager;
         private SettingsHandler _settingsHandler;
         private CloudInteractions _cloud;
+        private CheckConnection _connectionState;
 
         public MainForm()
         {
@@ -36,6 +37,7 @@ namespace ClipboardMonitorLite
             _langChange = new SetLanguageOnForm();
             _buttonActions = new FormEvents(_clipManager, notificationIcon, this, _settings, _historyFile);
             _startup = new WinStartup(_settings);
+            _connectionState = new CheckConnection(timer_checkConnection, Label_Connection_DONOTMODIFY);
             EnumSetLang();
             BindProperties();
             BindButtonActions();
@@ -48,6 +50,7 @@ namespace ClipboardMonitorLite
 
             Btn_Donate.DataBindings.Add("Visible", _settings, "ShowDonation",
                 true, DataSourceUpdateMode.OnPropertyChanged);
+
         }
 
         private void BindButtonActions()

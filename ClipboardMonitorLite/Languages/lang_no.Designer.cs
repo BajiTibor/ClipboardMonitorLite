@@ -361,7 +361,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Versjon.
+        ///   Looks up a localized string similar to Versjon .
         /// </summary>
         internal static string Label_Version {
             get {

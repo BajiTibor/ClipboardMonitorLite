@@ -37,6 +37,7 @@
             this.Label_FileLocation = new System.Windows.Forms.Label();
             this.txt_FileLocation = new System.Windows.Forms.TextBox();
             this.GroupBox_BehaviourAndVisuals = new System.Windows.Forms.GroupBox();
+            this.Check_OnlineMode = new System.Windows.Forms.CheckBox();
             this.Check_OpenWithWin = new System.Windows.Forms.CheckBox();
             this.Label_Minutes = new System.Windows.Forms.Label();
             this.combo_lang = new System.Windows.Forms.ComboBox();
@@ -63,7 +64,7 @@
             this.Btn_Apply = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.Label_Version = new System.Windows.Forms.Label();
-            this.Check_OnlineMode = new System.Windows.Forms.CheckBox();
+            this.Check_UseTimestamp = new System.Windows.Forms.CheckBox();
             this.GroupBox_General.SuspendLayout();
             this.GroupBox_SaveToFileSettings.SuspendLayout();
             this.GroupBox_BehaviourAndVisuals.SuspendLayout();
@@ -144,6 +145,7 @@
             // 
             // GroupBox_BehaviourAndVisuals
             // 
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_UseTimestamp);
             this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_OnlineMode);
             this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_OpenWithWin);
             this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Label_Minutes);
@@ -174,6 +176,16 @@
             this.GroupBox_BehaviourAndVisuals.TabIndex = 1;
             this.GroupBox_BehaviourAndVisuals.TabStop = false;
             this.GroupBox_BehaviourAndVisuals.Text = "Behaviour and visuals";
+            // 
+            // Check_OnlineMode
+            // 
+            this.Check_OnlineMode.AutoSize = true;
+            this.Check_OnlineMode.Location = new System.Drawing.Point(6, 283);
+            this.Check_OnlineMode.Name = "Check_OnlineMode";
+            this.Check_OnlineMode.Size = new System.Drawing.Size(124, 24);
+            this.Check_OnlineMode.TabIndex = 26;
+            this.Check_OnlineMode.Text = "Online Mode";
+            this.Check_OnlineMode.UseVisualStyleBackColor = true;
             // 
             // Check_OpenWithWin
             // 
@@ -395,7 +407,7 @@
             // Check_NotifyOfCopy
             // 
             this.Check_NotifyOfCopy.AutoSize = true;
-            this.Check_NotifyOfCopy.Location = new System.Drawing.Point(6, 71);
+            this.Check_NotifyOfCopy.Location = new System.Drawing.Point(6, 58);
             this.Check_NotifyOfCopy.Name = "Check_NotifyOfCopy";
             this.Check_NotifyOfCopy.Size = new System.Drawing.Size(300, 24);
             this.Check_NotifyOfCopy.TabIndex = 2;
@@ -431,15 +443,15 @@
             this.Label_Version.TabIndex = 5;
             this.Label_Version.Text = "Version";
             // 
-            // Check_OnlineMode
+            // Check_UseTimestamp
             // 
-            this.Check_OnlineMode.AutoSize = true;
-            this.Check_OnlineMode.Location = new System.Drawing.Point(6, 283);
-            this.Check_OnlineMode.Name = "Check_OnlineMode";
-            this.Check_OnlineMode.Size = new System.Drawing.Size(124, 24);
-            this.Check_OnlineMode.TabIndex = 26;
-            this.Check_OnlineMode.Text = "Online Mode";
-            this.Check_OnlineMode.UseVisualStyleBackColor = true;
+            this.Check_UseTimestamp.AutoSize = true;
+            this.Check_UseTimestamp.Location = new System.Drawing.Point(6, 86);
+            this.Check_UseTimestamp.Name = "Check_UseTimestamp";
+            this.Check_UseTimestamp.Size = new System.Drawing.Size(146, 24);
+            this.Check_UseTimestamp.TabIndex = 27;
+            this.Check_UseTimestamp.Text = "Use Timestamp";
+            this.Check_UseTimestamp.UseVisualStyleBackColor = true;
             // 
             // OptionsForm
             // 
@@ -504,5 +516,6 @@
         private System.Windows.Forms.Label Label_Minutes;
         private System.Windows.Forms.CheckBox Check_OpenWithWin;
         private System.Windows.Forms.CheckBox Check_OnlineMode;
+        private System.Windows.Forms.CheckBox Check_UseTimestamp;
     }
 }

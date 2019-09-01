@@ -188,6 +188,22 @@ namespace ClipboardMonitorLite.SettingsManager
             }
         }
 
+        private bool useTimestamp;
+
+        public bool UseTimestamp
+        {
+            get
+            {
+                return useTimestamp;
+            }
+            set
+            {
+                useTimestamp = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("UseTimestamp"));
+            }
+        }
+
+
         private void InvokePropertyChanged(PropertyChangedEventArgs e)
         {
             PropertyChanged?.Invoke(this, e);

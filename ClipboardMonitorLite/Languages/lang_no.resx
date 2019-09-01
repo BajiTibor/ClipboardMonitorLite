@@ -220,7 +220,7 @@ for ĺ starte programmet pĺ nytt som administrator.</value>
     <value>Vis varsel for (sekunder)</value>
   </data>
   <data name="Label_Version" xml:space="preserve">
-    <value>Versjon</value>
+    <value>Versjon </value>
   </data>
   <data name="Label_WhenMainWindowClosed" xml:space="preserve">
     <value>Nĺr jeg lukker hovedvinduet</value>

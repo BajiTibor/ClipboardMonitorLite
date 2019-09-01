@@ -44,6 +44,8 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Btn_Donate = new System.Windows.Forms.Button();
             this.timerEmptyClipboard = new System.Windows.Forms.Timer(this.components);
+            this.Label_Connection_DONOTMODIFY = new System.Windows.Forms.Label();
+            this.timer_checkConnection = new System.Windows.Forms.Timer(this.components);
             this.GroupBox_CopiedItems.SuspendLayout();
             this.GroupBox_Actions.SuspendLayout();
             this.MenuStrip.SuspendLayout();
@@ -168,10 +170,24 @@
             // 
             this.timerEmptyClipboard.Interval = 60000;
             // 
+            // Label_Connection_DONOTMODIFY
+            // 
+            this.Label_Connection_DONOTMODIFY.AutoSize = true;
+            this.Label_Connection_DONOTMODIFY.Location = new System.Drawing.Point(197, 523);
+            this.Label_Connection_DONOTMODIFY.Name = "Label_Connection_DONOTMODIFY";
+            this.Label_Connection_DONOTMODIFY.Size = new System.Drawing.Size(133, 20);
+            this.Label_Connection_DONOTMODIFY.TabIndex = 6;
+            this.Label_Connection_DONOTMODIFY.Text = "Connection State";
+            // 
+            // timer_checkConnection
+            // 
+            this.timer_checkConnection.Interval = 2500;
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(534, 550);
+            this.Controls.Add(this.Label_Connection_DONOTMODIFY);
             this.Controls.Add(this.Btn_Donate);
             this.Controls.Add(this.GroupBox_Actions);
             this.Controls.Add(this.GroupBox_CopiedItems);
@@ -184,6 +200,7 @@
             this.GroupBox_Actions.ResumeLayout(false);
             this.MenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -203,6 +220,8 @@
         private System.Windows.Forms.Button Btn_MoreOptions;
         private System.Windows.Forms.Button Btn_Donate;
         private System.Windows.Forms.Timer timerEmptyClipboard;
+        private System.Windows.Forms.Label Label_Connection_DONOTMODIFY;
+        private System.Windows.Forms.Timer timer_checkConnection;
     }
 }
 

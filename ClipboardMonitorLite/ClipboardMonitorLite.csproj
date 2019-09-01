@@ -181,8 +181,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClipboardActions\AutoHistoryCleaner.cs" />
+    <Compile Include="Cloud\CheckConnection.cs" />
     <Compile Include="Cloud\ClipMessage.cs" />
     <Compile Include="Cloud\CloudInteractions.cs" />
+    <Compile Include="Cloud\onState.cs" />
     <Compile Include="Exceptions\ExceptionHandling.cs" />
     <Compile Include="FileOperations\WinStartup.cs" />
     <Compile Include="FormControls\FormControl.cs" />

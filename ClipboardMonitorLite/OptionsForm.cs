@@ -70,6 +70,9 @@ namespace ClipboardMonitorLite
             Check_OnlineMode.DataBindings.Add("Checked", _settings, "OnlineMode",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
+            Check_UseTimestamp.DataBindings.Add("Checked", _settings, "UseTimestamp",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
             numeric_clearAfter.DataBindings.Add("Enabled", _settings, "AutoClearClipboardHistory",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 

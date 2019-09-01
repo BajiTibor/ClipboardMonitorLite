@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.ComponentModel;
-using ClipboardMonitorLite.Languages;
+using ClipboardMonitorLite.Languages.LanguageControl;
 using ClipboardMonitorLite.FileOperations;
 using ClipboardMonitorLite.SettingsManager;
 using ClipboardMonitorLite.ClipboardActions;

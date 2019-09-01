@@ -148,7 +148,7 @@
     <value>Gi meg beskjed hvis jeg kopierer noe</value>
   </data>
   <data name="Check_OnlineMode" xml:space="preserve">
-    <value>TRANSLATE</value>
+    <value>Online-modus</value>
   </data>
   <data name="Check_OpenWithWin" xml:space="preserve">
     <value>Brukes med Windows</value>

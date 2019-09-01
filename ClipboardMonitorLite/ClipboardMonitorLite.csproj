@@ -185,9 +185,9 @@
     <Compile Include="Cloud\CloudInteractions.cs" />
     <Compile Include="Exceptions\ExceptionHandling.cs" />
     <Compile Include="FileOperations\WinStartup.cs" />
-    <Compile Include="FormControls\FormEvents.cs" />
-    <Compile Include="Languages\LanguageCode.cs" />
     <Compile Include="FormControls\FormControl.cs" />
+    <Compile Include="FormControls\FormEvents.cs" />
+    <Compile Include="Languages\LanguageControl\LanguageCode.cs" />
     <Compile Include="Languages\lang_da.Designer.cs">
       <DependentUpon>lang_da.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -228,7 +228,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>lang_hu.resx</DependentUpon>
     </Compile>
-    <Compile Include="Languages\SetLanguageOnForm.cs" />
+    <Compile Include="Languages\LanguageControl\SetLanguageOnForm.cs" />
     <Compile Include="Main_Form.cs">
       <SubType>Form</SubType>
     </Compile>

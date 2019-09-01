@@ -148,7 +148,7 @@
     <value>Laat een notificatie zien als ik iets kopieer</value>
   </data>
   <data name="Check_OnlineMode" xml:space="preserve">
-    <value>TRANSLATE</value>
+    <value>Online mode</value>
   </data>
   <data name="Check_OpenWithWin" xml:space="preserve">
     <value>Open met Windows</value>

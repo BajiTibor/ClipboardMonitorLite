@@ -148,7 +148,7 @@
     <value>Poinformuj jeśli coś skopiuję</value>
   </data>
   <data name="Check_OnlineMode" xml:space="preserve">
-    <value>TRANSLATE</value>
+    <value>Tryb Sieciowy</value>
   </data>
   <data name="Check_OpenWithWin" xml:space="preserve">
     <value>Otwórz za pomocą Windows</value>

@@ -148,7 +148,7 @@
     <value>Обавести ме ако ископирам нешто</value>
   </data>
   <data name="Check_OnlineMode" xml:space="preserve">
-    <value>TRANSLATE</value>
+    <value>Онлине режим</value>
   </data>
   <data name="Check_OpenWithWin" xml:space="preserve">
     <value>Отвори са Windows</value>

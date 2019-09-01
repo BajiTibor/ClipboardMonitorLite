@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.ComponentModel;
 using ClipboardMonitorLite.Cloud;
-using ClipboardMonitorLite.Languages;
+using ClipboardMonitorLite.Languages.LanguageControl;
 using ClipboardMonitorLite.FormControls;
 using ClipboardMonitorLite.FileOperations;
 using ClipboardMonitorLite.SettingsManager;

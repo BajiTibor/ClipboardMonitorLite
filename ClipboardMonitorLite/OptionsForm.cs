@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using System.Windows.Forms;
-using ClipboardMonitorLite.Languages;
+using ClipboardMonitorLite.Languages.LanguageControl;
 using ClipboardMonitorLite.FormControls;
 using ClipboardMonitorLite.SettingsManager;
 

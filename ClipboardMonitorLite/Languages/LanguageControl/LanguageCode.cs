@@ -1,4 +1,4 @@
-﻿namespace ClipboardMonitorLite.Languages
+﻿namespace ClipboardMonitorLite.Languages.LanguageControl
 {
     public class LanguageCode
     {

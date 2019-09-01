@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using ClipboardMonitorLite.FormControls;
 using ClipboardMonitorLite.SettingsManager;
 
-namespace ClipboardMonitorLite.Languages
+namespace ClipboardMonitorLite.Languages.LanguageControl
 {
     public class SetLanguageOnForm
     {

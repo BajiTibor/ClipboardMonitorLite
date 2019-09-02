@@ -21,6 +21,7 @@ namespace ClipboardMonitorLite.ClipboardActions
         public static event EventHandler ClipboardUpdate;
         public event PropertyChangedEventHandler PropertyChanged;
         private Settings _settings;
+        private bool TextFromCloud;
 
         public ClipboardManager(CloudInteractions cloud, ClipMessage message, Settings settings)
         {
@@ -31,17 +32,36 @@ namespace ClipboardMonitorLite.ClipboardActions
             _message = message;
             _cloud = cloud;
             _message.PropertyChanged += MessageChanged;
+            TextFromCloud = false;
         }
-
-        private void MessageChanged(object sender, EventArgs e)
+         // So many issues, the machine name first doesn't appear then two of them appear, then this pattern continues.
+        public void MessageFromCloud()
         {
-            SetFromCloud(sender, e);
+            if (_settings.LimitTraffic && !_settings.SendOnly)
+            {
+                SetFromCloud();
+            }
+            else if (!_settings.LimitTraffic)
+            {
+                SetFromCloud();
+            }
         }
 
-        private void SetFromCloud(object sender, EventArgs e)
+        private void MessageChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == "MachineName")
+            {
+                MessageFromCloud();
+            }
+        }
+
+        private void SetFromCloud()
         {
             string CopiedItem = _message.Message;
+            if (_settings.IncludeDeviceName)
+                ClipboardHistory += $"{_message.MachineName} - ";
             ChangeTextOnClip(CopiedItem);
+            TextFromCloud = true;
         }
 
         private void ClipboardChangeEvent_ClipboardUpdate(object sender, EventArgs e)
@@ -52,6 +72,7 @@ namespace ClipboardMonitorLite.ClipboardActions
                 CurrentlyCopiedItem = CopiedItem;
                 var timeStamp = ($"{ DateTime.Now.ToShortTimeString() } - ");
 
+
                 if (_settings.UseTimestamp)
                 {
                     ClipboardHistory += ($"{timeStamp}{CopiedItem}\n");
@@ -60,19 +81,26 @@ namespace ClipboardMonitorLite.ClipboardActions
                 {
                     ClipboardHistory += ($"{CopiedItem}\n");
                 }
-
-                if (_settings.OnlineMode)
+                if (!TextFromCloud)
                 {
-                    try
+                    if (_settings.OnlineMode)
                     {
-                        _cloud.SendText(Constants.MachineName, CopiedItem);
-                    }
-                    catch (Exception ex)
-                    {
-                        _exception.Handle(ex);
+                        try
+                        {
+                            if (!_settings.LimitTraffic)
+                                _cloud.SendText(Constants.MachineName, CopiedItem);
+                            else if (_settings.LimitTraffic && _settings.SendOnly)
+                                _cloud.SendText(Constants.MachineName, CopiedItem);
+                        }
+                        catch (Exception ex)
+                        {
+                            _exception.Handle(ex);
+                        }
                     }
                 }
+                TextFromCloud = false;
             }
+
         }
 
         public void ClearClip()
@@ -89,9 +117,9 @@ namespace ClipboardMonitorLite.ClipboardActions
         {
             try
             {
-                Methods.OpenClipboard(IntPtr.Zero);
+                UnsafeNativeMethods.OpenClipboard(IntPtr.Zero);
                 var ptr = Marshal.StringToHGlobalUni(text);
-                Methods.SetClipboardData(13, ptr);
+                UnsafeNativeMethods.SetClipboardData(13, ptr);
             }
             catch (Exception ex)
             {
@@ -99,21 +127,21 @@ namespace ClipboardMonitorLite.ClipboardActions
             }
             finally
             {
-                Methods.CloseClipboard();
+                UnsafeNativeMethods.CloseClipboard();
             }
         }
 
         public string GetClipText()
         {
-            if (!Methods.IsClipboardFormatAvailable(Methods.CF_UNICODETEXT))
+            if (!UnsafeNativeMethods.IsClipboardFormatAvailable(UnsafeNativeMethods.CF_UNICODETEXT))
                 return null;
 
             try
             {
-                if (!Methods.OpenClipboard(IntPtr.Zero))
+                if (!UnsafeNativeMethods.OpenClipboard(IntPtr.Zero))
                     return null;
 
-                IntPtr handle = Methods.GetClipboardData(Methods.CF_UNICODETEXT);
+                IntPtr handle = UnsafeNativeMethods.GetClipboardData(UnsafeNativeMethods.CF_UNICODETEXT);
                 if (handle == IntPtr.Zero)
                     return null;
 
@@ -121,11 +149,11 @@ namespace ClipboardMonitorLite.ClipboardActions
 
                 try
                 {
-                    pointer = Methods.GlobalLock(handle);
+                    pointer = UnsafeNativeMethods.GlobalLock(handle);
                     if (pointer == IntPtr.Zero)
                         return null;
 
-                    int size = Methods.GlobalSize(handle);
+                    int size = UnsafeNativeMethods.GlobalSize(handle);
                     byte[] buff = new byte[size];
 
                     Marshal.Copy(pointer, buff, 0, size);
@@ -135,16 +163,16 @@ namespace ClipboardMonitorLite.ClipboardActions
                 finally
                 {
                     if (pointer != IntPtr.Zero)
-                        Methods.GlobalUnlock(handle);
+                        UnsafeNativeMethods.GlobalUnlock(handle);
                 }
             }
             finally
             {
-                Methods.CloseClipboard();
+                UnsafeNativeMethods.CloseClipboard();
             }
         }
 
-        internal static class Methods
+        internal static class UnsafeNativeMethods
         {
             public const int WM_CLIPBOARDUPDATE = 0x031D;
             public static IntPtr HWND_MESSAGE = new IntPtr(-3);
@@ -167,7 +195,7 @@ namespace ClipboardMonitorLite.ClipboardActions
             public static extern bool CloseClipboard();
 
             [DllImport("user32.dll")]
-            public static extern bool SetClipboardData(uint uFormat, IntPtr data);
+            public static extern UIntPtr SetClipboardData(uint uFormat, IntPtr data); // Changed
 
             [DllImport("User32.dll", SetLastError = true)]
             [return: MarshalAs(UnmanagedType.Bool)]
@@ -200,13 +228,13 @@ namespace ClipboardMonitorLite.ClipboardActions
         {
             public NotificationForm()
             {
-                Methods.SetParent(Handle, Methods.HWND_MESSAGE);
-                Methods.AddClipboardFormatListener(Handle);
+                UnsafeNativeMethods.SetParent(Handle, UnsafeNativeMethods.HWND_MESSAGE);
+                UnsafeNativeMethods.AddClipboardFormatListener(Handle);
             }
 
             protected override void WndProc(ref Message m)
             {
-                if (m.Msg == Methods.WM_CLIPBOARDUPDATE)
+                if (m.Msg == UnsafeNativeMethods.WM_CLIPBOARDUPDATE)
                 {
                     OnClipboardUpdate(null);
                 }

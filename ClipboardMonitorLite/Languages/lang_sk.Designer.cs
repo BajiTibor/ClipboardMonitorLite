@@ -22,14 +22,14 @@ namespace ClipboardMonitorLite.Languages {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class lang_da {
+    internal class lang_sk {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal lang_da() {
+        internal lang_sk() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ClipboardMonitorLite.Languages {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.Languages.lang_da", typeof(lang_da).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.Languages.lang_sk", typeof(lang_sk).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Information.
+        ///   Looks up a localized string similar to Viac.
         /// </summary>
         internal static string Btn_About {
             get {
@@ -70,7 +70,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Anvend.
+        ///   Looks up a localized string similar to Aplikovať zmeny.
         /// </summary>
         internal static string Btn_Apply {
             get {
@@ -79,7 +79,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Udforsk.
+        ///   Looks up a localized string similar to Prehliadať.
         /// </summary>
         internal static string Btn_Browse {
             get {
@@ -88,7 +88,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Find opdateringer.
+        ///   Looks up a localized string similar to Nájsť aktualizácie.
         /// </summary>
         internal static string Btn_CheckForUpdates {
             get {
@@ -97,7 +97,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Afslut.
+        ///   Looks up a localized string similar to Zavrieť.
         /// </summary>
         internal static string Btn_Close {
             get {
@@ -106,7 +106,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fjern Kopieret.
+        ///   Looks up a localized string similar to Vyprázdniť schránku.
         /// </summary>
         internal static string Btn_EmptyClipboard {
             get {
@@ -115,7 +115,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fjern Historie.
+        ///   Looks up a localized string similar to Vyprázdniť históriu.
         /// </summary>
         internal static string Btn_EmptyHistory {
             get {
@@ -124,7 +124,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Indstillinger.
+        ///   Looks up a localized string similar to Možnosti.
         /// </summary>
         internal static string Btn_MoreOptions {
             get {
@@ -133,7 +133,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Selv-rens Kopier.
+        ///   Looks up a localized string similar to Automaticky vyprázdniť schránku.
         /// </summary>
         internal static string Check_AutoClearClipboard {
             get {
@@ -142,7 +142,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Uveď zariadenie v histórii kopírovania.
         /// </summary>
         internal static string Check_IncludeDeviceName {
             get {
@@ -151,7 +151,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Oplys mig ved kopiering.
+        ///   Looks up a localized string similar to Ohlás ma ak niečo skopírujem.
         /// </summary>
         internal static string Check_NotifyOfCopy {
             get {
@@ -160,7 +160,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Online-tilstand.
+        ///   Looks up a localized string similar to Režim online.
         /// </summary>
         internal static string Check_OnlineMode {
             get {
@@ -169,7 +169,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Åben med Windows.
+        ///   Looks up a localized string similar to Otvoriť cez Windows.
         /// </summary>
         internal static string Check_OpenWithWin {
             get {
@@ -178,7 +178,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gem til fil.
+        ///   Looks up a localized string similar to Uložiť do súboru.
         /// </summary>
         internal static string Check_SaveToFile {
             get {
@@ -187,7 +187,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vis donations-knappen.
+        ///   Looks up a localized string similar to Zobraziť tlačidlo príspevkov na hlavnom formulári.
         /// </summary>
         internal static string Check_ShowDonation {
             get {
@@ -196,7 +196,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Start Minimeret.
+        ///   Looks up a localized string similar to Minimalizovať po zapnutí.
         /// </summary>
         internal static string Check_StartMinimized {
             get {
@@ -205,7 +205,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Opdatér ved opstart.
+        ///   Looks up a localized string similar to Aktualizovať pri štarte.
         /// </summary>
         internal static string Check_UpdateOnStartup {
             get {
@@ -214,7 +214,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Použiť časovú značku.
         /// </summary>
         internal static string Check_UseTimestamp {
             get {
@@ -223,7 +223,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Brug hvidt ikon i proceslinjen.
+        ///   Looks up a localized string similar to Použiť bielu ikonu v paneli úloh.
         /// </summary>
         internal static string Check_UseWhiteIcon {
             get {
@@ -232,7 +232,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gem løbende.
+        ///   Looks up a localized string similar to Písať v móde real time.
         /// </summary>
         internal static string Check_WriteInRealTime {
             get {
@@ -241,7 +241,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Time.
+        ///   Looks up a localized string similar to Hodina.
         /// </summary>
         internal static string ComboBox_Time_Hour {
             get {
@@ -250,7 +250,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sekund.
+        ///   Looks up a localized string similar to Sekunda.
         /// </summary>
         internal static string ComboBox_Time_Sec {
             get {
@@ -259,7 +259,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tekst fil|*.txt.
+        ///   Looks up a localized string similar to Textový súbor|*.txt.
         /// </summary>
         internal static string File_TextFile {
             get {
@@ -268,7 +268,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Foretagelser.
+        ///   Looks up a localized string similar to Akcie.
         /// </summary>
         internal static string GroupBox_Actions {
             get {
@@ -277,7 +277,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Anvendelse og Visuelt.
+        ///   Looks up a localized string similar to Správanie a vizuály.
         /// </summary>
         internal static string GroupBox_BehaviourAndVisuals {
             get {
@@ -286,7 +286,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kopierede elementer.
+        ///   Looks up a localized string similar to Skopírované predmety.
         /// </summary>
         internal static string GroupBox_CopiedItems {
             get {
@@ -295,7 +295,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Generelt.
+        ///   Looks up a localized string similar to Všeobecné.
         /// </summary>
         internal static string GroupBox_General {
             get {
@@ -304,7 +304,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Online správanie aplikácie.
         /// </summary>
         internal static string GroupBox_OnlineBehaviour {
             get {
@@ -313,7 +313,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Online nastavenia.
         /// </summary>
         internal static string GroupBox_OnlineSettings {
             get {
@@ -322,7 +322,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gem indstillinger til fil.
+        ///   Looks up a localized string similar to Uložiť do nastavení súboru.
         /// </summary>
         internal static string GroupBox_SaveToFileSettings {
             get {
@@ -331,7 +331,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Oneskorenie pri pokuse o pripojenie.
         /// </summary>
         internal static string GroupBox_TimeBeforeReconnect {
             get {
@@ -340,7 +340,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vedrørende nuværende version og opdatering.
+        ///   Looks up a localized string similar to Aktualizácie a informácie k najnovšej verzii.
         /// </summary>
         internal static string GroupBox_UpdateAndCurrentVersion {
             get {
@@ -349,7 +349,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hver.
+        ///   Looks up a localized string similar to Každých.
         /// </summary>
         internal static string Label_Every {
             get {
@@ -358,7 +358,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fil beliggenhed.
+        ///   Looks up a localized string similar to Umiestnenie súboru.
         /// </summary>
         internal static string Label_FileLocation {
             get {
@@ -367,7 +367,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sprog.
+        ///   Looks up a localized string similar to Jazyk.
         /// </summary>
         internal static string Label_Lang {
             get {
@@ -376,7 +376,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minut.
+        ///   Looks up a localized string similar to Minút.
         /// </summary>
         internal static string Label_Minutes {
             get {
@@ -385,10 +385,9 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Beklager! Du har vidst ikke
-        ///administrator-rettigheder, Genstart
-        ///programmet med administrator-rettigheder
-        ///for optimal funktionalitet..
+        ///   Looks up a localized string similar to Ľutujeme, zdá sa že nemáte administratívny
+        ///prístup alebo aplikácia s ním nebola spustená.
+        ///Prosím reštartujte aplikáciu ako administrátor..
         /// </summary>
         internal static string Label_NoAdminRights {
             get {
@@ -397,7 +396,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Nastaviť online interakcie aplikácie s ostatnými zariadeniami.
         /// </summary>
         internal static string Label_OnlineBehaviourExplanation {
             get {
@@ -406,7 +405,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Sekundy.
         /// </summary>
         internal static string Label_Seconds {
             get {
@@ -415,7 +414,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vis notifikation i (sekunder).
+        ///   Looks up a localized string similar to Zobraziť notifikácie pre sekundy.
         /// </summary>
         internal static string Label_ShowNotificationFor {
             get {
@@ -424,7 +423,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Version .
+        ///   Looks up a localized string similar to Verzia.
         /// </summary>
         internal static string Label_Version {
             get {
@@ -433,7 +432,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ved lukning af hovedvinduet.
+        ///   Looks up a localized string similar to Keď zavriem hlavné okno.
         /// </summary>
         internal static string Label_WhenMainWindowClosed {
             get {
@@ -442,8 +441,9 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hvis der ikke gemmes løbende, vil programmet
-        ///kun gemme filen, når filen er lukket..
+        ///   Looks up a localized string similar to Ak je real time vypuntý, aplikácia bude
+        ///vstupovať a zapisovať do súboru len
+        ///keď je zavretá..
         /// </summary>
         internal static string Label_WriteRealTimeInfo {
             get {
@@ -452,7 +452,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Clipboard Monitor Lite.
+        ///   Looks up a localized string similar to Schránkový Monitor Lite.
         /// </summary>
         internal static string Main_Title {
             get {
@@ -461,7 +461,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tøm elementer.
+        ///   Looks up a localized string similar to Vyprázdniť Schránku.
         /// </summary>
         internal static string Menu_EmptyClipboard {
             get {
@@ -470,7 +470,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tøm historie.
+        ///   Looks up a localized string similar to Vyprázdniť Históriu.
         /// </summary>
         internal static string Menu_EmptyHistory {
             get {
@@ -479,7 +479,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Afslut.
+        ///   Looks up a localized string similar to Ukončiť.
         /// </summary>
         internal static string Menu_Exit {
             get {
@@ -488,7 +488,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Åben.
+        ///   Looks up a localized string similar to Otvoriť.
         /// </summary>
         internal static string Menu_Restore {
             get {
@@ -497,7 +497,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Jeg skjuler knappen med det samme, men først vil jeg lige sige at jeg arbejder helt alene på dette projekt og har fået venner til at hjælpe med oversættelser, men jeg får ingen intægt og vil ikke spørge folk om penge og jeg nægter at dynge reklamer indover. Hvis du vil støtte programmet og forbedringer hertil, kan du altid donere, jeg ville blive yderst taknemmelig! :).
+        ///   Looks up a localized string similar to Tlačidlá schovám hneď ale predtým chcem len povedať, že na tejto aplikácii pracujem prevažne sám s pomocou niekoľkých priateľov, ale nemám žiadnu finančnú podporu. Nechcem žiadať peniaze za použitie tejto aplikácie a nechcem ani mať v nej reklamu. Ak chcete pomôcť podporiť moju prácu prosím zvážte poskytnutie príspevku, ďakujem! :).
         /// </summary>
         internal static string MsgBox_DonateHide {
             get {
@@ -506,7 +506,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Genstart programmet for at ændringerne kan træde i kraft.
+        ///   Looks up a localized string similar to Na aplikáciu zmien je potrebné reštartovať program.
         /// </summary>
         internal static string MsgBox_RestartApp {
             get {
@@ -515,7 +515,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Skjul donationsknappen.
+        ///   Looks up a localized string similar to Skryť tlačidlo príspevkov.
         /// </summary>
         internal static string MsgBox_Title_DonateHide {
             get {
@@ -524,7 +524,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Genstart program.
+        ///   Looks up a localized string similar to Reštartovať aplikáciu.
         /// </summary>
         internal static string MsgBox_TitleRestartApp {
             get {
@@ -533,7 +533,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Programmet kører stadigt! For at afslutte, højre-klik venligst på proceslinje ikonet og vælg Afslut!.
+        ///   Looks up a localized string similar to Aplikácia zrovna beží! Ak ju chcete ukončiť, prosím stlačte pravé tlačidlo myši na panely úloh a zvoľte možnosť Ukončiť.
         /// </summary>
         internal static string Notif_AppStillRunning {
             get {
@@ -542,7 +542,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Element kopieret!.
+        ///   Looks up a localized string similar to Predme skopírovaný do schránky!.
         /// </summary>
         internal static string Notif_ItemCopied {
             get {
@@ -551,7 +551,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Programmet kører stadigt!.
+        ///   Looks up a localized string similar to Aplikácia stále beží!.
         /// </summary>
         internal static string Notif_Title_AppStillRunning {
             get {
@@ -560,7 +560,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Element kopieret!.
+        ///   Looks up a localized string similar to Predmety skopírované!.
         /// </summary>
         internal static string Notif_Title_ItemCopied {
             get {
@@ -569,7 +569,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Indstillinger.
+        ///   Looks up a localized string similar to Možnosti.
         /// </summary>
         internal static string Options_Title {
             get {
@@ -578,7 +578,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tilføj fil.
+        ///   Looks up a localized string similar to Pripojiť súbor.
         /// </summary>
         internal static string Radio_Append {
             get {
@@ -587,7 +587,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tøm fil og erstat.
+        ///   Looks up a localized string similar to Vyprázdniť súbor a nahradiť.
         /// </summary>
         internal static string Radio_EmptyAndReplace {
             get {
@@ -596,7 +596,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Afslut programmet.
+        ///   Looks up a localized string similar to Ukončiť aplikáciu.
         /// </summary>
         internal static string Radio_ExitApp {
             get {
@@ -605,7 +605,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minimér til proceslinje.
+        ///   Looks up a localized string similar to Minimalizovať na systémovej lište.
         /// </summary>
         internal static string Radio_Minimize {
             get {
@@ -614,7 +614,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Len prijímať.
         /// </summary>
         internal static string Radio_ReceiveOnly {
             get {
@@ -623,7 +623,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Odosielať a prijímať.
         /// </summary>
         internal static string Radio_SendAndReceive {
             get {
@@ -632,7 +632,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Len odosielať.
         /// </summary>
         internal static string Radio_SendOnly {
             get {
@@ -641,7 +641,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gem historien til text fil.
+        ///   Looks up a localized string similar to Uložiť históriu do textového súboru.
         /// </summary>
         internal static string SaveAsTextFile {
             get {

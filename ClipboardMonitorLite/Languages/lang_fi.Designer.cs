@@ -142,6 +142,15 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sisällytä laitteen nimi kopiointihistoriaan.
+        /// </summary>
+        internal static string Check_IncludeDeviceName {
+            get {
+                return ResourceManager.GetString("Check_IncludeDeviceName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Huomauta jos kopioin jotakin.
         /// </summary>
         internal static string Check_NotifyOfCopy {
@@ -201,6 +210,15 @@ namespace ClipboardMonitorLite.Languages {
         internal static string Check_UpdateOnStartup {
             get {
                 return ResourceManager.GetString("Check_UpdateOnStartup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sisällytä aikaleima.
+        /// </summary>
+        internal static string Check_UseTimestamp {
+            get {
+                return ResourceManager.GetString("Check_UseTimestamp", resourceCulture);
             }
         }
         
@@ -286,11 +304,38 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sovelluksen verkkokäytös.
+        /// </summary>
+        internal static string GroupBox_OnlineBehaviour {
+            get {
+                return ResourceManager.GetString("GroupBox_OnlineBehaviour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Verkkoasetukset.
+        /// </summary>
+        internal static string GroupBox_OnlineSettings {
+            get {
+                return ResourceManager.GetString("GroupBox_OnlineSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tallenna tiedostoasetuksiin.
         /// </summary>
         internal static string GroupBox_SaveToFileSettings {
             get {
                 return ResourceManager.GetString("GroupBox_SaveToFileSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Viive ennenkuin yhdistämistä yritetään uudelleen.
+        /// </summary>
+        internal static string GroupBox_TimeBeforeReconnect {
+            get {
+                return ResourceManager.GetString("GroupBox_TimeBeforeReconnect", resourceCulture);
             }
         }
         
@@ -349,6 +394,26 @@ namespace ClipboardMonitorLite.Languages {
         internal static string Label_NoAdminRights {
             get {
                 return ResourceManager.GetString("Label_NoAdminRights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aseta miten sovellus käsittelee
+        ///verkkovuorovaikutuksia muiden
+        ///laitteiden kanssa..
+        /// </summary>
+        internal static string Label_OnlineBehaviourExplanation {
+            get {
+                return ResourceManager.GetString("Label_OnlineBehaviourExplanation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sekuntia.
+        /// </summary>
+        internal static string Label_Seconds {
+            get {
+                return ResourceManager.GetString("Label_Seconds", resourceCulture);
             }
         }
         
@@ -549,6 +614,33 @@ namespace ClipboardMonitorLite.Languages {
         internal static string Radio_Minimize {
             get {
                 return ResourceManager.GetString("Radio_Minimize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vain vastaanotto.
+        /// </summary>
+        internal static string Radio_ReceiveOnly {
+            get {
+                return ResourceManager.GetString("Radio_ReceiveOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lähetä ja vastaanota.
+        /// </summary>
+        internal static string Radio_SendAndReceive {
+            get {
+                return ResourceManager.GetString("Radio_SendAndReceive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vain lähetys.
+        /// </summary>
+        internal static string Radio_SendOnly {
+            get {
+                return ResourceManager.GetString("Radio_SendOnly", resourceCulture);
             }
         }
         

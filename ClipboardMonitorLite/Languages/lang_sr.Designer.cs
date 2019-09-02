@@ -142,6 +142,15 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Укључи име уређаја у копи историју.
+        /// </summary>
+        internal static string Check_IncludeDeviceName {
+            get {
+                return ResourceManager.GetString("Check_IncludeDeviceName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Обавести ме ако ископирам нешто.
         /// </summary>
         internal static string Check_NotifyOfCopy {
@@ -201,6 +210,15 @@ namespace ClipboardMonitorLite.Languages {
         internal static string Check_UpdateOnStartup {
             get {
                 return ResourceManager.GetString("Check_UpdateOnStartup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Укључи Временску Ознаку.
+        /// </summary>
+        internal static string Check_UseTimestamp {
+            get {
+                return ResourceManager.GetString("Check_UseTimestamp", resourceCulture);
             }
         }
         
@@ -286,11 +304,38 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Онлајн понашање апликације.
+        /// </summary>
+        internal static string GroupBox_OnlineBehaviour {
+            get {
+                return ResourceManager.GetString("GroupBox_OnlineBehaviour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Интернет подешавања.
+        /// </summary>
+        internal static string GroupBox_OnlineSettings {
+            get {
+                return ResourceManager.GetString("GroupBox_OnlineSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Запамти у подешавања за датотеку.
         /// </summary>
         internal static string GroupBox_SaveToFileSettings {
             get {
                 return ResourceManager.GetString("GroupBox_SaveToFileSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kашњење пре реконекције.
+        /// </summary>
+        internal static string GroupBox_TimeBeforeReconnect {
+            get {
+                return ResourceManager.GetString("GroupBox_TimeBeforeReconnect", resourceCulture);
             }
         }
         
@@ -348,6 +393,25 @@ namespace ClipboardMonitorLite.Languages {
         internal static string Label_NoAdminRights {
             get {
                 return ResourceManager.GetString("Label_NoAdminRights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Подеси како ће апликацијa руковати
+        ///онлајн интеракције са осталим уређајима..
+        /// </summary>
+        internal static string Label_OnlineBehaviourExplanation {
+            get {
+                return ResourceManager.GetString("Label_OnlineBehaviourExplanation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Секунде.
+        /// </summary>
+        internal static string Label_Seconds {
+            get {
+                return ResourceManager.GetString("Label_Seconds", resourceCulture);
             }
         }
         
@@ -548,6 +612,33 @@ namespace ClipboardMonitorLite.Languages {
         internal static string Radio_Minimize {
             get {
                 return ResourceManager.GetString("Radio_Minimize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Прими само.
+        /// </summary>
+        internal static string Radio_ReceiveOnly {
+            get {
+                return ResourceManager.GetString("Radio_ReceiveOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пошаљи и Прими.
+        /// </summary>
+        internal static string Radio_SendAndReceive {
+            get {
+                return ResourceManager.GetString("Radio_SendAndReceive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пошаљи само.
+        /// </summary>
+        internal static string Radio_SendOnly {
+            get {
+                return ResourceManager.GetString("Radio_SendOnly", resourceCulture);
             }
         }
         

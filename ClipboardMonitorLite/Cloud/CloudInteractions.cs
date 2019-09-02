@@ -11,6 +11,7 @@ namespace ClipboardMonitorLite.Cloud
         private Settings _settings;
         private ClipMessage _message;
         private HubConnection connection;
+        private OnlineItem _newItem;
 
         public CloudInteractions(ClipMessage message, Settings settings)
         {
@@ -49,7 +50,9 @@ namespace ClipboardMonitorLite.Cloud
                 await connection.StartAsync();
                 connection.On<string, string>("broadcastMessage", (user, message) =>
                 {
-                    _message.Message = message;
+                        _message.Message = message;
+                        _message.MachineName = user;
+                    
                 });
                 connection.Closed += Connection_Closed;
                 onState.ConnectionLife = connection.State;
@@ -77,9 +80,7 @@ namespace ClipboardMonitorLite.Cloud
         
         private async Task RetryConnection(int retries)
         {
-            int delay = 5000;
-            if (retries > 2)
-            { delay *= 6; }
+            int delay = _settings.RetryConnectionAfter;
             retries++;
             try
             {

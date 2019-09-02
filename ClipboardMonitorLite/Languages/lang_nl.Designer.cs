@@ -142,6 +142,15 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Apparaat naam bijvoegen in kopie geschiedenis.
+        /// </summary>
+        internal static string Check_IncludeDeviceName {
+            get {
+                return ResourceManager.GetString("Check_IncludeDeviceName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Laat een notificatie zien als ik iets kopieer.
         /// </summary>
         internal static string Check_NotifyOfCopy {
@@ -201,6 +210,15 @@ namespace ClipboardMonitorLite.Languages {
         internal static string Check_UpdateOnStartup {
             get {
                 return ResourceManager.GetString("Check_UpdateOnStartup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inclusief tijd.
+        /// </summary>
+        internal static string Check_UseTimestamp {
+            get {
+                return ResourceManager.GetString("Check_UseTimestamp", resourceCulture);
             }
         }
         
@@ -286,11 +304,38 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Online gedrag van Applicatie.
+        /// </summary>
+        internal static string GroupBox_OnlineBehaviour {
+            get {
+                return ResourceManager.GetString("GroupBox_OnlineBehaviour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Online Opties.
+        /// </summary>
+        internal static string GroupBox_OnlineSettings {
+            get {
+                return ResourceManager.GetString("GroupBox_OnlineSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Opslaan naar bestand opties.
         /// </summary>
         internal static string GroupBox_SaveToFileSettings {
             get {
                 return ResourceManager.GetString("GroupBox_SaveToFileSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vertraging voordat verbinding wordt gemaakt.
+        /// </summary>
+        internal static string GroupBox_TimeBeforeReconnect {
+            get {
+                return ResourceManager.GetString("GroupBox_TimeBeforeReconnect", resourceCulture);
             }
         }
         
@@ -349,6 +394,26 @@ namespace ClipboardMonitorLite.Languages {
         internal static string Label_NoAdminRights {
             get {
                 return ResourceManager.GetString("Label_NoAdminRights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instellen hoe de applicatie zichzelf
+        ///hanteerd tegenover andere online
+        ///applicaties op andere apparaten..
+        /// </summary>
+        internal static string Label_OnlineBehaviourExplanation {
+            get {
+                return ResourceManager.GetString("Label_OnlineBehaviourExplanation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seconden.
+        /// </summary>
+        internal static string Label_Seconds {
+            get {
+                return ResourceManager.GetString("Label_Seconds", resourceCulture);
             }
         }
         
@@ -550,6 +615,33 @@ namespace ClipboardMonitorLite.Languages {
         internal static string Radio_Minimize {
             get {
                 return ResourceManager.GetString("Radio_Minimize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alleen ontvangen.
+        /// </summary>
+        internal static string Radio_ReceiveOnly {
+            get {
+                return ResourceManager.GetString("Radio_ReceiveOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Versturen en ontvangen.
+        /// </summary>
+        internal static string Radio_SendAndReceive {
+            get {
+                return ResourceManager.GetString("Radio_SendAndReceive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alleen versturen.
+        /// </summary>
+        internal static string Radio_SendOnly {
+            get {
+                return ResourceManager.GetString("Radio_SendOnly", resourceCulture);
             }
         }
         

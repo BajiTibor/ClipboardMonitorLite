@@ -144,6 +144,9 @@
   <data name="Check_AutoClearClipboard" xml:space="preserve">
     <value>Vágólap autómatikus kiürítése</value>
   </data>
+  <data name="Check_IncludeDeviceName" xml:space="preserve">
+    <value>Eszköz nevének megjelenítése az előzményekben</value>
+  </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
     <value>Értesíts, amikor kimásolok valamit</value>
   </data>
@@ -195,8 +198,17 @@
   <data name="GroupBox_General" xml:space="preserve">
     <value>Általános</value>
   </data>
+  <data name="GroupBox_OnlineBehaviour" xml:space="preserve">
+    <value>Alkalmazás online viselkedése</value>
+  </data>
+  <data name="GroupBox_OnlineSettings" xml:space="preserve">
+    <value>Online beállítások</value>
+  </data>
   <data name="GroupBox_SaveToFileSettings" xml:space="preserve">
     <value>File-ba mentés beállításai</value>
+  </data>
+  <data name="GroupBox_TimeBeforeReconnect" xml:space="preserve">
+    <value>Újracsatlakozási kísérletek közötti idő</value>
   </data>
   <data name="GroupBox_UpdateAndCurrentVersion" xml:space="preserve">
     <value>Frissítés és jelenlegi verzió</value>
@@ -219,6 +231,13 @@ az alkalmazás nem tudott újraindulni
 admin jogokkal, kérlek próbáld meg
 újraindítani az alkalmazást, mint
 Adminisztrátor!</value>
+  </data>
+  <data name="Label_OnlineBehaviourExplanation" xml:space="preserve">
+    <value>Más eszközökkel való kommunikáció
+módjának megváltoztatása.</value>
+  </data>
+  <data name="Label_Seconds" xml:space="preserve">
+    <value>Másodperc</value>
   </data>
   <data name="Label_ShowNotificationFor" xml:space="preserve">
     <value>Értesítés megjelenítése (másodperc):</value>
@@ -287,6 +306,15 @@ fog a file-ba írni.</value>
   </data>
   <data name="Radio_Minimize" xml:space="preserve">
     <value>Tálcára kicsibe</value>
+  </data>
+  <data name="Radio_ReceiveOnly" xml:space="preserve">
+    <value>Csak fogadás</value>
+  </data>
+  <data name="Radio_SendAndReceive" xml:space="preserve">
+    <value>Kétirányú</value>
+  </data>
+  <data name="Radio_SendOnly" xml:space="preserve">
+    <value>Csak küldés</value>
   </data>
   <data name="SaveAsTextFile" xml:space="preserve">
     <value>Előzmények elmentése szöveges file-ba</value>

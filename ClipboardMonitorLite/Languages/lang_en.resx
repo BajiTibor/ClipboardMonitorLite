@@ -144,6 +144,12 @@
   <data name="Check_AutoClearClipboard" xml:space="preserve">
     <value>Auto clear clipboard</value>
   </data>
+  <data name="Check_IncludeDeviceName" xml:space="preserve">
+    <value>Include device name in copy history</value>
+  </data>
+  <data name="Check_LimitTraffic" xml:space="preserve">
+    <value>Limited Traffic</value>
+  </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
     <value>Notify me if I copy something</value>
   </data>
@@ -195,8 +201,17 @@
   <data name="GroupBox_General" xml:space="preserve">
     <value>General</value>
   </data>
+  <data name="GroupBox_OnlineBehaviour" xml:space="preserve">
+    <value>Application Online behaviour</value>
+  </data>
+  <data name="GroupBox_OnlineSettings" xml:space="preserve">
+    <value>Online Settings</value>
+  </data>
   <data name="GroupBox_SaveToFileSettings" xml:space="preserve">
     <value>Save to file settings</value>
+  </data>
+  <data name="GroupBox_TimeBeforeReconnect" xml:space="preserve">
+    <value>Delay before trying to reconnect</value>
   </data>
   <data name="GroupBox_UpdateAndCurrentVersion" xml:space="preserve">
     <value>Update and current version info</value>
@@ -218,6 +233,13 @@
 rights, or the application failed
 to start up as such, please try
 to restart the application as administrator.</value>
+  </data>
+  <data name="Label_OnlineBehaviourExplanation" xml:space="preserve">
+    <value>Set how the application will handle
+online interactions with other devices.</value>
+  </data>
+  <data name="Label_Seconds" xml:space="preserve">
+    <value>Seconds</value>
   </data>
   <data name="Label_ShowNotificationFor" xml:space="preserve">
     <value>Show notification for (Seconds)</value>
@@ -286,6 +308,15 @@ write to the file when it's closed.</value>
   </data>
   <data name="Radio_Minimize" xml:space="preserve">
     <value>Minimize on system tray</value>
+  </data>
+  <data name="Radio_ReceiveOnly" xml:space="preserve">
+    <value>Receive only</value>
+  </data>
+  <data name="Radio_SendAndReceive" xml:space="preserve">
+    <value>Send and Receive</value>
+  </data>
+  <data name="Radio_SendOnly" xml:space="preserve">
+    <value>Send only</value>
   </data>
   <data name="SaveAsTextFile" xml:space="preserve">
     <value>Save history as text file</value>

@@ -142,6 +142,15 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Isama ang pangalan ng aparato sa kasaysayang kopya.
+        /// </summary>
+        internal static string Check_IncludeDeviceName {
+            get {
+                return ResourceManager.GetString("Check_IncludeDeviceName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sabihan ako pag may na kopya ako.
         /// </summary>
         internal static string Check_NotifyOfCopy {
@@ -201,6 +210,15 @@ namespace ClipboardMonitorLite.Languages {
         internal static string Check_UpdateOnStartup {
             get {
                 return ResourceManager.GetString("Check_UpdateOnStartup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Isama ang Timestamp.
+        /// </summary>
+        internal static string Check_UseTimestamp {
+            get {
+                return ResourceManager.GetString("Check_UseTimestamp", resourceCulture);
             }
         }
         
@@ -286,11 +304,38 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ugali ng online aplikasyon.
+        /// </summary>
+        internal static string GroupBox_OnlineBehaviour {
+            get {
+                return ResourceManager.GetString("GroupBox_OnlineBehaviour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Online Settings.
+        /// </summary>
+        internal static string GroupBox_OnlineSettings {
+            get {
+                return ResourceManager.GetString("GroupBox_OnlineSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save to file settings.
         /// </summary>
         internal static string GroupBox_SaveToFileSettings {
             get {
                 return ResourceManager.GetString("GroupBox_SaveToFileSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to pagkaantala bago subukin na kumonekta muli.
+        /// </summary>
+        internal static string GroupBox_TimeBeforeReconnect {
+            get {
+                return ResourceManager.GetString("GroupBox_TimeBeforeReconnect", resourceCulture);
             }
         }
         
@@ -347,6 +392,26 @@ namespace ClipboardMonitorLite.Languages {
         internal static string Label_NoAdminRights {
             get {
                 return ResourceManager.GetString("Label_NoAdminRights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Itakda kung paano hahawakan ng aplikasyon
+        ///ang pakikipag-ugnay sa ibang mga aparato
+        ///ng pa-online.
+        /// </summary>
+        internal static string Label_OnlineBehaviourExplanation {
+            get {
+                return ResourceManager.GetString("Label_OnlineBehaviourExplanation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Segundo.
+        /// </summary>
+        internal static string Label_Seconds {
+            get {
+                return ResourceManager.GetString("Label_Seconds", resourceCulture);
             }
         }
         
@@ -547,6 +612,33 @@ namespace ClipboardMonitorLite.Languages {
         internal static string Radio_Minimize {
             get {
                 return ResourceManager.GetString("Radio_Minimize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tumanggap lamang.
+        /// </summary>
+        internal static string Radio_ReceiveOnly {
+            get {
+                return ResourceManager.GetString("Radio_ReceiveOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Magpadala at tumanggap.
+        /// </summary>
+        internal static string Radio_SendAndReceive {
+            get {
+                return ResourceManager.GetString("Radio_SendAndReceive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Magpadala lamang.
+        /// </summary>
+        internal static string Radio_SendOnly {
+            get {
+                return ResourceManager.GetString("Radio_SendOnly", resourceCulture);
             }
         }
         

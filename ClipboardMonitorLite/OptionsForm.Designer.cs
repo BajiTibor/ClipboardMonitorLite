@@ -30,6 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsForm));
             this.GroupBox_General = new System.Windows.Forms.GroupBox();
+            this.GroupBox_OnlineSettings = new System.Windows.Forms.GroupBox();
+            this.GroupBox_TimeBeforeReconnect = new System.Windows.Forms.GroupBox();
+            this.Label_Seconds = new System.Windows.Forms.Label();
+            this.numeric_ReconnectDelay = new System.Windows.Forms.NumericUpDown();
+            this.Check_IncludeDeviceName = new System.Windows.Forms.CheckBox();
+            this.GroupBox_OnlineBehaviour = new System.Windows.Forms.GroupBox();
+            this.Label_OnlineBehaviourExplanation = new System.Windows.Forms.Label();
+            this.Radio_ReceiveOnly = new System.Windows.Forms.RadioButton();
+            this.Radio_SendOnly = new System.Windows.Forms.RadioButton();
             this.GroupBox_SaveToFileSettings = new System.Windows.Forms.GroupBox();
             this.Label_WriteRealTimeInfo = new System.Windows.Forms.Label();
             this.Check_WriteInRealTime = new System.Windows.Forms.CheckBox();
@@ -37,9 +46,10 @@
             this.Label_FileLocation = new System.Windows.Forms.Label();
             this.txt_FileLocation = new System.Windows.Forms.TextBox();
             this.GroupBox_BehaviourAndVisuals = new System.Windows.Forms.GroupBox();
-            this.Check_OnlineMode = new System.Windows.Forms.CheckBox();
+            this.Check_UseTimestamp = new System.Windows.Forms.CheckBox();
             this.Check_OpenWithWin = new System.Windows.Forms.CheckBox();
             this.Label_Minutes = new System.Windows.Forms.Label();
+            this.Check_OnlineMode = new System.Windows.Forms.CheckBox();
             this.combo_lang = new System.Windows.Forms.ComboBox();
             this.Label_Lang = new System.Windows.Forms.Label();
             this.DONOTMODIFY7 = new System.Windows.Forms.Label();
@@ -64,8 +74,12 @@
             this.Btn_Apply = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.Label_Version = new System.Windows.Forms.Label();
-            this.Check_UseTimestamp = new System.Windows.Forms.CheckBox();
+            this.Check_LimitTraffic = new System.Windows.Forms.CheckBox();
             this.GroupBox_General.SuspendLayout();
+            this.GroupBox_OnlineSettings.SuspendLayout();
+            this.GroupBox_TimeBeforeReconnect.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_ReconnectDelay)).BeginInit();
+            this.GroupBox_OnlineBehaviour.SuspendLayout();
             this.GroupBox_SaveToFileSettings.SuspendLayout();
             this.GroupBox_BehaviourAndVisuals.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_clearAfter)).BeginInit();
@@ -73,6 +87,7 @@
             // 
             // GroupBox_General
             // 
+            this.GroupBox_General.Controls.Add(this.GroupBox_OnlineSettings);
             this.GroupBox_General.Controls.Add(this.GroupBox_SaveToFileSettings);
             this.GroupBox_General.Controls.Add(this.GroupBox_BehaviourAndVisuals);
             this.GroupBox_General.Location = new System.Drawing.Point(12, 12);
@@ -81,6 +96,114 @@
             this.GroupBox_General.TabIndex = 0;
             this.GroupBox_General.TabStop = false;
             this.GroupBox_General.Text = "General";
+            // 
+            // GroupBox_OnlineSettings
+            // 
+            this.GroupBox_OnlineSettings.Controls.Add(this.GroupBox_TimeBeforeReconnect);
+            this.GroupBox_OnlineSettings.Controls.Add(this.Check_IncludeDeviceName);
+            this.GroupBox_OnlineSettings.Controls.Add(this.GroupBox_OnlineBehaviour);
+            this.GroupBox_OnlineSettings.Location = new System.Drawing.Point(362, 248);
+            this.GroupBox_OnlineSettings.Name = "GroupBox_OnlineSettings";
+            this.GroupBox_OnlineSettings.Size = new System.Drawing.Size(349, 307);
+            this.GroupBox_OnlineSettings.TabIndex = 2;
+            this.GroupBox_OnlineSettings.TabStop = false;
+            this.GroupBox_OnlineSettings.Text = "Online Settings";
+            // 
+            // GroupBox_TimeBeforeReconnect
+            // 
+            this.GroupBox_TimeBeforeReconnect.Controls.Add(this.Label_Seconds);
+            this.GroupBox_TimeBeforeReconnect.Controls.Add(this.numeric_ReconnectDelay);
+            this.GroupBox_TimeBeforeReconnect.Location = new System.Drawing.Point(6, 25);
+            this.GroupBox_TimeBeforeReconnect.Name = "GroupBox_TimeBeforeReconnect";
+            this.GroupBox_TimeBeforeReconnect.Size = new System.Drawing.Size(337, 69);
+            this.GroupBox_TimeBeforeReconnect.TabIndex = 30;
+            this.GroupBox_TimeBeforeReconnect.TabStop = false;
+            this.GroupBox_TimeBeforeReconnect.Text = "Delay before trying to reconnect";
+            // 
+            // Label_Seconds
+            // 
+            this.Label_Seconds.AutoSize = true;
+            this.Label_Seconds.Location = new System.Drawing.Point(6, 37);
+            this.Label_Seconds.Name = "Label_Seconds";
+            this.Label_Seconds.Size = new System.Drawing.Size(72, 20);
+            this.Label_Seconds.TabIndex = 1;
+            this.Label_Seconds.Text = "Seconds";
+            // 
+            // numeric_ReconnectDelay
+            // 
+            this.numeric_ReconnectDelay.Location = new System.Drawing.Point(84, 35);
+            this.numeric_ReconnectDelay.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.numeric_ReconnectDelay.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numeric_ReconnectDelay.Name = "numeric_ReconnectDelay";
+            this.numeric_ReconnectDelay.Size = new System.Drawing.Size(112, 26);
+            this.numeric_ReconnectDelay.TabIndex = 0;
+            this.numeric_ReconnectDelay.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // Check_IncludeDeviceName
+            // 
+            this.Check_IncludeDeviceName.AutoSize = true;
+            this.Check_IncludeDeviceName.Location = new System.Drawing.Point(12, 277);
+            this.Check_IncludeDeviceName.Name = "Check_IncludeDeviceName";
+            this.Check_IncludeDeviceName.Size = new System.Drawing.Size(283, 24);
+            this.Check_IncludeDeviceName.TabIndex = 29;
+            this.Check_IncludeDeviceName.Text = "Include device name in copy history";
+            this.Check_IncludeDeviceName.UseVisualStyleBackColor = true;
+            // 
+            // GroupBox_OnlineBehaviour
+            // 
+            this.GroupBox_OnlineBehaviour.Controls.Add(this.Check_LimitTraffic);
+            this.GroupBox_OnlineBehaviour.Controls.Add(this.Label_OnlineBehaviourExplanation);
+            this.GroupBox_OnlineBehaviour.Controls.Add(this.Radio_ReceiveOnly);
+            this.GroupBox_OnlineBehaviour.Controls.Add(this.Radio_SendOnly);
+            this.GroupBox_OnlineBehaviour.Location = new System.Drawing.Point(6, 100);
+            this.GroupBox_OnlineBehaviour.Name = "GroupBox_OnlineBehaviour";
+            this.GroupBox_OnlineBehaviour.Size = new System.Drawing.Size(337, 171);
+            this.GroupBox_OnlineBehaviour.TabIndex = 28;
+            this.GroupBox_OnlineBehaviour.TabStop = false;
+            this.GroupBox_OnlineBehaviour.Text = "Application Online behaviour";
+            // 
+            // Label_OnlineBehaviourExplanation
+            // 
+            this.Label_OnlineBehaviourExplanation.AutoSize = true;
+            this.Label_OnlineBehaviourExplanation.Location = new System.Drawing.Point(6, 26);
+            this.Label_OnlineBehaviourExplanation.Name = "Label_OnlineBehaviourExplanation";
+            this.Label_OnlineBehaviourExplanation.Size = new System.Drawing.Size(271, 40);
+            this.Label_OnlineBehaviourExplanation.TabIndex = 30;
+            this.Label_OnlineBehaviourExplanation.Text = "Set how the application will handle\r\nonline interactions with other devices.";
+            // 
+            // Radio_ReceiveOnly
+            // 
+            this.Radio_ReceiveOnly.AutoSize = true;
+            this.Radio_ReceiveOnly.Checked = true;
+            this.Radio_ReceiveOnly.Location = new System.Drawing.Point(6, 140);
+            this.Radio_ReceiveOnly.Name = "Radio_ReceiveOnly";
+            this.Radio_ReceiveOnly.Size = new System.Drawing.Size(123, 24);
+            this.Radio_ReceiveOnly.TabIndex = 29;
+            this.Radio_ReceiveOnly.TabStop = true;
+            this.Radio_ReceiveOnly.Text = "Receive only";
+            this.Radio_ReceiveOnly.UseVisualStyleBackColor = true;
+            // 
+            // Radio_SendOnly
+            // 
+            this.Radio_SendOnly.AutoSize = true;
+            this.Radio_SendOnly.Location = new System.Drawing.Point(6, 110);
+            this.Radio_SendOnly.Name = "Radio_SendOnly";
+            this.Radio_SendOnly.Size = new System.Drawing.Size(104, 24);
+            this.Radio_SendOnly.TabIndex = 28;
+            this.Radio_SendOnly.Text = "Send only";
+            this.Radio_SendOnly.UseVisualStyleBackColor = true;
             // 
             // GroupBox_SaveToFileSettings
             // 
@@ -146,9 +269,9 @@
             // GroupBox_BehaviourAndVisuals
             // 
             this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_UseTimestamp);
-            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_OnlineMode);
             this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_OpenWithWin);
             this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Label_Minutes);
+            this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Check_OnlineMode);
             this.GroupBox_BehaviourAndVisuals.Controls.Add(this.combo_lang);
             this.GroupBox_BehaviourAndVisuals.Controls.Add(this.Label_Lang);
             this.GroupBox_BehaviourAndVisuals.Controls.Add(this.DONOTMODIFY7);
@@ -177,20 +300,20 @@
             this.GroupBox_BehaviourAndVisuals.TabStop = false;
             this.GroupBox_BehaviourAndVisuals.Text = "Behaviour and visuals";
             // 
-            // Check_OnlineMode
+            // Check_UseTimestamp
             // 
-            this.Check_OnlineMode.AutoSize = true;
-            this.Check_OnlineMode.Location = new System.Drawing.Point(6, 283);
-            this.Check_OnlineMode.Name = "Check_OnlineMode";
-            this.Check_OnlineMode.Size = new System.Drawing.Size(124, 24);
-            this.Check_OnlineMode.TabIndex = 26;
-            this.Check_OnlineMode.Text = "Online Mode";
-            this.Check_OnlineMode.UseVisualStyleBackColor = true;
+            this.Check_UseTimestamp.AutoSize = true;
+            this.Check_UseTimestamp.Location = new System.Drawing.Point(6, 86);
+            this.Check_UseTimestamp.Name = "Check_UseTimestamp";
+            this.Check_UseTimestamp.Size = new System.Drawing.Size(146, 24);
+            this.Check_UseTimestamp.TabIndex = 27;
+            this.Check_UseTimestamp.Text = "Use Timestamp";
+            this.Check_UseTimestamp.UseVisualStyleBackColor = true;
             // 
             // Check_OpenWithWin
             // 
             this.Check_OpenWithWin.AutoSize = true;
-            this.Check_OpenWithWin.Location = new System.Drawing.Point(6, 223);
+            this.Check_OpenWithWin.Location = new System.Drawing.Point(6, 220);
             this.Check_OpenWithWin.Name = "Check_OpenWithWin";
             this.Check_OpenWithWin.Size = new System.Drawing.Size(178, 24);
             this.Check_OpenWithWin.TabIndex = 25;
@@ -206,6 +329,16 @@
             this.Label_Minutes.TabIndex = 24;
             this.Label_Minutes.Text = "Minutes";
             // 
+            // Check_OnlineMode
+            // 
+            this.Check_OnlineMode.AutoSize = true;
+            this.Check_OnlineMode.Location = new System.Drawing.Point(6, 285);
+            this.Check_OnlineMode.Name = "Check_OnlineMode";
+            this.Check_OnlineMode.Size = new System.Drawing.Size(124, 24);
+            this.Check_OnlineMode.TabIndex = 26;
+            this.Check_OnlineMode.Text = "Online Mode";
+            this.Check_OnlineMode.UseVisualStyleBackColor = true;
+            // 
             // combo_lang
             // 
             this.combo_lang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -219,7 +352,8 @@
             "Dutch",
             "Serbian",
             "Danish",
-            "Polish"});
+            "Polish",
+            "Slovak"});
             this.combo_lang.Location = new System.Drawing.Point(103, 445);
             this.combo_lang.Name = "combo_lang";
             this.combo_lang.Size = new System.Drawing.Size(116, 28);
@@ -305,7 +439,7 @@
             // Check_StartMinimized
             // 
             this.Check_StartMinimized.AutoSize = true;
-            this.Check_StartMinimized.Location = new System.Drawing.Point(6, 253);
+            this.Check_StartMinimized.Location = new System.Drawing.Point(6, 252);
             this.Check_StartMinimized.Name = "Check_StartMinimized";
             this.Check_StartMinimized.Size = new System.Drawing.Size(144, 24);
             this.Check_StartMinimized.TabIndex = 6;
@@ -443,15 +577,15 @@
             this.Label_Version.TabIndex = 5;
             this.Label_Version.Text = "Version";
             // 
-            // Check_UseTimestamp
+            // Check_LimitTraffic
             // 
-            this.Check_UseTimestamp.AutoSize = true;
-            this.Check_UseTimestamp.Location = new System.Drawing.Point(6, 86);
-            this.Check_UseTimestamp.Name = "Check_UseTimestamp";
-            this.Check_UseTimestamp.Size = new System.Drawing.Size(146, 24);
-            this.Check_UseTimestamp.TabIndex = 27;
-            this.Check_UseTimestamp.Text = "Use Timestamp";
-            this.Check_UseTimestamp.UseVisualStyleBackColor = true;
+            this.Check_LimitTraffic.AutoSize = true;
+            this.Check_LimitTraffic.Location = new System.Drawing.Point(6, 79);
+            this.Check_LimitTraffic.Name = "Check_LimitTraffic";
+            this.Check_LimitTraffic.Size = new System.Drawing.Size(112, 24);
+            this.Check_LimitTraffic.TabIndex = 31;
+            this.Check_LimitTraffic.Text = "Limit traffic";
+            this.Check_LimitTraffic.UseVisualStyleBackColor = true;
             // 
             // OptionsForm
             // 
@@ -469,6 +603,13 @@
             this.ShowInTaskbar = false;
             this.Text = "Options";
             this.GroupBox_General.ResumeLayout(false);
+            this.GroupBox_OnlineSettings.ResumeLayout(false);
+            this.GroupBox_OnlineSettings.PerformLayout();
+            this.GroupBox_TimeBeforeReconnect.ResumeLayout(false);
+            this.GroupBox_TimeBeforeReconnect.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_ReconnectDelay)).EndInit();
+            this.GroupBox_OnlineBehaviour.ResumeLayout(false);
+            this.GroupBox_OnlineBehaviour.PerformLayout();
             this.GroupBox_SaveToFileSettings.ResumeLayout(false);
             this.GroupBox_SaveToFileSettings.PerformLayout();
             this.GroupBox_BehaviourAndVisuals.ResumeLayout(false);
@@ -517,5 +658,15 @@
         private System.Windows.Forms.CheckBox Check_OpenWithWin;
         private System.Windows.Forms.CheckBox Check_OnlineMode;
         private System.Windows.Forms.CheckBox Check_UseTimestamp;
+        private System.Windows.Forms.GroupBox GroupBox_OnlineSettings;
+        private System.Windows.Forms.CheckBox Check_IncludeDeviceName;
+        private System.Windows.Forms.GroupBox GroupBox_OnlineBehaviour;
+        private System.Windows.Forms.Label Label_OnlineBehaviourExplanation;
+        private System.Windows.Forms.RadioButton Radio_ReceiveOnly;
+        private System.Windows.Forms.RadioButton Radio_SendOnly;
+        private System.Windows.Forms.GroupBox GroupBox_TimeBeforeReconnect;
+        private System.Windows.Forms.Label Label_Seconds;
+        private System.Windows.Forms.NumericUpDown numeric_ReconnectDelay;
+        private System.Windows.Forms.CheckBox Check_LimitTraffic;
     }
 }

@@ -142,6 +142,24 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Include device name in copy history.
+        /// </summary>
+        internal static string Check_IncludeDeviceName {
+            get {
+                return ResourceManager.GetString("Check_IncludeDeviceName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Limited Traffic.
+        /// </summary>
+        internal static string Check_LimitTraffic {
+            get {
+                return ResourceManager.GetString("Check_LimitTraffic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Notify me if I copy something.
         /// </summary>
         internal static string Check_NotifyOfCopy {
@@ -295,11 +313,38 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Application Online behaviour.
+        /// </summary>
+        internal static string GroupBox_OnlineBehaviour {
+            get {
+                return ResourceManager.GetString("GroupBox_OnlineBehaviour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Online Settings.
+        /// </summary>
+        internal static string GroupBox_OnlineSettings {
+            get {
+                return ResourceManager.GetString("GroupBox_OnlineSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save to file settings.
         /// </summary>
         internal static string GroupBox_SaveToFileSettings {
             get {
                 return ResourceManager.GetString("GroupBox_SaveToFileSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delay before trying to reconnect.
+        /// </summary>
+        internal static string GroupBox_TimeBeforeReconnect {
+            get {
+                return ResourceManager.GetString("GroupBox_TimeBeforeReconnect", resourceCulture);
             }
         }
         
@@ -357,6 +402,25 @@ namespace ClipboardMonitorLite.Languages {
         internal static string Label_NoAdminRights {
             get {
                 return ResourceManager.GetString("Label_NoAdminRights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set how the application will handle
+        ///online interactions with other devices..
+        /// </summary>
+        internal static string Label_OnlineBehaviourExplanation {
+            get {
+                return ResourceManager.GetString("Label_OnlineBehaviourExplanation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seconds.
+        /// </summary>
+        internal static string Label_Seconds {
+            get {
+                return ResourceManager.GetString("Label_Seconds", resourceCulture);
             }
         }
         
@@ -557,6 +621,33 @@ namespace ClipboardMonitorLite.Languages {
         internal static string Radio_Minimize {
             get {
                 return ResourceManager.GetString("Radio_Minimize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Receive only.
+        /// </summary>
+        internal static string Radio_ReceiveOnly {
+            get {
+                return ResourceManager.GetString("Radio_ReceiveOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send and Receive.
+        /// </summary>
+        internal static string Radio_SendAndReceive {
+            get {
+                return ResourceManager.GetString("Radio_SendAndReceive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send only.
+        /// </summary>
+        internal static string Radio_SendOnly {
+            get {
+                return ResourceManager.GetString("Radio_SendOnly", resourceCulture);
             }
         }
         

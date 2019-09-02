@@ -73,6 +73,24 @@ namespace ClipboardMonitorLite
             Check_UseTimestamp.DataBindings.Add("Checked", _settings, "UseTimestamp",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
+            Check_LimitTraffic.DataBindings.Add("Checked", _settings, "LimitTraffic",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            Radio_SendOnly.DataBindings.Add("Enabled", _settings, "LimitTraffic",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            Radio_ReceiveOnly.DataBindings.Add("Enabled", _settings, "LimitTraffic",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            Radio_SendOnly.DataBindings.Add("Checked", _settings, "SendOnly",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            numeric_ReconnectDelay.DataBindings.Add("Value", _settings, "RetryConnectionAfter",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            Check_IncludeDeviceName.DataBindings.Add("Checked", _settings, "IncludeDeviceName",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
             numeric_clearAfter.DataBindings.Add("Enabled", _settings, "AutoClearClipboardHistory",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
@@ -90,7 +108,6 @@ namespace ClipboardMonitorLite
         private void Btn_apply_Click(object sender, EventArgs e)
         {
             Close();
-            Dispose();
         }
 
         private void Combo_lang_SelectedIndexChanged(object sender, EventArgs e)

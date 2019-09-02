@@ -189,7 +189,6 @@ namespace ClipboardMonitorLite.SettingsManager
         }
 
         private bool useTimestamp;
-
         public bool UseTimestamp
         {
             get
@@ -203,6 +202,61 @@ namespace ClipboardMonitorLite.SettingsManager
             }
         }
 
+        private bool limitTraffic;
+        public bool LimitTraffic
+        {
+            get
+            {
+                return limitTraffic;
+            }
+            set
+            {
+                limitTraffic = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("LimitTraffic"));
+            }
+        }
+
+        private bool sendOnly;
+        public bool SendOnly
+        {
+            get
+            {
+                return sendOnly;
+            }
+            set
+            {
+                sendOnly = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("SendOnly"));
+            }
+        }
+
+        private int retryConnectionAfter;
+        public int RetryConnectionAfter
+        {
+            get
+            {
+                return retryConnectionAfter;
+            }
+            set
+            {
+                retryConnectionAfter = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("RetryConnectionAfter"));
+            }
+        }
+
+        private bool includeDeviceName;
+        public bool IncludeDeviceName
+        {
+            get
+            {
+                return includeDeviceName;
+            }
+            set
+            {
+                includeDeviceName = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("IncludeDeviceName"));
+            }
+        }
 
         private void InvokePropertyChanged(PropertyChangedEventArgs e)
         {

@@ -1,22 +1,22 @@
 ﻿using System;
+using Newtonsoft.Json;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using ClipboardMonitorLite.Resources;
 using Microsoft.AspNetCore.SignalR.Client;
 using ClipboardMonitorLite.SettingsManager;
-using Newtonsoft.Json;
 using ClipboardMonitorLite.ClipboardActions;
-using ClipboardMonitorLite.Resources;
 
 namespace ClipboardMonitorLite.Cloud
 {
     public class CloudInteractions
     {
-        private Settings _settings;
-        private InboundMessage _inboundMessage;
-        private HubConnection connection;
-        private ClipboardManager _clipboardManager;
-        private OutgoingMessage _outgoingMessage;
         private Random rng;
+        private Settings _settings;
+        private HubConnection connection;
+        private InboundMessage _inboundMessage;
+        private OutgoingMessage _outgoingMessage;
+        private ClipboardManager _clipboardManager;
 
         public CloudInteractions(InboundMessage inboundMessage, OutgoingMessage outgoingMessage, Settings settings, ClipboardManager clipManager)
         {

@@ -5,9 +5,9 @@ namespace ClipboardMonitorLite.ClipboardActions
 {
     public class AutoHistoryCleaner
     {
-        private ClipboardManager _clipManager;
-        private int clearInterval;
         private Timer Timer;
+        private int clearInterval;
+        private ClipboardManager _clipManager;
         public AutoHistoryCleaner(ClipboardManager Clip, Timer timer)
         {
             _clipManager = Clip;

@@ -7,29 +7,28 @@ using ClipboardMonitorLite.Resources;
 using System.Runtime.InteropServices;
 using ClipboardMonitorLite.Exceptions;
 using ClipboardMonitorLite.SettingsManager;
-using Newtonsoft.Json;
 
 namespace ClipboardMonitorLite.ClipboardActions
 {
     public class ClipboardManager : INotifyPropertyChanged
     {
-        private InboundMessage _inboundMessage;
+        private Settings _settings;
+        private bool TextFromCloud;
         private string clipboardhistory;
         private string currentlycopieditem;
-        private static NotificationForm _form;
+        private static NotificationForm form;
+        private InboundMessage _inboundMessage;
+        private OutgoingMessage _outgoingMessage;
         private static ExceptionHandling _exception;
         public static event EventHandler ClipboardUpdate;
         public event PropertyChangedEventHandler PropertyChanged;
-        private OutgoingMessage _outgoingMessage;
-        private Settings _settings;
-        private bool TextFromCloud; // No. Come up with something better.
 
         public ClipboardManager(InboundMessage inboundMessage, OutgoingMessage outgoingMessage, Settings settings)
         {
             ClipboardUpdate += ClipboardChangeEvent_ClipboardUpdate;
             _settings = settings;
             _exception = new ExceptionHandling();
-            _form = new NotificationForm();
+            form = new NotificationForm();
             _inboundMessage = inboundMessage;
             _outgoingMessage = outgoingMessage;
             TextFromCloud = false;

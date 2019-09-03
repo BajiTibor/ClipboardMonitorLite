@@ -30,7 +30,7 @@ namespace ClipboardMonitorLite.Cloud
             onState.ConnectionLife = connection.State;
             if (_settings.OnlineMode)
             {
-               StartListening();
+                StartListening();
             }
             _settings.PropertyChanged += OnlineModeChanged;
             _outgoingMessage.PropertyChanged += NewMessageToSend;
@@ -38,15 +38,21 @@ namespace ClipboardMonitorLite.Cloud
 
         private async void NewMessageToSend(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName.Equals("MachineName"))
+            if ((_settings.LimitTraffic && _settings.SendOnly) || (!_settings.LimitTraffic))
             {
-                await connection.SendAsync("broadcastMessage", rng.Next(), JsonConvert.SerializeObject(_outgoingMessage));
+                if (e.PropertyName.Equals("MachineName"))
+                {
+                    await connection.SendAsync("broadcastMessage", rng.Next(), JsonConvert.SerializeObject(_outgoingMessage));
+                }
             }
         }
 
         private void MessageArrived(InboundMessage message, int idNum)
         {
-            _clipboardManager.MessageFromCloud(message, idNum);   
+            if ((_settings.LimitTraffic && !_settings.SendOnly) || (!_settings.LimitTraffic))
+            {
+                _clipboardManager.MessageFromCloud(message, idNum);
+            }
         }
 
         private void OnlineModeChanged(object sender, PropertyChangedEventArgs e)
@@ -96,7 +102,7 @@ namespace ClipboardMonitorLite.Cloud
                 onState.ConnectionLife = connection.State;
             }
         }
-        
+
         private async Task RetryConnection(int retries)
         {
             int delay = _settings.RetryConnectionAfter;

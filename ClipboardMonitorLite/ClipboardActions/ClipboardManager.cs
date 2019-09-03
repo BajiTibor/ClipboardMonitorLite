@@ -38,7 +38,10 @@ namespace ClipboardMonitorLite.ClipboardActions
         {
             TextFromCloud = true;
             _inboundMessage = inboundMessage;
-            ClipboardHistory += $"{_inboundMessage.MachineName} - ";
+            if (_settings.IncludeDeviceName)
+            {
+                ClipboardHistory += $"{_inboundMessage.MachineName} - ";
+            }
             ChangeTextOnClip(_inboundMessage.Message);
 
         }

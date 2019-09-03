@@ -6,7 +6,7 @@ using ClipboardMonitorLite.Cloud;
 using ClipboardMonitorLite.Resources;
 using System.Runtime.InteropServices;
 using ClipboardMonitorLite.Exceptions;
-using ClipboardMonitorLite.SettingsManager;
+using SettingsLib;
 
 namespace ClipboardMonitorLite.ClipboardActions
 {

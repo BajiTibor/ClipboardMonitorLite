@@ -259,9 +259,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MainResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SettingsManager\CreateJsonFile.cs" />
-    <Compile Include="SettingsManager\SettingsHandler.cs" />
-    <Compile Include="SettingsManager\Settings.cs" />
     <EmbeddedResource Include="Languages\lang_da.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_da.Designer.cs</LastGenOutput>
@@ -365,6 +362,13 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SettingsLib\SettingsLib.csproj">
+      <Project>{16cdbe54-7d1c-4f57-8abf-7e8520b95b49}</Project>
+      <Name>SettingsLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

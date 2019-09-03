@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using ClipboardMonitorLite.Cloud;
 using ClipboardMonitorLite.FormControls;
 using ClipboardMonitorLite.FileOperations;
-using ClipboardMonitorLite.SettingsManager;
+using SettingsLib;
 using ClipboardMonitorLite.ClipboardActions;
 using ClipboardMonitorLite.Languages.LanguageControl;
 

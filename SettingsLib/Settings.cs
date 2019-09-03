@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace ClipboardMonitorLite.SettingsManager
+namespace SettingsLib
 {
     public class Settings : INotifyPropertyChanged
     {

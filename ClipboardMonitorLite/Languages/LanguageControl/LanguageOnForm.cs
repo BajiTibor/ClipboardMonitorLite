@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Windows.Forms;
 using ClipboardMonitorLite.FormControls;
-using ClipboardMonitorLite.SettingsManager;
+using SettingsLib;
 
 namespace ClipboardMonitorLite.Languages.LanguageControl
 {

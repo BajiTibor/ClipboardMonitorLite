@@ -1,4 +1,5 @@
 ﻿using System;
+using CloudConnectionLib;
 using System.Windows.Forms;
 
 namespace ClipboardMonitorLite.Cloud
@@ -17,7 +18,7 @@ namespace ClipboardMonitorLite.Cloud
 
         private void TimeElapsed(object sender, EventArgs e)
         {
-            ConnectionLabel.Text = OnlineState.ConnectionLife.ToString();
+            ConnectionLabel.Text = OnlineState.ConnectionLife;
         }
     }
 }

@@ -6,7 +6,7 @@ using ClipboardMonitorLite.Resources;
 using System.Runtime.InteropServices;
 using ClipboardMonitorLite.Exceptions;
 using SettingsLib;
-using CloudMessageLib;
+using CloudConnectionLib.Messages;
 
 namespace ClipboardMonitorLite.ClipboardActions
 {
@@ -32,16 +32,20 @@ namespace ClipboardMonitorLite.ClipboardActions
             _inboundMessage = inboundMessage;
             _outgoingMessage = outgoingMessage;
             TextFromCloud = false;
+            _inboundMessage.PropertyChanged += _inboundMessage_PropertyChanged;
         }
-        public void MessageFromCloud(InboundMessage inboundMessage)
+
+        private void _inboundMessage_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            TextFromCloud = true;
-            _inboundMessage = inboundMessage;
-            if (_settings.IncludeDeviceName)
+            if (e.PropertyName.Equals("MachineName"))
             {
-                ClipboardHistory += $"{_inboundMessage.MachineName} - ";
+                TextFromCloud = true;
+                if (_settings.IncludeDeviceName)
+                {
+                    ClipboardHistory += $"{_inboundMessage.MachineName} - ";
+                }
+                ChangeTextOnClip(_inboundMessage.Message);
             }
-            ChangeTextOnClip(_inboundMessage.Message);
         }
 
         private void ClipChanged(bool NeedsToSend = true)

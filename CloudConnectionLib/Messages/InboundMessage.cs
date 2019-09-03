@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace CloudMessageLib
+namespace CloudConnectionLib.Messages
 {
     public class InboundMessage : INotifyPropertyChanged
     {

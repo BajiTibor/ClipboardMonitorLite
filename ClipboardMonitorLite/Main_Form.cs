@@ -1,10 +1,11 @@
 ﻿using System;
+using SettingsLib;
+using CloudConnectionLib;
 using System.Windows.Forms;
 using ClipboardMonitorLite.Cloud;
+using CloudConnectionLib.Messages;
 using ClipboardMonitorLite.FormControls;
 using ClipboardMonitorLite.FileOperations;
-using SettingsLib;
-using CloudMessageLib;
 using ClipboardMonitorLite.ClipboardActions;
 using ClipboardMonitorLite.Languages.LanguageControl;
 
@@ -34,7 +35,7 @@ namespace ClipboardMonitorLite
             _inboundMessage = new InboundMessage();
             _outgoingMessage = new OutgoingMessage();
             _clipboardManager = new ClipboardManager(_inboundMessage, _outgoingMessage, _settings);
-            _cloudInteractions = new CloudInteractions(_inboundMessage, _outgoingMessage, _settings, _clipboardManager);
+            _cloudInteractions = new CloudInteractions(_inboundMessage, _outgoingMessage, _settings);
             _writeHistoryFile = new WriteHistoryFile(_clipboardManager, _settings);
             _languageOnForm = new LanguageOnForm();
             _formEvents = new FormEvents(_clipboardManager, notificationIcon, this, _settings, _writeHistoryFile);

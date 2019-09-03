@@ -147,6 +147,9 @@
   <data name="Check_IncludeDeviceName" xml:space="preserve">
     <value>Sisällytä laitteen nimi kopiointihistoriaan</value>
   </data>
+  <data name="Check_LimitTraffic" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
     <value>Huomauta jos kopioin jotakin</value>
   </data>

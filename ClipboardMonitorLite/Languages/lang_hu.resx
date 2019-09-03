@@ -147,6 +147,9 @@
   <data name="Check_IncludeDeviceName" xml:space="preserve">
     <value>Eszköz nevének megjelenítése az előzményekben</value>
   </data>
+  <data name="Check_LimitTraffic" xml:space="preserve">
+    <value>Limitált adatforgalom</value>
+  </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
     <value>Értesíts, amikor kimásolok valamit</value>
   </data>
@@ -223,7 +226,7 @@
     <value>Nyelv</value>
   </data>
   <data name="Label_Minutes" xml:space="preserve">
-    <value>Perc</value>
+    <value>Percben</value>
   </data>
   <data name="Label_NoAdminRights" xml:space="preserve">
     <value>Úgy tűnik hogy nincs Admin jogod, illetve

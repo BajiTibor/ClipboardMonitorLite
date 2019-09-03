@@ -151,6 +151,15 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Limitált adatforgalom.
+        /// </summary>
+        internal static string Check_LimitTraffic {
+            get {
+                return ResourceManager.GetString("Check_LimitTraffic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Értesíts, amikor kimásolok valamit.
         /// </summary>
         internal static string Check_NotifyOfCopy {
@@ -376,7 +385,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Perc.
+        ///   Looks up a localized string similar to Percben.
         /// </summary>
         internal static string Label_Minutes {
             get {

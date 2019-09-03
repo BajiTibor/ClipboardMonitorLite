@@ -145,6 +145,9 @@
     <value>Selv-rens Kopier</value>
   </data>
   <data name="Check_IncludeDeviceName" xml:space="preserve">
+    <value>Indehold enhedsnavnet i kopi historien</value>
+  </data>
+  <data name="Check_LimitTraffic" xml:space="preserve">
     <value>NEEDS TRANSLATION</value>
   </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
@@ -169,7 +172,7 @@
     <value>Opdatér ved opstart</value>
   </data>
   <data name="Check_UseTimestamp" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Indehold Klokkeslæt</value>
   </data>
   <data name="Check_UseWhiteIcon" xml:space="preserve">
     <value>Brug hvidt ikon i proceslinjen</value>
@@ -199,16 +202,16 @@
     <value>Generelt</value>
   </data>
   <data name="GroupBox_OnlineBehaviour" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Programmets Online opførsel</value>
   </data>
   <data name="GroupBox_OnlineSettings" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Online Indstillinger</value>
   </data>
   <data name="GroupBox_SaveToFileSettings" xml:space="preserve">
     <value>Gem indstillinger til fil</value>
   </data>
   <data name="GroupBox_TimeBeforeReconnect" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Tid før forbindelse genoprettes</value>
   </data>
   <data name="GroupBox_UpdateAndCurrentVersion" xml:space="preserve">
     <value>Vedrørende nuværende version og opdatering</value>
@@ -232,10 +235,11 @@ programmet med administrator-rettigheder
 for optimal funktionalitet.</value>
   </data>
   <data name="Label_OnlineBehaviourExplanation" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Se hvordan programmet behandler online
+andvendelse med andre enheder.</value>
   </data>
   <data name="Label_Seconds" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Sekunder</value>
   </data>
   <data name="Label_ShowNotificationFor" xml:space="preserve">
     <value>Vis notifikation i (sekunder)</value>
@@ -305,13 +309,13 @@ kun gemme filen, når filen er lukket.</value>
     <value>Minimér til proceslinje</value>
   </data>
   <data name="Radio_ReceiveOnly" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Kun modtagelse</value>
   </data>
   <data name="Radio_SendAndReceive" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Afsend og Modtag</value>
   </data>
   <data name="Radio_SendOnly" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Kun afsendelse</value>
   </data>
   <data name="SaveAsTextFile" xml:space="preserve">
     <value>Gem historien til text fil</value>

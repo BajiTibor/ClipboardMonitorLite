@@ -142,11 +142,20 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Indehold enhedsnavnet i kopi historien.
         /// </summary>
         internal static string Check_IncludeDeviceName {
             get {
                 return ResourceManager.GetString("Check_IncludeDeviceName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        /// </summary>
+        internal static string Check_LimitTraffic {
+            get {
+                return ResourceManager.GetString("Check_LimitTraffic", resourceCulture);
             }
         }
         
@@ -214,7 +223,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Indehold Klokkeslæt.
         /// </summary>
         internal static string Check_UseTimestamp {
             get {
@@ -304,7 +313,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Programmets Online opførsel.
         /// </summary>
         internal static string GroupBox_OnlineBehaviour {
             get {
@@ -313,7 +322,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Online Indstillinger.
         /// </summary>
         internal static string GroupBox_OnlineSettings {
             get {
@@ -331,7 +340,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Tid før forbindelse genoprettes.
         /// </summary>
         internal static string GroupBox_TimeBeforeReconnect {
             get {
@@ -397,7 +406,8 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Se hvordan programmet behandler online
+        ///andvendelse med andre enheder..
         /// </summary>
         internal static string Label_OnlineBehaviourExplanation {
             get {
@@ -406,7 +416,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Sekunder.
         /// </summary>
         internal static string Label_Seconds {
             get {
@@ -614,7 +624,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Kun modtagelse.
         /// </summary>
         internal static string Radio_ReceiveOnly {
             get {
@@ -623,7 +633,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Afsend og Modtag.
         /// </summary>
         internal static string Radio_SendAndReceive {
             get {
@@ -632,7 +642,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Kun afsendelse.
         /// </summary>
         internal static string Radio_SendOnly {
             get {

@@ -147,6 +147,9 @@
   <data name="Check_IncludeDeviceName" xml:space="preserve">
     <value>Isama ang pangalan ng aparato sa kasaysayang kopya</value>
   </data>
+  <data name="Check_LimitTraffic" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
     <value>Sabihan ako pag may na kopya ako</value>
   </data>

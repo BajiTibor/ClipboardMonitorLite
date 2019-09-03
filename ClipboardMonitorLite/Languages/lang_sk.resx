@@ -147,6 +147,9 @@
   <data name="Check_IncludeDeviceName" xml:space="preserve">
     <value>Uveď zariadenie v histórii kopírovania</value>
   </data>
+  <data name="Check_LimitTraffic" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
     <value>Ohlás ma ak niečo skopírujem</value>
   </data>

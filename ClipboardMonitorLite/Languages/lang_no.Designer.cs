@@ -151,6 +151,15 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        /// </summary>
+        internal static string Check_LimitTraffic {
+            get {
+                return ResourceManager.GetString("Check_LimitTraffic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gi meg beskjed hvis jeg kopierer noe.
         /// </summary>
         internal static string Check_NotifyOfCopy {

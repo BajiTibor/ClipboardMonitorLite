@@ -2,7 +2,7 @@
 
 namespace ClipboardMonitorLite.Cloud
 {
-    public class ClipMessage : INotifyPropertyChanged
+    public class InboundMessage : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

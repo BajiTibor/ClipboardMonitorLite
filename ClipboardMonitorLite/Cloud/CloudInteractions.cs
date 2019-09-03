@@ -3,21 +3,29 @@ using System.ComponentModel;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR.Client;
 using ClipboardMonitorLite.SettingsManager;
+using Newtonsoft.Json;
+using ClipboardMonitorLite.ClipboardActions;
+using ClipboardMonitorLite.Resources;
 
 namespace ClipboardMonitorLite.Cloud
 {
     public class CloudInteractions
     {
         private Settings _settings;
-        private ClipMessage _message;
+        private InboundMessage _inboundMessage;
         private HubConnection connection;
-        private OnlineItem _newItem;
+        private ClipboardManager _clipboardManager;
+        private OutgoingMessage _outgoingMessage;
+        private Random rng;
 
-        public CloudInteractions(ClipMessage message, Settings settings)
+        public CloudInteractions(InboundMessage inboundMessage, OutgoingMessage outgoingMessage, Settings settings, ClipboardManager clipManager)
         {
             connection = new HubConnectionBuilder().WithUrl("http://clipmanagerweb.azurewebsites.net/broadcast").Build();
             _settings = settings;
-            _message = message;
+            _inboundMessage = inboundMessage;
+            _outgoingMessage = outgoingMessage;
+            _clipboardManager = clipManager;
+            rng = new Random();
 
             onState.ConnectionLife = connection.State;
             if (_settings.OnlineMode)
@@ -25,6 +33,20 @@ namespace ClipboardMonitorLite.Cloud
                StartListening();
             }
             _settings.PropertyChanged += OnlineModeChanged;
+            _outgoingMessage.PropertyChanged += NewMessageToSend;
+        }
+
+        private async void NewMessageToSend(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName.Equals("MachineName"))
+            {
+                await connection.SendAsync("broadcastMessage", rng.Next(), JsonConvert.SerializeObject(_outgoingMessage));
+            }
+        }
+
+        private void MessageArrived(InboundMessage message, int idNum)
+        {
+            _clipboardManager.MessageFromCloud(message, idNum);   
         }
 
         private void OnlineModeChanged(object sender, PropertyChangedEventArgs e)
@@ -50,9 +72,11 @@ namespace ClipboardMonitorLite.Cloud
                 await connection.StartAsync();
                 connection.On<string, string>("broadcastMessage", (user, message) =>
                 {
-                        _message.Message = message;
-                        _message.MachineName = user;
-                    
+                    _inboundMessage = JsonConvert.DeserializeObject<InboundMessage>(message);
+                    if (!_inboundMessage.MachineName.Equals(Constants.MachineName))
+                    {
+                        MessageArrived(_inboundMessage, int.Parse(user));
+                    }
                 });
                 connection.Closed += Connection_Closed;
                 onState.ConnectionLife = connection.State;
@@ -61,11 +85,6 @@ namespace ClipboardMonitorLite.Cloud
             {
                 await RetryConnection(0);
             }
-        }
-
-        public async void SendText(string MachineName, string Text)
-        {
-            await connection.SendAsync("broadcastMessage", MachineName, Text);
         }
 
         private async Task Connection_Closed(Exception arg)

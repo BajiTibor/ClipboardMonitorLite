@@ -15,7 +15,7 @@ namespace ClipboardMonitorLite
         private Settings _settings;
         private WinStartup _startup;
         private CreateJsonFile _file;
-        private ClipMessage _message;
+        private InboundMessage _inboundMessage;
         private SaveHistory _historyFile;
         private FormEvents _buttonActions;
         private SetLanguageOnForm _langChange;
@@ -23,6 +23,7 @@ namespace ClipboardMonitorLite
         private SettingsHandler _settingsHandler;
         private CloudInteractions _cloud;
         private CheckConnection _connectionState;
+        private OutgoingMessage _outgoingMessage;
 
         public MainForm()
         {
@@ -30,9 +31,13 @@ namespace ClipboardMonitorLite
             _file = new CreateJsonFile();
             _settingsHandler = new SettingsHandler();
             _settings = _settingsHandler.LoadSettingsFile();
-            _message = new ClipMessage();
-            _cloud = new CloudInteractions(_message, _settings);
-            _clipManager = new ClipboardManager(_cloud, _message, _settings);
+
+            _inboundMessage = new InboundMessage();
+            _outgoingMessage = new OutgoingMessage();
+
+            _clipManager = new ClipboardManager(_inboundMessage, _outgoingMessage, _settings);
+            _cloud = new CloudInteractions(_inboundMessage, _outgoingMessage, _settings, _clipManager);
+
 
             _historyFile = new SaveHistory(_clipManager, _settings);
             _langChange = new SetLanguageOnForm();

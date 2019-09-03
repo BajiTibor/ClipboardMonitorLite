@@ -7,100 +7,84 @@ using ClipboardMonitorLite.Resources;
 using System.Runtime.InteropServices;
 using ClipboardMonitorLite.Exceptions;
 using ClipboardMonitorLite.SettingsManager;
+using Newtonsoft.Json;
 
 namespace ClipboardMonitorLite.ClipboardActions
 {
     public class ClipboardManager : INotifyPropertyChanged
     {
-        private ClipMessage _message;
+        private InboundMessage _inboundMessage;
         private string clipboardhistory;
-        private CloudInteractions _cloud;
         private string currentlycopieditem;
         private static NotificationForm _form;
         private static ExceptionHandling _exception;
         public static event EventHandler ClipboardUpdate;
         public event PropertyChangedEventHandler PropertyChanged;
+        private OutgoingMessage _outgoingMessage;
         private Settings _settings;
-        private bool TextFromCloud;
+        private bool TextFromCloud; // No. Come up with something better.
 
-        public ClipboardManager(CloudInteractions cloud, ClipMessage message, Settings settings)
+        public ClipboardManager(InboundMessage inboundMessage, OutgoingMessage outgoingMessage, Settings settings)
         {
             ClipboardUpdate += ClipboardChangeEvent_ClipboardUpdate;
             _settings = settings;
             _exception = new ExceptionHandling();
             _form = new NotificationForm();
-            _message = message;
-            _cloud = cloud;
-            _message.PropertyChanged += MessageChanged;
+            _inboundMessage = inboundMessage;
+            _outgoingMessage = outgoingMessage;
             TextFromCloud = false;
         }
-         // So many issues, the machine name first doesn't appear then two of them appear, then this pattern continues.
-        public void MessageFromCloud()
+        public void MessageFromCloud(InboundMessage inboundMessage, int idNum)
         {
-            if (_settings.LimitTraffic && !_settings.SendOnly)
-            {
-                SetFromCloud();
-            }
-            else if (!_settings.LimitTraffic)
-            {
-                SetFromCloud();
-            }
-        }
-
-        private void MessageChanged(object sender, PropertyChangedEventArgs e)
-        {
-            if (e.PropertyName == "MachineName")
-            {
-                MessageFromCloud();
-            }
-        }
-
-        private void SetFromCloud()
-        {
-            string CopiedItem = _message.Message;
-            if (_settings.IncludeDeviceName)
-                ClipboardHistory += $"{_message.MachineName} - ";
-            ChangeTextOnClip(CopiedItem);
             TextFromCloud = true;
+            _inboundMessage = inboundMessage;
+            ClipboardHistory += $"{_inboundMessage.MachineName} - ";
+            ChangeTextOnClip(_inboundMessage.Message);
+
+        }
+
+        private void ClipChanged(bool NeedsToSend = true)
+        {
+            string CurrentCopy = GetClipText();
+            if (!string.IsNullOrWhiteSpace(CurrentCopy) && !CurrentCopy.Equals(currentlycopieditem))
+            {
+                CurrentlyCopiedItem = CurrentCopy;
+                var timeStamp = ($"{ DateTime.Now.ToShortTimeString() } - ");
+                if (_settings.UseTimestamp)
+                {
+                    ClipboardHistory += ($"{timeStamp}{CurrentCopy}\n");
+                }
+                else
+                {
+                    ClipboardHistory += ($"{CurrentCopy}\n");
+                }
+                if (_settings.OnlineMode && NeedsToSend)
+                {
+                    try
+                    {
+                        _outgoingMessage.Message = CurrentCopy;
+                        _outgoingMessage.MachineName = Constants.MachineName;
+                    }
+                    catch (Exception ex)
+                    {
+                        _exception.Handle(ex);
+                    }
+                }
+            }
+
         }
 
         private void ClipboardChangeEvent_ClipboardUpdate(object sender, EventArgs e)
         {
-            string CopiedItem = GetClipText();
-            if (!string.IsNullOrWhiteSpace(CopiedItem) && !CopiedItem.Equals(currentlycopieditem))
+            if (!TextFromCloud)
             {
-                CurrentlyCopiedItem = CopiedItem;
-                var timeStamp = ($"{ DateTime.Now.ToShortTimeString() } - ");
-
-
-                if (_settings.UseTimestamp)
-                {
-                    ClipboardHistory += ($"{timeStamp}{CopiedItem}\n");
-                }
-                else
-                {
-                    ClipboardHistory += ($"{CopiedItem}\n");
-                }
-                if (!TextFromCloud)
-                {
-                    if (_settings.OnlineMode)
-                    {
-                        try
-                        {
-                            if (!_settings.LimitTraffic)
-                                _cloud.SendText(Constants.MachineName, CopiedItem);
-                            else if (_settings.LimitTraffic && _settings.SendOnly)
-                                _cloud.SendText(Constants.MachineName, CopiedItem);
-                        }
-                        catch (Exception ex)
-                        {
-                            _exception.Handle(ex);
-                        }
-                    }
-                }
+                ClipChanged();
+            }
+            else
+            {
+                ClipChanged(false);
                 TextFromCloud = false;
             }
-
         }
 
         public void ClearClip()

@@ -7,7 +7,7 @@ using ClipboardMonitorLite.SettingsManager;
 
 namespace ClipboardMonitorLite.FileOperations
 {
-    public class WinStartup
+    public class LaunchOnStartup
     {
         private Settings _settings;
         private string shortcutName;
@@ -15,7 +15,7 @@ namespace ClipboardMonitorLite.FileOperations
         private string targetFileLocation;
         private string targetWorkingFolder;
 
-        public WinStartup(Settings settings)
+        public LaunchOnStartup(Settings settings)
         {
             _settings = settings;
             shortcutName = "ClipboardManagerLite";

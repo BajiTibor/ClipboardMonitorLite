@@ -17,7 +17,7 @@ namespace ClipboardMonitorLite.Cloud
 
         private void TimeElapsed(object sender, EventArgs e)
         {
-            ConnectionLabel.Text = onState.ConnectionLife.ToString();
+            ConnectionLabel.Text = OnlineState.ConnectionLife.ToString();
         }
     }
 }

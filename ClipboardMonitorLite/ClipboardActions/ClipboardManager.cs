@@ -33,7 +33,7 @@ namespace ClipboardMonitorLite.ClipboardActions
             _outgoingMessage = outgoingMessage;
             TextFromCloud = false;
         }
-        public void MessageFromCloud(InboundMessage inboundMessage, int idNum)
+        public void MessageFromCloud(InboundMessage inboundMessage)
         {
             TextFromCloud = true;
             _inboundMessage = inboundMessage;
@@ -42,7 +42,6 @@ namespace ClipboardMonitorLite.ClipboardActions
                 ClipboardHistory += $"{_inboundMessage.MachineName} - ";
             }
             ChangeTextOnClip(_inboundMessage.Message);
-
         }
 
         private void ClipChanged(bool NeedsToSend = true)

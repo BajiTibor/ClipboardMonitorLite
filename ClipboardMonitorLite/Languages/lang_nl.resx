@@ -148,7 +148,7 @@
     <value>Apparaat naam bijvoegen in kopie geschiedenis</value>
   </data>
   <data name="Check_LimitTraffic" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Verbinding Beperken</value>
   </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
     <value>Laat een notificatie zien als ik iets kopieer</value>

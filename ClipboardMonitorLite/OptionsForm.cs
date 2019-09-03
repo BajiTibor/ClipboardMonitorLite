@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Reflection;
 using System.Windows.Forms;
-using ClipboardMonitorLite.Languages.LanguageControl;
 using ClipboardMonitorLite.FormControls;
 using ClipboardMonitorLite.SettingsManager;
+using ClipboardMonitorLite.Languages.LanguageControl;
 
 namespace ClipboardMonitorLite
 {
     public partial class OptionsForm : Form
     {
         private Settings _settings;
-        private FormEvents _buttonActions;
-        private SetLanguageOnForm _langChange;
+        private FormEvents _formEvents;
+        private LanguageOnForm _languageOnForm;
 
         public OptionsForm(Settings settings, FormEvents buttonActions)
         {
-            _buttonActions = buttonActions;
-            _langChange = new SetLanguageOnForm();
+            _formEvents = buttonActions;
+            _languageOnForm = new LanguageOnForm();
             _settings = settings;
             InitializeComponent();
             InitializeLanguage();
@@ -26,7 +26,7 @@ namespace ClipboardMonitorLite
 
         private void BindButtonEvents()
         {
-            Btn_Browse.Click += _buttonActions.OpenFileBrowserClick;
+            Btn_Browse.Click += _formEvents.OpenFileBrowserClick;
         }
 
         private void InitializeProperties()
@@ -118,7 +118,7 @@ namespace ClipboardMonitorLite
 
         private void InitializeLanguage()
         {
-            _langChange.SetLang(_settings, this);
+            _languageOnForm.SetLang(_settings, this);
             Label_Version.Text += Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
     }

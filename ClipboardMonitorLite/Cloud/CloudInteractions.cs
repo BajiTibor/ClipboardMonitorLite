@@ -27,7 +27,7 @@ namespace ClipboardMonitorLite.Cloud
             _clipboardManager = clipManager;
             rng = new Random();
 
-            onState.ConnectionLife = connection.State;
+            OnlineState.ConnectionLife = connection.State;
             if (_settings.OnlineMode)
             {
                 StartListening();
@@ -51,7 +51,7 @@ namespace ClipboardMonitorLite.Cloud
         {
             if ((_settings.LimitTraffic && !_settings.SendOnly) || (!_settings.LimitTraffic))
             {
-                _clipboardManager.MessageFromCloud(message, idNum);
+                _clipboardManager.MessageFromCloud(message);
             }
         }
 
@@ -85,7 +85,7 @@ namespace ClipboardMonitorLite.Cloud
                     }
                 });
                 connection.Closed += Connection_Closed;
-                onState.ConnectionLife = connection.State;
+                OnlineState.ConnectionLife = connection.State;
             }
             catch
             {
@@ -95,11 +95,11 @@ namespace ClipboardMonitorLite.Cloud
 
         private async Task Connection_Closed(Exception arg)
         {
-            onState.ConnectionLife = connection.State;
+            OnlineState.ConnectionLife = connection.State;
             if (_settings.OnlineMode)
             {
                 await RetryConnection(0);
-                onState.ConnectionLife = connection.State;
+                OnlineState.ConnectionLife = connection.State;
             }
         }
 

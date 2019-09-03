@@ -6,19 +6,19 @@ using ClipboardMonitorLite.SettingsManager;
 
 namespace ClipboardMonitorLite.Languages.LanguageControl
 {
-    public class SetLanguageOnForm
+    public class LanguageOnForm
     {
         private Settings _settings;
-        private FormControl _controls;
+        private FormControl _formControl;
         private ResourceManager _resManager;
         public void SetLang(Settings settings, Form CurrentForm)
         {
-            _controls = new FormControl();
+            _formControl = new FormControl();
             _settings = settings;
             _resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[_settings.CurrentlySelectedLanguage]}",
                 Assembly.GetExecutingAssembly());
 
-            foreach (var item in _controls.GetControlsForTranslation(CurrentForm))
+            foreach (var item in _formControl.GetControlsForTranslation(CurrentForm))
             {
                 if (!(item is ComboBox) && !(item.Name.Contains("DONOTMODIFY") && !(item is RichTextBox)))
                 {

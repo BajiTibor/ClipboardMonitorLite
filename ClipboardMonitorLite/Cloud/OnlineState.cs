@@ -2,7 +2,7 @@
 
 namespace ClipboardMonitorLite.Cloud
 {
-    public static class onState
+    public static class OnlineState
     {
         public static HubConnectionState ConnectionLife = HubConnectionState.Disconnected;
     }

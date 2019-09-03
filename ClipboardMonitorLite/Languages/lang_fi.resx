@@ -148,7 +148,7 @@
     <value>Sisällytä laitteen nimi kopiointihistoriaan</value>
   </data>
   <data name="Check_LimitTraffic" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Rajoita dataliikennettä</value>
   </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
     <value>Huomauta jos kopioin jotakin</value>

@@ -36,6 +36,7 @@
             this.numeric_ReconnectDelay = new System.Windows.Forms.NumericUpDown();
             this.Check_IncludeDeviceName = new System.Windows.Forms.CheckBox();
             this.GroupBox_OnlineBehaviour = new System.Windows.Forms.GroupBox();
+            this.Check_LimitTraffic = new System.Windows.Forms.CheckBox();
             this.Label_OnlineBehaviourExplanation = new System.Windows.Forms.Label();
             this.Radio_ReceiveOnly = new System.Windows.Forms.RadioButton();
             this.Radio_SendOnly = new System.Windows.Forms.RadioButton();
@@ -74,7 +75,6 @@
             this.Btn_Apply = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.Label_Version = new System.Windows.Forms.Label();
-            this.Check_LimitTraffic = new System.Windows.Forms.CheckBox();
             this.GroupBox_General.SuspendLayout();
             this.GroupBox_OnlineSettings.SuspendLayout();
             this.GroupBox_TimeBeforeReconnect.SuspendLayout();
@@ -174,6 +174,16 @@
             this.GroupBox_OnlineBehaviour.TabStop = false;
             this.GroupBox_OnlineBehaviour.Text = "Application Online behaviour";
             // 
+            // Check_LimitTraffic
+            // 
+            this.Check_LimitTraffic.AutoSize = true;
+            this.Check_LimitTraffic.Location = new System.Drawing.Point(6, 79);
+            this.Check_LimitTraffic.Name = "Check_LimitTraffic";
+            this.Check_LimitTraffic.Size = new System.Drawing.Size(112, 24);
+            this.Check_LimitTraffic.TabIndex = 31;
+            this.Check_LimitTraffic.Text = "Limit traffic";
+            this.Check_LimitTraffic.UseVisualStyleBackColor = true;
+            // 
             // Label_OnlineBehaviourExplanation
             // 
             this.Label_OnlineBehaviourExplanation.AutoSize = true;
@@ -224,9 +234,10 @@
             this.Label_WriteRealTimeInfo.AutoSize = true;
             this.Label_WriteRealTimeInfo.Location = new System.Drawing.Point(33, 137);
             this.Label_WriteRealTimeInfo.Name = "Label_WriteRealTimeInfo";
-            this.Label_WriteRealTimeInfo.Size = new System.Drawing.Size(123, 20);
+            this.Label_WriteRealTimeInfo.Size = new System.Drawing.Size(230, 60);
             this.Label_WriteRealTimeInfo.TabIndex = 6;
-            this.Label_WriteRealTimeInfo.Text = "RealtimeExplain";
+            this.Label_WriteRealTimeInfo.Text = "If real time is turned off, the\r\napplication will only access and\r\nwrite to the f" +
+    "ile when it\'s closed.";
             // 
             // Check_WriteInRealTime
             // 
@@ -576,16 +587,6 @@
             this.Label_Version.Size = new System.Drawing.Size(63, 20);
             this.Label_Version.TabIndex = 5;
             this.Label_Version.Text = "Version";
-            // 
-            // Check_LimitTraffic
-            // 
-            this.Check_LimitTraffic.AutoSize = true;
-            this.Check_LimitTraffic.Location = new System.Drawing.Point(6, 79);
-            this.Check_LimitTraffic.Name = "Check_LimitTraffic";
-            this.Check_LimitTraffic.Size = new System.Drawing.Size(112, 24);
-            this.Check_LimitTraffic.TabIndex = 31;
-            this.Check_LimitTraffic.Text = "Limit traffic";
-            this.Check_LimitTraffic.UseVisualStyleBackColor = true;
             // 
             // OptionsForm
             // 

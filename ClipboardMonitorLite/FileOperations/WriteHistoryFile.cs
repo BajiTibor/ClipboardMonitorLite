@@ -8,25 +8,25 @@ using ClipboardMonitorLite.ClipboardActions;
 
 namespace ClipboardMonitorLite.FileOperations
 {
-    public class SaveHistory
+    public class WriteHistoryFile
     {
         private Settings _settings;
         public string FilePath { get; set; }
-        private ClipboardManager _clipManager;
+        private ClipboardManager _clipboardManager;
         private ExceptionHandling _exceptionHandler;
 
-        public SaveHistory(ClipboardManager clipManager, Settings settings)
+        public WriteHistoryFile(ClipboardManager clipManager, Settings settings)
         {
             _exceptionHandler = new ExceptionHandling();
-            _clipManager = clipManager;
+            _clipboardManager = clipManager;
             _settings = settings;
             FilePath = _settings.HistoryFileLocation;
-            _clipManager.PropertyChanged += SaveNewItem;
-            _settings.PropertyChanged += _settings_PropertyChanged;
+            _clipboardManager.PropertyChanged += SaveNewItem;
+            _settings.PropertyChanged += HistoryFileLocationChanged;
             InitialFilePath();
         }
 
-        private void _settings_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void HistoryFileLocationChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName.Equals("HistoryFileLocation"))
             {
@@ -42,7 +42,7 @@ namespace ClipboardMonitorLite.FileOperations
                 {
                     using (StreamWriter sw = File.AppendText(FilePath))
                     {
-                        await sw.WriteLineAsync(_clipManager.CurrentlyCopiedItem);
+                        await sw.WriteLineAsync(_clipboardManager.CurrentlyCopiedItem);
                     }
                 }
                 catch (Exception ex)
@@ -56,7 +56,7 @@ namespace ClipboardMonitorLite.FileOperations
         {
             using (StreamWriter sw = File.AppendText(FilePath))
             {
-                sw.WriteLine(_clipManager.ClipboardHistory);
+                sw.WriteLine(_clipboardManager.ClipboardHistory);
             }
         }
 

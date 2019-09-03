@@ -151,7 +151,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Verbinding Beperken.
         /// </summary>
         internal static string Check_LimitTraffic {
             get {

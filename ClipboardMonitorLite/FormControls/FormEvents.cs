@@ -4,10 +4,10 @@ using System.Reflection;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.ComponentModel;
-using ClipboardMonitorLite.Languages.LanguageControl;
 using ClipboardMonitorLite.FileOperations;
 using ClipboardMonitorLite.SettingsManager;
 using ClipboardMonitorLite.ClipboardActions;
+using ClipboardMonitorLite.Languages.LanguageControl;
 
 namespace ClipboardMonitorLite.FormControls
 {
@@ -15,21 +15,21 @@ namespace ClipboardMonitorLite.FormControls
     {
         private Form ActiveForm;
         private Settings _settings;
-        private SaveHistory _history;
         private bool exitFileWritten;
         private ResourceManager resManager;
         private NotifyIcon NotificationIcon;
-        private ClipboardManager _clipActions;
-        public FormEvents(ClipboardManager clipManager, NotifyIcon icon, Form form, Settings settings, SaveHistory history)
+        private WriteHistoryFile _writeHistory;
+        private ClipboardManager _clipboardManager;
+        public FormEvents(ClipboardManager clipManager, NotifyIcon icon, Form form, Settings settings, WriteHistoryFile history)
         {
             exitFileWritten = false;
             ActiveForm = form;
-            _clipActions = clipManager;
+            _clipboardManager = clipManager;
             NotificationIcon = icon;
             _settings = settings;
-            _history = history;
+            _writeHistory = history;
             _settings.PropertyChanged += ChangeIconStyle;
-            _clipActions.PropertyChanged += ShowCopyNotification;
+            _clipboardManager.PropertyChanged += ShowCopyNotification;
             SetIconStyle();
             SetWindowStartupState();
         }
@@ -45,7 +45,7 @@ namespace ClipboardMonitorLite.FormControls
 
         private void ShowCopyNotification(object sender, PropertyChangedEventArgs e)
         {
-            if (_settings.NotifyClipboardChange && !string.IsNullOrWhiteSpace(_clipActions.CurrentlyCopiedItem))
+            if (_settings.NotifyClipboardChange && !string.IsNullOrWhiteSpace(_clipboardManager.CurrentlyCopiedItem))
             {
                 RefreshResourceManager();
                 NotificationIcon.BalloonTipText = resManager.GetString("Notif_ItemCopied");
@@ -84,12 +84,12 @@ namespace ClipboardMonitorLite.FormControls
 
         public void ClearClipboardClick(object sender, EventArgs e)
         {
-            _clipActions.ClearClip();
+            _clipboardManager.ClearClip();
         }
 
         public void ClearHistoryClick(object sender, EventArgs e)
         {
-            _clipActions.ClearHistory();
+            _clipboardManager.ClearHistory();
         }
 
         public void DonationClick(object sender, EventArgs e)
@@ -101,7 +101,7 @@ namespace ClipboardMonitorLite.FormControls
         {
             if (_settings.SaveClipboardHistory && !_settings.WriteInRealTime && !exitFileWritten)
             {
-                _history.WriteBeforeExit();
+                _writeHistory.WriteBeforeExit();
                 exitFileWritten = true;
             }
             NotificationIcon.Visible = false;

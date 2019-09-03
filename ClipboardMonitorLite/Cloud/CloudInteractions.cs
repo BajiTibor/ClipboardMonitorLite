@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using ClipboardMonitorLite.Resources;
 using Microsoft.AspNetCore.SignalR.Client;
 using SettingsLib;
+using CloudMessageLib;
 using ClipboardMonitorLite.ClipboardActions;
 
 namespace ClipboardMonitorLite.Cloud

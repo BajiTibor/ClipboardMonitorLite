@@ -4,6 +4,7 @@ using ClipboardMonitorLite.Cloud;
 using ClipboardMonitorLite.FormControls;
 using ClipboardMonitorLite.FileOperations;
 using SettingsLib;
+using CloudMessageLib;
 using ClipboardMonitorLite.ClipboardActions;
 using ClipboardMonitorLite.Languages.LanguageControl;
 

@@ -148,7 +148,7 @@
     <value>Укључи име уређаја у копи историју</value>
   </data>
   <data name="Check_LimitTraffic" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Ограничи саобраћај података</value>
   </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
     <value>Обавести ме ако ископирам нешто</value>

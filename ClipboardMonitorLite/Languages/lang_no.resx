@@ -148,7 +148,7 @@
     <value>Inkluder enhetsnavn i kopihistorikken</value>
   </data>
   <data name="Check_LimitTraffic" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Begrens datatrafikk</value>
   </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
     <value>Gi meg beskjed hvis jeg kopierer noe</value>

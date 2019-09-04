@@ -17,13 +17,13 @@ namespace ClipboardMonitorLite.ClipboardActions
         private string clipboardhistory;
         private string currentlycopieditem;
         private static NotificationForm form;
-        private InboundMessage _inboundMessage;
-        private OutgoingMessage _outgoingMessage;
+        private SignalRMessage _inboundMessage;
+        private SignalRMessage _outgoingMessage;
         private static ExceptionHandling _exception;
         public static event EventHandler ClipboardUpdate;
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public ClipboardManager(InboundMessage inboundMessage, OutgoingMessage outgoingMessage, Settings settings)
+        public ClipboardManager(SignalRMessage inboundMessage, SignalRMessage outgoingMessage, Settings settings)
         {
             ClipboardUpdate += ClipboardChangeEvent_ClipboardUpdate;
             _settings = settings;

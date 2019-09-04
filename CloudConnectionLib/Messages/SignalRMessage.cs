@@ -2,7 +2,7 @@
 
 namespace CloudConnectionLib.Messages
 {
-    public class InboundMessage : INotifyPropertyChanged
+    public class SignalRMessage : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

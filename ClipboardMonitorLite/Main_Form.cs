@@ -16,11 +16,11 @@ namespace ClipboardMonitorLite
         private Settings _settings;
         private FormEvents _formEvents;
         private CreateJsonFile _createJson;
-        private InboundMessage _inboundMessage;
+        private SignalRMessage _inboundMessage;
         private LanguageOnForm _languageOnForm;
+        private SignalRMessage _outgoingMessage;
         private SettingsHandler _settingsHandler;
         private CheckConnection _checkConnection;
-        private OutgoingMessage _outgoingMessage;
         private LaunchOnStartup _startWithWindows;
         private WriteHistoryFile _writeHistoryFile;
         private ClipboardManager _clipboardManager;
@@ -32,8 +32,8 @@ namespace ClipboardMonitorLite
             _createJson = new CreateJsonFile();
             _settingsHandler = new SettingsHandler();
             _settings = _settingsHandler.LoadSettingsFile();
-            _inboundMessage = new InboundMessage();
-            _outgoingMessage = new OutgoingMessage();
+            _inboundMessage = new SignalRMessage();
+            _outgoingMessage = new SignalRMessage();
             _clipboardManager = new ClipboardManager(_inboundMessage, _outgoingMessage, _settings);
             _cloudInteractions = new CloudInteractions(_inboundMessage, _outgoingMessage, _settings);
             _writeHistoryFile = new WriteHistoryFile(_clipboardManager, _settings);

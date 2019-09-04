@@ -12,10 +12,10 @@ namespace CloudConnectionLib
     {
         private Settings _settings;
         private HubConnection connection;
-        private InboundMessage _inboundMessage;
-        private OutgoingMessage _outgoingMessage;
+        private SignalRMessage _inboundMessage;
+        private SignalRMessage _outgoingMessage;
 
-        public CloudInteractions(InboundMessage inboundMessage, OutgoingMessage outgoingMessage, Settings settings)
+        public CloudInteractions(SignalRMessage inboundMessage, SignalRMessage outgoingMessage, Settings settings)
         {
             connection = new HubConnectionBuilder().WithUrl("http://clipmanagerweb.azurewebsites.net/broadcast").Build();
             _settings = settings;
@@ -42,7 +42,7 @@ namespace CloudConnectionLib
             }
         }
 
-        private void MessageArrived(InboundMessage message)
+        private void MessageArrived(SignalRMessage message)
         {
             if ((_settings.LimitTraffic && !_settings.SendOnly) || (!_settings.LimitTraffic))
             {
@@ -74,7 +74,7 @@ namespace CloudConnectionLib
                 await connection.StartAsync();
                 connection.On<string, string>("broadcastMessage", (user, message) =>
                 {
-                    var newMessage = JsonConvert.DeserializeObject<InboundMessage>(message);
+                    var newMessage = JsonConvert.DeserializeObject<SignalRMessage>(message);
                     if (!newMessage.MachineName.Equals(Environment.MachineName))
                     {
                         MessageArrived(newMessage);

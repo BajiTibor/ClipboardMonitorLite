@@ -3,7 +3,7 @@ using System.IO;
 using System.ComponentModel;
 using ClipboardMonitorLite.Resources;
 using ClipboardMonitorLite.Exceptions;
-using ClipboardMonitorLite.SettingsManager;
+using SettingsLib;
 using ClipboardMonitorLite.ClipboardActions;
 
 namespace ClipboardMonitorLite.FileOperations

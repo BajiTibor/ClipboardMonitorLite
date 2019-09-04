@@ -2,11 +2,11 @@
 using System.Text;
 using System.Windows.Forms;
 using System.ComponentModel;
-using ClipboardMonitorLite.Cloud;
 using ClipboardMonitorLite.Resources;
 using System.Runtime.InteropServices;
 using ClipboardMonitorLite.Exceptions;
-using ClipboardMonitorLite.SettingsManager;
+using SettingsLib;
+using CloudConnectionLib.Messages;
 
 namespace ClipboardMonitorLite.ClipboardActions
 {
@@ -17,13 +17,13 @@ namespace ClipboardMonitorLite.ClipboardActions
         private string clipboardhistory;
         private string currentlycopieditem;
         private static NotificationForm form;
-        private InboundMessage _inboundMessage;
-        private OutgoingMessage _outgoingMessage;
+        private SignalRMessage _inboundMessage;
+        private SignalRMessage _outgoingMessage;
         private static ExceptionHandling _exception;
         public static event EventHandler ClipboardUpdate;
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public ClipboardManager(InboundMessage inboundMessage, OutgoingMessage outgoingMessage, Settings settings)
+        public ClipboardManager(SignalRMessage inboundMessage, SignalRMessage outgoingMessage, Settings settings)
         {
             ClipboardUpdate += ClipboardChangeEvent_ClipboardUpdate;
             _settings = settings;
@@ -32,16 +32,20 @@ namespace ClipboardMonitorLite.ClipboardActions
             _inboundMessage = inboundMessage;
             _outgoingMessage = outgoingMessage;
             TextFromCloud = false;
+            _inboundMessage.PropertyChanged += _inboundMessage_PropertyChanged;
         }
-        public void MessageFromCloud(InboundMessage inboundMessage)
+
+        private void _inboundMessage_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            TextFromCloud = true;
-            _inboundMessage = inboundMessage;
-            if (_settings.IncludeDeviceName)
+            if (e.PropertyName.Equals("MachineName"))
             {
-                ClipboardHistory += $"{_inboundMessage.MachineName} - ";
+                TextFromCloud = true;
+                if (_settings.IncludeDeviceName)
+                {
+                    ClipboardHistory += $"{_inboundMessage.MachineName} - ";
+                }
+                ChangeTextOnClip(_inboundMessage.Message);
             }
-            ChangeTextOnClip(_inboundMessage.Message);
         }
 
         private void ClipChanged(bool NeedsToSend = true)

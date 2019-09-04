@@ -13,6 +13,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>ftp://190.100.87.181/VSDeploy/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
@@ -31,8 +33,6 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -80,6 +80,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ClipboardMonitorLite.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.AspNetCore.Connections.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
@@ -182,47 +185,14 @@
   <ItemGroup>
     <Compile Include="ClipboardActions\AutoHistoryCleaner.cs" />
     <Compile Include="Cloud\CheckConnection.cs" />
-    <Compile Include="Cloud\InboundMessage.cs" />
-    <Compile Include="Cloud\CloudInteractions.cs" />
-    <Compile Include="Cloud\OnlineState.cs" />
-    <Compile Include="Cloud\OutgoingMessage.cs" />
     <Compile Include="Exceptions\ExceptionHandling.cs" />
     <Compile Include="FileOperations\LaunchOnStartup.cs" />
     <Compile Include="FormControls\FormControl.cs" />
     <Compile Include="FormControls\FormEvents.cs" />
     <Compile Include="Languages\LanguageControl\LanguageCode.cs" />
+    <Compile Include="Languages\LanguageControl\LanguageOnForm.cs" />
     <Compile Include="Languages\lang_da.Designer.cs">
       <DependentUpon>lang_da.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Languages\lang_sk.Designer.cs">
-      <DependentUpon>lang_sk.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Languages\lang_nl.Designer.cs">
-      <DependentUpon>lang_nl.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Languages\lang_fil.Designer.cs">
-      <DependentUpon>lang_fil.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Languages\lang_sr.Designer.cs">
-      <DependentUpon>lang_sr.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Languages\lang_fi.Designer.cs">
-      <DependentUpon>lang_fi.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Languages\lang_no.Designer.cs">
-      <DependentUpon>lang_no.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -231,12 +201,46 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Languages\lang_hu.Designer.cs">
+    <Compile Include="Languages\lang_fi.Designer.cs">
+      <DependentUpon>lang_fi.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>lang_hu.resx</DependentUpon>
     </Compile>
-    <Compile Include="Languages\LanguageControl\LanguageOnForm.cs" />
+    <Compile Include="Languages\lang_fil.Designer.cs">
+      <DependentUpon>lang_fil.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Languages\lang_hu.Designer.cs">
+      <DependentUpon>lang_hu.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Languages\lang_nl.Designer.cs">
+      <DependentUpon>lang_nl.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Languages\lang_no.Designer.cs">
+      <DependentUpon>lang_no.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Languages\lang_pl.Designer.cs">
+      <DependentUpon>lang_pl.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Languages\lang_sk.Designer.cs">
+      <DependentUpon>lang_sk.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Languages\lang_sr.Designer.cs">
+      <DependentUpon>lang_sr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Main_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,45 +263,45 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MainResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SettingsManager\CreateJsonFile.cs" />
-    <Compile Include="SettingsManager\SettingsHandler.cs" />
-    <Compile Include="SettingsManager\Settings.cs" />
     <EmbeddedResource Include="Languages\lang_da.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_da.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Languages\lang_sk.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>lang_sk.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Languages\lang_nl.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>lang_nl.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Languages\lang_fil.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>lang_fil.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Languages\lang_pl.resx" />
-    <EmbeddedResource Include="Languages\lang_sr.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>lang_sr.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Languages\lang_fi.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>lang_fi.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Languages\lang_no.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>lang_no.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Languages\lang_en.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_en.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Languages\lang_fi.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_fi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\lang_fil.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_fil.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Languages\lang_hu.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_hu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\lang_nl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_nl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\lang_no.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_no.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\lang_pl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_pl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\lang_sk.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_sk.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\lang_sr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_sr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>
@@ -365,6 +369,17 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CloudConnectionLib\CloudConnectionLib.csproj">
+      <Project>{971df3ce-1eb6-41cf-9264-e02d38b62409}</Project>
+      <Name>CloudConnectionLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SettingsLib\SettingsLib.csproj">
+      <Project>{16cdbe54-7d1c-4f57-8abf-7e8520b95b49}</Project>
+      <Name>SettingsLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

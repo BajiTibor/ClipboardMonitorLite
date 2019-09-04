@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace ClipboardMonitorLite.SettingsManager
+namespace SettingsLib
 {
     public class CreateJsonFile
     {

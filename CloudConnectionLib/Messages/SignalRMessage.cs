@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 
-namespace ClipboardMonitorLite.Cloud
+namespace CloudConnectionLib.Messages
 {
-    public class OutgoingMessage : INotifyPropertyChanged
+    public class SignalRMessage : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -33,8 +33,6 @@ namespace ClipboardMonitorLite.Cloud
                 InvokePropertyChanged(new PropertyChangedEventArgs("MachineName"));
             }
         }
-
-
 
         private void InvokePropertyChanged(PropertyChangedEventArgs e)
         {

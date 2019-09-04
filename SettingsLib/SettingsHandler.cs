@@ -1,58 +1,61 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using Newtonsoft.Json;
-using ClipboardMonitorLite.Resources;
-using ClipboardMonitorLite.Exceptions;
 
-namespace ClipboardMonitorLite.SettingsManager
+namespace SettingsLib
 {
     public class SettingsHandler
     {
-        private ExceptionHandling _exceptions;
+        private string appDataDirectory;
+        private string settingsDirectory;
+        private string settingsFilePath;
         public SettingsHandler()
         {
-            _exceptions = new ExceptionHandling();
+            appDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            settingsDirectory = appDataDirectory + @"\ClipboardManagerLite";
+            settingsFilePath = appDataDirectory + @"\ClipboardManagerLite\settings.json";
         }
         
         public async void WriteSettingsFile(string jsonFile)
         {
-            if (!Directory.Exists(Constants.SettingsDirectory))
+            if (!Directory.Exists(settingsDirectory))
             {
                 try
                 {
-                    Directory.CreateDirectory(Constants.SettingsDirectory);
+                    Directory.CreateDirectory(settingsDirectory);
                 }
                 catch (Exception e)
                 {
-                    _exceptions.Handle(e);
+                    Debug.WriteLine(e.Message);
                 }
             }
             try
             {
-                using (StreamWriter sw = new StreamWriter(Constants.SettingsFilePath))
+                using (StreamWriter sw = new StreamWriter(settingsFilePath))
                 {
                     await sw.WriteLineAsync(jsonFile);
                 }
             }
             catch (Exception e)
             {
-                _exceptions.Handle(e);
+                Debug.WriteLine(e.Message);
             }
         }
 
         public Settings LoadSettingsFile()
         {
             Settings tempSettings = new Settings();
-            if (File.Exists(Constants.SettingsFilePath))
+            if (File.Exists(settingsFilePath))
             {
                 try
                 {
-                    Settings settings = JsonConvert.DeserializeObject<Settings>(File.ReadAllText(Constants.SettingsFilePath));
+                    Settings settings = JsonConvert.DeserializeObject<Settings>(File.ReadAllText(settingsFilePath));
                     tempSettings = settings;
                 }
                 catch (Exception e)
                 {
-                    _exceptions.Handle(e);
+                    Debug.WriteLine(e.Message);
                 }
             }
             return tempSettings;

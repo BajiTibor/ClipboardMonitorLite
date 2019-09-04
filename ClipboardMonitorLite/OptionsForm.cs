@@ -2,8 +2,8 @@
 using System.Reflection;
 using System.Windows.Forms;
 using ClipboardMonitorLite.FormControls;
-using ClipboardMonitorLite.SettingsManager;
 using ClipboardMonitorLite.Languages.LanguageControl;
+using SettingsLib;
 
 namespace ClipboardMonitorLite
 {

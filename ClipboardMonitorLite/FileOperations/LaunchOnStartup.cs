@@ -3,7 +3,7 @@ using System.IO;
 using IWshRuntimeLibrary;
 using System.Windows.Forms;
 using System.ComponentModel;
-using ClipboardMonitorLite.SettingsManager;
+using SettingsLib;
 
 namespace ClipboardMonitorLite.FileOperations
 {

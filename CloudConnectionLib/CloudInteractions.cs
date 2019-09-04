@@ -2,32 +2,27 @@
 using Newtonsoft.Json;
 using System.ComponentModel;
 using System.Threading.Tasks;
-using ClipboardMonitorLite.Resources;
 using Microsoft.AspNetCore.SignalR.Client;
-using ClipboardMonitorLite.SettingsManager;
-using ClipboardMonitorLite.ClipboardActions;
+using SettingsLib;
+using CloudConnectionLib.Messages;
 
-namespace ClipboardMonitorLite.Cloud
+namespace CloudConnectionLib
 {
     public class CloudInteractions
     {
-        private Random rng;
         private Settings _settings;
         private HubConnection connection;
-        private InboundMessage _inboundMessage;
-        private OutgoingMessage _outgoingMessage;
-        private ClipboardManager _clipboardManager;
+        private SignalRMessage _inboundMessage;
+        private SignalRMessage _outgoingMessage;
 
-        public CloudInteractions(InboundMessage inboundMessage, OutgoingMessage outgoingMessage, Settings settings, ClipboardManager clipManager)
+        public CloudInteractions(SignalRMessage inboundMessage, SignalRMessage outgoingMessage, Settings settings)
         {
             connection = new HubConnectionBuilder().WithUrl("http://clipmanagerweb.azurewebsites.net/broadcast").Build();
             _settings = settings;
             _inboundMessage = inboundMessage;
             _outgoingMessage = outgoingMessage;
-            _clipboardManager = clipManager;
-            rng = new Random();
 
-            OnlineState.ConnectionLife = connection.State;
+            OnlineState.ConnectionLife = connection.State.ToString();
             if (_settings.OnlineMode)
             {
                 StartListening();
@@ -42,16 +37,17 @@ namespace ClipboardMonitorLite.Cloud
             {
                 if (e.PropertyName.Equals("MachineName"))
                 {
-                    await connection.SendAsync("broadcastMessage", rng.Next(), JsonConvert.SerializeObject(_outgoingMessage));
+                    await connection.SendAsync("broadcastMessage", string.Empty, JsonConvert.SerializeObject(_outgoingMessage));
                 }
             }
         }
 
-        private void MessageArrived(InboundMessage message, int idNum)
+        private void MessageArrived(SignalRMessage message)
         {
             if ((_settings.LimitTraffic && !_settings.SendOnly) || (!_settings.LimitTraffic))
             {
-                _clipboardManager.MessageFromCloud(message);
+                _inboundMessage.Message = message.Message;
+                _inboundMessage.MachineName = message.MachineName;
             }
         }
 
@@ -78,14 +74,14 @@ namespace ClipboardMonitorLite.Cloud
                 await connection.StartAsync();
                 connection.On<string, string>("broadcastMessage", (user, message) =>
                 {
-                    _inboundMessage = JsonConvert.DeserializeObject<InboundMessage>(message);
-                    if (!_inboundMessage.MachineName.Equals(Constants.MachineName))
+                    var newMessage = JsonConvert.DeserializeObject<SignalRMessage>(message);
+                    if (!newMessage.MachineName.Equals(Environment.MachineName))
                     {
-                        MessageArrived(_inboundMessage, int.Parse(user));
+                        MessageArrived(newMessage);
                     }
                 });
                 connection.Closed += Connection_Closed;
-                OnlineState.ConnectionLife = connection.State;
+                OnlineState.ConnectionLife = connection.State.ToString();
             }
             catch
             {
@@ -95,11 +91,11 @@ namespace ClipboardMonitorLite.Cloud
 
         private async Task Connection_Closed(Exception arg)
         {
-            OnlineState.ConnectionLife = connection.State;
+            OnlineState.ConnectionLife = connection.State.ToString();
             if (_settings.OnlineMode)
             {
                 await RetryConnection(0);
-                OnlineState.ConnectionLife = connection.State;
+                OnlineState.ConnectionLife = connection.State.ToString();
             }
         }
 

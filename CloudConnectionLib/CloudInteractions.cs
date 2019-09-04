@@ -1,10 +1,10 @@
 ﻿using System;
+using SettingsLib;
 using Newtonsoft.Json;
 using System.ComponentModel;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.SignalR.Client;
-using SettingsLib;
 using CloudConnectionLib.Messages;
+using Microsoft.AspNetCore.SignalR.Client;
 
 namespace CloudConnectionLib
 {

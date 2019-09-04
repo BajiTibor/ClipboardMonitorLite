@@ -1,12 +1,12 @@
 ﻿using System;
+using SettingsLib;
 using System.Text;
 using System.Windows.Forms;
 using System.ComponentModel;
+using CloudConnectionLib.Messages;
 using ClipboardMonitorLite.Resources;
 using System.Runtime.InteropServices;
 using ClipboardMonitorLite.Exceptions;
-using SettingsLib;
-using CloudConnectionLib.Messages;
 
 namespace ClipboardMonitorLite.ClipboardActions
 {

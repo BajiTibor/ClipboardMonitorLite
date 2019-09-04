@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace SettingsLib
 {
     public class SettingsHandler
     {
         private string appDataDirectory;
-        private string settingsDirectory;
         private string settingsFilePath;
+        private string settingsDirectory;
         public SettingsHandler()
         {
             appDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);

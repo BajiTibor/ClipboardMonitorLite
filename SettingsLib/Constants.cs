@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ClipboardMonitorLite.Resources
+namespace SettingsLib
 {
     public static class Constants
     {

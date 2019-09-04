@@ -4,7 +4,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.ComponentModel;
 using CloudConnectionLib.Messages;
-using ClipboardMonitorLite.Resources;
 using System.Runtime.InteropServices;
 using ClipboardMonitorLite.Exceptions;
 

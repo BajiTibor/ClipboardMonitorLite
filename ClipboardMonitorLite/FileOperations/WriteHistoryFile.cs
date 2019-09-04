@@ -2,7 +2,6 @@
 using System.IO;
 using SettingsLib;
 using System.ComponentModel;
-using ClipboardMonitorLite.Resources;
 using ClipboardMonitorLite.Exceptions;
 using ClipboardMonitorLite.ClipboardActions;
 

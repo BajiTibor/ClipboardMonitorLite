@@ -1,6 +1,7 @@
 ﻿using System;
 using SettingsLib;
 using Newtonsoft.Json;
+using CloudConnectionLib;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using CloudConnectionLib.Messages;
@@ -17,7 +18,7 @@ namespace CloudConnectionLib
 
         public CloudInteractions(SignalRMessage inboundMessage, SignalRMessage outgoingMessage, Settings settings)
         {
-            connection = new HubConnectionBuilder().WithUrl("http://clipmanagerweb.azurewebsites.net/broadcast").Build();
+            connection = new HubConnectionBuilder().WithUrl("https://clipmanagerweb.azurewebsites.net/broadcast").Build();
             _settings = settings;
             _inboundMessage = inboundMessage;
             _outgoingMessage = outgoingMessage;
@@ -33,11 +34,13 @@ namespace CloudConnectionLib
 
         private async void NewMessageToSend(object sender, PropertyChangedEventArgs e)
         {
-            if ((_settings.LimitTraffic && _settings.SendOnly) || (!_settings.LimitTraffic))
+            if (((_settings.LimitTraffic && _settings.SendOnly) || (!_settings.LimitTraffic))
+                && (OnlineState.ConnectionLife.Equals("Connected")))
             {
                 if (e.PropertyName.Equals("MachineName"))
                 {
-                    await connection.SendAsync("broadcastMessage", string.Empty, JsonConvert.SerializeObject(_outgoingMessage));
+                    await connection.SendAsync("broadcastMessage",
+                        string.Empty, JsonConvert.SerializeObject(_outgoingMessage));
                 }
             }
         }

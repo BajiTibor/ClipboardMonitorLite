@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
+using SettingsLib;
 using IWshRuntimeLibrary;
 using System.Windows.Forms;
 using System.ComponentModel;
-using SettingsLib;
 
 namespace ClipboardMonitorLite.FileOperations
 {

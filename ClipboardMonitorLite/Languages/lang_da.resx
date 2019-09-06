@@ -148,7 +148,7 @@
     <value>Indehold enhedsnavnet i kopi historien</value>
   </data>
   <data name="Check_LimitTraffic" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Begræns datatrafik</value>
   </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
     <value>Oplys mig ved kopiering</value>

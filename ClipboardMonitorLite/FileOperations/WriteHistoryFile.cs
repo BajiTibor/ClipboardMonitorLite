@@ -1,9 +1,8 @@
 ﻿using System;
 using System.IO;
-using System.ComponentModel;
-using ClipboardMonitorLite.Resources;
-using ClipboardMonitorLite.Exceptions;
 using SettingsLib;
+using System.ComponentModel;
+using ClipboardMonitorLite.Exceptions;
 using ClipboardMonitorLite.ClipboardActions;
 
 namespace ClipboardMonitorLite.FileOperations

@@ -1,11 +1,11 @@
 ﻿using System;
+using SettingsLib;
 using System.Resources;
 using System.Reflection;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.ComponentModel;
 using ClipboardMonitorLite.FileOperations;
-using SettingsLib;
 using ClipboardMonitorLite.ClipboardActions;
 using ClipboardMonitorLite.Languages.LanguageControl;
 

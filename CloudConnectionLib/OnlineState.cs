@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.SignalR.Client;
-
-namespace CloudConnectionLib
+﻿namespace CloudConnectionLib
 {
     public static class OnlineState
     {

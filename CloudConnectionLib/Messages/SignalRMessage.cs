@@ -1,38 +1,68 @@
-﻿using System.ComponentModel;
+﻿using CloudConnectionLib.Messages.Interface;
+using System.ComponentModel;
 
 namespace CloudConnectionLib.Messages
 {
-    public class SignalRMessage : INotifyPropertyChanged
+    public class SignalRMessage : INotifyPropertyChanged , ICloudMessage
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private string message;
-        public string Message
+        private string messageType;
+        public string Type
         {
             get
             {
-                return message;
+                return messageType;
             }
             set
             {
-                message = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("Messsage"));
+                messageType = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("Type"));
             }
         }
 
-        private string machine;
+        private string messageContent;
+        public string Content
+        {
+            get
+            {
+                return messageContent;
+            }
+            set
+            {
+                messageContent = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("Content"));
+            }
+        }
+
+        private string machineName;
         public string MachineName
         {
             get
             {
-                return machine;
+                return machineName;
             }
             set
             {
-                machine = value;
+                machineName = value;
                 InvokePropertyChanged(new PropertyChangedEventArgs("MachineName"));
             }
         }
+
+        private string guid;
+        public string Guid
+        {
+            get
+            {
+                return guid;
+            }
+            set
+            {
+                guid = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("GUID"));
+            }
+        }
+
 
         private void InvokePropertyChanged(PropertyChangedEventArgs e)
         {

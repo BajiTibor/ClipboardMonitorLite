@@ -43,7 +43,7 @@ namespace ClipboardMonitorLite.ClipboardActions
                 {
                     ClipboardHistory += $"{_inboundMessage.MachineName} - ";
                 }
-                ChangeTextOnClip(_inboundMessage.Message);
+                ChangeTextOnClip(_inboundMessage.Content);
             }
         }
 
@@ -66,7 +66,7 @@ namespace ClipboardMonitorLite.ClipboardActions
                 {
                     try
                     {
-                        _outgoingMessage.Message = CurrentCopy;
+                        _outgoingMessage.Content = CurrentCopy;
                         _outgoingMessage.MachineName = Constants.MachineName;
                     }
                     catch (Exception ex)

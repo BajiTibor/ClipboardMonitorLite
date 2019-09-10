@@ -142,7 +142,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Dołącz nazwe urządzenia w historii.
         /// </summary>
         internal static string Check_IncludeDeviceName {
             get {
@@ -151,7 +151,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Ogranicz użycie danych.
         /// </summary>
         internal static string Check_LimitTraffic {
             get {
@@ -223,7 +223,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Dołącz czas skopiowania.
         /// </summary>
         internal static string Check_UseTimestamp {
             get {
@@ -313,7 +313,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Zachowanie aplikacji online.
         /// </summary>
         internal static string GroupBox_OnlineBehaviour {
             get {
@@ -322,7 +322,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Ustawienia sieciowe.
         /// </summary>
         internal static string GroupBox_OnlineSettings {
             get {
@@ -340,7 +340,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Opóżnienie przed próbą wznowienia połączenia.
         /// </summary>
         internal static string GroupBox_TimeBeforeReconnect {
             get {
@@ -403,7 +403,8 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Wybierz jak aplikacja będzie się zachowywać
+        ///podczas interakcji z innymi urządzeniami online.
         /// </summary>
         internal static string Label_OnlineBehaviourExplanation {
             get {
@@ -412,7 +413,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Sekundy.
         /// </summary>
         internal static string Label_Seconds {
             get {
@@ -621,7 +622,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Tylko Odbierz.
         /// </summary>
         internal static string Radio_ReceiveOnly {
             get {
@@ -630,7 +631,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Wyślij i Odbierz.
         /// </summary>
         internal static string Radio_SendAndReceive {
             get {
@@ -639,7 +640,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        ///   Looks up a localized string similar to Tylko wyślij.
         /// </summary>
         internal static string Radio_SendOnly {
             get {

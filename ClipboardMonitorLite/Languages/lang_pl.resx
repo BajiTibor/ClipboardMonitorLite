@@ -145,10 +145,10 @@
     <value>Automatycznie wyczyść schowek</value>
   </data>
   <data name="Check_IncludeDeviceName" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Dołącz nazwe urządzenia w historii</value>
   </data>
   <data name="Check_LimitTraffic" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Ogranicz użycie danych</value>
   </data>
   <data name="Check_NotifyOfCopy" xml:space="preserve">
     <value>Poinformuj jeśli coś skopiuję</value>
@@ -172,7 +172,7 @@
     <value>Aktualizuj na starcie</value>
   </data>
   <data name="Check_UseTimestamp" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Dołącz czas skopiowania</value>
   </data>
   <data name="Check_UseWhiteIcon" xml:space="preserve">
     <value>Użyj białej ikony na pasku startowym</value>
@@ -202,16 +202,16 @@
     <value>Ogólne</value>
   </data>
   <data name="GroupBox_OnlineBehaviour" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Zachowanie aplikacji online</value>
   </data>
   <data name="GroupBox_OnlineSettings" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Ustawienia sieciowe</value>
   </data>
   <data name="GroupBox_SaveToFileSettings" xml:space="preserve">
     <value>Zapisz ustawienia do pliku</value>
   </data>
   <data name="GroupBox_TimeBeforeReconnect" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Opóżnienie przed próbą wznowienia połączenia</value>
   </data>
   <data name="GroupBox_UpdateAndCurrentVersion" xml:space="preserve">
     <value>Aktualizacje i obecna wersja</value>
@@ -232,10 +232,11 @@
     <value>Brak uprawnień administratora, lub aplikacja ich nie posiada, proszę spróbować uruchomić ją ponownie jako administrator.</value>
   </data>
   <data name="Label_OnlineBehaviourExplanation" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Wybierz jak aplikacja będzie się zachowywać
+podczas interakcji z innymi urządzeniami online</value>
   </data>
   <data name="Label_Seconds" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Sekundy</value>
   </data>
   <data name="Label_ShowNotificationFor" xml:space="preserve">
     <value>Pokaż powiadomienie przez (sekundy)</value>
@@ -306,13 +307,13 @@ dane do pliku kiedy zostanie zamknięta.</value>
     <value>Zminimalizuj do paska zadań</value>
   </data>
   <data name="Radio_ReceiveOnly" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Tylko Odbierz</value>
   </data>
   <data name="Radio_SendAndReceive" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Wyślij i Odbierz</value>
   </data>
   <data name="Radio_SendOnly" xml:space="preserve">
-    <value>NEEDS TRANSLATION</value>
+    <value>Tylko wyślij</value>
   </data>
   <data name="SaveAsTextFile" xml:space="preserve">
     <value>Zapisz historię jako plik tekstowy</value>

@@ -27,6 +27,8 @@ namespace ClipboardMonitorLite.FileOperations
         {
             if (e.PropertyName.Equals("HistoryFileLocation"))
             {
+                if (string.IsNullOrWhiteSpace(_settings.HistoryFileLocation))
+                    _settings.HistoryFileLocation = Constants.DefaultHistoryFileDirectory;
                 FilePath = _settings.HistoryFileLocation;
             }
         }

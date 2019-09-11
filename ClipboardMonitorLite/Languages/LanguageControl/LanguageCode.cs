@@ -2,7 +2,7 @@
 {
     public class LanguageCode
     {
-        public static string[] LanguageList = new string[10]
+        public static string[] LanguageList = new string[11]
         {
             "en", // English
             "hu", // Hungarian
@@ -13,7 +13,8 @@
             "sr", // Serbian
             "da", // Danish
             "pl", // Polish
-            "sk" // Slovak
+            "sk", // Slovak
+            "por" // Portuguese
         };
     }
 }

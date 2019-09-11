@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using System.ComponentModel;
 using CloudConnectionLib.Messages;
 using System.Runtime.InteropServices;
-using ClipboardMonitorLite.Exceptions;
+using System.Diagnostics;
 
 namespace ClipboardMonitorLite.ClipboardActions
 {
@@ -18,7 +18,6 @@ namespace ClipboardMonitorLite.ClipboardActions
         private static NotificationForm form;
         private SignalRMessage _inboundMessage;
         private SignalRMessage _outgoingMessage;
-        private static ExceptionHandling _exception;
         public static event EventHandler ClipboardUpdate;
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -26,7 +25,6 @@ namespace ClipboardMonitorLite.ClipboardActions
         {
             ClipboardUpdate += ClipboardChangeEvent_ClipboardUpdate;
             _settings = settings;
-            _exception = new ExceptionHandling();
             form = new NotificationForm();
             _inboundMessage = inboundMessage;
             _outgoingMessage = outgoingMessage;
@@ -71,11 +69,10 @@ namespace ClipboardMonitorLite.ClipboardActions
                     }
                     catch (Exception ex)
                     {
-                        _exception.Handle(ex);
+                        Debug.WriteLine(ex.Message);
                     }
                 }
             }
-
         }
 
         private void ClipboardChangeEvent_ClipboardUpdate(object sender, EventArgs e)
@@ -111,7 +108,7 @@ namespace ClipboardMonitorLite.ClipboardActions
             }
             catch (Exception ex)
             {
-                _exception.Handle(ex);
+                Debug.WriteLine(ex.Message);
             }
             finally
             {
@@ -208,7 +205,7 @@ namespace ClipboardMonitorLite.ClipboardActions
             }
             catch (Exception ex)
             {
-                _exception.Handle(ex);
+                Debug.WriteLine(ex.Message);
             }
         }
 

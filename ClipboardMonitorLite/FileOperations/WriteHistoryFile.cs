@@ -1,8 +1,8 @@
 ﻿using System;
 using System.IO;
 using SettingsLib;
+using System.Diagnostics;
 using System.ComponentModel;
-using ClipboardMonitorLite.Exceptions;
 using ClipboardMonitorLite.ClipboardActions;
 
 namespace ClipboardMonitorLite.FileOperations
@@ -12,11 +12,9 @@ namespace ClipboardMonitorLite.FileOperations
         private Settings _settings;
         public string FilePath { get; set; }
         private ClipboardManager _clipboardManager;
-        private ExceptionHandling _exceptionHandler;
 
         public WriteHistoryFile(ClipboardManager clipManager, Settings settings)
         {
-            _exceptionHandler = new ExceptionHandling();
             _clipboardManager = clipManager;
             _settings = settings;
             FilePath = _settings.HistoryFileLocation;
@@ -46,7 +44,7 @@ namespace ClipboardMonitorLite.FileOperations
                 }
                 catch (Exception ex)
                 {
-                    _exceptionHandler.Handle(ex);
+                    Debug.WriteLine(ex.Message);
                 }
             }
         }

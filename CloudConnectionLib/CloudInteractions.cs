@@ -84,9 +84,12 @@ namespace CloudConnectionLib
                 connection.On<string, string>("broadcastMessage", (user, message) =>
                 {
                     var newMessage = JsonConvert.DeserializeObject<SignalRMessage>(message);
-                    if (!newMessage.MachineName.Equals(Environment.MachineName))
+                    if (!newMessage.Equals(_inboundMessage))
                     {
-                        MessageArrived(newMessage);
+                        if (!newMessage.MachineName.Equals(Environment.MachineName))
+                        {
+                            MessageArrived(newMessage);
+                        }
                     }
                 });
                 connection.Closed += Connection_Closed;

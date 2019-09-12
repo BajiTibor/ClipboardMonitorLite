@@ -7,6 +7,10 @@ using ClipboardMonitorLite.ClipboardActions;
 
 namespace ClipboardMonitorLite.FileOperations
 {
+    /// <summary>
+    /// Writes the history file, either in real time, or when the user
+    /// exist the application.
+    /// </summary>
     public class WriteHistoryFile
     {
         private Settings _settings;

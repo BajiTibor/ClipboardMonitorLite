@@ -2,6 +2,9 @@
 
 namespace SettingsLib
 {
+    /// <summary>
+    /// Settings object that's used to store the user's preferences.
+    /// </summary>
     public class Settings : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

@@ -2,6 +2,9 @@
 
 namespace CloudConnectionLib.Messages
 {
+    /// <summary>
+    /// Message object that gets sent or received by SignalR.
+    /// </summary>
     public class SignalRMessage : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

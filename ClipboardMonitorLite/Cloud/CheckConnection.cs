@@ -5,6 +5,11 @@ using System;
 
 namespace ClipboardMonitorLite.Cloud
 {
+    /// <summary>
+    /// Object that checks a static variable every time the timer that
+    /// was bassed to it elapses, because WinForms doesn't respect
+    /// INotifyPropertyChanged across threads.
+    /// </summary>
     public class CheckConnection
     {
         private Label ConnectionLabel;

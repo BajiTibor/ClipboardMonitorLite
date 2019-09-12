@@ -11,6 +11,9 @@ using ClipboardMonitorLite.Languages.LanguageControl;
 
 namespace ClipboardMonitorLite.FormControls
 {
+    /// <summary>
+    /// Class that handles events that happen on a Form.
+    /// </summary>
     public class FormEvents
     {
         private Form ActiveForm;
@@ -133,6 +136,9 @@ namespace ClipboardMonitorLite.FormControls
             }
         }
 
+        /// <summary>
+        /// Sets the notification icon's style on the taskbar.
+        /// </summary>
         private void SetIconStyle()
         {
             if (_settings.UsingWhiteTrayIcon)
@@ -141,6 +147,10 @@ namespace ClipboardMonitorLite.FormControls
                 NotificationIcon.Icon = Resources.MainResources.icon_dark;
         }
 
+        /// <summary>
+        /// Creates a new ResourceManager object with the new language.
+        /// Usually gets called when the language has changed.
+        /// </summary>
         private void RefreshResourceManager()
         {
             resManager = new ResourceManager($"ClipboardMonitorLite.Languages.lang_{LanguageCode.LanguageList[_settings.CurrentlySelectedLanguage]}",

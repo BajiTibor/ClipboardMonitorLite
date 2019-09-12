@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace ClipboardMonitorLite.FormControls
 {
+    /// <summary>
+    /// Object that contains a method that can fetch most
+    /// Controls from a form that can be translated.
+    /// </summary>
     public class FormControl
     {
         public List<Control> GetControlsForTranslation(Control parent)

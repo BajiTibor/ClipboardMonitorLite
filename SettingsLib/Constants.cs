@@ -2,6 +2,10 @@
 
 namespace SettingsLib
 {
+    /// <summary>
+    /// Constants that gets pulled from the user's Environment 
+    /// and won't be modified, mostly used as a fallback, default value.
+    /// </summary>
     public static class Constants
     {
         public static string DefaultHistoryFileDirectory = 

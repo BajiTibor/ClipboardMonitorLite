@@ -8,6 +8,11 @@ using Microsoft.AspNetCore.SignalR.Client;
 
 namespace CloudConnectionLib
 {
+    /// <summary>
+    /// Handles all the interactions using SignalR with the servers and
+    /// web applications, will also change the inboundMessage or act
+    /// accordingly when the outgoing message changes.
+    /// </summary>
     public class CloudInteractions
     {
         private Settings _settings;

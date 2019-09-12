@@ -9,6 +9,10 @@ using System.Runtime.InteropServices;
 
 namespace ClipboardMonitorLite.ClipboardActions
 {
+    /// <summary>
+    /// Handles all interactions connected to the Windows Clipboard.
+    /// Uses user32.dll and kernel32.dll
+    /// </summary>
     public class ClipboardManager : INotifyPropertyChanged
     {
         private Settings _settings;
@@ -29,10 +33,13 @@ namespace ClipboardMonitorLite.ClipboardActions
             _inboundMessage = inboundMessage;
             _outgoingMessage = outgoingMessage;
             TextFromCloud = false;
-            _inboundMessage.PropertyChanged += _inboundMessage_PropertyChanged;
+            _inboundMessage.PropertyChanged += NewInboundMessage;
         }
 
-        private void _inboundMessage_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        /// <summary>
+        /// Handles a new incoming message.
+        /// </summary>
+        private void NewInboundMessage(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName.Equals("MachineName"))
             {
@@ -45,6 +52,10 @@ namespace ClipboardMonitorLite.ClipboardActions
             }
         }
 
+        /// <summary>
+        /// Gets called when the clipboard changes, if NeedsToSend
+        /// is false, no cloud message will be sent.
+        /// </summary>
         private void ClipChanged(bool NeedsToSend = true)
         {
             string CurrentCopy = GetClipText();
@@ -98,6 +109,9 @@ namespace ClipboardMonitorLite.ClipboardActions
             ClipboardHistory = string.Empty;
         }
 
+        /// <summary>
+        /// Replaces the clipboard's current content with the string passed to it.
+        /// </summary>
         public void ChangeTextOnClip(string text)
         {
             try
@@ -116,6 +130,9 @@ namespace ClipboardMonitorLite.ClipboardActions
             }
         }
 
+        /// <summary>
+        /// Returns a string of the current text that's on the user's clipboard.
+        /// </summary>
         public string GetClipText()
         {
             if (!UnsafeNativeMethods.IsClipboardFormatAvailable(UnsafeNativeMethods.CF_UNICODETEXT))
@@ -157,6 +174,9 @@ namespace ClipboardMonitorLite.ClipboardActions
             }
         }
 
+        /// <summary>
+        /// Unsafe methods using Windows DLLs to control the clipboard's content.
+        /// </summary>
         internal static class UnsafeNativeMethods
         {
             public const int WM_CLIPBOARDUPDATE = 0x031D;
@@ -182,21 +202,24 @@ namespace ClipboardMonitorLite.ClipboardActions
             [DllImport("user32.dll")]
             public static extern UIntPtr SetClipboardData(uint uFormat, IntPtr data); // Changed
 
-            [DllImport("User32.dll", SetLastError = true)]
+            [DllImport("user32.dll", SetLastError = true)]
             [return: MarshalAs(UnmanagedType.Bool)]
             public static extern bool IsClipboardFormatAvailable(uint format);
 
-            [DllImport("Kernel32.dll", SetLastError = true)]
+            [DllImport("kernel32.dll", SetLastError = true)]
             public static extern IntPtr GlobalLock(IntPtr hMem);
 
-            [DllImport("Kernel32.dll", SetLastError = true)]
+            [DllImport("kernel32.dll", SetLastError = true)]
             [return: MarshalAs(UnmanagedType.Bool)]
             public static extern bool GlobalUnlock(IntPtr hMem);
 
-            [DllImport("Kernel32.dll", SetLastError = true)]
+            [DllImport("kernel32.dll", SetLastError = true)]
             public static extern int GlobalSize(IntPtr hMem);
         }
 
+        /// <summary>
+        /// Will Invoke property changed when the clipboard changed.
+        /// </summary>
         public static void OnClipboardUpdate(EventArgs e)
         {
             try

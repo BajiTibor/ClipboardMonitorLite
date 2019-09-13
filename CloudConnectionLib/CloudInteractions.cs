@@ -84,7 +84,7 @@ namespace CloudConnectionLib
                 connection.On<string, string>("broadcastMessage", (user, message) =>
                 {
                     var newMessage = JsonConvert.DeserializeObject<SignalRMessage>(message);
-                    if (!newMessage.Equals(_inboundMessage))
+                    if (!newMessage.Message.Equals(_inboundMessage.Message))
                     {
                         if (!newMessage.MachineName.Equals(Environment.MachineName))
                         {

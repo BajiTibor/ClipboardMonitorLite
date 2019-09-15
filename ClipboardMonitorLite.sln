@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClipManagerWebAPI", "ClipMa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClipboardMonitorLite.API", "ClipboardMonitorLite.API\ClipboardMonitorLite.API.csproj", "{AC7E8EE2-A6AA-465F-A4F9-751DD78A47E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClipboardMonitorLite.Functions", "ClipboardMonitorLite.Functions\ClipboardMonitorLite.Functions.csproj", "{B09BFFE1-2AE1-463B-9EEB-79F4AE07EFAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClipboardMonitorLite.Functions", "ClipboardMonitorLite.Functions\ClipboardMonitorLite.Functions.csproj", "{B09BFFE1-2AE1-463B-9EEB-79F4AE07EFAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

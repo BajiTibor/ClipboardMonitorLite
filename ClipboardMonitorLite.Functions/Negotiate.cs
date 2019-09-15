@@ -14,7 +14,7 @@ namespace ClipboardMonitorLite.Functions
     public static class NegotiateFunc
     {
         [FunctionName("negotiate")]
-        public static SignalRConnectionInfo Negotiate(
+        public static SignalRConnectionInfo Run(
         [HttpTrigger(AuthorizationLevel.Anonymous)]HttpRequest req,
         [SignalRConnectionInfo(HubName = "messages")]SignalRConnectionInfo connectionInfo)
         {

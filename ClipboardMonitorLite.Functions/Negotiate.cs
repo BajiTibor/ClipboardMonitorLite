@@ -11,14 +11,12 @@ using Microsoft.Azure.WebJobs.Extensions.SignalRService;
 
 namespace ClipboardMonitorLite.Functions
 {
-    public static class NegotiateFunc
+    public static class Negotiate
     {
         [FunctionName("negotiate")]
         public static SignalRConnectionInfo Run(
         [HttpTrigger(AuthorizationLevel.Anonymous)]HttpRequest req,
-        [SignalRConnectionInfo(HubName = "messages")]SignalRConnectionInfo connectionInfo)
-        {
-            return connectionInfo;
-        }
+        [SignalRConnectionInfo(HubName = "Messages")]
+            SignalRConnectionInfo connectionInfo) => connectionInfo;
     }
 }

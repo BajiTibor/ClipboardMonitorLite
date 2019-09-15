@@ -20,7 +20,7 @@ namespace ClipboardMonitorLite.Functions
     {
         [FunctionName("Register")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] ApplicationInfo info,
+            [HttpTrigger(AuthorizationLevel.Function, "post")] ApplicationInfo info,
             ILogger log)
         {
             var table = TableUtilities.GetCloudTable("Applications");
@@ -36,7 +36,6 @@ namespace ClipboardMonitorLite.Functions
 
             var query = table.CreateQuery<ApplicationEntity>()
                             .Where(p => p.PartitionKey.Equals(info.GroupId))
-                            .Where(p => p.RowKey.Equals(info.ApplicationId) == false)
                             .AsTableQuery();
 
             var entities = await table.ExecuteQueryAsync(query);

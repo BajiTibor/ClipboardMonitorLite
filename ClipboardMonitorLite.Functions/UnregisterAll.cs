@@ -20,7 +20,7 @@ namespace ClipboardMonitorLite.Functions
     {
         [FunctionName("UnregisterAll")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] ApplicationInfo info,
+            [HttpTrigger(AuthorizationLevel.Function, "post")] ApplicationInfo info,
             ILogger log)
         {
             var table = TableUtilities.GetCloudTable("Applications");

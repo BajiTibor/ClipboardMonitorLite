@@ -43,6 +43,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -271,6 +272,7 @@
     <EmbeddedResource Include="Languages\lang_da.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_da.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Languages\lang_en.resx">
       <Generator>ResXFileCodeGenerator</Generator>

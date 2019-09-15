@@ -9,7 +9,7 @@ namespace ClipboardMonitorLite.Functions.Utilities
     {
         public static CloudTable GetCloudTable(string name)
         {
-            var account = CloudStorageAccount.Parse(Environment.GetEnvironmentVariable(""));
+            var account = CloudStorageAccount.Parse(Environment.GetEnvironmentVariable("StorageConnectionString"));
             var client = account.CreateCloudTableClient();
             var table = client.GetTableReference(name);
             table.CreateIfNotExistsAsync();

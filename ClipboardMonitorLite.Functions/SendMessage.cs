@@ -18,8 +18,8 @@ namespace ClipboardMonitorLite.Functions
     {
         [FunctionName("SendMessage")]
         public static Task Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "post")]Message message,
-            [SignalR(HubName = "chat")]IAsyncCollector<SignalRMessage> signalRMessages)
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)]Message message,
+            [SignalR(HubName = "Messages")]IAsyncCollector<SignalRMessage> signalRMessages)
         {
             var table = TableUtilities.GetCloudTable("Applications");
 

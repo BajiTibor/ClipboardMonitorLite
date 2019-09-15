@@ -22,7 +22,7 @@ namespace ClipboardMonitorLite.Functions
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post")] ApplicationInfo info,
             ILogger log)
-        {
+        {          
             var table = TableUtilities.GetCloudTable("Applications");
 
             var operation = TableOperation.Retrieve<ApplicationEntity>(info.GroupId, info.ApplicationId);

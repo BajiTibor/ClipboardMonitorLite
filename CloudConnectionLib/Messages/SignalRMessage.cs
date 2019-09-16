@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace CloudConnectionLib.Messages
 {
-    public class SignalRMessage : INotifyPropertyChanged , ICloudMessage
+    public class SignalRMessage : INotifyPropertyChanged 
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

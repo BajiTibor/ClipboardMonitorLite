@@ -84,9 +84,12 @@ namespace CloudConnectionLib
                 connection.On<string, string>("broadcastMessage", (user, message) =>
                 {
                     var newMessage = JsonConvert.DeserializeObject<ICloudMessage>(message);
-                    if (!newMessage.MachineName.Equals(Environment.MachineName))
+                    if (!newMessage.Content.Equals(_inboundMessage.Content))
                     {
-                        MessageArrived(newMessage);
+                        if (!newMessage.MachineName.Equals(Environment.MachineName))
+                        {
+                            MessageArrived(newMessage);
+                        }
                     }
                 });
                 connection.Closed += Connection_Closed;

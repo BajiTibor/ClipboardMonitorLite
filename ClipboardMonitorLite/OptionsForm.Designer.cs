@@ -73,7 +73,6 @@
             this.Check_NotifyOfCopy = new System.Windows.Forms.CheckBox();
             this.Check_UseWhiteIcon = new System.Windows.Forms.CheckBox();
             this.Btn_Apply = new System.Windows.Forms.Button();
-            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.Label_Version = new System.Windows.Forms.Label();
             this.GroupBox_General.SuspendLayout();
             this.GroupBox_OnlineSettings.SuspendLayout();
@@ -105,7 +104,7 @@
             this.GroupBox_OnlineSettings.Location = new System.Drawing.Point(362, 248);
             this.GroupBox_OnlineSettings.Name = "GroupBox_OnlineSettings";
             this.GroupBox_OnlineSettings.Size = new System.Drawing.Size(349, 307);
-            this.GroupBox_OnlineSettings.TabIndex = 2;
+            this.GroupBox_OnlineSettings.TabIndex = 0;
             this.GroupBox_OnlineSettings.TabStop = false;
             this.GroupBox_OnlineSettings.Text = "Online Settings";
             // 
@@ -116,7 +115,7 @@
             this.GroupBox_TimeBeforeReconnect.Location = new System.Drawing.Point(6, 25);
             this.GroupBox_TimeBeforeReconnect.Name = "GroupBox_TimeBeforeReconnect";
             this.GroupBox_TimeBeforeReconnect.Size = new System.Drawing.Size(337, 69);
-            this.GroupBox_TimeBeforeReconnect.TabIndex = 30;
+            this.GroupBox_TimeBeforeReconnect.TabIndex = 0;
             this.GroupBox_TimeBeforeReconnect.TabStop = false;
             this.GroupBox_TimeBeforeReconnect.Text = "Delay before trying to reconnect";
             // 
@@ -125,7 +124,7 @@
             this.Label_Seconds.AutoSize = true;
             this.Label_Seconds.Location = new System.Drawing.Point(6, 37);
             this.Label_Seconds.Name = "Label_Seconds";
-            this.Label_Seconds.Size = new System.Drawing.Size(72, 20);
+            this.Label_Seconds.Size = new System.Drawing.Size(63, 17);
             this.Label_Seconds.TabIndex = 1;
             this.Label_Seconds.Text = "Seconds";
             // 
@@ -143,8 +142,8 @@
             0,
             0});
             this.numeric_ReconnectDelay.Name = "numeric_ReconnectDelay";
-            this.numeric_ReconnectDelay.Size = new System.Drawing.Size(112, 26);
-            this.numeric_ReconnectDelay.TabIndex = 0;
+            this.numeric_ReconnectDelay.Size = new System.Drawing.Size(112, 22);
+            this.numeric_ReconnectDelay.TabIndex = 17;
             this.numeric_ReconnectDelay.Value = new decimal(new int[] {
             10,
             0,
@@ -156,8 +155,8 @@
             this.Check_IncludeDeviceName.AutoSize = true;
             this.Check_IncludeDeviceName.Location = new System.Drawing.Point(12, 277);
             this.Check_IncludeDeviceName.Name = "Check_IncludeDeviceName";
-            this.Check_IncludeDeviceName.Size = new System.Drawing.Size(283, 24);
-            this.Check_IncludeDeviceName.TabIndex = 29;
+            this.Check_IncludeDeviceName.Size = new System.Drawing.Size(254, 21);
+            this.Check_IncludeDeviceName.TabIndex = 21;
             this.Check_IncludeDeviceName.Text = "Include device name in copy history";
             this.Check_IncludeDeviceName.UseVisualStyleBackColor = true;
             // 
@@ -170,7 +169,7 @@
             this.GroupBox_OnlineBehaviour.Location = new System.Drawing.Point(6, 100);
             this.GroupBox_OnlineBehaviour.Name = "GroupBox_OnlineBehaviour";
             this.GroupBox_OnlineBehaviour.Size = new System.Drawing.Size(337, 171);
-            this.GroupBox_OnlineBehaviour.TabIndex = 28;
+            this.GroupBox_OnlineBehaviour.TabIndex = 0;
             this.GroupBox_OnlineBehaviour.TabStop = false;
             this.GroupBox_OnlineBehaviour.Text = "Application Online behaviour";
             // 
@@ -179,8 +178,8 @@
             this.Check_LimitTraffic.AutoSize = true;
             this.Check_LimitTraffic.Location = new System.Drawing.Point(6, 79);
             this.Check_LimitTraffic.Name = "Check_LimitTraffic";
-            this.Check_LimitTraffic.Size = new System.Drawing.Size(112, 24);
-            this.Check_LimitTraffic.TabIndex = 31;
+            this.Check_LimitTraffic.Size = new System.Drawing.Size(98, 21);
+            this.Check_LimitTraffic.TabIndex = 18;
             this.Check_LimitTraffic.Text = "Limit traffic";
             this.Check_LimitTraffic.UseVisualStyleBackColor = true;
             // 
@@ -189,7 +188,7 @@
             this.Label_OnlineBehaviourExplanation.AutoSize = true;
             this.Label_OnlineBehaviourExplanation.Location = new System.Drawing.Point(6, 26);
             this.Label_OnlineBehaviourExplanation.Name = "Label_OnlineBehaviourExplanation";
-            this.Label_OnlineBehaviourExplanation.Size = new System.Drawing.Size(271, 40);
+            this.Label_OnlineBehaviourExplanation.Size = new System.Drawing.Size(244, 34);
             this.Label_OnlineBehaviourExplanation.TabIndex = 30;
             this.Label_OnlineBehaviourExplanation.Text = "Set how the application will handle\r\nonline interactions with other devices.";
             // 
@@ -199,8 +198,8 @@
             this.Radio_ReceiveOnly.Checked = true;
             this.Radio_ReceiveOnly.Location = new System.Drawing.Point(6, 140);
             this.Radio_ReceiveOnly.Name = "Radio_ReceiveOnly";
-            this.Radio_ReceiveOnly.Size = new System.Drawing.Size(123, 24);
-            this.Radio_ReceiveOnly.TabIndex = 29;
+            this.Radio_ReceiveOnly.Size = new System.Drawing.Size(110, 21);
+            this.Radio_ReceiveOnly.TabIndex = 20;
             this.Radio_ReceiveOnly.TabStop = true;
             this.Radio_ReceiveOnly.Text = "Receive only";
             this.Radio_ReceiveOnly.UseVisualStyleBackColor = true;
@@ -210,8 +209,8 @@
             this.Radio_SendOnly.AutoSize = true;
             this.Radio_SendOnly.Location = new System.Drawing.Point(6, 110);
             this.Radio_SendOnly.Name = "Radio_SendOnly";
-            this.Radio_SendOnly.Size = new System.Drawing.Size(104, 24);
-            this.Radio_SendOnly.TabIndex = 28;
+            this.Radio_SendOnly.Size = new System.Drawing.Size(92, 21);
+            this.Radio_SendOnly.TabIndex = 19;
             this.Radio_SendOnly.Text = "Send only";
             this.Radio_SendOnly.UseVisualStyleBackColor = true;
             // 
@@ -225,7 +224,7 @@
             this.GroupBox_SaveToFileSettings.Location = new System.Drawing.Point(362, 25);
             this.GroupBox_SaveToFileSettings.Name = "GroupBox_SaveToFileSettings";
             this.GroupBox_SaveToFileSettings.Size = new System.Drawing.Size(350, 217);
-            this.GroupBox_SaveToFileSettings.TabIndex = 1;
+            this.GroupBox_SaveToFileSettings.TabIndex = 0;
             this.GroupBox_SaveToFileSettings.TabStop = false;
             this.GroupBox_SaveToFileSettings.Text = "Save to file settings";
             // 
@@ -234,7 +233,7 @@
             this.Label_WriteRealTimeInfo.AutoSize = true;
             this.Label_WriteRealTimeInfo.Location = new System.Drawing.Point(33, 137);
             this.Label_WriteRealTimeInfo.Name = "Label_WriteRealTimeInfo";
-            this.Label_WriteRealTimeInfo.Size = new System.Drawing.Size(230, 60);
+            this.Label_WriteRealTimeInfo.Size = new System.Drawing.Size(206, 51);
             this.Label_WriteRealTimeInfo.TabIndex = 6;
             this.Label_WriteRealTimeInfo.Text = "If real time is turned off, the\r\napplication will only access and\r\nwrite to the f" +
     "ile when it\'s closed.";
@@ -245,8 +244,8 @@
             this.Check_WriteInRealTime.Enabled = false;
             this.Check_WriteInRealTime.Location = new System.Drawing.Point(6, 86);
             this.Check_WriteInRealTime.Name = "Check_WriteInRealTime";
-            this.Check_WriteInRealTime.Size = new System.Drawing.Size(176, 24);
-            this.Check_WriteInRealTime.TabIndex = 13;
+            this.Check_WriteInRealTime.Size = new System.Drawing.Size(158, 21);
+            this.Check_WriteInRealTime.TabIndex = 16;
             this.Check_WriteInRealTime.Text = "Write file in real time";
             this.Check_WriteInRealTime.UseVisualStyleBackColor = true;
             // 
@@ -256,7 +255,7 @@
             this.Btn_Browse.Location = new System.Drawing.Point(266, 48);
             this.Btn_Browse.Name = "Btn_Browse";
             this.Btn_Browse.Size = new System.Drawing.Size(78, 26);
-            this.Btn_Browse.TabIndex = 12;
+            this.Btn_Browse.TabIndex = 15;
             this.Btn_Browse.Text = "Browse";
             this.Btn_Browse.UseVisualStyleBackColor = true;
             // 
@@ -265,7 +264,7 @@
             this.Label_FileLocation.AutoSize = true;
             this.Label_FileLocation.Location = new System.Drawing.Point(6, 25);
             this.Label_FileLocation.Name = "Label_FileLocation";
-            this.Label_FileLocation.Size = new System.Drawing.Size(93, 20);
+            this.Label_FileLocation.Size = new System.Drawing.Size(83, 17);
             this.Label_FileLocation.TabIndex = 1;
             this.Label_FileLocation.Text = "File location";
             // 
@@ -274,8 +273,8 @@
             this.txt_FileLocation.Enabled = false;
             this.txt_FileLocation.Location = new System.Drawing.Point(6, 48);
             this.txt_FileLocation.Name = "txt_FileLocation";
-            this.txt_FileLocation.Size = new System.Drawing.Size(254, 26);
-            this.txt_FileLocation.TabIndex = 11;
+            this.txt_FileLocation.Size = new System.Drawing.Size(254, 22);
+            this.txt_FileLocation.TabIndex = 14;
             // 
             // GroupBox_BehaviourAndVisuals
             // 
@@ -307,7 +306,7 @@
             this.GroupBox_BehaviourAndVisuals.Location = new System.Drawing.Point(6, 25);
             this.GroupBox_BehaviourAndVisuals.Name = "GroupBox_BehaviourAndVisuals";
             this.GroupBox_BehaviourAndVisuals.Size = new System.Drawing.Size(350, 530);
-            this.GroupBox_BehaviourAndVisuals.TabIndex = 1;
+            this.GroupBox_BehaviourAndVisuals.TabIndex = 0;
             this.GroupBox_BehaviourAndVisuals.TabStop = false;
             this.GroupBox_BehaviourAndVisuals.Text = "Behaviour and visuals";
             // 
@@ -316,8 +315,8 @@
             this.Check_UseTimestamp.AutoSize = true;
             this.Check_UseTimestamp.Location = new System.Drawing.Point(6, 86);
             this.Check_UseTimestamp.Name = "Check_UseTimestamp";
-            this.Check_UseTimestamp.Size = new System.Drawing.Size(146, 24);
-            this.Check_UseTimestamp.TabIndex = 27;
+            this.Check_UseTimestamp.Size = new System.Drawing.Size(128, 21);
+            this.Check_UseTimestamp.TabIndex = 3;
             this.Check_UseTimestamp.Text = "Use Timestamp";
             this.Check_UseTimestamp.UseVisualStyleBackColor = true;
             // 
@@ -326,8 +325,8 @@
             this.Check_OpenWithWin.AutoSize = true;
             this.Check_OpenWithWin.Location = new System.Drawing.Point(6, 220);
             this.Check_OpenWithWin.Name = "Check_OpenWithWin";
-            this.Check_OpenWithWin.Size = new System.Drawing.Size(178, 24);
-            this.Check_OpenWithWin.TabIndex = 25;
+            this.Check_OpenWithWin.Size = new System.Drawing.Size(157, 21);
+            this.Check_OpenWithWin.TabIndex = 7;
             this.Check_OpenWithWin.Text = "Open With Windows";
             this.Check_OpenWithWin.UseVisualStyleBackColor = true;
             // 
@@ -336,7 +335,7 @@
             this.Label_Minutes.AutoSize = true;
             this.Label_Minutes.Location = new System.Drawing.Point(205, 187);
             this.Label_Minutes.Name = "Label_Minutes";
-            this.Label_Minutes.Size = new System.Drawing.Size(65, 20);
+            this.Label_Minutes.Size = new System.Drawing.Size(57, 17);
             this.Label_Minutes.TabIndex = 24;
             this.Label_Minutes.Text = "Minutes";
             // 
@@ -345,8 +344,8 @@
             this.Check_OnlineMode.AutoSize = true;
             this.Check_OnlineMode.Location = new System.Drawing.Point(6, 285);
             this.Check_OnlineMode.Name = "Check_OnlineMode";
-            this.Check_OnlineMode.Size = new System.Drawing.Size(124, 24);
-            this.Check_OnlineMode.TabIndex = 26;
+            this.Check_OnlineMode.Size = new System.Drawing.Size(110, 21);
+            this.Check_OnlineMode.TabIndex = 9;
             this.Check_OnlineMode.Text = "Online Mode";
             this.Check_OnlineMode.UseVisualStyleBackColor = true;
             // 
@@ -364,11 +363,12 @@
             "Serbian",
             "Danish",
             "Polish",
-            "Slovak"});
+            "Slovak",
+            "Portuguese"});
             this.combo_lang.Location = new System.Drawing.Point(103, 445);
             this.combo_lang.Name = "combo_lang";
-            this.combo_lang.Size = new System.Drawing.Size(116, 28);
-            this.combo_lang.TabIndex = 10;
+            this.combo_lang.Size = new System.Drawing.Size(116, 24);
+            this.combo_lang.TabIndex = 13;
             this.combo_lang.SelectedIndexChanged += new System.EventHandler(this.Combo_lang_SelectedIndexChanged);
             // 
             // Label_Lang
@@ -376,7 +376,7 @@
             this.Label_Lang.AutoSize = true;
             this.Label_Lang.Location = new System.Drawing.Point(2, 448);
             this.Label_Lang.Name = "Label_Lang";
-            this.Label_Lang.Size = new System.Drawing.Size(81, 20);
+            this.Label_Lang.Size = new System.Drawing.Size(72, 17);
             this.Label_Lang.TabIndex = 22;
             this.Label_Lang.Text = "Language";
             // 
@@ -395,8 +395,8 @@
             this.Check_ShowDonation.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Check_ShowDonation.Location = new System.Drawing.Point(6, 402);
             this.Check_ShowDonation.Name = "Check_ShowDonation";
-            this.Check_ShowDonation.Size = new System.Drawing.Size(307, 24);
-            this.Check_ShowDonation.TabIndex = 9;
+            this.Check_ShowDonation.Size = new System.Drawing.Size(270, 21);
+            this.Check_ShowDonation.TabIndex = 12;
             this.Check_ShowDonation.Text = "Show donation button on main window";
             this.Check_ShowDonation.UseVisualStyleBackColor = true;
             // 
@@ -414,8 +414,8 @@
             this.Radio_ExitApp.Checked = true;
             this.Radio_ExitApp.Location = new System.Drawing.Point(6, 365);
             this.Radio_ExitApp.Name = "Radio_ExitApp";
-            this.Radio_ExitApp.Size = new System.Drawing.Size(167, 24);
-            this.Radio_ExitApp.TabIndex = 8;
+            this.Radio_ExitApp.Size = new System.Drawing.Size(147, 21);
+            this.Radio_ExitApp.TabIndex = 11;
             this.Radio_ExitApp.TabStop = true;
             this.Radio_ExitApp.Text = "Exit the application";
             this.Radio_ExitApp.UseVisualStyleBackColor = true;
@@ -425,8 +425,8 @@
             this.Radio_Minimize.AutoSize = true;
             this.Radio_Minimize.Location = new System.Drawing.Point(6, 337);
             this.Radio_Minimize.Name = "Radio_Minimize";
-            this.Radio_Minimize.Size = new System.Drawing.Size(201, 24);
-            this.Radio_Minimize.TabIndex = 7;
+            this.Radio_Minimize.Size = new System.Drawing.Size(179, 21);
+            this.Radio_Minimize.TabIndex = 10;
             this.Radio_Minimize.Text = "Minimize on system tray";
             this.Radio_Minimize.UseVisualStyleBackColor = true;
             // 
@@ -435,7 +435,7 @@
             this.Label_WhenMainWindowClosed.AutoSize = true;
             this.Label_WhenMainWindowClosed.Location = new System.Drawing.Point(6, 314);
             this.Label_WhenMainWindowClosed.Name = "Label_WhenMainWindowClosed";
-            this.Label_WhenMainWindowClosed.Size = new System.Drawing.Size(230, 20);
+            this.Label_WhenMainWindowClosed.Size = new System.Drawing.Size(204, 17);
             this.Label_WhenMainWindowClosed.TabIndex = 16;
             this.Label_WhenMainWindowClosed.Text = "When I close the main Window:";
             // 
@@ -452,8 +452,8 @@
             this.Check_StartMinimized.AutoSize = true;
             this.Check_StartMinimized.Location = new System.Drawing.Point(6, 252);
             this.Check_StartMinimized.Name = "Check_StartMinimized";
-            this.Check_StartMinimized.Size = new System.Drawing.Size(144, 24);
-            this.Check_StartMinimized.TabIndex = 6;
+            this.Check_StartMinimized.Size = new System.Drawing.Size(126, 21);
+            this.Check_StartMinimized.TabIndex = 8;
             this.Check_StartMinimized.Text = "Start Minimized";
             this.Check_StartMinimized.UseVisualStyleBackColor = true;
             // 
@@ -512,8 +512,8 @@
             0,
             0});
             this.numeric_clearAfter.Name = "numeric_clearAfter";
-            this.numeric_clearAfter.Size = new System.Drawing.Size(120, 26);
-            this.numeric_clearAfter.TabIndex = 5;
+            this.numeric_clearAfter.Size = new System.Drawing.Size(120, 22);
+            this.numeric_clearAfter.TabIndex = 6;
             this.numeric_clearAfter.Value = new decimal(new int[] {
             10,
             0,
@@ -525,7 +525,7 @@
             this.Label_Every.AutoSize = true;
             this.Label_Every.Location = new System.Drawing.Point(25, 187);
             this.Label_Every.Name = "Label_Every";
-            this.Label_Every.Size = new System.Drawing.Size(48, 20);
+            this.Label_Every.Size = new System.Drawing.Size(44, 17);
             this.Label_Every.TabIndex = 6;
             this.Label_Every.Text = "Every";
             // 
@@ -534,8 +534,8 @@
             this.Check_AutoClearClipboard.AutoSize = true;
             this.Check_AutoClearClipboard.Location = new System.Drawing.Point(6, 160);
             this.Check_AutoClearClipboard.Name = "Check_AutoClearClipboard";
-            this.Check_AutoClearClipboard.Size = new System.Drawing.Size(309, 24);
-            this.Check_AutoClearClipboard.TabIndex = 4;
+            this.Check_AutoClearClipboard.Size = new System.Drawing.Size(278, 21);
+            this.Check_AutoClearClipboard.TabIndex = 5;
             this.Check_AutoClearClipboard.Text = "Automatically clear my clipboard history";
             this.Check_AutoClearClipboard.UseVisualStyleBackColor = true;
             // 
@@ -544,8 +544,8 @@
             this.Check_SaveToFile.AutoSize = true;
             this.Check_SaveToFile.Location = new System.Drawing.Point(6, 125);
             this.Check_SaveToFile.Name = "Check_SaveToFile";
-            this.Check_SaveToFile.Size = new System.Drawing.Size(337, 24);
-            this.Check_SaveToFile.TabIndex = 3;
+            this.Check_SaveToFile.Size = new System.Drawing.Size(303, 21);
+            this.Check_SaveToFile.TabIndex = 4;
             this.Check_SaveToFile.Text = "Save the clipboard history to a local text file";
             this.Check_SaveToFile.UseVisualStyleBackColor = true;
             // 
@@ -554,7 +554,7 @@
             this.Check_NotifyOfCopy.AutoSize = true;
             this.Check_NotifyOfCopy.Location = new System.Drawing.Point(6, 58);
             this.Check_NotifyOfCopy.Name = "Check_NotifyOfCopy";
-            this.Check_NotifyOfCopy.Size = new System.Drawing.Size(300, 24);
+            this.Check_NotifyOfCopy.Size = new System.Drawing.Size(268, 21);
             this.Check_NotifyOfCopy.TabIndex = 2;
             this.Check_NotifyOfCopy.Text = "Notify me when my clipboard changes";
             this.Check_NotifyOfCopy.UseVisualStyleBackColor = true;
@@ -564,17 +564,18 @@
             this.Check_UseWhiteIcon.AutoSize = true;
             this.Check_UseWhiteIcon.Location = new System.Drawing.Point(6, 25);
             this.Check_UseWhiteIcon.Name = "Check_UseWhiteIcon";
-            this.Check_UseWhiteIcon.Size = new System.Drawing.Size(265, 24);
+            this.Check_UseWhiteIcon.Size = new System.Drawing.Size(236, 21);
             this.Check_UseWhiteIcon.TabIndex = 1;
             this.Check_UseWhiteIcon.Text = "Use white icon in the system tray";
             this.Check_UseWhiteIcon.UseVisualStyleBackColor = true;
             // 
             // Btn_Apply
             // 
+            this.Btn_Apply.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Apply.Location = new System.Drawing.Point(615, 579);
             this.Btn_Apply.Name = "Btn_Apply";
             this.Btn_Apply.Size = new System.Drawing.Size(117, 53);
-            this.Btn_Apply.TabIndex = 14;
+            this.Btn_Apply.TabIndex = 22;
             this.Btn_Apply.Text = "Apply";
             this.Btn_Apply.UseVisualStyleBackColor = true;
             this.Btn_Apply.Click += new System.EventHandler(this.Btn_apply_Click);
@@ -582,9 +583,10 @@
             // Label_Version
             // 
             this.Label_Version.AutoSize = true;
-            this.Label_Version.Location = new System.Drawing.Point(14, 612);
+            this.Label_Version.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Version.Location = new System.Drawing.Point(6, 596);
             this.Label_Version.Name = "Label_Version";
-            this.Label_Version.Size = new System.Drawing.Size(63, 20);
+            this.Label_Version.Size = new System.Drawing.Size(118, 36);
             this.Label_Version.TabIndex = 5;
             this.Label_Version.Text = "Version";
             // 
@@ -643,7 +645,6 @@
         private System.Windows.Forms.CheckBox Check_WriteInRealTime;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button Btn_Apply;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.CheckBox Check_StartMinimized;
         private System.Windows.Forms.Label DONOTMODIFY5;
         private System.Windows.Forms.RadioButton Radio_ExitApp;

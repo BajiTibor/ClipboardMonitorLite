@@ -1,22 +1,40 @@
-﻿using System;
-using CloudConnectionLib;
+﻿using CloudConnectionLib;
 using System.Windows.Forms;
+using System.Threading.Tasks;
+using System;
 
 namespace ClipboardMonitorLite.Cloud
 {
+    /// <summary>
+    /// Object that checks a static variable every time the timer that
+    /// was bassed to it elapses, because WinForms doesn't respect
+    /// INotifyPropertyChanged across threads.
+    /// </summary>
     public class CheckConnection
     {
-        private Timer CheckTimer;
         private Label ConnectionLabel;
-        public CheckConnection(Timer timer, Label label)
+        private Timer MainTimer;
+        public CheckConnection(Label label, Timer timer)
         {
-            CheckTimer = timer;
             ConnectionLabel = label;
-            CheckTimer.Start();
-            CheckTimer.Tick += TimeElapsed;
+            MainTimer = timer;
+            MainTimer.Start();
+            MainTimer.Tick += TimerElapsed;
+
+            //Task.Factory.StartNew(() => SetConnectionLabel(), TaskCreationOptions.LongRunning);
+
         }
 
-        private void TimeElapsed(object sender, EventArgs e)
+        private async Task SetConnectionLabel()
+        {
+            while (true)
+            {
+                ConnectionLabel.Text = OnlineState.ConnectionLife;
+                await Task.Delay(2500);
+            }
+        }
+
+        private void TimerElapsed(object sender, EventArgs e)
         {
             ConnectionLabel.Text = OnlineState.ConnectionLife;
         }

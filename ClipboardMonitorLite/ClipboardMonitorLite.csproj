@@ -186,7 +186,6 @@
   <ItemGroup>
     <Compile Include="ClipboardActions\AutoHistoryCleaner.cs" />
     <Compile Include="Cloud\CheckConnection.cs" />
-    <Compile Include="Exceptions\ExceptionHandling.cs" />
     <Compile Include="FileOperations\LaunchOnStartup.cs" />
     <Compile Include="FormControls\FormControl.cs" />
     <Compile Include="FormControls\FormEvents.cs" />
@@ -194,6 +193,11 @@
     <Compile Include="Languages\LanguageControl\LanguageOnForm.cs" />
     <Compile Include="Languages\lang_da.Designer.cs">
       <DependentUpon>lang_da.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Languages\lang_por.Designer.cs">
+      <DependentUpon>lang_por.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -273,6 +277,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_da.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\lang_por.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_por.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Languages\lang_en.resx">
       <Generator>ResXFileCodeGenerator</Generator>

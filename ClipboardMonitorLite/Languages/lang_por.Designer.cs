@@ -22,14 +22,14 @@ namespace ClipboardMonitorLite.Languages {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class lang_pl {
+    internal class lang_por {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal lang_pl() {
+        internal lang_por() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ClipboardMonitorLite.Languages {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.Languages.lang_pl", typeof(lang_pl).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClipboardMonitorLite.Languages.lang_por", typeof(lang_por).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O Programie.
+        ///   Looks up a localized string similar to Sobre.
         /// </summary>
         internal static string Btn_About {
             get {
@@ -70,7 +70,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zatwierdź.
+        ///   Looks up a localized string similar to Aplicar.
         /// </summary>
         internal static string Btn_Apply {
             get {
@@ -79,7 +79,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Przeglądaj.
+        ///   Looks up a localized string similar to Procurar.
         /// </summary>
         internal static string Btn_Browse {
             get {
@@ -88,7 +88,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sprawdź akutalizacje.
+        ///   Looks up a localized string similar to Verificar atualizações.
         /// </summary>
         internal static string Btn_CheckForUpdates {
             get {
@@ -97,7 +97,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zamknij.
+        ///   Looks up a localized string similar to Fechar.
         /// </summary>
         internal static string Btn_Close {
             get {
@@ -106,7 +106,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wyczyść schowek.
+        ///   Looks up a localized string similar to Área de transferência vazia.
         /// </summary>
         internal static string Btn_EmptyClipboard {
             get {
@@ -115,7 +115,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wyczyść historię.
+        ///   Looks up a localized string similar to História vazia.
         /// </summary>
         internal static string Btn_EmptyHistory {
             get {
@@ -124,7 +124,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Opcje.
+        ///   Looks up a localized string similar to Opções.
         /// </summary>
         internal static string Btn_MoreOptions {
             get {
@@ -133,7 +133,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Automatycznie wyczyść schowek.
+        ///   Looks up a localized string similar to Limpar a área de transferência automaticamente.
         /// </summary>
         internal static string Check_AutoClearClipboard {
             get {
@@ -142,7 +142,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dołącz nazwe urządzenia w historii.
+        ///   Looks up a localized string similar to Incluir nome do dispositivo no histórico de cópias.
         /// </summary>
         internal static string Check_IncludeDeviceName {
             get {
@@ -151,7 +151,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ogranicz użycie danych.
+        ///   Looks up a localized string similar to Limitar o tráfego de dados.
         /// </summary>
         internal static string Check_LimitTraffic {
             get {
@@ -160,7 +160,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Poinformuj jeśli coś skopiuję.
+        ///   Looks up a localized string similar to Notifique-me se eu copiar algo.
         /// </summary>
         internal static string Check_NotifyOfCopy {
             get {
@@ -169,7 +169,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tryb Sieciowy.
+        ///   Looks up a localized string similar to Modo Online.
         /// </summary>
         internal static string Check_OnlineMode {
             get {
@@ -178,7 +178,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Otwórz za pomocą Windows.
+        ///   Looks up a localized string similar to Abrir com Windows.
         /// </summary>
         internal static string Check_OpenWithWin {
             get {
@@ -187,7 +187,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zapisz do pliku.
+        ///   Looks up a localized string similar to Salvar em arquivo.
         /// </summary>
         internal static string Check_SaveToFile {
             get {
@@ -196,7 +196,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pokaż przycisk dotacji na głównym formularzu.
+        ///   Looks up a localized string similar to Mostrar botão de doação no formulário principal.
         /// </summary>
         internal static string Check_ShowDonation {
             get {
@@ -205,7 +205,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Uruchom zminimalizowny.
+        ///   Looks up a localized string similar to Começar Minimizado.
         /// </summary>
         internal static string Check_StartMinimized {
             get {
@@ -214,7 +214,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Aktualizuj na starcie.
+        ///   Looks up a localized string similar to Atualizar na inicialização.
         /// </summary>
         internal static string Check_UpdateOnStartup {
             get {
@@ -223,7 +223,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dołącz czas skopiowania.
+        ///   Looks up a localized string similar to Usar carimbo de data e hora.
         /// </summary>
         internal static string Check_UseTimestamp {
             get {
@@ -232,7 +232,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Użyj białej ikony na pasku startowym.
+        ///   Looks up a localized string similar to Use o ícone branco na barra de tarefas do sistema.
         /// </summary>
         internal static string Check_UseWhiteIcon {
             get {
@@ -241,7 +241,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zapisuj w czasie rzeczywistym.
+        ///   Looks up a localized string similar to Escreva em tempo real.
         /// </summary>
         internal static string Check_WriteInRealTime {
             get {
@@ -250,7 +250,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Godzina.
+        ///   Looks up a localized string similar to Hora.
         /// </summary>
         internal static string ComboBox_Time_Hour {
             get {
@@ -259,7 +259,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sekunda.
+        ///   Looks up a localized string similar to Segundo.
         /// </summary>
         internal static string ComboBox_Time_Sec {
             get {
@@ -268,7 +268,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Plik tekstowy|*.txt.
+        ///   Looks up a localized string similar to Arquivo de texto|*.txt.
         /// </summary>
         internal static string File_TextFile {
             get {
@@ -277,7 +277,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Akcje.
+        ///   Looks up a localized string similar to Ações.
         /// </summary>
         internal static string GroupBox_Actions {
             get {
@@ -286,7 +286,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zachowanie i wygląd.
+        ///   Looks up a localized string similar to Comportamento e recursos visuais.
         /// </summary>
         internal static string GroupBox_BehaviourAndVisuals {
             get {
@@ -295,7 +295,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Skopiowane rzeczy.
+        ///   Looks up a localized string similar to Itens copiados.
         /// </summary>
         internal static string GroupBox_CopiedItems {
             get {
@@ -304,7 +304,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ogólne.
+        ///   Looks up a localized string similar to Geral.
         /// </summary>
         internal static string GroupBox_General {
             get {
@@ -313,7 +313,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zachowanie aplikacji online.
+        ///   Looks up a localized string similar to Comportamento do aplicativo online.
         /// </summary>
         internal static string GroupBox_OnlineBehaviour {
             get {
@@ -322,7 +322,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ustawienia sieciowe.
+        ///   Looks up a localized string similar to Configurações online.
         /// </summary>
         internal static string GroupBox_OnlineSettings {
             get {
@@ -331,7 +331,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zapisz ustawienia do pliku.
+        ///   Looks up a localized string similar to Salvar nas configurações do arquivo.
         /// </summary>
         internal static string GroupBox_SaveToFileSettings {
             get {
@@ -340,7 +340,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Opóżnienie przed próbą wznowienia połączenia.
+        ///   Looks up a localized string similar to Atraso antes de reconectar.
         /// </summary>
         internal static string GroupBox_TimeBeforeReconnect {
             get {
@@ -349,7 +349,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Aktualizacje i obecna wersja.
+        ///   Looks up a localized string similar to Atualizar informações da versão.
         /// </summary>
         internal static string GroupBox_UpdateAndCurrentVersion {
             get {
@@ -358,7 +358,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Każdy.
+        ///   Looks up a localized string similar to Cada.
         /// </summary>
         internal static string Label_Every {
             get {
@@ -367,7 +367,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lokalizacja pliku.
+        ///   Looks up a localized string similar to Localização de arquivo.
         /// </summary>
         internal static string Label_FileLocation {
             get {
@@ -376,7 +376,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Język.
+        ///   Looks up a localized string similar to Língua.
         /// </summary>
         internal static string Label_Lang {
             get {
@@ -385,7 +385,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minuta.
+        ///   Looks up a localized string similar to Minuto.
         /// </summary>
         internal static string Label_Minutes {
             get {
@@ -394,7 +394,10 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Brak uprawnień administratora, lub aplikacja ich nie posiada, proszę spróbować uruchomić ją ponownie jako administrator..
+        ///   Looks up a localized string similar to Desculpe! Parece que você não tem um administrador
+        ///direitos e o aplicativo falhou
+        ///para começar como tal, tente
+        ///para reiniciar o aplicativo como administrador..
         /// </summary>
         internal static string Label_NoAdminRights {
             get {
@@ -403,8 +406,8 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wybierz jak aplikacja będzie się zachowywać
-        ///podczas interakcji z innymi urządzeniami online.
+        ///   Looks up a localized string similar to Defina como o aplicativo lidará
+        ///interações online com outros dispositivos..
         /// </summary>
         internal static string Label_OnlineBehaviourExplanation {
             get {
@@ -413,7 +416,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sekundy.
+        ///   Looks up a localized string similar to Segundos.
         /// </summary>
         internal static string Label_Seconds {
             get {
@@ -422,7 +425,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pokaż powiadomienie przez (sekundy).
+        ///   Looks up a localized string similar to Mostrar notificação por (segundos).
         /// </summary>
         internal static string Label_ShowNotificationFor {
             get {
@@ -431,7 +434,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wersja .
+        ///   Looks up a localized string similar to Versão .
         /// </summary>
         internal static string Label_Version {
             get {
@@ -440,7 +443,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kiedy zostanie zamknięte główne okno.
+        ///   Looks up a localized string similar to Quando fecho a janela principal.
         /// </summary>
         internal static string Label_WhenMainWindowClosed {
             get {
@@ -449,9 +452,9 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Jeśli zapis w czasie rzeczywistym
-        ///jest włączony, aplikacja zapisze
-        ///dane do pliku kiedy zostanie zamknięta..
+        ///   Looks up a localized string similar to Se o tempo real estiver desativado, o
+        ///aplicação terá apenas acesso e
+        ///escreva no arquivo quando estiver fechado..
         /// </summary>
         internal static string Label_WriteRealTimeInfo {
             get {
@@ -469,7 +472,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wyczyść schowek.
+        ///   Looks up a localized string similar to Área de transferência vazia.
         /// </summary>
         internal static string Menu_EmptyClipboard {
             get {
@@ -478,7 +481,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wyczyść historię.
+        ///   Looks up a localized string similar to História vazia.
         /// </summary>
         internal static string Menu_EmptyHistory {
             get {
@@ -487,7 +490,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wyjdź.
+        ///   Looks up a localized string similar to Saída.
         /// </summary>
         internal static string Menu_Exit {
             get {
@@ -496,7 +499,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Otwórz.
+        ///   Looks up a localized string similar to Abrir.
         /// </summary>
         internal static string Menu_Restore {
             get {
@@ -505,7 +508,16 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zanim schowam przycisk chciałbym powiedzieć, że pracuję nad tą aplikacją głównie sam, z pomocą kilku przyjaciół, lecz nie dostaję żadnego wspracia finansowego. Nie chcę prosić ludzi o pieniądze, którzy używają tej aplikacji i nie zamierzam dodawać żadnych reklam pod żadną postacią. Jeśli chcesz wesprzeć moją pracę i pomóc mi ulepszyć ją w przyszłości, możesz dobrowolnie złożyć dotację, dziękuję! :).
+        ///   Looks up a localized string similar to Vou ocultar o botão imediatamente, mas
+        ///antes de fazer isso, eu só queria dizer,
+        ///Eu trabalho neste aplicativo principalmente sozinho,
+        ///com a ajuda de alguns amigos,
+        ///mas não recebo ajuda financeira, não tenho
+        ///desejo pedir dinheiro às pessoas apenas
+        ///para usar este aplicativo, e eu me recuso a
+        ///inclua anúncios de qualquer maneira. Se você gostaria de
+        ///apoiar meu trabalho e me ajudar a melhorá-los
+        ///o futuro, por favor considere doar, obrigado! :).
         /// </summary>
         internal static string MsgBox_DonateHide {
             get {
@@ -514,7 +526,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Aby zatwierdzić zmiany, zrestartuj aplikację.
+        ///   Looks up a localized string similar to Para aplicar as alterações, reinicie o aplicativo..
         /// </summary>
         internal static string MsgBox_RestartApp {
             get {
@@ -523,7 +535,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ukryj przycisk dotacji.
+        ///   Looks up a localized string similar to Ocultar botão de doação.
         /// </summary>
         internal static string MsgBox_Title_DonateHide {
             get {
@@ -532,7 +544,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zrestartuj aplikację.
+        ///   Looks up a localized string similar to Reiniciar o aplicativo.
         /// </summary>
         internal static string MsgBox_TitleRestartApp {
             get {
@@ -541,7 +553,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Aplikacja wciąż działa! Jeśli chcesz ją zamknąć, naciśnij prawym przyciskiem na ikonę paska i wybierz opcję zamknij!.
+        ///   Looks up a localized string similar to O aplicativo ainda está sendo executado! Se você deseja sair, clique com o botão direito do mouse no ícone da barra de tarefas e escolha Sair!.
         /// </summary>
         internal static string Notif_AppStillRunning {
             get {
@@ -550,7 +562,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Skopiowano do schowka!.
+        ///   Looks up a localized string similar to Item copiado para a área de transferência!.
         /// </summary>
         internal static string Notif_ItemCopied {
             get {
@@ -559,7 +571,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Aplikacja wciąż działa!.
+        ///   Looks up a localized string similar to Aplicativo ainda em execução!.
         /// </summary>
         internal static string Notif_Title_AppStillRunning {
             get {
@@ -568,7 +580,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rzecz skopiowana!.
+        ///   Looks up a localized string similar to Item copiado!.
         /// </summary>
         internal static string Notif_Title_ItemCopied {
             get {
@@ -577,7 +589,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Opcje.
+        ///   Looks up a localized string similar to Opções.
         /// </summary>
         internal static string Options_Title {
             get {
@@ -586,7 +598,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dodaj na koniec pliku.
+        ///   Looks up a localized string similar to Anexar Arquivo.
         /// </summary>
         internal static string Radio_Append {
             get {
@@ -595,7 +607,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Podmień plik.
+        ///   Looks up a localized string similar to Esvaziar e substituir arquivo.
         /// </summary>
         internal static string Radio_EmptyAndReplace {
             get {
@@ -604,7 +616,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wyjdź z aplikacji.
+        ///   Looks up a localized string similar to Sair da aplicação.
         /// </summary>
         internal static string Radio_ExitApp {
             get {
@@ -613,7 +625,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zminimalizuj do paska zadań.
+        ///   Looks up a localized string similar to Minimizar para a bandeja.
         /// </summary>
         internal static string Radio_Minimize {
             get {
@@ -622,7 +634,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tylko Odbierz.
+        ///   Looks up a localized string similar to Receber apenas.
         /// </summary>
         internal static string Radio_ReceiveOnly {
             get {
@@ -631,7 +643,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wyślij i Odbierz.
+        ///   Looks up a localized string similar to Enviar e Receber.
         /// </summary>
         internal static string Radio_SendAndReceive {
             get {
@@ -640,7 +652,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tylko wyślij.
+        ///   Looks up a localized string similar to Envie apenas.
         /// </summary>
         internal static string Radio_SendOnly {
             get {
@@ -649,7 +661,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zapisz historię jako plik tekstowy.
+        ///   Looks up a localized string similar to Salvar histórico como arquivo de texto.
         /// </summary>
         internal static string SaveAsTextFile {
             get {

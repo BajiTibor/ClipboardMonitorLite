@@ -7,6 +7,11 @@ using System.ComponentModel;
 
 namespace ClipboardMonitorLite.FileOperations
 {
+    /// <summary>
+    /// Contains the methods for detecting whenever the application's
+    /// shotcut exists inside the startup folder or not, and can create
+    /// a new shortcut and place it there if needed, or remove the old one.
+    /// </summary>
     public class LaunchOnStartup
     {
         private Settings _settings;

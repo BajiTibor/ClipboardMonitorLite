@@ -432,7 +432,7 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Verzia.
+        ///   Looks up a localized string similar to Verzia .
         /// </summary>
         internal static string Label_Version {
             get {

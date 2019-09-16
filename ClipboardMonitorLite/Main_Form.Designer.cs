@@ -131,30 +131,30 @@
             this.emptyHistoryToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(219, 132);
+            this.MenuStrip.Size = new System.Drawing.Size(191, 100);
             // 
             // restoreToolStripMenuItem
             // 
             this.restoreToolStripMenuItem.Name = "restoreToolStripMenuItem";
-            this.restoreToolStripMenuItem.Size = new System.Drawing.Size(218, 32);
+            this.restoreToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.restoreToolStripMenuItem.Text = "Restore";
             // 
             // emptyClipboardToolStripMenuItem
             // 
             this.emptyClipboardToolStripMenuItem.Name = "emptyClipboardToolStripMenuItem";
-            this.emptyClipboardToolStripMenuItem.Size = new System.Drawing.Size(218, 32);
+            this.emptyClipboardToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.emptyClipboardToolStripMenuItem.Text = "Empty Clipboard";
             // 
             // emptyHistoryToolStripMenuItem
             // 
             this.emptyHistoryToolStripMenuItem.Name = "emptyHistoryToolStripMenuItem";
-            this.emptyHistoryToolStripMenuItem.Size = new System.Drawing.Size(218, 32);
+            this.emptyHistoryToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.emptyHistoryToolStripMenuItem.Text = "Empty History";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(218, 32);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // Btn_Donate
@@ -175,7 +175,7 @@
             this.Label_Connection_DONOTMODIFY.AutoSize = true;
             this.Label_Connection_DONOTMODIFY.Location = new System.Drawing.Point(197, 523);
             this.Label_Connection_DONOTMODIFY.Name = "Label_Connection_DONOTMODIFY";
-            this.Label_Connection_DONOTMODIFY.Size = new System.Drawing.Size(133, 20);
+            this.Label_Connection_DONOTMODIFY.Size = new System.Drawing.Size(116, 17);
             this.Label_Connection_DONOTMODIFY.TabIndex = 6;
             this.Label_Connection_DONOTMODIFY.Text = "Connection State";
             // 

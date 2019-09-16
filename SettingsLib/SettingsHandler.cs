@@ -5,6 +5,10 @@ using System.Diagnostics;
 
 namespace SettingsLib
 {
+    /// <summary>
+    /// Object that handles finding, loading or writing the settings.json file to
+    /// the AppData directory.
+    /// </summary>
     public class SettingsHandler
     {
         private string appDataDirectory;

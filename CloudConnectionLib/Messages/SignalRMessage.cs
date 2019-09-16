@@ -3,7 +3,10 @@ using System.ComponentModel;
 
 namespace CloudConnectionLib.Messages
 {
-    public class SignalRMessage : INotifyPropertyChanged 
+    /// <summary>
+    /// Message object that gets sent or received by SignalR.
+    /// </summary>
+    public class SignalRMessage : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

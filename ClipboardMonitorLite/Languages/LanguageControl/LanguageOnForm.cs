@@ -6,6 +6,11 @@ using SettingsLib;
 
 namespace ClipboardMonitorLite.Languages.LanguageControl
 {
+    /// <summary>
+    /// Object that sets the language on the form passed to it.
+    /// Generates a new Resource managed based on the Settings object
+    /// that's bassed to it.
+    /// </summary>
     public class LanguageOnForm
     {
         private Settings _settings;

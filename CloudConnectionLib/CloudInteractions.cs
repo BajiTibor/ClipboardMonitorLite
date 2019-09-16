@@ -9,6 +9,11 @@ using CloudConnectionLib.Messages.Interface;
 
 namespace CloudConnectionLib
 {
+    /// <summary>
+    /// Handles all the interactions using SignalR with the servers and
+    /// web applications, will also change the inboundMessage or act
+    /// accordingly when the outgoing message changes.
+    /// </summary>
     public class CloudInteractions
     {
         private Settings _settings;
@@ -83,8 +88,8 @@ namespace CloudConnectionLib
                 await connection.StartAsync();
                 connection.On<string, string>("broadcastMessage", (user, message) =>
                 {
-                    var newMessage = JsonConvert.DeserializeObject<ICloudMessage>(message);
-                    if (!newMessage.Content.Equals(_inboundMessage.Content))
+                    var newMessage = JsonConvert.DeserializeObject<SignalRMessage>(message);
+                    if (!newMessage.Message.Equals(_inboundMessage.Message))
                     {
                         if (!newMessage.MachineName.Equals(Environment.MachineName))
                         {

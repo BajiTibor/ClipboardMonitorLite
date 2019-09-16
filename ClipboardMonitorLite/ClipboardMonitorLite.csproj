@@ -43,6 +43,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -266,9 +267,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MainResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SetConnectedClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetConnectedClients.Designer.cs">
+      <DependentUpon>SetConnectedClients.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Languages\lang_da.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>lang_da.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Languages\lang_por.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -329,6 +337,9 @@
     <EmbeddedResource Include="Resources\MainResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MainResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetConnectedClients.resx">
+      <DependentUpon>SetConnectedClients.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />

@@ -18,7 +18,7 @@ namespace SettingsLib
             set
             {
                 usingWhiteIcon = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("UsingWhiteTrayIcon"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(UsingWhiteTrayIcon)));
             }
         }
 
@@ -32,7 +32,7 @@ namespace SettingsLib
             set
             {
                 notifyClipChange = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("NotifyClipboardChange"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(NotifyClipboardChange)));
             }
         }
 
@@ -46,7 +46,7 @@ namespace SettingsLib
             set
             {
                 saveClipHistory = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("SaveClipboardHistory"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(SaveClipboardHistory)));
             }
         }
 
@@ -60,7 +60,7 @@ namespace SettingsLib
             set
             {
                 autoClearHistory = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("AutoClearClipboardHistory"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(AutoClearClipboardHistory)));
             }
         }
 
@@ -74,7 +74,7 @@ namespace SettingsLib
             set
             {
                 minimizeOnClose = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("MinimizeOnClose"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(MinimizeOnClose)));
             }
         }
 
@@ -88,7 +88,7 @@ namespace SettingsLib
             set
             {
                 showDonationButton = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("ShowDonation"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(ShowDonation)));
             }
         }
 
@@ -102,7 +102,7 @@ namespace SettingsLib
             set
             {
                 selectedLanguage = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("CurrentlySelectedLanguage"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(CurrentlySelectedLanguage)));
             }
         }
 
@@ -116,7 +116,7 @@ namespace SettingsLib
             set
             {
                 fileLocation = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("HistoryFileLocation"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(HistoryFileLocation)));
             }
         }
 
@@ -130,7 +130,7 @@ namespace SettingsLib
             set
             {
                 writeRealTime = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("WriteInRealTime"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(WriteInRealTime)));
             }
         }
 
@@ -144,7 +144,7 @@ namespace SettingsLib
             set
             {
                 clearBetweenMinutes = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("ClearBetween"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(ClearBetween)));
             }
         }
 
@@ -158,7 +158,7 @@ namespace SettingsLib
             set
             {
                 startMinimized = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("StartMinimized"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(StartMinimized)));
             }
         }
 
@@ -172,7 +172,7 @@ namespace SettingsLib
             set
             {
                 startWithWin = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("StartWithWindows"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(StartWithWindows)));
             }
         }
 
@@ -187,7 +187,7 @@ namespace SettingsLib
             set
             {
                 onlineMode = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("OnlineMode"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(OnlineMode)));
             }
         }
 
@@ -201,7 +201,7 @@ namespace SettingsLib
             set
             {
                 useTimestamp = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("UseTimestamp"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(UseTimestamp)));
             }
         }
 
@@ -215,7 +215,7 @@ namespace SettingsLib
             set
             {
                 limitTraffic = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("LimitTraffic"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(LimitTraffic)));
             }
         }
 
@@ -229,7 +229,7 @@ namespace SettingsLib
             set
             {
                 sendOnly = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("SendOnly"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(SendOnly)));
             }
         }
 
@@ -243,7 +243,7 @@ namespace SettingsLib
             set
             {
                 retryConnectionAfter = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("RetryConnectionAfter"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(RetryConnectionAfter)));
             }
         }
 
@@ -257,7 +257,7 @@ namespace SettingsLib
             set
             {
                 includeDeviceName = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("IncludeDeviceName"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(IncludeDeviceName)));
             }
         }
 

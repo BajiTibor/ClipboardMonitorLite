@@ -53,7 +53,7 @@ namespace CloudConnectionLib
             }
         }
 
-        private void MessageArrived(ICloudMessage message)
+        private void MessageArrived(SignalRMessage message)
         {
             if (message.Type.Equals(MessageType.ClipboardMessage))
             {
@@ -89,7 +89,7 @@ namespace CloudConnectionLib
                 connection.On<string, string>("broadcastMessage", (user, message) =>
                 {
                     var newMessage = JsonConvert.DeserializeObject<SignalRMessage>(message);
-                    if (!newMessage.Message.Equals(_inboundMessage.Message))
+                    if (!newMessage.Content.Equals(_inboundMessage.Content))
                     {
                         if (!newMessage.MachineName.Equals(Environment.MachineName))
                         {

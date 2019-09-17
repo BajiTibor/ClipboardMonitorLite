@@ -64,5 +64,14 @@ namespace SettingsLib
             }
             return tempSettings;
         }
+
+        public void CreateFile(Settings _settings)
+        {
+            if (!_settings.Equals(null))
+            {
+                string converted = JsonConvert.SerializeObject(_settings, Formatting.Indented);
+                WriteSettingsFile(converted);
+            }
+        }
     }
 }

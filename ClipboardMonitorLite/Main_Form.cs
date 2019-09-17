@@ -15,7 +15,6 @@ namespace ClipboardMonitorLite
     {
         private Settings _settings;
         private FormEvents _formEvents;
-        private CreateJsonFile _createJson;
         private SignalRMessage _inboundMessage;
         private LanguageOnForm _languageOnForm;
         private SignalRMessage _outgoingMessage;
@@ -29,7 +28,6 @@ namespace ClipboardMonitorLite
         public MainForm()
         {
             InitializeComponent();
-            _createJson = new CreateJsonFile();
             _settingsHandler = new SettingsHandler();
             _settings = _settingsHandler.LoadSettingsFile();
             _inboundMessage = new SignalRMessage();
@@ -73,7 +71,7 @@ namespace ClipboardMonitorLite
             OptionsForm form = new OptionsForm(_settings, _formEvents);
             form.ShowDialog();
             form.Dispose();
-            _createJson.CreateFile(_settings);
+            _settingsHandler.CreateFile(_settings);
             _languageOnForm.SetLang(_settings, this);
         }
 

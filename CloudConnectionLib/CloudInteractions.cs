@@ -5,7 +5,6 @@ using System.ComponentModel;
 using System.Threading.Tasks;
 using CloudConnectionLib.Messages;
 using Microsoft.AspNetCore.SignalR.Client;
-using CloudConnectionLib.Messages.Interface;
 
 namespace CloudConnectionLib
 {
@@ -44,24 +43,20 @@ namespace CloudConnectionLib
             if ((_settings.LimitTraffic && _settings.SendOnly) || (!_settings.LimitTraffic)
                 && (OnlineState.ConnectionLife.Equals("Connected")))
             {
-                if (e.PropertyName.Equals("MachineName") && 
-                    _outgoingMessage.Type.Equals(MessageType.ClipboardMessage))
+                if (e.PropertyName.Equals("MachineName"))
                 {
-                    await connection.SendAsync("broadcastMessage",
-                        string.Empty, JsonConvert.SerializeObject(_outgoingMessage));
+                    //await connection.SendAsync("broadcastMessage",
+                    //    string.Empty, JsonConvert.SerializeObject(_outgoingMessage));
                 }
             }
         }
 
         private void MessageArrived(SignalRMessage message)
         {
-            if (message.Type.Equals(MessageType.ClipboardMessage))
+            if ((_settings.LimitTraffic && !_settings.SendOnly) || (!_settings.LimitTraffic))
             {
-                if ((_settings.LimitTraffic && !_settings.SendOnly) || (!_settings.LimitTraffic))
-                {
-                    _inboundMessage.Content = message.Content;
-                    _inboundMessage.MachineName = message.MachineName;
-                }
+                _inboundMessage.Content = message.Content;
+                _inboundMessage.MachineName = message.MachineName;
             }
         }
 

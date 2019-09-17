@@ -28,145 +28,116 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Group_ClientConnections = new System.Windows.Forms.GroupBox();
-            this.Group_AddNewConnection = new System.Windows.Forms.GroupBox();
-            this.Group_RemoveConnection = new System.Windows.Forms.GroupBox();
-            this.txt_ConnectedClients = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Btn_AddConnection = new System.Windows.Forms.Button();
-            this.Btn_TestConnection = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Btn_PingConnection = new System.Windows.Forms.Button();
-            this.Btn_Remove = new System.Windows.Forms.Button();
-            this.Group_ClientConnections.SuspendLayout();
-            this.Group_AddNewConnection.SuspendLayout();
-            this.Group_RemoveConnection.SuspendLayout();
+            this.Group_GroupSettings = new System.Windows.Forms.GroupBox();
+            this.txt_GroupId = new System.Windows.Forms.TextBox();
+            this.Label_GroupId = new System.Windows.Forms.Label();
+            this.txt_Password = new System.Windows.Forms.TextBox();
+            this.Label_Password = new System.Windows.Forms.Label();
+            this.Btn_Update = new System.Windows.Forms.Button();
+            this.Btn_ShowPassword = new System.Windows.Forms.Button();
+            this.Btn_Generate = new System.Windows.Forms.Button();
+            this.Group_GroupSettings.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Group_ClientConnections
+            // Group_GroupSettings
             // 
-            this.Group_ClientConnections.Controls.Add(this.txt_ConnectedClients);
-            this.Group_ClientConnections.Location = new System.Drawing.Point(12, 12);
-            this.Group_ClientConnections.Name = "Group_ClientConnections";
-            this.Group_ClientConnections.Size = new System.Drawing.Size(518, 173);
-            this.Group_ClientConnections.TabIndex = 0;
-            this.Group_ClientConnections.TabStop = false;
-            this.Group_ClientConnections.Text = "Connected Clients";
+            this.Group_GroupSettings.Controls.Add(this.Btn_Generate);
+            this.Group_GroupSettings.Controls.Add(this.Btn_ShowPassword);
+            this.Group_GroupSettings.Controls.Add(this.Btn_Update);
+            this.Group_GroupSettings.Controls.Add(this.Label_Password);
+            this.Group_GroupSettings.Controls.Add(this.txt_Password);
+            this.Group_GroupSettings.Controls.Add(this.Label_GroupId);
+            this.Group_GroupSettings.Controls.Add(this.txt_GroupId);
+            this.Group_GroupSettings.Location = new System.Drawing.Point(12, 12);
+            this.Group_GroupSettings.Name = "Group_GroupSettings";
+            this.Group_GroupSettings.Size = new System.Drawing.Size(315, 171);
+            this.Group_GroupSettings.TabIndex = 0;
+            this.Group_GroupSettings.TabStop = false;
+            this.Group_GroupSettings.Text = "Connections";
             // 
-            // Group_AddNewConnection
+            // txt_GroupId
             // 
-            this.Group_AddNewConnection.Controls.Add(this.Btn_TestConnection);
-            this.Group_AddNewConnection.Controls.Add(this.Btn_AddConnection);
-            this.Group_AddNewConnection.Controls.Add(this.textBox1);
-            this.Group_AddNewConnection.Location = new System.Drawing.Point(12, 191);
-            this.Group_AddNewConnection.Name = "Group_AddNewConnection";
-            this.Group_AddNewConnection.Size = new System.Drawing.Size(250, 110);
-            this.Group_AddNewConnection.TabIndex = 1;
-            this.Group_AddNewConnection.TabStop = false;
-            this.Group_AddNewConnection.Text = "Add new connection";
+            this.txt_GroupId.Location = new System.Drawing.Point(6, 47);
+            this.txt_GroupId.Name = "txt_GroupId";
+            this.txt_GroupId.Size = new System.Drawing.Size(222, 22);
+            this.txt_GroupId.TabIndex = 0;
             // 
-            // Group_RemoveConnection
+            // Label_GroupId
             // 
-            this.Group_RemoveConnection.Controls.Add(this.Btn_Remove);
-            this.Group_RemoveConnection.Controls.Add(this.Btn_PingConnection);
-            this.Group_RemoveConnection.Controls.Add(this.comboBox1);
-            this.Group_RemoveConnection.Location = new System.Drawing.Point(280, 191);
-            this.Group_RemoveConnection.Name = "Group_RemoveConnection";
-            this.Group_RemoveConnection.Size = new System.Drawing.Size(250, 110);
-            this.Group_RemoveConnection.TabIndex = 2;
-            this.Group_RemoveConnection.TabStop = false;
-            this.Group_RemoveConnection.Text = "Remove a connected client";
+            this.Label_GroupId.AutoSize = true;
+            this.Label_GroupId.Location = new System.Drawing.Point(6, 27);
+            this.Label_GroupId.Name = "Label_GroupId";
+            this.Label_GroupId.Size = new System.Drawing.Size(138, 17);
+            this.Label_GroupId.TabIndex = 1;
+            this.Label_GroupId.Text = "Username (GroupId)";
             // 
-            // txt_ConnectedClients
+            // txt_Password
             // 
-            this.txt_ConnectedClients.Location = new System.Drawing.Point(7, 22);
-            this.txt_ConnectedClients.Name = "txt_ConnectedClients";
-            this.txt_ConnectedClients.ReadOnly = true;
-            this.txt_ConnectedClients.Size = new System.Drawing.Size(505, 145);
-            this.txt_ConnectedClients.TabIndex = 0;
-            this.txt_ConnectedClients.Text = "";
+            this.txt_Password.Location = new System.Drawing.Point(6, 103);
+            this.txt_Password.Name = "txt_Password";
+            this.txt_Password.Size = new System.Drawing.Size(222, 22);
+            this.txt_Password.TabIndex = 2;
+            this.txt_Password.UseSystemPasswordChar = true;
             // 
-            // textBox1
+            // Label_Password
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(237, 22);
-            this.textBox1.TabIndex = 0;
+            this.Label_Password.AutoSize = true;
+            this.Label_Password.Location = new System.Drawing.Point(6, 83);
+            this.Label_Password.Name = "Label_Password";
+            this.Label_Password.Size = new System.Drawing.Size(69, 17);
+            this.Label_Password.TabIndex = 3;
+            this.Label_Password.Text = "Password";
             // 
-            // Btn_AddConnection
+            // Btn_Update
             // 
-            this.Btn_AddConnection.Location = new System.Drawing.Point(151, 63);
-            this.Btn_AddConnection.Name = "Btn_AddConnection";
-            this.Btn_AddConnection.Size = new System.Drawing.Size(93, 35);
-            this.Btn_AddConnection.TabIndex = 1;
-            this.Btn_AddConnection.Text = "Add";
-            this.Btn_AddConnection.UseVisualStyleBackColor = true;
+            this.Btn_Update.Location = new System.Drawing.Point(6, 135);
+            this.Btn_Update.Name = "Btn_Update";
+            this.Btn_Update.Size = new System.Drawing.Size(80, 30);
+            this.Btn_Update.TabIndex = 4;
+            this.Btn_Update.Text = "Update";
+            this.Btn_Update.UseVisualStyleBackColor = true;
             // 
-            // Btn_TestConnection
+            // Btn_ShowPassword
             // 
-            this.Btn_TestConnection.Location = new System.Drawing.Point(7, 63);
-            this.Btn_TestConnection.Name = "Btn_TestConnection";
-            this.Btn_TestConnection.Size = new System.Drawing.Size(138, 35);
-            this.Btn_TestConnection.TabIndex = 2;
-            this.Btn_TestConnection.Text = "Test Connection";
-            this.Btn_TestConnection.UseVisualStyleBackColor = true;
+            this.Btn_ShowPassword.Location = new System.Drawing.Point(234, 93);
+            this.Btn_ShowPassword.Name = "Btn_ShowPassword";
+            this.Btn_ShowPassword.Size = new System.Drawing.Size(70, 40);
+            this.Btn_ShowPassword.TabIndex = 5;
+            this.Btn_ShowPassword.Text = "Show";
+            this.Btn_ShowPassword.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // Btn_Generate
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(238, 24);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // Btn_PingConnection
-            // 
-            this.Btn_PingConnection.Location = new System.Drawing.Point(6, 63);
-            this.Btn_PingConnection.Name = "Btn_PingConnection";
-            this.Btn_PingConnection.Size = new System.Drawing.Size(124, 35);
-            this.Btn_PingConnection.TabIndex = 1;
-            this.Btn_PingConnection.Text = "Ping Device";
-            this.Btn_PingConnection.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Remove
-            // 
-            this.Btn_Remove.Location = new System.Drawing.Point(136, 63);
-            this.Btn_Remove.Name = "Btn_Remove";
-            this.Btn_Remove.Size = new System.Drawing.Size(108, 35);
-            this.Btn_Remove.TabIndex = 2;
-            this.Btn_Remove.Text = "Remove";
-            this.Btn_Remove.UseVisualStyleBackColor = true;
+            this.Btn_Generate.Location = new System.Drawing.Point(234, 38);
+            this.Btn_Generate.Name = "Btn_Generate";
+            this.Btn_Generate.Size = new System.Drawing.Size(70, 40);
+            this.Btn_Generate.TabIndex = 6;
+            this.Btn_Generate.Text = "Random";
+            this.Btn_Generate.UseVisualStyleBackColor = true;
             // 
             // SetConnectedClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 313);
-            this.Controls.Add(this.Group_RemoveConnection);
-            this.Controls.Add(this.Group_AddNewConnection);
-            this.Controls.Add(this.Group_ClientConnections);
+            this.ClientSize = new System.Drawing.Size(336, 192);
+            this.Controls.Add(this.Group_GroupSettings);
             this.Name = "SetConnectedClients";
             this.Text = "SetConnectedClients";
-            this.Group_ClientConnections.ResumeLayout(false);
-            this.Group_AddNewConnection.ResumeLayout(false);
-            this.Group_AddNewConnection.PerformLayout();
-            this.Group_RemoveConnection.ResumeLayout(false);
+            this.Group_GroupSettings.ResumeLayout(false);
+            this.Group_GroupSettings.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox Group_ClientConnections;
-        private System.Windows.Forms.RichTextBox txt_ConnectedClients;
-        private System.Windows.Forms.GroupBox Group_AddNewConnection;
-        private System.Windows.Forms.GroupBox Group_RemoveConnection;
-        private System.Windows.Forms.Button Btn_TestConnection;
-        private System.Windows.Forms.Button Btn_AddConnection;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button Btn_Remove;
-        private System.Windows.Forms.Button Btn_PingConnection;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox Group_GroupSettings;
+        private System.Windows.Forms.Label Label_Password;
+        private System.Windows.Forms.TextBox txt_Password;
+        private System.Windows.Forms.Label Label_GroupId;
+        private System.Windows.Forms.TextBox txt_GroupId;
+        private System.Windows.Forms.Button Btn_Update;
+        private System.Windows.Forms.Button Btn_Generate;
+        private System.Windows.Forms.Button Btn_ShowPassword;
     }
 }

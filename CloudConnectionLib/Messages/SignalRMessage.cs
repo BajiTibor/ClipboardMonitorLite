@@ -1,5 +1,4 @@
-﻿using CloudConnectionLib.Messages.Interface;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 namespace CloudConnectionLib.Messages
 {
@@ -9,20 +8,6 @@ namespace CloudConnectionLib.Messages
     public class SignalRMessage : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
-        private string messageType;
-        public string Type
-        {
-            get
-            {
-                return messageType;
-            }
-            set
-            {
-                messageType = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("Type"));
-            }
-        }
 
         private string messageContent;
         public string Content
@@ -34,7 +19,7 @@ namespace CloudConnectionLib.Messages
             set
             {
                 messageContent = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("Content"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(Content)));
             }
         }
 
@@ -48,24 +33,9 @@ namespace CloudConnectionLib.Messages
             set
             {
                 machineName = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("MachineName"));
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(MachineName)));
             }
         }
-
-        private string guid;
-        public string Guid
-        {
-            get
-            {
-                return guid;
-            }
-            set
-            {
-                guid = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("GUID"));
-            }
-        }
-
 
         private void InvokePropertyChanged(PropertyChangedEventArgs e)
         {

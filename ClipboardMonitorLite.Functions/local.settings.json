@@ -1,7 +1,9 @@
 {
     "IsEncrypted": false,
-    "Values": {
-        "AzureWebJobsStorage": "UseDevelopmentStorage=true",
-        "FUNCTIONS_WORKER_RUNTIME": "dotnet"
-    }
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "AzureSignalRConnectionString": "Endpoint=https://clipboardmanager.service.signalr.net;AccessKey=4pN7bJtiRRIpq6vvxNmIy7r5D+zpRQUeKGplDun3E1s=;Version=1.0;",
+    "StorageConnectionString": "UseDevelopmentStorage=true"
+  }
 }

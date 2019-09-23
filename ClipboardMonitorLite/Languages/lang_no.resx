@@ -138,8 +138,14 @@
   <data name="Btn_EmptyHistory" xml:space="preserve">
     <value>Tom historie</value>
   </data>
+  <data name="Btn_Generate" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Btn_MoreOptions" xml:space="preserve">
     <value>alternativer</value>
+  </data>
+  <data name="Btn_ShowPassword" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
   </data>
   <data name="Check_AutoClearClipboard" xml:space="preserve">
     <value>Klar utklippstavle automatisk</value>
@@ -216,11 +222,17 @@
   <data name="GroupBox_UpdateAndCurrentVersion" xml:space="preserve">
     <value>Oppdater og aktuell versjonsinfo</value>
   </data>
+  <data name="Group_GroupSettings" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Label_Every" xml:space="preserve">
     <value>Hver</value>
   </data>
   <data name="Label_FileLocation" xml:space="preserve">
     <value>Filplassering</value>
+  </data>
+  <data name="Label_GroupId" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
   </data>
   <data name="Label_Lang" xml:space="preserve">
     <value>Sprĺk</value>
@@ -236,6 +248,9 @@ for ĺ starte programmet pĺ nytt som administrator.</value>
   </data>
   <data name="Label_OnlineBehaviourExplanation" xml:space="preserve">
     <value>Angi hvordan applikasjonen skal håndtere online interaksjoner med andre enheter.</value>
+  </data>
+  <data name="Label_Password" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
   </data>
   <data name="Label_Seconds" xml:space="preserve">
     <value>Sekunder</value>

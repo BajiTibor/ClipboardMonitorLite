@@ -138,8 +138,14 @@
   <data name="Btn_EmptyHistory" xml:space="preserve">
     <value>História vazia</value>
   </data>
+  <data name="Btn_Generate" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Btn_MoreOptions" xml:space="preserve">
     <value>Opções</value>
+  </data>
+  <data name="Btn_ShowPassword" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
   </data>
   <data name="Check_AutoClearClipboard" xml:space="preserve">
     <value>Limpar a área de transferência automaticamente</value>
@@ -216,11 +222,17 @@
   <data name="GroupBox_UpdateAndCurrentVersion" xml:space="preserve">
     <value>Atualizar informações da versão</value>
   </data>
+  <data name="Group_GroupSettings" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Label_Every" xml:space="preserve">
     <value>Cada</value>
   </data>
   <data name="Label_FileLocation" xml:space="preserve">
     <value>Localização de arquivo</value>
+  </data>
+  <data name="Label_GroupId" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
   </data>
   <data name="Label_Lang" xml:space="preserve">
     <value>Língua</value>
@@ -237,6 +249,9 @@ para reiniciar o aplicativo como administrador.</value>
   <data name="Label_OnlineBehaviourExplanation" xml:space="preserve">
     <value>Defina como o aplicativo lidará
 interações online com outros dispositivos.</value>
+  </data>
+  <data name="Label_Password" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
   </data>
   <data name="Label_Seconds" xml:space="preserve">
     <value>Segundos</value>

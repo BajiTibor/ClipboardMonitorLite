@@ -138,8 +138,14 @@
   <data name="Btn_EmptyHistory" xml:space="preserve">
     <value>Vyprázdniť históriu</value>
   </data>
+  <data name="Btn_Generate" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Btn_MoreOptions" xml:space="preserve">
     <value>Možnosti</value>
+  </data>
+  <data name="Btn_ShowPassword" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
   </data>
   <data name="Check_AutoClearClipboard" xml:space="preserve">
     <value>Automaticky vyprázdniť schránku</value>
@@ -216,11 +222,17 @@
   <data name="GroupBox_UpdateAndCurrentVersion" xml:space="preserve">
     <value>Aktualizácie a informácie k najnovšej verzii</value>
   </data>
+  <data name="Group_GroupSettings" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Label_Every" xml:space="preserve">
     <value>Každých</value>
   </data>
   <data name="Label_FileLocation" xml:space="preserve">
     <value>Umiestnenie súboru</value>
+  </data>
+  <data name="Label_GroupId" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
   </data>
   <data name="Label_Lang" xml:space="preserve">
     <value>Jazyk</value>
@@ -235,6 +247,9 @@ Prosím reštartujte aplikáciu ako administrátor.</value>
   </data>
   <data name="Label_OnlineBehaviourExplanation" xml:space="preserve">
     <value>Nastaviť online interakcie aplikácie s ostatnými zariadeniami</value>
+  </data>
+  <data name="Label_Password" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
   </data>
   <data name="Label_Seconds" xml:space="preserve">
     <value>Sekundy</value>

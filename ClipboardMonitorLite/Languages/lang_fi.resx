@@ -138,8 +138,14 @@
   <data name="Btn_EmptyHistory" xml:space="preserve">
     <value>Tyhjennä Historia</value>
   </data>
+  <data name="Btn_Generate" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Btn_MoreOptions" xml:space="preserve">
     <value>Asetukset</value>
+  </data>
+  <data name="Btn_ShowPassword" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
   </data>
   <data name="Check_AutoClearClipboard" xml:space="preserve">
     <value>Tyhjennä leikepöytä automaattisesti</value>
@@ -216,11 +222,17 @@
   <data name="GroupBox_UpdateAndCurrentVersion" xml:space="preserve">
     <value>Päivityksen ja nykyisen sovellusversion tiedot</value>
   </data>
+  <data name="Group_GroupSettings" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Label_Every" xml:space="preserve">
     <value>Joka</value>
   </data>
   <data name="Label_FileLocation" xml:space="preserve">
     <value>Tiedostosijainti</value>
+  </data>
+  <data name="Label_GroupId" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
   </data>
   <data name="Label_Lang" xml:space="preserve">
     <value>Kieli</value>
@@ -239,6 +251,9 @@ uudelleen järjestelmänvalvojana.</value>
     <value>Aseta miten sovellus käsittelee
 verkkovuorovaikutuksia muiden
 laitteiden kanssa.</value>
+  </data>
+  <data name="Label_Password" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
   </data>
   <data name="Label_Seconds" xml:space="preserve">
     <value>Sekuntia</value>

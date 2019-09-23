@@ -138,8 +138,14 @@
   <data name="Btn_EmptyHistory" xml:space="preserve">
     <value>Fjern Historie</value>
   </data>
+  <data name="Btn_Generate" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Btn_MoreOptions" xml:space="preserve">
     <value>Indstillinger</value>
+  </data>
+  <data name="Btn_ShowPassword" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
   </data>
   <data name="Check_AutoClearClipboard" xml:space="preserve">
     <value>Selv-rens Kopier</value>
@@ -216,11 +222,17 @@
   <data name="GroupBox_UpdateAndCurrentVersion" xml:space="preserve">
     <value>Vedrørende nuværende version og opdatering</value>
   </data>
+  <data name="Group_GroupSettings" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Label_Every" xml:space="preserve">
     <value>Hver</value>
   </data>
   <data name="Label_FileLocation" xml:space="preserve">
     <value>Fil beliggenhed</value>
+  </data>
+  <data name="Label_GroupId" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
   </data>
   <data name="Label_Lang" xml:space="preserve">
     <value>Sprog</value>
@@ -237,6 +249,9 @@ for optimal funktionalitet.</value>
   <data name="Label_OnlineBehaviourExplanation" xml:space="preserve">
     <value>Se hvordan programmet behandler online
 andvendelse med andre enheder.</value>
+  </data>
+  <data name="Label_Password" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
   </data>
   <data name="Label_Seconds" xml:space="preserve">
     <value>Sekunder</value>

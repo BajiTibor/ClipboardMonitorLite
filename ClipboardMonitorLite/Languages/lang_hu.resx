@@ -138,8 +138,14 @@
   <data name="Btn_EmptyHistory" xml:space="preserve">
     <value>Előzmények törlése</value>
   </data>
+  <data name="Btn_Generate" xml:space="preserve">
+    <value>Generál</value>
+  </data>
   <data name="Btn_MoreOptions" xml:space="preserve">
     <value>Beállítások</value>
+  </data>
+  <data name="Btn_ShowPassword" xml:space="preserve">
+    <value>Mutat</value>
   </data>
   <data name="Check_AutoClearClipboard" xml:space="preserve">
     <value>Vágólap autómatikus kiürítése</value>
@@ -216,11 +222,17 @@
   <data name="GroupBox_UpdateAndCurrentVersion" xml:space="preserve">
     <value>Frissítés és jelenlegi verzió</value>
   </data>
+  <data name="Group_GroupSettings" xml:space="preserve">
+    <value>Online csatlakozások</value>
+  </data>
   <data name="Label_Every" xml:space="preserve">
     <value>Minden</value>
   </data>
   <data name="Label_FileLocation" xml:space="preserve">
     <value>File helye</value>
+  </data>
+  <data name="Label_GroupId" xml:space="preserve">
+    <value>Felhasználónév (CsoportId)</value>
   </data>
   <data name="Label_Lang" xml:space="preserve">
     <value>Nyelv</value>
@@ -238,6 +250,9 @@ Adminisztrátor!</value>
   <data name="Label_OnlineBehaviourExplanation" xml:space="preserve">
     <value>Más eszközökkel való kommunikáció
 módjának megváltoztatása.</value>
+  </data>
+  <data name="Label_Password" xml:space="preserve">
+    <value>Jelszó</value>
   </data>
   <data name="Label_Seconds" xml:space="preserve">
     <value>Másodperc</value>

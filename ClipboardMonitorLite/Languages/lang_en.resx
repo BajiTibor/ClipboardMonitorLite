@@ -138,8 +138,14 @@
   <data name="Btn_EmptyHistory" xml:space="preserve">
     <value>Empty History</value>
   </data>
+  <data name="Btn_Generate" xml:space="preserve">
+    <value>Generate</value>
+  </data>
   <data name="Btn_MoreOptions" xml:space="preserve">
     <value>Options</value>
+  </data>
+  <data name="Btn_ShowPassword" xml:space="preserve">
+    <value>Show</value>
   </data>
   <data name="Check_AutoClearClipboard" xml:space="preserve">
     <value>Auto clear clipboard</value>
@@ -216,11 +222,17 @@
   <data name="GroupBox_UpdateAndCurrentVersion" xml:space="preserve">
     <value>Update and current version info</value>
   </data>
+  <data name="Group_GroupSettings" xml:space="preserve">
+    <value>Online Connections</value>
+  </data>
   <data name="Label_Every" xml:space="preserve">
     <value>Every</value>
   </data>
   <data name="Label_FileLocation" xml:space="preserve">
     <value>File Location</value>
+  </data>
+  <data name="Label_GroupId" xml:space="preserve">
+    <value>Username (GroupId)</value>
   </data>
   <data name="Label_Lang" xml:space="preserve">
     <value>Language</value>
@@ -237,6 +249,9 @@ to restart the application as administrator.</value>
   <data name="Label_OnlineBehaviourExplanation" xml:space="preserve">
     <value>Set how the application will handle
 online interactions with other devices.</value>
+  </data>
+  <data name="Label_Password" xml:space="preserve">
+    <value>Password</value>
   </data>
   <data name="Label_Seconds" xml:space="preserve">
     <value>Seconds</value>

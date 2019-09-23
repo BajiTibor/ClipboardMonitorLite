@@ -124,11 +124,29 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Generál.
+        /// </summary>
+        internal static string Btn_Generate {
+            get {
+                return ResourceManager.GetString("Btn_Generate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Beállítások.
         /// </summary>
         internal static string Btn_MoreOptions {
             get {
                 return ResourceManager.GetString("Btn_MoreOptions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mutat.
+        /// </summary>
+        internal static string Btn_ShowPassword {
+            get {
+                return ResourceManager.GetString("Btn_ShowPassword", resourceCulture);
             }
         }
         
@@ -277,6 +295,15 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Online csatlakozások.
+        /// </summary>
+        internal static string Group_GroupSettings {
+            get {
+                return ResourceManager.GetString("Group_GroupSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Műveletek.
         /// </summary>
         internal static string GroupBox_Actions {
@@ -376,6 +403,15 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Felhasználónév (CsoportId).
+        /// </summary>
+        internal static string Label_GroupId {
+            get {
+                return ResourceManager.GetString("Label_GroupId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nyelv.
         /// </summary>
         internal static string Label_Lang {
@@ -413,6 +449,15 @@ namespace ClipboardMonitorLite.Languages {
         internal static string Label_OnlineBehaviourExplanation {
             get {
                 return ResourceManager.GetString("Label_OnlineBehaviourExplanation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jelszó.
+        /// </summary>
+        internal static string Label_Password {
+            get {
+                return ResourceManager.GetString("Label_Password", resourceCulture);
             }
         }
         

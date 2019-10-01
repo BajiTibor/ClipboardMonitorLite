@@ -15,6 +15,7 @@ namespace ClipboardMonitorLite
     {
         private Settings _settings;
         private FormEvents _formEvents;
+        private OnlineSettings _onlineSettings;
         private SignalRMessage _inboundMessage;
         private LanguageOnForm _languageOnForm;
         private SignalRMessage _outgoingMessage;
@@ -29,7 +30,8 @@ namespace ClipboardMonitorLite
         {
             InitializeComponent();
             _settingsHandler = new SettingsHandler();
-            _settings = _settingsHandler.LoadSettingsFile();
+            _settings = _settingsHandler.LoadSettingsFile() as Settings;
+            _onlineSettings = _settingsHandler.LoadSettingsFile(true) as OnlineSettings;
             _inboundMessage = new SignalRMessage();
             _outgoingMessage = new SignalRMessage();
             _clipboardManager = new ClipboardManager(_inboundMessage, _outgoingMessage, _settings);
@@ -68,7 +70,7 @@ namespace ClipboardMonitorLite
         }
         private void Btn_MoreOptions_Click(object sender, EventArgs e)
         {
-            OptionsForm form = new OptionsForm(_settings, _formEvents);
+            OptionsForm form = new OptionsForm(_settings, _onlineSettings, _formEvents);
             form.ShowDialog();
             form.Dispose();
             _settingsHandler.CreateFile(_settings);

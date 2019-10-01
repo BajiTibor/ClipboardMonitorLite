@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SettingsLib
 {
-    public class OnlineInformation : INotifyPropertyChanged, IAppSettings
+    public class OnlineSettings : INotifyPropertyChanged, IAppSettings
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public string Type
@@ -13,6 +13,19 @@ namespace SettingsLib
             get
             {
                 return "OnlineSettings";
+            }
+        }
+
+        private Guid oldGroupId;
+        public Guid OldGroupId
+        {
+            get
+            {
+                return oldGroupId;
+            }
+            set
+            {
+                oldGroupId = value;
             }
         }
 
@@ -24,7 +37,8 @@ namespace SettingsLib
                 return groupId;
             }
             set 
-            { 
+            {
+                OldGroupId = groupId;
                 groupId = value;
                 InvokePropertyChanged(new PropertyChangedEventArgs(nameof(GroupId)));
             }
@@ -62,6 +76,5 @@ namespace SettingsLib
         {
             PropertyChanged?.Invoke(this, arg);
         }
-
     }
 }

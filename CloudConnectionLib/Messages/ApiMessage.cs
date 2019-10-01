@@ -8,6 +8,7 @@ namespace CloudConnectionLib.Messages
     {
         public Guid GroupId { get; set; }
         public Guid ApplicationId { get; set; }
+        public string MachineName { get; set; }
         public string Password { get; set; }
         public string Content { get; set; }
     }

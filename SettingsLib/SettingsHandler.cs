@@ -59,12 +59,12 @@ namespace SettingsLib
             {
                 try
                 {
-                    IAppSettings OnlineSettings = new OnlineInformation();
+                    IAppSettings OnlineSettings = new OnlineSettings();
                     IAppSettings LocalSettings = new Settings();
 
                     if (isOnlineFile)
                     {
-                        OnlineSettings = JsonConvert.DeserializeObject<OnlineInformation>(File.ReadAllText(FileToLoad));
+                        OnlineSettings = JsonConvert.DeserializeObject<OnlineSettings>(File.ReadAllText(FileToLoad));
                         tempSettings = OnlineSettings;
                     }
                     else

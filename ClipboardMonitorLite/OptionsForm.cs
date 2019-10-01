@@ -10,14 +10,16 @@ namespace ClipboardMonitorLite
     public partial class OptionsForm : Form
     {
         private Settings _settings;
+        private OnlineSettings _onlineSettings;
         private FormEvents _formEvents;
         private LanguageOnForm _languageOnForm;
 
-        public OptionsForm(Settings settings, FormEvents buttonActions)
+        public OptionsForm(Settings settings, OnlineSettings onlineSettings, FormEvents buttonActions)
         {
             _formEvents = buttonActions;
             _languageOnForm = new LanguageOnForm();
             _settings = settings;
+            _onlineSettings = onlineSettings;
             InitializeComponent();
             InitializeLanguage();
             InitializeProperties();
@@ -74,6 +76,12 @@ namespace ClipboardMonitorLite
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
             Check_LimitTraffic.DataBindings.Add("Checked", _settings, "LimitTraffic",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            txt_GroupId.DataBindings.Add("Text", _onlineSettings, "GroupId",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            txt_Password.DataBindings.Add("Text", _onlineSettings, "Password",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
             Radio_SendOnly.DataBindings.Add("Enabled", _settings, "LimitTraffic",

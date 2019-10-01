@@ -5,9 +5,17 @@ namespace SettingsLib
     /// <summary>
     /// Settings object that's used to store the user's preferences.
     /// </summary>
-    public class Settings : INotifyPropertyChanged
+    public class Settings : INotifyPropertyChanged, IAppSettings
     {
         public event PropertyChangedEventHandler PropertyChanged;
+        public string Type
+        {
+            get
+            {
+                return "UserSettings";
+            }
+        }
+
         bool usingWhiteIcon;
         public bool UsingWhiteTrayIcon
         {

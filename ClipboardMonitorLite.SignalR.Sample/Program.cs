@@ -13,7 +13,7 @@ namespace ClipboardMonitorLite.SignalR.Sample
             var connection = new HubConnectionBuilder()
                 .WithUrl("http://localhost:7071/api")
                 .Build();
-
+            
             var g1 = "af1631dd-52da-4990-a3a2-6de0e936995c";
 
             connection.On<string>(g1, (msg) =>
@@ -29,7 +29,7 @@ namespace ClipboardMonitorLite.SignalR.Sample
                 ApplicationId = "976c92c1-c8f0-474b-a14f-f8a1074e4647",
                 Password = "kekeke",
                 Content = "RandomStuff"
-            };
+            }; // Sets up a new message to send to the API function
 
             var json = JsonConvert.SerializeObject(message);
 
@@ -38,6 +38,6 @@ namespace ClipboardMonitorLite.SignalR.Sample
             await client.PostAsync("http://localhost:7071/api/SendMessage", new StringContent(json));
 
             await Task.Delay(-1);
-        }
+        } 
     }
 }

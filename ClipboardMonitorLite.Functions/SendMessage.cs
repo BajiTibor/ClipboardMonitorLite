@@ -35,7 +35,8 @@ namespace ClipboardMonitorLite.Functions
             if(application.Password.Equals(message.Password) == false)
             {
                 return Task.CompletedTask;
-            }
+            } // Will return completed even if the password was incorrect, however, it will not do
+            // What it was asked to do if that's the case.
 
             return signalRMessages.AddAsync(
                 new SignalRMessage

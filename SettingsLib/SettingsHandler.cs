@@ -2,6 +2,7 @@
 using System.IO;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using System.ComponentModel;
 
 namespace SettingsLib
 {
@@ -12,16 +13,18 @@ namespace SettingsLib
     public class SettingsHandler
     {
         private string appDataDirectory;
-        private string settingsFilePath;
         private string settingsDirectory;
+        private string settingsFilePath;
+        private string onlineSettingsFilePath;
         public SettingsHandler()
         {
             appDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             settingsDirectory = appDataDirectory + @"\ClipboardManagerLite";
             settingsFilePath = appDataDirectory + @"\ClipboardManagerLite\settings.json";
+            onlineSettingsFilePath = settingsDirectory + @"\onlineSettings.json";
         }
-        
-        public async void WriteSettingsFile(string jsonFile)
+
+        public async void WriteSettingsFile(string jsonFile, bool isOnlineFile = false)
         {
             if (!Directory.Exists(settingsDirectory))
             {
@@ -36,7 +39,8 @@ namespace SettingsLib
             }
             try
             {
-                using (StreamWriter sw = new StreamWriter(settingsFilePath))
+                var fileToWrite = isOnlineFile ? onlineSettingsFilePath : settingsFilePath;
+                using (StreamWriter sw = new StreamWriter(fileToWrite))
                 {
                     await sw.WriteLineAsync(jsonFile);
                 }
@@ -47,15 +51,27 @@ namespace SettingsLib
             }
         }
 
-        public Settings LoadSettingsFile()
+        public IAppSettings LoadSettingsFile(bool isOnlineFile = false)
         {
-            Settings tempSettings = new Settings();
-            if (File.Exists(settingsFilePath))
+            IAppSettings tempSettings = null;
+            var FileToLoad = isOnlineFile ? onlineSettingsFilePath : settingsFilePath;
+            if (File.Exists(FileToLoad))
             {
                 try
                 {
-                    Settings settings = JsonConvert.DeserializeObject<Settings>(File.ReadAllText(settingsFilePath));
-                    tempSettings = settings;
+                    IAppSettings OnlineSettings = new OnlineInformation();
+                    IAppSettings LocalSettings = new Settings();
+
+                    if (isOnlineFile)
+                    {
+                        OnlineSettings = JsonConvert.DeserializeObject<OnlineInformation>(File.ReadAllText(FileToLoad));
+                        tempSettings = OnlineSettings;
+                    }
+                    else
+                    {
+                        LocalSettings = JsonConvert.DeserializeObject<Settings>(File.ReadAllText(FileToLoad));
+                        tempSettings = LocalSettings;
+                    }
                 }
                 catch (Exception e)
                 {
@@ -65,12 +81,20 @@ namespace SettingsLib
             return tempSettings;
         }
 
-        public void CreateFile(Settings _settings)
+        public void CreateFile(IAppSettings _settings)
         {
             if (!_settings.Equals(null))
             {
                 string converted = JsonConvert.SerializeObject(_settings, Formatting.Indented);
-                WriteSettingsFile(converted);
+                if (_settings.Type.Equals("UserSettings"))
+                {
+                    WriteSettingsFile(converted);
+                }
+                else
+                {
+                    WriteSettingsFile(converted, true);
+                }
+
             }
         }
     }

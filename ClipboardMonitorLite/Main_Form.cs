@@ -35,10 +35,10 @@ namespace ClipboardMonitorLite
             _inboundMessage = new SignalRMessage();
             _outgoingMessage = new SignalRMessage();
             _clipboardManager = new ClipboardManager(_inboundMessage, _outgoingMessage, _settings);
-            _cloudInteractions = new CloudInteractions(_inboundMessage, _outgoingMessage, _settings);
+            _cloudInteractions = new CloudInteractions(_inboundMessage, _outgoingMessage, _settings, _onlineSettings);
             _writeHistoryFile = new WriteHistoryFile(_clipboardManager, _settings);
             _languageOnForm = new LanguageOnForm();
-            _formEvents = new FormEvents(_clipboardManager, notificationIcon, this, _settings, _writeHistoryFile);
+            _formEvents = new FormEvents(_clipboardManager, notificationIcon, this, _settings, _writeHistoryFile, _onlineSettings);
             _startWithWindows = new LaunchOnStartup(_settings);
             _checkConnection = new CheckConnection(Label_Connection_DONOTMODIFY, timer_checkConnection);
             EnumSetLang();

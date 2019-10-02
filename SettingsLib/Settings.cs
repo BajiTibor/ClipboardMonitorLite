@@ -269,6 +269,20 @@ namespace SettingsLib
             }
         }
 
+        private bool showPassword;
+        public bool ShowPassword
+        {
+            get
+            {
+                return showPassword;
+            }
+            set
+            {
+                showPassword = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs(nameof(ShowPassword)));
+            }
+        }
+
         private void InvokePropertyChanged(PropertyChangedEventArgs e)
         {
             PropertyChanged?.Invoke(this, e);

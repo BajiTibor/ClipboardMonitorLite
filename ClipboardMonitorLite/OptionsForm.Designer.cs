@@ -31,6 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsForm));
             this.GroupBox_General = new System.Windows.Forms.GroupBox();
             this.GroupBox_OnlineSettings = new System.Windows.Forms.GroupBox();
+            this.Group_GroupSettings = new System.Windows.Forms.GroupBox();
+            this.Check_Show = new System.Windows.Forms.CheckBox();
+            this.Btn_Generate = new System.Windows.Forms.Button();
+            this.txt_Password = new System.Windows.Forms.TextBox();
+            this.txt_GroupId = new System.Windows.Forms.TextBox();
+            this.Label_Password = new System.Windows.Forms.Label();
+            this.Label_GroupId = new System.Windows.Forms.Label();
             this.GroupBox_TimeBeforeReconnect = new System.Windows.Forms.GroupBox();
             this.Label_Seconds = new System.Windows.Forms.Label();
             this.numeric_ReconnectDelay = new System.Windows.Forms.NumericUpDown();
@@ -74,22 +81,15 @@
             this.Check_UseWhiteIcon = new System.Windows.Forms.CheckBox();
             this.Btn_Apply = new System.Windows.Forms.Button();
             this.Label_Version = new System.Windows.Forms.Label();
-            this.Group_GroupSettings = new System.Windows.Forms.GroupBox();
-            this.Label_GroupId = new System.Windows.Forms.Label();
-            this.Label_Password = new System.Windows.Forms.Label();
-            this.txt_GroupId = new System.Windows.Forms.TextBox();
-            this.txt_Password = new System.Windows.Forms.TextBox();
-            this.Btn_Generate = new System.Windows.Forms.Button();
-            this.Btn_ShowPassword = new System.Windows.Forms.Button();
             this.GroupBox_General.SuspendLayout();
             this.GroupBox_OnlineSettings.SuspendLayout();
+            this.Group_GroupSettings.SuspendLayout();
             this.GroupBox_TimeBeforeReconnect.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_ReconnectDelay)).BeginInit();
             this.GroupBox_OnlineBehaviour.SuspendLayout();
             this.GroupBox_SaveToFileSettings.SuspendLayout();
             this.GroupBox_BehaviourAndVisuals.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_clearAfter)).BeginInit();
-            this.Group_GroupSettings.SuspendLayout();
             this.SuspendLayout();
             // 
             // GroupBox_General
@@ -117,6 +117,73 @@
             this.GroupBox_OnlineSettings.TabStop = false;
             this.GroupBox_OnlineSettings.Text = "Online Settings";
             // 
+            // Group_GroupSettings
+            // 
+            this.Group_GroupSettings.Controls.Add(this.Check_Show);
+            this.Group_GroupSettings.Controls.Add(this.Btn_Generate);
+            this.Group_GroupSettings.Controls.Add(this.txt_Password);
+            this.Group_GroupSettings.Controls.Add(this.txt_GroupId);
+            this.Group_GroupSettings.Controls.Add(this.Label_Password);
+            this.Group_GroupSettings.Controls.Add(this.Label_GroupId);
+            this.Group_GroupSettings.Location = new System.Drawing.Point(6, 277);
+            this.Group_GroupSettings.Name = "Group_GroupSettings";
+            this.Group_GroupSettings.Size = new System.Drawing.Size(337, 136);
+            this.Group_GroupSettings.TabIndex = 22;
+            this.Group_GroupSettings.TabStop = false;
+            this.Group_GroupSettings.Text = "Online Connections";
+            // 
+            // Check_Show
+            // 
+            this.Check_Show.AutoSize = true;
+            this.Check_Show.Location = new System.Drawing.Point(242, 92);
+            this.Check_Show.Name = "Check_Show";
+            this.Check_Show.Size = new System.Drawing.Size(88, 29);
+            this.Check_Show.TabIndex = 5;
+            this.Check_Show.Text = "Show";
+            this.Check_Show.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Generate
+            // 
+            this.Btn_Generate.Location = new System.Drawing.Point(242, 43);
+            this.Btn_Generate.Name = "Btn_Generate";
+            this.Btn_Generate.Size = new System.Drawing.Size(89, 20);
+            this.Btn_Generate.TabIndex = 4;
+            this.Btn_Generate.Text = "Generate";
+            this.Btn_Generate.UseVisualStyleBackColor = true;
+            // 
+            // txt_Password
+            // 
+            this.txt_Password.Location = new System.Drawing.Point(6, 92);
+            this.txt_Password.Name = "txt_Password";
+            this.txt_Password.PasswordChar = '*';
+            this.txt_Password.Size = new System.Drawing.Size(230, 29);
+            this.txt_Password.TabIndex = 3;
+            // 
+            // txt_GroupId
+            // 
+            this.txt_GroupId.Location = new System.Drawing.Point(6, 43);
+            this.txt_GroupId.Name = "txt_GroupId";
+            this.txt_GroupId.Size = new System.Drawing.Size(230, 29);
+            this.txt_GroupId.TabIndex = 2;
+            // 
+            // Label_Password
+            // 
+            this.Label_Password.AutoSize = true;
+            this.Label_Password.Location = new System.Drawing.Point(3, 75);
+            this.Label_Password.Name = "Label_Password";
+            this.Label_Password.Size = new System.Drawing.Size(98, 25);
+            this.Label_Password.TabIndex = 1;
+            this.Label_Password.Text = "Password";
+            // 
+            // Label_GroupId
+            // 
+            this.Label_GroupId.AutoSize = true;
+            this.Label_GroupId.Location = new System.Drawing.Point(3, 27);
+            this.Label_GroupId.Name = "Label_GroupId";
+            this.Label_GroupId.Size = new System.Drawing.Size(191, 25);
+            this.Label_GroupId.TabIndex = 0;
+            this.Label_GroupId.Text = "Username (GroupId)";
+            // 
             // GroupBox_TimeBeforeReconnect
             // 
             this.GroupBox_TimeBeforeReconnect.Controls.Add(this.Label_Seconds);
@@ -133,7 +200,7 @@
             this.Label_Seconds.AutoSize = true;
             this.Label_Seconds.Location = new System.Drawing.Point(6, 37);
             this.Label_Seconds.Name = "Label_Seconds";
-            this.Label_Seconds.Size = new System.Drawing.Size(49, 13);
+            this.Label_Seconds.Size = new System.Drawing.Size(90, 25);
             this.Label_Seconds.TabIndex = 1;
             this.Label_Seconds.Text = "Seconds";
             // 
@@ -141,20 +208,20 @@
             // 
             this.numeric_ReconnectDelay.Location = new System.Drawing.Point(84, 35);
             this.numeric_ReconnectDelay.Maximum = new decimal(new int[] {
-            120,
+            512,
             0,
             0,
             0});
             this.numeric_ReconnectDelay.Minimum = new decimal(new int[] {
-            10,
+            15,
             0,
             0,
             0});
             this.numeric_ReconnectDelay.Name = "numeric_ReconnectDelay";
-            this.numeric_ReconnectDelay.Size = new System.Drawing.Size(112, 20);
+            this.numeric_ReconnectDelay.Size = new System.Drawing.Size(112, 29);
             this.numeric_ReconnectDelay.TabIndex = 17;
             this.numeric_ReconnectDelay.Value = new decimal(new int[] {
-            10,
+            15,
             0,
             0,
             0});
@@ -164,7 +231,7 @@
             this.Check_IncludeDeviceName.AutoSize = true;
             this.Check_IncludeDeviceName.Location = new System.Drawing.Point(12, 419);
             this.Check_IncludeDeviceName.Name = "Check_IncludeDeviceName";
-            this.Check_IncludeDeviceName.Size = new System.Drawing.Size(195, 17);
+            this.Check_IncludeDeviceName.Size = new System.Drawing.Size(346, 29);
             this.Check_IncludeDeviceName.TabIndex = 21;
             this.Check_IncludeDeviceName.Text = "Include device name in copy history";
             this.Check_IncludeDeviceName.UseVisualStyleBackColor = true;
@@ -187,7 +254,7 @@
             this.Check_LimitTraffic.AutoSize = true;
             this.Check_LimitTraffic.Location = new System.Drawing.Point(6, 79);
             this.Check_LimitTraffic.Name = "Check_LimitTraffic";
-            this.Check_LimitTraffic.Size = new System.Drawing.Size(76, 17);
+            this.Check_LimitTraffic.Size = new System.Drawing.Size(129, 29);
             this.Check_LimitTraffic.TabIndex = 18;
             this.Check_LimitTraffic.Text = "Limit traffic";
             this.Check_LimitTraffic.UseVisualStyleBackColor = true;
@@ -197,7 +264,7 @@
             this.Label_OnlineBehaviourExplanation.AutoSize = true;
             this.Label_OnlineBehaviourExplanation.Location = new System.Drawing.Point(6, 26);
             this.Label_OnlineBehaviourExplanation.Name = "Label_OnlineBehaviourExplanation";
-            this.Label_OnlineBehaviourExplanation.Size = new System.Drawing.Size(184, 26);
+            this.Label_OnlineBehaviourExplanation.Size = new System.Drawing.Size(333, 50);
             this.Label_OnlineBehaviourExplanation.TabIndex = 30;
             this.Label_OnlineBehaviourExplanation.Text = "Set how the application will handle\r\nonline interactions with other devices.";
             // 
@@ -207,7 +274,7 @@
             this.Radio_ReceiveOnly.Checked = true;
             this.Radio_ReceiveOnly.Location = new System.Drawing.Point(6, 140);
             this.Radio_ReceiveOnly.Name = "Radio_ReceiveOnly";
-            this.Radio_ReceiveOnly.Size = new System.Drawing.Size(87, 17);
+            this.Radio_ReceiveOnly.Size = new System.Drawing.Size(148, 29);
             this.Radio_ReceiveOnly.TabIndex = 20;
             this.Radio_ReceiveOnly.TabStop = true;
             this.Radio_ReceiveOnly.Text = "Receive only";
@@ -218,7 +285,7 @@
             this.Radio_SendOnly.AutoSize = true;
             this.Radio_SendOnly.Location = new System.Drawing.Point(6, 110);
             this.Radio_SendOnly.Name = "Radio_SendOnly";
-            this.Radio_SendOnly.Size = new System.Drawing.Size(72, 17);
+            this.Radio_SendOnly.Size = new System.Drawing.Size(125, 29);
             this.Radio_SendOnly.TabIndex = 19;
             this.Radio_SendOnly.Text = "Send only";
             this.Radio_SendOnly.UseVisualStyleBackColor = true;
@@ -242,7 +309,7 @@
             this.Label_WriteRealTimeInfo.AutoSize = true;
             this.Label_WriteRealTimeInfo.Location = new System.Drawing.Point(33, 94);
             this.Label_WriteRealTimeInfo.Name = "Label_WriteRealTimeInfo";
-            this.Label_WriteRealTimeInfo.Size = new System.Drawing.Size(156, 39);
+            this.Label_WriteRealTimeInfo.Size = new System.Drawing.Size(282, 75);
             this.Label_WriteRealTimeInfo.TabIndex = 6;
             this.Label_WriteRealTimeInfo.Text = "If real time is turned off, the\r\napplication will only access and\r\nwrite to the f" +
     "ile when it\'s closed.";
@@ -253,7 +320,7 @@
             this.Check_WriteInRealTime.Enabled = false;
             this.Check_WriteInRealTime.Location = new System.Drawing.Point(6, 67);
             this.Check_WriteInRealTime.Name = "Check_WriteInRealTime";
-            this.Check_WriteInRealTime.Size = new System.Drawing.Size(120, 17);
+            this.Check_WriteInRealTime.Size = new System.Drawing.Size(211, 29);
             this.Check_WriteInRealTime.TabIndex = 16;
             this.Check_WriteInRealTime.Text = "Write file in real time";
             this.Check_WriteInRealTime.UseVisualStyleBackColor = true;
@@ -273,7 +340,7 @@
             this.Label_FileLocation.AutoSize = true;
             this.Label_FileLocation.Location = new System.Drawing.Point(6, 22);
             this.Label_FileLocation.Name = "Label_FileLocation";
-            this.Label_FileLocation.Size = new System.Drawing.Size(63, 13);
+            this.Label_FileLocation.Size = new System.Drawing.Size(115, 25);
             this.Label_FileLocation.TabIndex = 1;
             this.Label_FileLocation.Text = "File location";
             // 
@@ -282,7 +349,7 @@
             this.txt_FileLocation.Enabled = false;
             this.txt_FileLocation.Location = new System.Drawing.Point(6, 42);
             this.txt_FileLocation.Name = "txt_FileLocation";
-            this.txt_FileLocation.Size = new System.Drawing.Size(254, 20);
+            this.txt_FileLocation.Size = new System.Drawing.Size(254, 29);
             this.txt_FileLocation.TabIndex = 14;
             // 
             // GroupBox_BehaviourAndVisuals
@@ -324,7 +391,7 @@
             this.Check_UseTimestamp.AutoSize = true;
             this.Check_UseTimestamp.Location = new System.Drawing.Point(6, 111);
             this.Check_UseTimestamp.Name = "Check_UseTimestamp";
-            this.Check_UseTimestamp.Size = new System.Drawing.Size(99, 17);
+            this.Check_UseTimestamp.Size = new System.Drawing.Size(175, 29);
             this.Check_UseTimestamp.TabIndex = 3;
             this.Check_UseTimestamp.Text = "Use Timestamp";
             this.Check_UseTimestamp.UseVisualStyleBackColor = true;
@@ -334,7 +401,7 @@
             this.Check_OpenWithWin.AutoSize = true;
             this.Check_OpenWithWin.Location = new System.Drawing.Point(6, 285);
             this.Check_OpenWithWin.Name = "Check_OpenWithWin";
-            this.Check_OpenWithWin.Size = new System.Drawing.Size(124, 17);
+            this.Check_OpenWithWin.Size = new System.Drawing.Size(218, 29);
             this.Check_OpenWithWin.TabIndex = 7;
             this.Check_OpenWithWin.Text = "Open With Windows";
             this.Check_OpenWithWin.UseVisualStyleBackColor = true;
@@ -344,7 +411,7 @@
             this.Label_Minutes.AutoSize = true;
             this.Label_Minutes.Location = new System.Drawing.Point(205, 229);
             this.Label_Minutes.Name = "Label_Minutes";
-            this.Label_Minutes.Size = new System.Drawing.Size(44, 13);
+            this.Label_Minutes.Size = new System.Drawing.Size(81, 25);
             this.Label_Minutes.TabIndex = 24;
             this.Label_Minutes.Text = "Minutes";
             // 
@@ -353,7 +420,7 @@
             this.Check_OnlineMode.AutoSize = true;
             this.Check_OnlineMode.Location = new System.Drawing.Point(6, 350);
             this.Check_OnlineMode.Name = "Check_OnlineMode";
-            this.Check_OnlineMode.Size = new System.Drawing.Size(86, 17);
+            this.Check_OnlineMode.Size = new System.Drawing.Size(150, 29);
             this.Check_OnlineMode.TabIndex = 9;
             this.Check_OnlineMode.Text = "Online Mode";
             this.Check_OnlineMode.UseVisualStyleBackColor = true;
@@ -376,7 +443,7 @@
             "Portuguese"});
             this.combo_lang.Location = new System.Drawing.Point(104, 563);
             this.combo_lang.Name = "combo_lang";
-            this.combo_lang.Size = new System.Drawing.Size(116, 21);
+            this.combo_lang.Size = new System.Drawing.Size(116, 32);
             this.combo_lang.TabIndex = 13;
             this.combo_lang.SelectedIndexChanged += new System.EventHandler(this.Combo_lang_SelectedIndexChanged);
             // 
@@ -385,7 +452,7 @@
             this.Label_Lang.AutoSize = true;
             this.Label_Lang.Location = new System.Drawing.Point(3, 566);
             this.Label_Lang.Name = "Label_Lang";
-            this.Label_Lang.Size = new System.Drawing.Size(55, 13);
+            this.Label_Lang.Size = new System.Drawing.Size(100, 25);
             this.Label_Lang.TabIndex = 22;
             this.Label_Lang.Text = "Language";
             // 
@@ -404,7 +471,7 @@
             this.Check_ShowDonation.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Check_ShowDonation.Location = new System.Drawing.Point(6, 513);
             this.Check_ShowDonation.Name = "Check_ShowDonation";
-            this.Check_ShowDonation.Size = new System.Drawing.Size(209, 17);
+            this.Check_ShowDonation.Size = new System.Drawing.Size(371, 29);
             this.Check_ShowDonation.TabIndex = 12;
             this.Check_ShowDonation.Text = "Show donation button on main window";
             this.Check_ShowDonation.UseVisualStyleBackColor = true;
@@ -423,7 +490,7 @@
             this.Radio_ExitApp.Checked = true;
             this.Radio_ExitApp.Location = new System.Drawing.Point(6, 456);
             this.Radio_ExitApp.Name = "Radio_ExitApp";
-            this.Radio_ExitApp.Size = new System.Drawing.Size(114, 17);
+            this.Radio_ExitApp.Size = new System.Drawing.Size(199, 29);
             this.Radio_ExitApp.TabIndex = 11;
             this.Radio_ExitApp.TabStop = true;
             this.Radio_ExitApp.Text = "Exit the application";
@@ -434,7 +501,7 @@
             this.Radio_Minimize.AutoSize = true;
             this.Radio_Minimize.Location = new System.Drawing.Point(6, 428);
             this.Radio_Minimize.Name = "Radio_Minimize";
-            this.Radio_Minimize.Size = new System.Drawing.Size(135, 17);
+            this.Radio_Minimize.Size = new System.Drawing.Size(245, 29);
             this.Radio_Minimize.TabIndex = 10;
             this.Radio_Minimize.Text = "Minimize on system tray";
             this.Radio_Minimize.UseVisualStyleBackColor = true;
@@ -444,7 +511,7 @@
             this.Label_WhenMainWindowClosed.AutoSize = true;
             this.Label_WhenMainWindowClosed.Location = new System.Drawing.Point(6, 405);
             this.Label_WhenMainWindowClosed.Name = "Label_WhenMainWindowClosed";
-            this.Label_WhenMainWindowClosed.Size = new System.Drawing.Size(158, 13);
+            this.Label_WhenMainWindowClosed.Size = new System.Drawing.Size(287, 25);
             this.Label_WhenMainWindowClosed.TabIndex = 16;
             this.Label_WhenMainWindowClosed.Text = "When I close the main Window:";
             // 
@@ -461,7 +528,7 @@
             this.Check_StartMinimized.AutoSize = true;
             this.Check_StartMinimized.Location = new System.Drawing.Point(6, 317);
             this.Check_StartMinimized.Name = "Check_StartMinimized";
-            this.Check_StartMinimized.Size = new System.Drawing.Size(97, 17);
+            this.Check_StartMinimized.Size = new System.Drawing.Size(172, 29);
             this.Check_StartMinimized.TabIndex = 8;
             this.Check_StartMinimized.Text = "Start Minimized";
             this.Check_StartMinimized.UseVisualStyleBackColor = true;
@@ -521,7 +588,7 @@
             0,
             0});
             this.numeric_clearAfter.Name = "numeric_clearAfter";
-            this.numeric_clearAfter.Size = new System.Drawing.Size(120, 20);
+            this.numeric_clearAfter.Size = new System.Drawing.Size(120, 29);
             this.numeric_clearAfter.TabIndex = 6;
             this.numeric_clearAfter.Value = new decimal(new int[] {
             10,
@@ -534,7 +601,7 @@
             this.Label_Every.AutoSize = true;
             this.Label_Every.Location = new System.Drawing.Point(25, 229);
             this.Label_Every.Name = "Label_Every";
-            this.Label_Every.Size = new System.Drawing.Size(34, 13);
+            this.Label_Every.Size = new System.Drawing.Size(62, 25);
             this.Label_Every.TabIndex = 6;
             this.Label_Every.Text = "Every";
             // 
@@ -543,7 +610,7 @@
             this.Check_AutoClearClipboard.AutoSize = true;
             this.Check_AutoClearClipboard.Location = new System.Drawing.Point(6, 202);
             this.Check_AutoClearClipboard.Name = "Check_AutoClearClipboard";
-            this.Check_AutoClearClipboard.Size = new System.Drawing.Size(209, 17);
+            this.Check_AutoClearClipboard.Size = new System.Drawing.Size(378, 29);
             this.Check_AutoClearClipboard.TabIndex = 5;
             this.Check_AutoClearClipboard.Text = "Automatically clear my clipboard history";
             this.Check_AutoClearClipboard.UseVisualStyleBackColor = true;
@@ -553,7 +620,7 @@
             this.Check_SaveToFile.AutoSize = true;
             this.Check_SaveToFile.Location = new System.Drawing.Point(6, 156);
             this.Check_SaveToFile.Name = "Check_SaveToFile";
-            this.Check_SaveToFile.Size = new System.Drawing.Size(230, 17);
+            this.Check_SaveToFile.Size = new System.Drawing.Size(409, 29);
             this.Check_SaveToFile.TabIndex = 4;
             this.Check_SaveToFile.Text = "Save the clipboard history to a local text file";
             this.Check_SaveToFile.UseVisualStyleBackColor = true;
@@ -563,7 +630,7 @@
             this.Check_NotifyOfCopy.AutoSize = true;
             this.Check_NotifyOfCopy.Location = new System.Drawing.Point(6, 83);
             this.Check_NotifyOfCopy.Name = "Check_NotifyOfCopy";
-            this.Check_NotifyOfCopy.Size = new System.Drawing.Size(205, 17);
+            this.Check_NotifyOfCopy.Size = new System.Drawing.Size(366, 29);
             this.Check_NotifyOfCopy.TabIndex = 2;
             this.Check_NotifyOfCopy.Text = "Notify me when my clipboard changes";
             this.Check_NotifyOfCopy.UseVisualStyleBackColor = true;
@@ -573,7 +640,7 @@
             this.Check_UseWhiteIcon.AutoSize = true;
             this.Check_UseWhiteIcon.Location = new System.Drawing.Point(6, 33);
             this.Check_UseWhiteIcon.Name = "Check_UseWhiteIcon";
-            this.Check_UseWhiteIcon.Size = new System.Drawing.Size(180, 17);
+            this.Check_UseWhiteIcon.Size = new System.Drawing.Size(320, 29);
             this.Check_UseWhiteIcon.TabIndex = 1;
             this.Check_UseWhiteIcon.Text = "Use white icon in the system tray";
             this.Check_UseWhiteIcon.UseVisualStyleBackColor = true;
@@ -595,74 +662,9 @@
             this.Label_Version.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Version.Location = new System.Drawing.Point(7, 713);
             this.Label_Version.Name = "Label_Version";
-            this.Label_Version.Size = new System.Drawing.Size(95, 29);
+            this.Label_Version.Size = new System.Drawing.Size(162, 48);
             this.Label_Version.TabIndex = 5;
             this.Label_Version.Text = "Version";
-            // 
-            // Group_GroupSettings
-            // 
-            this.Group_GroupSettings.Controls.Add(this.Btn_ShowPassword);
-            this.Group_GroupSettings.Controls.Add(this.Btn_Generate);
-            this.Group_GroupSettings.Controls.Add(this.txt_Password);
-            this.Group_GroupSettings.Controls.Add(this.txt_GroupId);
-            this.Group_GroupSettings.Controls.Add(this.Label_Password);
-            this.Group_GroupSettings.Controls.Add(this.Label_GroupId);
-            this.Group_GroupSettings.Location = new System.Drawing.Point(6, 277);
-            this.Group_GroupSettings.Name = "Group_GroupSettings";
-            this.Group_GroupSettings.Size = new System.Drawing.Size(337, 136);
-            this.Group_GroupSettings.TabIndex = 22;
-            this.Group_GroupSettings.TabStop = false;
-            this.Group_GroupSettings.Text = "Online Connections";
-            // 
-            // Label_GroupId
-            // 
-            this.Label_GroupId.AutoSize = true;
-            this.Label_GroupId.Location = new System.Drawing.Point(3, 27);
-            this.Label_GroupId.Name = "Label_GroupId";
-            this.Label_GroupId.Size = new System.Drawing.Size(102, 13);
-            this.Label_GroupId.TabIndex = 0;
-            this.Label_GroupId.Text = "Username (GroupId)";
-            // 
-            // Label_Password
-            // 
-            this.Label_Password.AutoSize = true;
-            this.Label_Password.Location = new System.Drawing.Point(3, 75);
-            this.Label_Password.Name = "Label_Password";
-            this.Label_Password.Size = new System.Drawing.Size(53, 13);
-            this.Label_Password.TabIndex = 1;
-            this.Label_Password.Text = "Password";
-            // 
-            // txt_GroupId
-            // 
-            this.txt_GroupId.Location = new System.Drawing.Point(6, 43);
-            this.txt_GroupId.Name = "txt_GroupId";
-            this.txt_GroupId.Size = new System.Drawing.Size(230, 20);
-            this.txt_GroupId.TabIndex = 2;
-            // 
-            // txt_Password
-            // 
-            this.txt_Password.Location = new System.Drawing.Point(6, 92);
-            this.txt_Password.Name = "txt_Password";
-            this.txt_Password.Size = new System.Drawing.Size(230, 20);
-            this.txt_Password.TabIndex = 3;
-            // 
-            // Btn_Generate
-            // 
-            this.Btn_Generate.Location = new System.Drawing.Point(242, 43);
-            this.Btn_Generate.Name = "Btn_Generate";
-            this.Btn_Generate.Size = new System.Drawing.Size(89, 20);
-            this.Btn_Generate.TabIndex = 4;
-            this.Btn_Generate.Text = "Generate";
-            this.Btn_Generate.UseVisualStyleBackColor = true;
-            // 
-            // Btn_ShowPassword
-            // 
-            this.Btn_ShowPassword.Location = new System.Drawing.Point(242, 92);
-            this.Btn_ShowPassword.Name = "Btn_ShowPassword";
-            this.Btn_ShowPassword.Size = new System.Drawing.Size(89, 20);
-            this.Btn_ShowPassword.TabIndex = 5;
-            this.Btn_ShowPassword.Text = "Show";
-            this.Btn_ShowPassword.UseVisualStyleBackColor = true;
             // 
             // OptionsForm
             // 
@@ -682,6 +684,8 @@
             this.GroupBox_General.ResumeLayout(false);
             this.GroupBox_OnlineSettings.ResumeLayout(false);
             this.GroupBox_OnlineSettings.PerformLayout();
+            this.Group_GroupSettings.ResumeLayout(false);
+            this.Group_GroupSettings.PerformLayout();
             this.GroupBox_TimeBeforeReconnect.ResumeLayout(false);
             this.GroupBox_TimeBeforeReconnect.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_ReconnectDelay)).EndInit();
@@ -692,8 +696,6 @@
             this.GroupBox_BehaviourAndVisuals.ResumeLayout(false);
             this.GroupBox_BehaviourAndVisuals.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_clearAfter)).EndInit();
-            this.Group_GroupSettings.ResumeLayout(false);
-            this.Group_GroupSettings.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -751,7 +753,7 @@
         private System.Windows.Forms.Label Label_GroupId;
         private System.Windows.Forms.TextBox txt_GroupId;
         private System.Windows.Forms.TextBox txt_Password;
-        private System.Windows.Forms.Button Btn_ShowPassword;
         private System.Windows.Forms.Button Btn_Generate;
+        private System.Windows.Forms.CheckBox Check_Show;
     }
 }

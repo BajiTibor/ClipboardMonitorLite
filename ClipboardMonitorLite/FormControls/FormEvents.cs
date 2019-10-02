@@ -23,7 +23,9 @@ namespace ClipboardMonitorLite.FormControls
         private NotifyIcon NotificationIcon;
         private WriteHistoryFile _writeHistory;
         private ClipboardManager _clipboardManager;
-        public FormEvents(ClipboardManager clipManager, NotifyIcon icon, Form form, Settings settings, WriteHistoryFile history)
+        private OnlineSettings _onlineSettings;
+        public FormEvents(ClipboardManager clipManager, NotifyIcon icon, Form form, Settings settings, WriteHistoryFile history,
+            OnlineSettings onlineSettings)
         {
             exitFileWritten = false;
             ActiveForm = form;
@@ -33,9 +35,31 @@ namespace ClipboardMonitorLite.FormControls
             _writeHistory = history;
             _settings.PropertyChanged += ChangeIconStyle;
             _clipboardManager.PropertyChanged += ShowCopyNotification;
+            _settings.PropertyChanged += ShowPasswordChanged;
+            _onlineSettings = onlineSettings;
             SetIconStyle();
             SetWindowStartupState();
         }
+
+        private void ShowPasswordChanged(object sender, PropertyChangedEventArgs e)
+        {
+            TextBox Password = ActiveForm.Controls.Find("Txt_Password", false)[0] as TextBox;
+            if (_settings.ShowPassword)
+            {
+                Password.PasswordChar = '\0';
+            }
+            else
+            {
+                Password.PasswordChar = '*';
+            }
+        }
+
+        public void GenerateNewGroupId(object sender, EventArgs e)
+        {
+            _onlineSettings.GroupId = Guid.NewGuid();
+        }
+
+
 
         private void SetWindowStartupState()
         {

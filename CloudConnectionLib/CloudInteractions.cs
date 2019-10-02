@@ -10,8 +10,10 @@ namespace CloudConnectionLib
 {
     /// <summary>
     /// Handles all the interactions using SignalR with the servers and
-    /// web applications, will also change the inboundMessage or act
+    /// the API, will also change the inboundMessage or act
     /// accordingly when the outgoing message changes.
+    /// Inbound messages are received using SignalR, and outbound
+    /// messages are sent using the API.
     /// </summary>
     public class CloudInteractions
     {
@@ -19,15 +21,19 @@ namespace CloudConnectionLib
         private HubConnection connection;
         private SignalRMessage _inboundMessage;
         private SignalRMessage _outgoingMessage;
+        private ApiFunction _function;
+        private OnlineSettings _onlineSettings;
 
         public CloudInteractions(SignalRMessage inboundMessage, SignalRMessage outgoingMessage,
-            Settings settings)
+            Settings settings, OnlineSettings onlineSettings)
         {
             connection = new HubConnectionBuilder()
                 .WithUrl("https://clipmanagerweb.azurewebsites.net/broadcast").Build();
             _settings = settings;
             _inboundMessage = inboundMessage;
             _outgoingMessage = outgoingMessage;
+            _function = new ApiFunction(_onlineSettings);
+            
 
             OnlineState.ConnectionLife = connection.State.ToString();
             if (_settings.OnlineMode)
@@ -45,8 +51,7 @@ namespace CloudConnectionLib
             {
                 if (e.PropertyName.Equals("MachineName"))
                 {
-                    //await connection.SendAsync("broadcastMessage",
-                    //    string.Empty, JsonConvert.SerializeObject(_outgoingMessage));
+                    await _function.Call(ApiFunction.Function.SendMessage, _outgoingMessage.Content);
                 }
             }
         }
@@ -78,6 +83,7 @@ namespace CloudConnectionLib
 
         private async void StartListening()
         {
+            await _function.Call(ApiFunction.Function.Register);
             try
             {
                 await connection.StartAsync();

@@ -29,6 +29,7 @@ namespace ClipboardMonitorLite
         private void BindButtonEvents()
         {
             Btn_Browse.Click += _formEvents.OpenFileBrowserClick;
+            Btn_Generate.Click += _formEvents.GenerateNewGroupId;
         }
 
         private void InitializeProperties()
@@ -76,6 +77,9 @@ namespace ClipboardMonitorLite
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
             Check_LimitTraffic.DataBindings.Add("Checked", _settings, "LimitTraffic",
+                true, DataSourceUpdateMode.OnPropertyChanged);
+
+            Check_Show.DataBindings.Add("Checked", _settings, "ShowPassword",
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
             txt_GroupId.DataBindings.Add("Text", _onlineSettings, "GroupId",

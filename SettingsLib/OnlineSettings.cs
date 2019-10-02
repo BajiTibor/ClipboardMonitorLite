@@ -58,6 +58,19 @@ namespace SettingsLib
             }
         }
 
+        private string oldPassword;
+        public string OldPassword
+        {
+            get
+            {
+                return oldPassword;
+            }
+            set
+            {
+                oldPassword = value;
+            }
+        }
+
         private string password;
         public string Password
         {
@@ -67,6 +80,7 @@ namespace SettingsLib
             }
             set
             {
+                OldPassword = password;
                 password = value;
                 InvokePropertyChanged(new PropertyChangedEventArgs(nameof(Password)));
             }

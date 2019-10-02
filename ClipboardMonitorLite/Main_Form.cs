@@ -74,6 +74,7 @@ namespace ClipboardMonitorLite
             form.ShowDialog();
             form.Dispose();
             _settingsHandler.CreateFile(_settings);
+            _settingsHandler.CreateFile(_onlineSettings);
             _languageOnForm.SetLang(_settings, this);
         }
 

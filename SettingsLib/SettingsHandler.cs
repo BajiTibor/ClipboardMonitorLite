@@ -78,6 +78,12 @@ namespace SettingsLib
                     Debug.WriteLine(e.Message);
                 }
             }
+            else
+            {
+                CreateFile(new OnlineSettings());
+                CreateFile(new Settings());
+                return LoadSettingsFile(isOnlineFile);
+            }
             return tempSettings;
         }
 

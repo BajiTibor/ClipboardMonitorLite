@@ -32,6 +32,7 @@ namespace CloudConnectionLib
             _settings = settings;
             _inboundMessage = inboundMessage;
             _outgoingMessage = outgoingMessage;
+            _onlineSettings = onlineSettings;
             _function = new ApiFunction(_onlineSettings);
             
 

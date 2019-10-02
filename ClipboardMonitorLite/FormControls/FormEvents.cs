@@ -35,28 +35,16 @@ namespace ClipboardMonitorLite.FormControls
             _writeHistory = history;
             _settings.PropertyChanged += ChangeIconStyle;
             _clipboardManager.PropertyChanged += ShowCopyNotification;
-            _settings.PropertyChanged += ShowPasswordChanged;
             _onlineSettings = onlineSettings;
             SetIconStyle();
             SetWindowStartupState();
         }
 
-        private void ShowPasswordChanged(object sender, PropertyChangedEventArgs e)
-        {
-            TextBox Password = ActiveForm.Controls.Find("Txt_Password", false)[0] as TextBox;
-            if (_settings.ShowPassword)
-            {
-                Password.PasswordChar = '\0';
-            }
-            else
-            {
-                Password.PasswordChar = '*';
-            }
-        }
+        
 
         public void GenerateNewGroupId(object sender, EventArgs e)
         {
-            _onlineSettings.GroupId = Guid.NewGuid();
+            _onlineSettings.GroupId = Guid.NewGuid().ToString();
         }
 
 

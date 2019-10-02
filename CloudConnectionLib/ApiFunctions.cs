@@ -22,11 +22,11 @@ namespace CloudConnectionLib
             _onlineSettings = settings;
             client = new HttpClient();
 
-            if (_onlineSettings.ApplicationId.Equals(null))
+            if (_onlineSettings.ApplicationId.Equals(Guid.Empty))
                 _onlineSettings.ApplicationId = Guid.NewGuid();
-            else if (_onlineSettings.GroupId.Equals(null))
-                _onlineSettings.GroupId = Guid.NewGuid();
-            else if (_onlineSettings.Password.Equals(null))
+            if (string.IsNullOrEmpty(_onlineSettings.GroupId))
+                _onlineSettings.GroupId = Guid.NewGuid().ToString();
+            if (_onlineSettings.Password == null)
                 _onlineSettings.Password = Guid.NewGuid().ToString();
 
             _onlineSettings.PropertyChanged += SettingsChanged;
@@ -40,10 +40,15 @@ namespace CloudConnectionLib
                 {
                     ApplicationId = _onlineSettings.ApplicationId,
                     GroupId = _onlineSettings.GroupId,
-                    OldPassword = _onlineSettings.OldPassword,
+                    Password = _onlineSettings.OldPassword,
                     NewPassword = _onlineSettings.Password
                 };
                 await Call(Function.ChangePassword, string.Empty, Message);
+            }
+            else if (e.PropertyName.Equals("GroupId"))
+            {
+                await Call(Function.Unregister);
+                await Call(Function.Register);
             }
         }
 
@@ -79,7 +84,7 @@ namespace CloudConnectionLib
         {
             _message = new ApiMessage
             {
-                GroupId = ForUnregistering ? _onlineSettings.OldGroupId : _onlineSettings.GroupId,
+                GroupId = ForUnregistering ? _onlineSettings.OldGroupId.ToString() : _onlineSettings.GroupId,
                 ApplicationId = _onlineSettings.ApplicationId,
                 MachineName = Constants.MachineName,
                 Password = _onlineSettings.Password,

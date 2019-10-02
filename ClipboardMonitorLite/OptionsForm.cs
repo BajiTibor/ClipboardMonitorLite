@@ -83,10 +83,10 @@ namespace ClipboardMonitorLite
                 true, DataSourceUpdateMode.OnPropertyChanged);
 
             txt_GroupId.DataBindings.Add("Text", _onlineSettings, "GroupId",
-                true, DataSourceUpdateMode.OnPropertyChanged);
+                true, DataSourceUpdateMode.OnValidation);
 
             txt_Password.DataBindings.Add("Text", _onlineSettings, "Password",
-                true, DataSourceUpdateMode.OnPropertyChanged);
+                true, DataSourceUpdateMode.OnValidation);
 
             Radio_SendOnly.DataBindings.Add("Enabled", _settings, "LimitTraffic",
                 true, DataSourceUpdateMode.OnPropertyChanged);
@@ -132,6 +132,14 @@ namespace ClipboardMonitorLite
         {
             _languageOnForm.SetLang(_settings, this);
             Label_Version.Text += Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        }
+
+        private void Check_Show_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((sender as CheckBox).Checked)
+                txt_Password.PasswordChar = '\0';
+            else
+                txt_Password.PasswordChar = '*';
         }
     }
 }

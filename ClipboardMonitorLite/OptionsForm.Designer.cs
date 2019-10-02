@@ -141,6 +141,7 @@
             this.Check_Show.TabIndex = 5;
             this.Check_Show.Text = "Show";
             this.Check_Show.UseVisualStyleBackColor = true;
+            this.Check_Show.CheckedChanged += new System.EventHandler(this.Check_Show_CheckedChanged);
             // 
             // Btn_Generate
             // 

@@ -6,7 +6,7 @@ namespace CloudConnectionLib.Messages
 {
     public class ApiMessage
     {
-        public Guid GroupId { get; set; }
+        public string GroupId { get; set; }
         public Guid ApplicationId { get; set; }
         public string MachineName { get; set; }
         public string Password { get; set; }

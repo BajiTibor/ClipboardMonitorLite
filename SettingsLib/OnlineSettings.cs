@@ -16,8 +16,8 @@ namespace SettingsLib
             }
         }
 
-        private Guid oldGroupId;
-        public Guid OldGroupId
+        private string oldGroupId;
+        public string OldGroupId
         {
             get
             {
@@ -29,8 +29,8 @@ namespace SettingsLib
             }
         }
 
-        private Guid groupId;
-        public Guid GroupId
+        private string groupId;
+        public string GroupId
         {
             get 
             { 

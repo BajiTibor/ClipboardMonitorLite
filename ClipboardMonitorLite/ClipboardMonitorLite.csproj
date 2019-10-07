@@ -185,7 +185,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClipboardActions\AutoHistoryCleaner.cs" />
-    <Compile Include="Cloud\CheckConnection.cs" />
+    <Compile Include="Cloud\CheckStaticConnectionState.cs" />
     <Compile Include="FileOperations\LaunchOnStartup.cs" />
     <Compile Include="FormControls\FormControl.cs" />
     <Compile Include="FormControls\FormEvents.cs" />

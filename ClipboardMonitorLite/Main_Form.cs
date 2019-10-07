@@ -20,7 +20,7 @@ namespace ClipboardMonitorLite
         private LanguageOnForm _languageOnForm;
         private SignalRMessage _outgoingMessage;
         private SettingsHandler _settingsHandler;
-        private CheckConnection _checkConnection;
+        private CheckStaticConnectionState _checkConnection;
         private LaunchOnStartup _startWithWindows;
         private WriteHistoryFile _writeHistoryFile;
         private ClipboardManager _clipboardManager;

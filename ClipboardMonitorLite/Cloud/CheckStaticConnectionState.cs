@@ -1,7 +1,6 @@
-﻿using CloudConnectionLib;
+﻿using System;
+using CloudConnectionLib;
 using System.Windows.Forms;
-using System.Threading.Tasks;
-using System;
 
 namespace ClipboardMonitorLite.Cloud
 {
@@ -10,28 +9,16 @@ namespace ClipboardMonitorLite.Cloud
     /// was bassed to it elapses, because WinForms doesn't respect
     /// INotifyPropertyChanged across threads.
     /// </summary>
-    public class CheckConnection
+    public class CheckStaticConnectionState
     {
         private Label ConnectionLabel;
         private Timer MainTimer;
-        public CheckConnection(Label label, Timer timer)
+        public CheckStaticConnectionState(Label label, Timer timer)
         {
             ConnectionLabel = label;
             MainTimer = timer;
             MainTimer.Start();
             MainTimer.Tick += TimerElapsed;
-
-            //Task.Factory.StartNew(() => SetConnectionLabel(), TaskCreationOptions.LongRunning);
-
-        }
-
-        private async Task SetConnectionLabel()
-        {
-            while (true)
-            {
-                ConnectionLabel.Text = OnlineState.ConnectionLife;
-                await Task.Delay(2500);
-            }
         }
 
         private void TimerElapsed(object sender, EventArgs e)

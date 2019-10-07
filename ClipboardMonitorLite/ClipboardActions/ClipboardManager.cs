@@ -175,7 +175,7 @@ namespace ClipboardMonitorLite.ClipboardActions
         }
 
         /// <summary>
-        /// Unsafe methods using Windows DLLs to control the clipboard's content.
+        /// Unsafe methods using Windows DLLs to control and detect the clipboard's content.
         /// </summary>
         internal static class UnsafeNativeMethods
         {
@@ -222,14 +222,7 @@ namespace ClipboardMonitorLite.ClipboardActions
         /// </summary>
         public static void OnClipboardUpdate(EventArgs e)
         {
-            try
-            {
-                ClipboardUpdate?.Invoke(null, e);
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.Message);
-            }
+            ClipboardUpdate?.Invoke(null, e);
         }
 
         private class NotificationForm : Form

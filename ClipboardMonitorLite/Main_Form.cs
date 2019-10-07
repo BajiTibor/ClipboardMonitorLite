@@ -40,7 +40,7 @@ namespace ClipboardMonitorLite
             _languageOnForm = new LanguageOnForm();
             _formEvents = new FormEvents(_clipboardManager, notificationIcon, this, _settings, _writeHistoryFile, _onlineSettings);
             _startWithWindows = new LaunchOnStartup(_settings);
-            _checkConnection = new CheckConnection(Label_Connection_DONOTMODIFY, timer_checkConnection);
+            _checkConnection = new CheckStaticConnectionState(Label_Connection_DONOTMODIFY, timer_checkConnection);
             EnumSetLang();
             BindProperties();
             BindButtonActions();

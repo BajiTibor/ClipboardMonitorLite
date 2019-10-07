@@ -168,6 +168,9 @@
   <data name="Check_SaveToFile" xml:space="preserve">
     <value>Save to file</value>
   </data>
+  <data name="Check_Show" xml:space="preserve">
+    <value>Show</value>
+  </data>
   <data name="Check_ShowDonation" xml:space="preserve">
     <value>Show donation button on main form</value>
   </data>

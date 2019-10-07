@@ -168,6 +168,9 @@
   <data name="Check_SaveToFile" xml:space="preserve">
     <value>Kimásolt szövegek File-ba mentése</value>
   </data>
+  <data name="Check_Show" xml:space="preserve">
+    <value>Mutat</value>
+  </data>
   <data name="Check_ShowDonation" xml:space="preserve">
     <value>Adomány gomb megjelenítése</value>
   </data>

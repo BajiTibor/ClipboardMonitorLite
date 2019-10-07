@@ -168,6 +168,9 @@
   <data name="Check_SaveToFile" xml:space="preserve">
     <value>Save sa file</value>
   </data>
+  <data name="Check_Show" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Check_ShowDonation" xml:space="preserve">
     <value>Ipakita ang donasyon sa main form</value>
   </data>

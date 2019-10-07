@@ -214,6 +214,15 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to NEEDS TRANSLATION.
+        /// </summary>
+        internal static string Check_Show {
+            get {
+                return ResourceManager.GetString("Check_Show", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Vis donasjonsknapp pĺ hovedskjema.
         /// </summary>
         internal static string Check_ShowDonation {

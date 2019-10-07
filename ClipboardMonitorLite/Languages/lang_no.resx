@@ -168,6 +168,9 @@
   <data name="Check_SaveToFile" xml:space="preserve">
     <value>Lagre til fil</value>
   </data>
+  <data name="Check_Show" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Check_ShowDonation" xml:space="preserve">
     <value>Vis donasjonsknapp pĺ hovedskjema</value>
   </data>

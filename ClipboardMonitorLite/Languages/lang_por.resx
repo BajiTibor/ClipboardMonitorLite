@@ -168,6 +168,9 @@
   <data name="Check_SaveToFile" xml:space="preserve">
     <value>Salvar em arquivo</value>
   </data>
+  <data name="Check_Show" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Check_ShowDonation" xml:space="preserve">
     <value>Mostrar botão de doação no formulário principal</value>
   </data>

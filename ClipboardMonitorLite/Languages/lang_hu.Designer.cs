@@ -214,6 +214,15 @@ namespace ClipboardMonitorLite.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mutat.
+        /// </summary>
+        internal static string Check_Show {
+            get {
+                return ResourceManager.GetString("Check_Show", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Adomány gomb megjelenítése.
         /// </summary>
         internal static string Check_ShowDonation {

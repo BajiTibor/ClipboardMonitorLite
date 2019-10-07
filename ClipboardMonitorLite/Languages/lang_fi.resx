@@ -168,6 +168,9 @@
   <data name="Check_SaveToFile" xml:space="preserve">
     <value>Tallenna tiedostoon</value>
   </data>
+  <data name="Check_Show" xml:space="preserve">
+    <value>NEEDS TRANSLATION</value>
+  </data>
   <data name="Check_ShowDonation" xml:space="preserve">
     <value>Näytä Lahjoitus -nappula pääikkunnassa</value>
   </data>

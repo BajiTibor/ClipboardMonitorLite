@@ -21,10 +21,10 @@ namespace ClipboardMonitorLite.FormControls
         private bool exitFileWritten;
         private ResourceManager resManager;
         private NotifyIcon NotificationIcon;
-        private WriteHistoryFile _writeHistory;
+        private HistoryFile _writeHistory;
         private ClipboardManager _clipboardManager;
         private OnlineSettings _onlineSettings;
-        public FormEvents(ClipboardManager clipManager, NotifyIcon icon, Form form, Settings settings, WriteHistoryFile history,
+        public FormEvents(ClipboardManager clipManager, NotifyIcon icon, Form form, Settings settings, HistoryFile history,
             OnlineSettings onlineSettings)
         {
             exitFileWritten = false;

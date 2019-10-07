@@ -11,23 +11,23 @@ namespace ClipboardMonitorLite.FileOperations
     /// Writes the history file, either in real time, or when the user
     /// exist the application.
     /// </summary>
-    public class WriteHistoryFile
+    public class HistoryFile
     {
         private Settings _settings;
         public string FilePath { get; set; }
         private ClipboardManager _clipboardManager;
 
-        public WriteHistoryFile(ClipboardManager clipManager, Settings settings)
+        public HistoryFile(ClipboardManager clipManager, Settings settings)
         {
             _clipboardManager = clipManager;
             _settings = settings;
             FilePath = _settings.HistoryFileLocation;
             _clipboardManager.PropertyChanged += SaveNewItem;
-            _settings.PropertyChanged += HistoryFileLocationChanged;
+            _settings.PropertyChanged += FileLocationChanged;
             InitialFilePath();
         }
 
-        private void HistoryFileLocationChanged(object sender, PropertyChangedEventArgs e)
+        private void FileLocationChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName.Equals("HistoryFileLocation"))
             {

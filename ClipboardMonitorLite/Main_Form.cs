@@ -22,7 +22,7 @@ namespace ClipboardMonitorLite
         private SettingsHandler _settingsHandler;
         private CheckStaticConnectionState _checkConnection;
         private LaunchOnStartup _startWithWindows;
-        private WriteHistoryFile _writeHistoryFile;
+        private HistoryFile _writeHistoryFile;
         private ClipboardManager _clipboardManager;
         private CloudInteractions _cloudInteractions;
 
@@ -36,7 +36,7 @@ namespace ClipboardMonitorLite
             _outgoingMessage = new SignalRMessage();
             _clipboardManager = new ClipboardManager(_inboundMessage, _outgoingMessage, _settings);
             _cloudInteractions = new CloudInteractions(_inboundMessage, _outgoingMessage, _settings, _onlineSettings);
-            _writeHistoryFile = new WriteHistoryFile(_clipboardManager, _settings);
+            _writeHistoryFile = new HistoryFile(_clipboardManager, _settings);
             _languageOnForm = new LanguageOnForm();
             _formEvents = new FormEvents(_clipboardManager, notificationIcon, this, _settings, _writeHistoryFile, _onlineSettings);
             _startWithWindows = new LaunchOnStartup(_settings);

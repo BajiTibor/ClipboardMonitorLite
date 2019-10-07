@@ -11,6 +11,7 @@ namespace ClipboardMonitorLite.FileOperations
     /// Contains the methods for detecting whenever the application's
     /// shotcut exists inside the startup folder or not, and can create
     /// a new shortcut and place it there if needed, or remove the old one.
+    /// This depends on the Settings class
     /// </summary>
     public class LaunchOnStartup
     {

@@ -253,7 +253,7 @@
       <DependentUpon>Main_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="ClipboardActions\ClipboardManager.cs" />
-    <Compile Include="FileOperations\WriteHistoryFile.cs" />
+    <Compile Include="FileOperations\HistoryFile.cs" />
     <Compile Include="OptionsForm.cs">
       <SubType>Form</SubType>
     </Compile>

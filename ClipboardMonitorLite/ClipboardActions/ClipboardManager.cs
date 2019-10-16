@@ -39,6 +39,8 @@ namespace ClipboardMonitorLite.ClipboardActions
         /// <summary>
         /// Handles a new incoming message.
         /// </summary>
+
+        //I think OnMessageRecieved would be a better name for the function.
         private void NewInboundMessage(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName.Equals("MachineName"))
@@ -56,6 +58,8 @@ namespace ClipboardMonitorLite.ClipboardActions
         /// Gets called when the clipboard changes, if NeedsToSend
         /// is false, no cloud message will be sent.
         /// </summary>
+
+        //What is that NeedsToSend? Shouldn't it always send?
         private void ClipChanged(bool NeedsToSend = true)
         {
             string CurrentCopy = GetClipText();
@@ -177,6 +181,8 @@ namespace ClipboardMonitorLite.ClipboardActions
         /// <summary>
         /// Unsafe methods using Windows DLLs to control and detect the clipboard's content.
         /// </summary>
+
+        //Move this out into separate class instead of keeping it here, possibly into a lib
         internal static class UnsafeNativeMethods
         {
             public const int WM_CLIPBOARDUPDATE = 0x031D;
@@ -225,6 +231,7 @@ namespace ClipboardMonitorLite.ClipboardActions
             ClipboardUpdate?.Invoke(null, e);
         }
 
+        //Perhaps move it into separate class as well if you think so?
         private class NotificationForm : Form
         {
             public NotificationForm()

@@ -6,6 +6,8 @@ namespace SettingsLib
     /// Constants that gets pulled from the user's Environment 
     /// and won't be modified, mostly used as a fallback, default value.
     /// </summary>
+
+    //Perhaps move this into settings file instead of keeping Constants as separate class?
     public static class Constants
     {
         public static string DefaultHistoryFileDirectory = 

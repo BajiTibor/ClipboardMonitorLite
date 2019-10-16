@@ -26,6 +26,12 @@ namespace ClipboardMonitorLite
         private ClipboardManager _clipboardManager;
         private CloudInteractions _cloudInteractions;
 
+
+        //At some point you could take a look at IoC Containers
+        //It'll take off the responsibility from you to initialize everything in MainForm
+        //And inject every required class.
+        //You'll only need to register them in the IoC Container and then use them just like,
+        //  in AspNetCore
         public MainForm()
         {
             InitializeComponent();

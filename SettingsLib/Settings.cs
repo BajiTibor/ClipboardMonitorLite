@@ -8,6 +8,8 @@ namespace SettingsLib
     public class Settings : INotifyPropertyChanged, IAppSettings
     {
         public event PropertyChangedEventHandler PropertyChanged;
+        
+        //Type should be of enum type rather than string.
         public string Type
         {
             get
@@ -16,7 +18,8 @@ namespace SettingsLib
             }
         }
 
-        bool usingWhiteIcon;
+        //UseWhiteTrayIcon instead of Using*
+        private bool usingWhiteIcon;
         public bool UsingWhiteTrayIcon
         {
             get
@@ -30,7 +33,7 @@ namespace SettingsLib
             }
         }
 
-        bool notifyClipChange;
+        private bool notifyClipChange;
         public bool NotifyClipboardChange
         {
             get
@@ -44,7 +47,7 @@ namespace SettingsLib
             }
         }
 
-        bool saveClipHistory;
+        private bool saveClipHistory;
         public bool SaveClipboardHistory
         {
             get
@@ -58,7 +61,7 @@ namespace SettingsLib
             }
         }
 
-        bool autoClearHistory;
+        private bool autoClearHistory;
         public bool AutoClearClipboardHistory
         {
             get
@@ -72,7 +75,7 @@ namespace SettingsLib
             }
         }
 
-        bool minimizeOnClose;
+        private bool minimizeOnClose;
         public bool MinimizeOnClose
         {
             get
@@ -86,7 +89,7 @@ namespace SettingsLib
             }
         }
 
-        bool showDonationButton;
+        private bool showDonationButton;
         public bool ShowDonation
         {
             get
@@ -100,7 +103,8 @@ namespace SettingsLib
             }
         }
 
-        int selectedLanguage;
+        //Shorten name to SelectedLanguage
+        private int selectedLanguage;
         public int CurrentlySelectedLanguage
         {
             get
@@ -114,7 +118,9 @@ namespace SettingsLib
             }
         }
 
-        string fileLocation;
+        //Names should be equal historyFileLocation and HistoryFileLocation, 
+        //same above in other variables
+        private string fileLocation;
         public string HistoryFileLocation
         {
             get
@@ -128,7 +134,7 @@ namespace SettingsLib
             }
         }
 
-        bool writeRealTime;
+        private bool writeRealTime;
         public bool WriteInRealTime
         {
             get
@@ -142,7 +148,7 @@ namespace SettingsLib
             }
         }
 
-        int clearBetweenMinutes;
+        private int clearBetweenMinutes;
         public int ClearBetween
         {
             get
@@ -156,7 +162,7 @@ namespace SettingsLib
             }
         }
 
-        bool startMinimized;
+        private bool startMinimized;
         public bool StartMinimized
         {
             get
@@ -170,7 +176,8 @@ namespace SettingsLib
             }
         }
 
-        bool startWithWin;
+        //Start on boot I would suggest instead of StartWithWindows
+        private bool startWithWin;
         public bool StartWithWindows
         {
             get
@@ -227,6 +234,8 @@ namespace SettingsLib
             }
         }
 
+
+        //Send what? Name it more clearly
         private bool sendOnly;
         public bool SendOnly
         {
@@ -241,6 +250,8 @@ namespace SettingsLib
             }
         }
 
+
+        //RetryConnection instead of RetryConnectionAfter, more clean
         private int retryConnectionAfter;
         public int RetryConnectionAfter
         {

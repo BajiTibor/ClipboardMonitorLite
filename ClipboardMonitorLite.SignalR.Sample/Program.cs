@@ -4,6 +4,17 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
+//I suggest organizing solution into 3 folders
+// /src where you keep your running applications
+// /lib where you keep your libraries that you include into apps, they cannot be run
+// /samples where you keep other things that can be used as a guideline
+// You can check my github or other repositiories, a lot of projects are split like this
+// For example you would have:
+// /src/ClipboardMonitorLite
+// /src/ClipboardMonitorLite.Functions
+// /lib/ClipboardMonitorLite.Models
+// etc.
+
 namespace ClipboardMonitorLite.SignalR.Sample
 {
     class Program

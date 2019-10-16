@@ -8,6 +8,9 @@ namespace SettingsLib
     public class OnlineSettings : INotifyPropertyChanged, IAppSettings
     {
         public event PropertyChangedEventHandler PropertyChanged;
+
+        //What's this?
+        //Besides that should be an Enum rather than a string.
         public string Type
         {
             get
@@ -16,6 +19,10 @@ namespace SettingsLib
             }
         }
 
+        //Is this really needed? You don't do anything with the value before assigning
+        //You could keep it simple with `public string OldGroupId { get; set; }`
+        //Also for what oldGroupId is even used, is it needed? In my opinon such things as,
+        //  old id's could be stored in dictionary or a list, if they're required.
         private string oldGroupId;
         public string OldGroupId
         {
@@ -58,6 +65,8 @@ namespace SettingsLib
             }
         }
 
+
+        //Simmilar thing here as above, is it needed to use full property?
         private string oldPassword;
         public string OldPassword
         {

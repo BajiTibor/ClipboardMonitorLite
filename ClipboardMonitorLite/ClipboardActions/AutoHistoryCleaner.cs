@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 
+//I think this and HistoryFile could be merged into something like
+//HistoryManager, code would be a bit cleaner.
+
 namespace ClipboardMonitorLite.ClipboardActions
 {
     public class AutoHistoryCleaner
@@ -14,6 +17,7 @@ namespace ClipboardMonitorLite.ClipboardActions
             Timer = timer;
         }
 
+        //Why full prop for this?
         public int ClearInterval
         {
             get

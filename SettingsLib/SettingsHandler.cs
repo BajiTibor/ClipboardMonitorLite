@@ -51,6 +51,8 @@ namespace SettingsLib
             }
         }
 
+        //Why settings are split between online and local settings?
+        //Perhaps you should merge them?
         public IAppSettings LoadSettingsFile(bool isOnlineFile = false)
         {
             IAppSettings tempSettings = null;

@@ -32,6 +32,8 @@ namespace ClipboardMonitorLite
             Btn_Generate.Click += _formEvents.GenerateNewGroupId;
         }
 
+
+        //This looks a bit messy, I don't know if it can be made better, but you can look around.
         private void InitializeProperties()
         {
             Check_UseWhiteIcon.DataBindings.Add("Checked", _settings, "UsingWhiteTrayIcon",
@@ -122,6 +124,7 @@ namespace ClipboardMonitorLite
             Close();
         }
 
+        //If it can be done, then don't use _ but use CamelCase in functions names
         private void Combo_lang_SelectedIndexChanged(object sender, EventArgs e)
         {
             _settings.CurrentlySelectedLanguage = combo_lang.SelectedIndex;

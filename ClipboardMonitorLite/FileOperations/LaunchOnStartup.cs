@@ -13,9 +13,12 @@ namespace ClipboardMonitorLite.FileOperations
     /// a new shortcut and place it there if needed, or remove the old one.
     /// This depends on the Settings class
     /// </summary>
+
+    //I think this could be moved into Settings and class could be removed entirely
     public class LaunchOnStartup
     {
         private Settings _settings;
+        //Shouldn't such things be in settings rather than in this class?
         private string shortcutName;
         private string shortcutPath;
         private string targetFileLocation;

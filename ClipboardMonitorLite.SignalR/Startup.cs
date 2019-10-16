@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+//Is this still used as well in the solution
+//Remove if not
+
 namespace ClipboardMonitorLite.SignalR
 {
     public class Startup

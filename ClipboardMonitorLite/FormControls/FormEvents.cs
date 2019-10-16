@@ -41,7 +41,8 @@ namespace ClipboardMonitorLite.FormControls
         }
 
         
-
+        //Maybe this could be outsourced into Settings class?
+        //This would be much cleaner, same with other functions related to settings.
         public void GenerateNewGroupId(object sender, EventArgs e)
         {
             _onlineSettings.GroupId = Guid.NewGuid().ToString();
@@ -69,6 +70,7 @@ namespace ClipboardMonitorLite.FormControls
             }
         }
 
+        //Why two functions to change icon?
         private void ChangeIconStyle(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName.Equals("UsingWhiteTrayIcon"))

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CloudConnectionLib.Messages;
 using Microsoft.AspNetCore.SignalR.Client;
 
+//Keep namespaces consistent
 namespace CloudConnectionLib
 {
     /// <summary>
@@ -15,6 +16,7 @@ namespace CloudConnectionLib
     /// Inbound messages are received using SignalR, and outbound
     /// messages are sent using the API.
     /// </summary>
+
     public class CloudInteractions
     {
         private Settings _settings;
@@ -45,6 +47,7 @@ namespace CloudConnectionLib
             _outgoingMessage.PropertyChanged += NewMessageToSend;
         }
 
+        //SendMessage I would suggest
         private async void NewMessageToSend(object sender, PropertyChangedEventArgs e)
         {
             if ((_settings.LimitTraffic && _settings.SendOnly) || (!_settings.LimitTraffic)
@@ -108,6 +111,7 @@ namespace CloudConnectionLib
             }
         }
 
+        //ConnectionClosed, not Connection_Closed, or rather CloseConnection
         private async Task Connection_Closed(Exception arg)
         {
             OnlineState.ConnectionLife = connection.State.ToString();

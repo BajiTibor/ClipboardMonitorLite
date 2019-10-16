@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
+//Is this still used in the project?
+//If not remove this from the solution.
+
 namespace ClipboardMonitorLite.API
 {
     public class Program

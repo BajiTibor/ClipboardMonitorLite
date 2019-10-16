@@ -22,6 +22,7 @@ namespace CloudConnectionLib
             _onlineSettings = settings;
             client = new HttpClient();
 
+            //Those things shouldn't be generated during the runtime, but on the start of application
             if (_onlineSettings.ApplicationId.Equals(Guid.Empty))
                 _onlineSettings.ApplicationId = Guid.NewGuid();
             if (string.IsNullOrEmpty(_onlineSettings.GroupId))
@@ -32,6 +33,7 @@ namespace CloudConnectionLib
             _onlineSettings.PropertyChanged += SettingsChanged;
         }
 
+        //Instead of SettingsChanged, hook up the separate functions into actions
         private async void SettingsChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName.Equals("Password"))
@@ -52,6 +54,9 @@ namespace CloudConnectionLib
             }
         }
 
+        //Don't use switch case, it just looks bad in the code and brings in unnecessary noise
+        //Split those into 5 small functions instead of using switch
+        //You don't have to return NotFound code because you'll get it from server
         public async Task<HttpResponseMessage> Call(Function function, string content = "", NewPasswordMessage pwdChange = null)
         {
             if (function.Equals(Function.Unregister))
@@ -80,6 +85,8 @@ namespace CloudConnectionLib
             }
         }
 
+        //Looks rather useless to me, depending on function just build it inside of it
+        //  instead of making it in separate function
         private void InitNewMessageObject(string content = "", bool ForUnregistering = false)
         {
             _message = new ApiMessage

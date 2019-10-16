@@ -9,6 +9,8 @@ namespace ClipboardMonitorLite.Cloud
     /// was bassed to it elapses, because WinForms doesn't respect
     /// INotifyPropertyChanged across threads.
     /// </summary>
+
+    //This just sounds bad, what does it even do?
     public class CheckStaticConnectionState
     {
         private Label ConnectionLabel;

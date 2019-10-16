@@ -14,6 +14,10 @@ using Microsoft.Azure.Cosmos.Table;
 using Microsoft.Azure.Cosmos.Table.Queryable;
 using ClipboardMonitorLite.Functions.Extensions;
 
+//Validation is still needed in all functions (not just this one)
+//You can take a look at FluentValidation library, very nice and easy one
+//If you need help with it I can help later, just ask
+
 namespace ClipboardMonitorLite.Functions
 {
     public static class ChangePassword

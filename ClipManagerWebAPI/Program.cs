@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
+//Is this project still developed?
+//If not then remove it from the github solution
+
 namespace ClipManagerWebAPI
 {
     public class Program

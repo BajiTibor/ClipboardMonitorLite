@@ -63,18 +63,20 @@ namespace CloudConnectionLib
             var json = JsonConvert.SerializeObject(_message);
             var pwdChangeJson = JsonConvert.SerializeObject(pwdChange);
 
+            var baseUrl = "https://clipboardmonitorlitefunctions.azurewebsites.net";
+
             switch (function)
             {
                 case Function.Register:
-                    return await Post("http://localhost:7071/api/register", json);
+                    return await Post($"{baseUrl}/api/register", json);
                 case Function.Unregister:
-                    return await Post("http://localhost:7071/api/unregister", json);
+                    return await Post($"{baseUrl}/api/unregister", json);
                 case Function.UnregisterAll:
-                    return await Post("http://localhost:7071/api/unregisterall", json);
+                    return await Post($"{baseUrl}/api/unregisterall", json);
                 case Function.ChangePassword:
-                    return await Post("http://localhost:7071/api/changepassword", pwdChangeJson);
+                    return await Post($"{baseUrl}/api/changepassword", pwdChangeJson);
                 case Function.SendMessage:
-                    return await Post("http://localhost:7071/api/sendmessage", json);
+                    return await Post($"{baseUrl}/api/sendmessage", json);
                 default:
                     return new HttpResponseMessage(HttpStatusCode.NotFound);
             }

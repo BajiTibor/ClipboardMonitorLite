@@ -18,7 +18,7 @@ namespace CloudConnectionLib
     public class CloudInteractions
     {
         private Settings _settings;
-        private HubConnection connection;
+        private static HubConnection connection;
         private SignalRMessage _inboundMessage;
         private SignalRMessage _outgoingMessage;
         private ApiFunction _function;
@@ -27,8 +27,12 @@ namespace CloudConnectionLib
         public CloudInteractions(SignalRMessage inboundMessage, SignalRMessage outgoingMessage,
             Settings settings, OnlineSettings onlineSettings)
         {
-            connection = new HubConnectionBuilder()
-                .WithUrl("https://clipmanagerweb.azurewebsites.net/broadcast").Build();
+            //connection = new HubConnectionBuilder()
+            //    .WithUrl("https://clipmanagerweb.azurewebsites.net/broadcast").Build();
+            var baseUrl = "https://clipboardmonitorlitefunctions.azurewebsites.net";
+            var connection = new HubConnectionBuilder()
+                .WithUrl($"{baseUrl}/api")
+                .Build();
             _settings = settings;
             _inboundMessage = inboundMessage;
             _outgoingMessage = outgoingMessage;
@@ -84,6 +88,9 @@ namespace CloudConnectionLib
 
         private async void StartListening()
         {
+            var connection = new HubConnectionBuilder()
+                .WithUrl($"https://clipboardmonitorlitefunctions.azurewebsites.net/api")
+                .Build();
             await _function.Call(ApiFunction.Function.Register);
             try
             {
